@@ -48,8 +48,13 @@
 
 <footer>
   <div class="wrap">
+    {%- if site.affiliateEnabled %}
     <p class="disclosure">当サイト「{{ site.name }}」は、Amazonアソシエイト・プログラムの参加者です。適格販売により収入を得ています。</p>
+    {%- else %}
+    <p class="disclosure">当サイト「{{ site.name }}」は、Amazonアソシエイト・プログラムへの参加を予定しています。参加後は適格販売により収入を得ます。</p>
+    {%- endif %}
     <p class="legal">{{ site.legal }}</p>
+    <p class="footer-links"><a href="{{ '/privacy/' | url }}">プライバシーポリシー・運営者情報</a> / <a href="{{ site.contactFormUrl }}" target="_blank" rel="noopener">お問い合わせ</a></p>
     <p class="credit">AFTER<span style="color:var(--cyan)">•</span>CREDITS — PICK YOUR UNIVERSE.</p>
   </div>
 </footer>
