@@ -2,6 +2,17 @@
 // マークアップは _includes/partials/work-item.njk と同一に保つこと
 (function () {
   const WORKS = JSON.parse(document.getElementById('mcu-data').textContent);
+  const AMZ = JSON.parse(document.getElementById('amz-data').textContent);
+
+  function buyRow(id) {
+    const a = AMZ.enabled && AMZ.links[id];
+    if (!a || id.startsWith('_')) return '';
+    const btn = (asin, label) => asin
+      ? '<a class="amz-btn" href="https://www.amazon.co.jp/dp/' + asin + '?tag=' + AMZ.tag + '" rel="sponsored noopener" target="_blank">' + label + '</a>'
+      : '';
+    const btns = btn(a.bd, 'Blu-ray') + btn(a.dvd, 'DVD') + btn(a.pv, 'プライムビデオ');
+    return btns ? '<p class="w-buy">' + btns + '<span class="pr-label">[PR]</span></p>' : '';
+  }
   const typeLabel = { movie: '映画', drama: 'ドラマ', anime: 'アニメ', special: 'SP' };
   const liveState = { mode: 'release', filter: 'all' };
 
@@ -33,7 +44,7 @@
     el.innerHTML =
       '<summary class="watch has-detail">' + head + '</summary>' +
       '<div class="w-detail">' +
-        '<p class="w-syn"><b>あらすじ(ネタバレなし):</b> ' + w.syn + '</p>' +
+        '<p class="w-syn"><b>あらすじ(ネタバレなし):</b> ' + w.syn + '</p>' + buyRow(w.id) +
         (w.sp
           ? '<details class="spoiler-box"><summary>⚠ ネタバレあり要約を表示(結末まで書いています)</summary><p>' + w.sp + '</p></details>'
           : (w.sp_pending ? '<p class="sp-pending">⚠ ネタバレあり要約は準備中です(公開から日が浅いため、確認でき次第追加します)</p>' : '')) +

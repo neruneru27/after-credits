@@ -1,0 +1,8 @@
+{
+  "_readme": "映像作品の購入リンク(運営者管理)。キーはmcu.jsonのwork id。bd/dvd/pvに商品ページのASIN(URLの/dp/直後の10桁)を入れると、実写ページの作品詳細に購入ボタンが表示される。未登録の作品にはボタンが出ない。_で始まるキーは無視される",
+  "_example": {
+    "bd": "B0XXXXXXXX",
+    "dvd": "B0XXXXXXXX",
+    "pv": "B0XXXXXXXX"
+  }
+}

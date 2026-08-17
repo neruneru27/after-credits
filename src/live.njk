@@ -29,7 +29,7 @@ pageJs: /assets/js/live.js
 
     <div class="watch-list" id="watch-list">
       {%- for w in mcu.works | sortJpRelease %}
-      {{ workItem(w, loop.index) }}
+      {{ workItem(w, loop.index, amazonLinks[w.id], site.amazonTag, site.affiliateEnabled) }}
       {%- endfor %}
     </div>
 
@@ -72,3 +72,4 @@ pageJs: /assets/js/live.js
 </section>
 
 <script id="mcu-data" type="application/json">{{ mcu.works | jsonify | safe }}</script>
+<script id="amz-data" type="application/json">{{ { links: amazonLinks, tag: site.amazonTag, enabled: site.affiliateEnabled } | jsonify | safe }}</script>

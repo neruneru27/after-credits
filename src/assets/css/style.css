@@ -505,3 +505,6 @@
     color: #6b5f52; border: 2px dashed var(--paper-dark);
     padding: 4px 12px; margin-top: 8px;
   }
+
+  /* ---------- 作品詳細の購入ボタン行 ---------- */
+  .w-buy { margin-top: 10px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }

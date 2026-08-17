@@ -1,5 +1,6 @@
 {#- 実写作品1件のカード。assets/js/live.js の makeItem と同一マークアップを維持すること -#}
-{%- macro workItem(w, num) -%}
+{#- amz: amazonLinks.json の該当エントリ({bd,dvd,pv} or undefined) -#}
+{%- macro workItem(w, num, amz, tag, enabled) -%}
 {%- set head -%}
 <span class="w-num">{{ num }}</span><div><h3>{{ w.title }}{% if w.brand %}<span class="w-badge">単独OK</span>{% endif %}{% if w.status == 'upcoming' %}<span class="w-badge upcoming">公開予定</span>{% endif %}</h3>{% if w.desc %}<p class="w-desc">{{ w.desc }}</p>{% endif %}<p class="w-meta">日本: {{ w.date_jp | fmtDate }}{% if w.chrono_note %} / {{ w.chrono_note }}{% endif %}</p></div><span class="w-type {{ w.type }}">{{ {'movie':'映画','drama':'ドラマ','anime':'アニメ','special':'SP'}[w.type] }}</span>
 {%- endset -%}
@@ -7,6 +8,13 @@
 <div class="watch">{{ head | safe }}</div>
 {%- else -%}
 <details class="watch-d"><summary class="watch has-detail">{{ head | safe }}</summary><div class="w-detail"><p class="w-syn"><b>あらすじ(ネタバレなし):</b> {{ w.syn }}</p>
+{%- if enabled and amz -%}
+<p class="w-buy">
+{%- if amz.bd %}<a class="amz-btn" href="https://www.amazon.co.jp/dp/{{ amz.bd }}?tag={{ tag }}" rel="sponsored noopener" target="_blank">Blu-ray</a>{% endif -%}
+{%- if amz.dvd %}<a class="amz-btn" href="https://www.amazon.co.jp/dp/{{ amz.dvd }}?tag={{ tag }}" rel="sponsored noopener" target="_blank">DVD</a>{% endif -%}
+{%- if amz.pv %}<a class="amz-btn" href="https://www.amazon.co.jp/dp/{{ amz.pv }}?tag={{ tag }}" rel="sponsored noopener" target="_blank">プライムビデオ</a>{% endif -%}
+<span class="pr-label">[PR]</span></p>
+{%- endif -%}
 {%- if w.sp -%}
 <details class="spoiler-box"><summary>⚠ ネタバレあり要約を表示(結末まで書いています)</summary><p>{{ w.sp }}</p></details>
 {%- elif w.sp_pending -%}
