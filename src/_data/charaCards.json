@@ -1,0 +1,716 @@
+{
+  "meta": {
+    "name": "キャラ検索カード(SPA v11から機械抽出)",
+    "source": "after-credits-v11.html chara-grid",
+    "extracted": "2026-08-17"
+  },
+  "cards": [
+    {
+      "name": "ドクター・ドゥーム",
+      "en": "DOCTOR DOOM",
+      "badge": "k",
+      "badge_code": "DD",
+      "key": "ドクター・ドゥーム どくたーどぅーむ doom victor ヴィクター ラトヴェリア ヴィラン",
+      "desc": "ラトヴェリアの君主にして天才科学者・魔術師。2026年『ドゥームズデイ』で実写本格登場。",
+      "media": [
+        "comic",
+        "live"
+      ]
+    },
+    {
+      "name": "スカーレット・ウィッチ",
+      "en": "WANDA MAXIMOFF",
+      "badge": "m",
+      "badge_code": "SW",
+      "key": "ワンダ・マキシモフ スカーレット・ウィッチ wanda scarlet witch 魔女 ハウスオブM",
+      "desc": "現実改変の魔女。『ワンダヴィジョン』の悲劇の源流は原作『ハウス・オブ・M』にあり。",
+      "media": [
+        "comic",
+        "live",
+        "anime"
+      ]
+    },
+    {
+      "name": "デアデビル",
+      "en": "MATT MURDOCK",
+      "badge": "c",
+      "badge_code": "DD",
+      "key": "デアデビル マット・マードック daredevil matt murdock 弁護士 ヘルズキッチン",
+      "desc": "盲目の弁護士にして地獄の厨房の守護者。『ボーン・アゲイン』の元ネタは80年代の傑作コミック。",
+      "media": [
+        "comic",
+        "live"
+      ]
+    },
+    {
+      "name": "ムーンナイト",
+      "en": "MOON KNIGHT",
+      "badge": "k",
+      "badge_code": "MK",
+      "key": "ムーンナイト マーク・スペクター moon knight marc spector コンス 月",
+      "desc": "月神コンスに仕える多重人格のヒーロー。原作はダークで実験的な名作揃い。",
+      "media": [
+        "comic",
+        "live"
+      ]
+    },
+    {
+      "name": "キャプテン・アメリカ(サム)",
+      "en": "SAM WILSON",
+      "badge": "y",
+      "badge_code": "CA",
+      "key": "サム・ウィルソン キャプテン・アメリカ ファルコン sam wilson captain america falcon 盾",
+      "desc": "スティーブから盾を継いだ男。原作でも「サム・キャップ」時代の物語がある。",
+      "media": [
+        "comic",
+        "live"
+      ]
+    },
+    {
+      "name": "ロキ",
+      "en": "LOKI",
+      "badge": "c",
+      "badge_code": "LK",
+      "key": "ロキ loki 神 アスガルド TVA トリックスター",
+      "desc": "いたずらの神からマルチバースの要へ。ドラマ『ロキ』はマルチバース理解の必修科目。",
+      "media": [
+        "comic",
+        "live",
+        "anime"
+      ]
+    },
+    {
+      "name": "ミスター・ファンタスティック",
+      "en": "REED RICHARDS",
+      "badge": "c",
+      "badge_code": "FF",
+      "key": "リード・リチャーズ ミスター・ファンタスティック reed richards mr fantastic ファンタスティック・フォー FF",
+      "desc": "マーベル一の頭脳でドゥームの因縁の相手。FFはマーベル・ユニバースの「始まりの家族」。",
+      "media": [
+        "comic",
+        "live"
+      ]
+    },
+    {
+      "name": "ウルヴァリン",
+      "en": "WOLVERINE",
+      "badge": "y",
+      "badge_code": "WV",
+      "key": "ウルヴァリン ローガン wolverine logan X-MEN ミュータント 爪",
+      "desc": "不死身のミュータント。『X-MEN '97』から原作X-MENへ入るのが今の最短ルート。",
+      "media": [
+        "comic",
+        "live",
+        "anime"
+      ]
+    },
+    {
+      "name": "ソー",
+      "en": "THOR",
+      "badge": "c",
+      "badge_code": "TH",
+      "key": "ソー 雷神 アスガルド thor オーディン",
+      "desc": "雷神にしてアスガルドの王族。ハンマーと斧を渡り歩く神様。",
+      "media": [
+        "comic",
+        "live",
+        "anime"
+      ]
+    },
+    {
+      "name": "ハルク",
+      "en": "HULK",
+      "badge": "y",
+      "badge_code": "HK",
+      "key": "ハルク hulk バナー ガンマ 緑",
+      "desc": "ガンマ線が生んだ緑の巨人。バナー博士との共存が永遠のテーマ。",
+      "media": [
+        "comic",
+        "live",
+        "anime"
+      ]
+    },
+    {
+      "name": "スパイダーマン",
+      "en": "SPIDER-MAN",
+      "badge": "m",
+      "badge_code": "SP",
+      "key": "スパイダーマン ピーター・パーカー spider peter 蜘蛛",
+      "desc": "親愛なる隣人。大いなる力には大いなる責任が伴う。",
+      "media": [
+        "comic",
+        "live",
+        "anime"
+      ]
+    },
+    {
+      "name": "ドクター・ストレンジ",
+      "en": "DOCTOR STRANGE",
+      "badge": "c",
+      "badge_code": "DS",
+      "key": "ストレンジ strange 魔術師 魔法",
+      "desc": "元天才外科医のソーサラー・スプリーム。マルチバースの門番役。",
+      "media": [
+        "comic",
+        "live",
+        "anime"
+      ]
+    },
+    {
+      "name": "キングピン",
+      "en": "KINGPIN",
+      "badge": "k",
+      "badge_code": "KP",
+      "key": "キングピン フィスク kingpin fisk ヴィラン 市長",
+      "desc": "NY裏社会の帝王ウィルソン・フィスク。市長にまで上り詰めた。",
+      "media": [
+        "comic",
+        "live"
+      ]
+    },
+    {
+      "name": "パニッシャー",
+      "en": "PUNISHER",
+      "badge": "k",
+      "badge_code": "PN",
+      "key": "パニッシャー フランク・キャッスル punisher frank 髑髏",
+      "desc": "家族を奪われ処刑人と化したフランク・キャッスル。髑髏の男。",
+      "media": [
+        "comic",
+        "live"
+      ]
+    },
+    {
+      "name": "イェレーナ・ベロワ",
+      "en": "YELENA BELOVA",
+      "badge": "m",
+      "badge_code": "YB",
+      "key": "イェレーナ yelena ウィドウ サンダーボルツ",
+      "desc": "ナターシャの妹分にして2代目ブラック・ウィドウ。ニュー・アベンジャーズの一員に。",
+      "media": [
+        "comic",
+        "live"
+      ]
+    },
+    {
+      "name": "シャン・チー",
+      "en": "SHANG-CHI",
+      "badge": "y",
+      "badge_code": "SC",
+      "key": "シャンチー shang-chi カンフー 武術 リング",
+      "desc": "マーベル最高峰の武術家。テン・リングスを受け継いだ男。",
+      "media": [
+        "comic",
+        "live"
+      ]
+    },
+    {
+      "name": "プロフェッサーX",
+      "en": "PROFESSOR X",
+      "badge": "c",
+      "badge_code": "PX",
+      "key": "プロフェッサー エグゼビア xavier テレパス 車椅子",
+      "desc": "世界最強のテレパスにしてX-MEN創設者。共存の夢を説く教師。",
+      "media": [
+        "comic",
+        "live",
+        "anime"
+      ]
+    },
+    {
+      "name": "マグニートー",
+      "en": "MAGNETO",
+      "badge": "m",
+      "badge_code": "MG",
+      "key": "マグニートー magneto 磁力 エリック",
+      "desc": "磁力を操るミュータントの過激派指導者。チャールズの親友にして宿敵。",
+      "media": [
+        "comic",
+        "live",
+        "anime"
+      ]
+    },
+    {
+      "name": "ギャラクタス",
+      "en": "GALACTUS",
+      "badge": "k",
+      "badge_code": "GL",
+      "key": "ギャラクタス galactus 惑星 捕食",
+      "desc": "惑星を喰らう宇宙的存在。『ファースト・ステップ』で本格映像化。",
+      "media": [
+        "comic",
+        "live",
+        "anime"
+      ]
+    },
+    {
+      "name": "シルバーサーファー",
+      "en": "SILVER SURFER",
+      "badge": "c",
+      "badge_code": "SS",
+      "key": "サーファー surfer ノリン シャラ・バル 銀",
+      "desc": "ギャラクタスの先触れ。銀色の放浪者。映画版は原作と設定が異なる。",
+      "media": [
+        "comic",
+        "live",
+        "anime"
+      ]
+    },
+    {
+      "name": "サノス",
+      "en": "THANOS",
+      "badge": "k",
+      "badge_code": "TN",
+      "key": "サノス thanos タイタン 指パッチン",
+      "desc": "狂気のタイタン。原作は死の女神への愛、映画は均衡思想——動機が別物。",
+      "media": [
+        "comic",
+        "live",
+        "anime"
+      ]
+    },
+    {
+      "name": "ウルトロン",
+      "en": "ULTRON",
+      "badge": "k",
+      "badge_code": "UL",
+      "key": "ウルトロン ultron AI ロボット",
+      "desc": "殺戮AI。原作の生みの親はハンク・ピム、映画ではトニー。",
+      "media": [
+        "comic",
+        "live",
+        "anime"
+      ]
+    },
+    {
+      "name": "ヴィジョン",
+      "en": "VISION",
+      "badge": "m",
+      "badge_code": "VI",
+      "key": "ヴィジョン vision 人造人間 アンドロイド ワンダ",
+      "desc": "ウルトロンが生んだ人造ヒーロー。2026年『ヴィジョン・クエスト』主役。",
+      "media": [
+        "comic",
+        "live",
+        "anime"
+      ]
+    },
+    {
+      "name": "セントリー",
+      "en": "SENTRY",
+      "badge": "y",
+      "badge_code": "SE",
+      "key": "セントリー sentry ボブ ヴォイド 最強",
+      "desc": "太陽100万個分の力と、内なるヴォイド。サンダーボルツ*で鮮烈登場。",
+      "media": [
+        "comic",
+        "live"
+      ]
+    },
+    {
+      "name": "キャプテン・マーベル",
+      "en": "CAPTAIN MARVEL",
+      "badge": "y",
+      "badge_code": "CM",
+      "key": "キャプテン・マーベル キャロル carol marvel",
+      "desc": "クリーの力を宿した最強のパイロット、キャロル・ダンヴァース。",
+      "media": [
+        "comic",
+        "live",
+        "anime"
+      ]
+    },
+    {
+      "name": "ニック・フューリー",
+      "en": "NICK FURY",
+      "badge": "k",
+      "badge_code": "NF",
+      "key": "フューリー fury シールド 眼帯",
+      "desc": "アベンジャーズ計画の仕掛け人。すべてを知る隻眼のスパイ。",
+      "media": [
+        "comic",
+        "live"
+      ]
+    },
+    {
+      "name": "バッキー・バーンズ",
+      "en": "BUCKY BARNES",
+      "badge": "c",
+      "badge_code": "BB",
+      "key": "バッキー bucky ウィンター・ソルジャー 腕",
+      "desc": "スティーブの親友にして元ウィンター・ソルジャー。贖罪の道を歩む。",
+      "media": [
+        "comic",
+        "live"
+      ]
+    },
+    {
+      "name": "ホークアイ",
+      "en": "HAWKEYE",
+      "badge": "m",
+      "badge_code": "HE",
+      "key": "ホークアイ クリント hawkeye 弓 ケイト",
+      "desc": "弓ひとつでアベンジャーズを張る男、クリント・バートン。",
+      "media": [
+        "comic",
+        "live",
+        "anime"
+      ]
+    },
+    {
+      "name": "スター・ロード",
+      "en": "STAR-LORD",
+      "badge": "c",
+      "badge_code": "SL",
+      "key": "スターロード クイル quill ガーディアンズ",
+      "desc": "ガーディアンズのリーダーを自称する地球生まれの宇宙海賊。",
+      "media": [
+        "comic",
+        "live",
+        "anime"
+      ]
+    },
+    {
+      "name": "ロケット・ラクーン",
+      "en": "ROCKET RACCOON",
+      "badge": "y",
+      "badge_code": "RR",
+      "key": "ロケット rocket アライグマ ハーフワールド",
+      "desc": "銃器マニアのアライグマ(と呼ぶと怒る)。GotG3の主役。",
+      "media": [
+        "comic",
+        "live",
+        "anime"
+      ]
+    },
+    {
+      "name": "アントマン",
+      "en": "ANT-MAN",
+      "badge": "c",
+      "badge_code": "AM",
+      "key": "アントマン スコット ant-man 量子",
+      "desc": "ピム粒子で縮む泥棒ヒーロー、スコット・ラング。",
+      "media": [
+        "comic",
+        "live",
+        "anime"
+      ]
+    },
+    {
+      "name": "ジェシカ・ジョーンズ",
+      "en": "JESSICA JONES",
+      "badge": "m",
+      "badge_code": "JJ",
+      "key": "ジェシカ jessica 探偵 ディフェンダーズ",
+      "desc": "怪力の私立探偵。ヒーローを辞めたヒーロー。",
+      "media": [
+        "comic",
+        "live"
+      ]
+    },
+    {
+      "name": "ルーク・ケイジ",
+      "en": "LUKE CAGE",
+      "badge": "y",
+      "badge_code": "LC",
+      "key": "ルーク・ケイジ luke cage ハーレム 鋼",
+      "desc": "鋼の皮膚を持つハーレムの守護者。",
+      "media": [
+        "comic",
+        "live"
+      ]
+    },
+    {
+      "name": "アイアン・フィスト",
+      "en": "IRON FIST",
+      "badge": "c",
+      "badge_code": "IF",
+      "key": "アイアンフィスト ダニー iron fist クンルン 拳",
+      "desc": "クン・ルンで修行した拳の伝承者ダニー・ランド。",
+      "media": [
+        "comic",
+        "live"
+      ]
+    },
+    {
+      "name": "エレクトラ",
+      "en": "ELEKTRA",
+      "badge": "m",
+      "badge_code": "EL",
+      "key": "エレクトラ elektra 暗殺者 ハンド サイ",
+      "desc": "サイで舞う暗殺者。デアデビルの永遠の宿命の女。",
+      "media": [
+        "comic",
+        "live"
+      ]
+    },
+    {
+      "name": "ストーム",
+      "en": "STORM",
+      "badge": "k",
+      "badge_code": "ST",
+      "key": "ストーム storm オロロ 天候 X-MEN",
+      "desc": "天候を操るオメガレベル・ミュータント。X-MENの女王格。",
+      "media": [
+        "comic",
+        "live",
+        "anime"
+      ]
+    },
+    {
+      "name": "ガモーラ",
+      "en": "GAMORA",
+      "badge": "m",
+      "badge_code": "GM",
+      "key": "ガモーラ gamora サノス 暗殺者",
+      "desc": "宇宙最強の女戦士。サノスの養女という宿命を背負う。",
+      "media": [
+        "comic",
+        "live",
+        "anime"
+      ]
+    },
+    {
+      "name": "ネビュラ",
+      "en": "NEBULA",
+      "badge": "c",
+      "badge_code": "NB",
+      "key": "ネビュラ nebula サイボーグ",
+      "desc": "ガモーラの妹。父への憎しみから贖罪への長い道を歩んだ。",
+      "media": [
+        "comic",
+        "live",
+        "anime"
+      ]
+    },
+    {
+      "name": "グルート",
+      "en": "GROOT",
+      "badge": "y",
+      "badge_code": "GR",
+      "key": "グルート groot 木",
+      "desc": "「私はグルート」しか喋らない樹木型生命体。",
+      "media": [
+        "comic",
+        "live",
+        "anime"
+      ]
+    },
+    {
+      "name": "オコエ",
+      "en": "OKOYE",
+      "badge": "k",
+      "badge_code": "OK",
+      "key": "オコエ okoye ドーラミラージュ 槍",
+      "desc": "ドーラ・ミラージュの将軍。ワカンダ最強の槍。",
+      "media": [
+        "comic",
+        "live",
+        "anime"
+      ]
+    },
+    {
+      "name": "シュリ",
+      "en": "SHURI",
+      "badge": "m",
+      "badge_code": "SH",
+      "key": "シュリ shuri ブラックパンサー 天才",
+      "desc": "ワカンダの天才王女にして2代目ブラックパンサー。",
+      "media": [
+        "comic",
+        "live",
+        "anime"
+      ]
+    },
+    {
+      "name": "ネイモア",
+      "en": "NAMOR",
+      "badge": "c",
+      "badge_code": "NM",
+      "key": "ネイモア namor アトランティス タロカニム 海",
+      "desc": "海底王国の翼足王。1939年生まれのアンチヒーローの元祖。",
+      "media": [
+        "comic",
+        "live"
+      ]
+    },
+    {
+      "name": "ウォン",
+      "en": "WONG",
+      "badge": "y",
+      "badge_code": "WG",
+      "key": "ウォン wong 魔術師 カマータージ",
+      "desc": "MCUのソーサラー・スプリーム。原作の従者から大出世。",
+      "media": [
+        "comic",
+        "live"
+      ]
+    },
+    {
+      "name": "ミズ・マーベル",
+      "en": "MS. MARVEL",
+      "badge": "m",
+      "badge_code": "MM",
+      "key": "カマラ kamala ミズマーベル ジャージーシティ",
+      "desc": "キャロルに憧れる高校生カマラ・カーン。ミュータント示唆で話題に。",
+      "media": [
+        "comic",
+        "live",
+        "anime"
+      ]
+    },
+    {
+      "name": "ケイト・ビショップ",
+      "en": "KATE BISHOP",
+      "badge": "c",
+      "badge_code": "KB",
+      "key": "ケイト kate ホークアイ 弓",
+      "desc": "クリントの弟子にして2代目ホークアイ。",
+      "media": [
+        "comic",
+        "live"
+      ]
+    },
+    {
+      "name": "USエージェント",
+      "en": "U.S. AGENT",
+      "badge": "k",
+      "badge_code": "UA",
+      "key": "ウォーカー walker usエージェント 盾",
+      "desc": "政府製の\"もう一人のキャップ\"ジョン・ウォーカー。",
+      "media": [
+        "comic",
+        "live"
+      ]
+    },
+    {
+      "name": "グリーン・ゴブリン",
+      "en": "GREEN GOBLIN",
+      "badge": "y",
+      "badge_code": "GG",
+      "key": "ゴブリン goblin ノーマン オズボーン カボチャ",
+      "desc": "スパイダーマン最大の宿敵ノーマン・オズボーン。",
+      "media": [
+        "comic",
+        "live",
+        "anime"
+      ]
+    },
+    {
+      "name": "ドクター・オクトパス",
+      "en": "DOCTOR OCTOPUS",
+      "badge": "c",
+      "badge_code": "DO",
+      "key": "オクトパス octopus オットー タコ 腕",
+      "desc": "4本の機械腕を持つ天才科学者オットー・オクタビアス。",
+      "media": [
+        "comic",
+        "live",
+        "anime"
+      ]
+    },
+    {
+      "name": "ヴェノム",
+      "en": "VENOM",
+      "badge": "k",
+      "badge_code": "VN",
+      "key": "ヴェノム venom シンビオート エディ",
+      "desc": "シンビオートと宿主が生む黒い暴力。スパイダーマンの闇写し。",
+      "media": [
+        "comic",
+        "live",
+        "anime"
+      ]
+    },
+    {
+      "name": "ヘラ",
+      "en": "HELA",
+      "badge": "k",
+      "badge_code": "HL",
+      "key": "ヘラ hela 死の女神 姉",
+      "desc": "死の女神にしてソーの姉。アスガルドの隠された長子。",
+      "media": [
+        "comic",
+        "live"
+      ]
+    },
+    {
+      "name": "レッドスカル",
+      "en": "RED SKULL",
+      "badge": "m",
+      "badge_code": "RS",
+      "key": "レッドスカル red skull ヒドラ ナチス",
+      "desc": "ヒドラを率いたキャップの宿敵。ヴォーミアの案内人に堕ちた。",
+      "media": [
+        "comic",
+        "live",
+        "anime"
+      ]
+    },
+    {
+      "name": "ジーン・グレイ",
+      "en": "JEAN GREY",
+      "badge": "m",
+      "badge_code": "JG",
+      "key": "ジーン jean フェニックス テレパス",
+      "desc": "強大なテレパスにしてフェニックスの器。X-MENの心臓。",
+      "media": [
+        "comic",
+        "live",
+        "anime"
+      ]
+    },
+    {
+      "name": "サイクロップス",
+      "en": "CYCLOPS",
+      "badge": "c",
+      "badge_code": "CY",
+      "key": "サイクロップス cyclops スコット ビーム",
+      "desc": "目からオプティック・ブラストを放つX-MENのリーダー。",
+      "media": [
+        "comic",
+        "live",
+        "anime"
+      ]
+    },
+    {
+      "name": "ローグ",
+      "en": "ROGUE",
+      "badge": "y",
+      "badge_code": "RG",
+      "key": "ローグ rogue 吸収 白メッシュ",
+      "desc": "触れた相手の力と記憶を奪うミュータント。ミスティークの養女。",
+      "media": [
+        "comic",
+        "live",
+        "anime"
+      ]
+    },
+    {
+      "name": "ガンビット",
+      "en": "GAMBIT",
+      "badge": "m",
+      "badge_code": "GB",
+      "key": "ガンビット gambit カード レミー",
+      "desc": "カードに運動エネルギーを込めて投げる伊達男。",
+      "media": [
+        "comic",
+        "live",
+        "anime"
+      ]
+    },
+    {
+      "name": "ブレイド",
+      "en": "BLADE",
+      "badge": "k",
+      "badge_code": "BL",
+      "key": "ブレイド blade 吸血鬼 デイウォーカー",
+      "desc": "ヴァンパイアハンターの半吸血鬼。MCU版は再始動待ち。",
+      "media": [
+        "comic",
+        "live",
+        "anime"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+---
+layout: layouts/base.njk
+title: マーベル用語辞典(149語)
+description: マーベル映画・ドラマ・コミックの用語149語を収録した日本語ミニ辞典。アース616・TVA・マルチバースなど、コミックと実写で意味が変わる語は分けて解説。
+permalink: /glossary/
+pageJs: /assets/js/glossary.js
+---
+<section data-page="dict">
+  <div class="wrap">
+    <p class="crumb"><a href="{{ '/' | url }}">ホーム</a> › 用語辞典</p>
+    <div class="sec-head">
+      <span class="en">GLOSSARY</span>
+      <h2>マーベル用語辞典</h2>
+      <p>映画・ドラマ・コミックの用語149語を収録。コミックと実写で意味が変わる語は📖/🎬で分けて記載。カテゴリ絞り込み+検索で即引きできます。🎬マークは映像作品との関連メモです。</p>
+    </div>
+
+    <div class="searchbox">
+      <input type="search" id="dict-input" placeholder="例:616 / マルチバース / TVA" aria-label="用語を検索">
+      <span class="sicon">検索</span>
+    </div>
+
+    <div class="filter-row" id="dict-cat-row" role="group" aria-label="カテゴリで絞り込み">
+      <button class="fbtn" data-cat="all" aria-pressed="true">すべて</button>
+      {%- for key, label in glossary.cats %}
+      <button class="fbtn" data-cat="{{ key }}" aria-pressed="false">{{ label }}</button>
+      {%- endfor %}
+    </div>
+
+    <div class="dict-list" id="dict-list">
+      {%- for t in glossary.terms %}
+      <div class="term" data-cat="{{ t.cat }}" data-key="{{ t.en }} {{ t.keys }}">
+        <h3>{{ t.term }}{% if t.en %} <span class="en">{{ t.en }}</span>{% endif %}<span class="cat-tag">{{ glossary.cats[t.cat] }}</span></h3>
+        {%- if t.def %}
+        <p>{{ t.def }}</p>
+        {%- else %}
+        <p class="dual comic"><b>📖 コミック:</b> {{ t.def_comic }}</p>
+        <p class="dual mcu"><b>🎬 実写(MCU):</b> {{ t.def_mcu }}</p>
+        {%- endif %}
+        {%- if t.note %}<p class="term-note">🎬 {{ t.note }}</p>{% endif %}
+      </div>
+      {%- endfor %}
+    </div>
+    <p class="no-hit" id="dict-nohit">該当する用語が見つかりませんでした。別のキーワードでお試しください。</p>
+  </div>
+</section>

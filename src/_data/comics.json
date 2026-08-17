@@ -1,0 +1,4893 @@
+{
+ "meta": {
+  "name": "アフタークレジット コミックDB(ShoPro刊行 全416タイトル)",
+  "source": "ShoPro公式 刊行作品一覧PDF(2026/2/20時点の在庫状況)",
+  "updated": "2026-08-17",
+  "notes": [
+   "status_code: A=在庫あり(紙+電子) S=店頭在庫・電子版のみ R=流通限定(オンラインストア他) D=電子版のみ(旧ヴィレッジブックス引継)",
+   "全電子版は2026/9/30 23:59に配信停止。D(176冊)は紙の受け皿がなく市場から完全消滅",
+   "screen: 関連する映像作品(mcu-works-data.jsonのid or 説明)",
+   "doomsday_prep: ドゥームズデイ/シークレット・ウォーズ予習の最優先枠",
+   "価格は税込。在庫状況は2026/2時点のため購入前にAmazon/店頭で要確認"
+  ]
+ },
+ "items": [
+  {
+   "no": 1,
+   "title": "ベスト・オブ・スパイダーマン",
+   "series": "ベスト・オブ・マーベル",
+   "isbn": "978-4-7968-7134-1",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 1540,
+   "price_digital": 1260,
+   "publisher": "shopro"
+  },
+  {
+   "no": 2,
+   "title": "ベスト・オブ・スパイダーマンⅡ",
+   "series": "ベスト・オブ・マーベル",
+   "isbn": "978-4-7968-7321-5",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 2970,
+   "price_digital": 2430,
+   "publisher": "shopro"
+  },
+  {
+   "no": 3,
+   "title": "ベスト・オブ・アイアンマン",
+   "series": "ベスト・オブ・マーベル",
+   "isbn": "978-4-7968-7322-2",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 2970,
+   "price_digital": 2430,
+   "publisher": "shopro"
+  },
+  {
+   "no": 4,
+   "title": "ベスト・オブ・キャプテン・アメリカ",
+   "series": "ベスト・オブ・マーベル",
+   "isbn": "978-4-7968-7323-9",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 2970,
+   "price_digital": 2430,
+   "publisher": "shopro"
+  },
+  {
+   "no": 5,
+   "title": "ベスト・オブ・デッドプール",
+   "series": "ベスト・オブ・マーベル",
+   "isbn": "978-4-7968-7385-7",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 2970,
+   "price_digital": 2430,
+   "publisher": "shopro"
+  },
+  {
+   "no": 6,
+   "title": "ベスト・オブ・ヴェノム",
+   "series": "ベスト・オブ・マーベル",
+   "isbn": "978-4-7968-7384-0",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 2970,
+   "price_digital": 2430,
+   "publisher": "shopro"
+  },
+  {
+   "no": 7,
+   "title": "ベスト・オブ・アベンジャーズ",
+   "series": "ベスト・オブ・マーベル",
+   "isbn": "978-4-7968-7382-6",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 2970,
+   "price_digital": 2430,
+   "publisher": "shopro"
+  },
+  {
+   "no": 8,
+   "title": "ベスト・オブ・ファンタスティック・フォー",
+   "series": "ベスト・オブ・マーベル",
+   "isbn": "978-4-7968-7448-9",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 2970,
+   "price_digital": 2430,
+   "publisher": "shopro"
+  },
+  {
+   "no": 9,
+   "title": "ベスト・オブ・X-MEN",
+   "series": "ベスト・オブ・マーベル",
+   "isbn": "978-4-7968-7383-3",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 2970,
+   "price_digital": 2430,
+   "publisher": "shopro"
+  },
+  {
+   "no": 10,
+   "title": "スパイダーマン：ワン・モア・デイ",
+   "series": "スパイダーマン",
+   "isbn": "978-4-7968-7121-1",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 2090,
+   "price_digital": 1710,
+   "publisher": "shopro",
+   "screen": [
+    "ironheart(メフィスト文脈)"
+   ]
+  },
+  {
+   "no": 11,
+   "title": "スパイダーマン：ブランニュー・デイ 1",
+   "series": "スパイダーマン",
+   "isbn": "978-4-7968-7135-8",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 2310,
+   "price_digital": 1890,
+   "publisher": "shopro"
+  },
+  {
+   "no": 12,
+   "title": "スパイダーマン：ブランニュー・デイ 2",
+   "series": "スパイダーマン",
+   "isbn": "978-4-7968-7136-5",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 2200,
+   "price_digital": 1800,
+   "publisher": "shopro"
+  },
+  {
+   "no": 13,
+   "title": "スパイダーマン：ブランニュー・デイ 3",
+   "series": "スパイダーマン",
+   "isbn": "978-4-7968-7137-2",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 2090,
+   "price_digital": 1710,
+   "publisher": "shopro"
+  },
+  {
+   "no": 14,
+   "title": "スパイダーマン：ニューウェイズ・トゥ・ダイ",
+   "series": "スパイダーマン",
+   "isbn": "978-4-7968-7171-6",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 2310,
+   "price_digital": 1890,
+   "publisher": "shopro"
+  },
+  {
+   "no": 15,
+   "title": "スパイダーマン：エレクション・デイ",
+   "series": "スパイダーマン",
+   "isbn": "978-4-7968-7174-7",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 2310,
+   "price_digital": 1890,
+   "publisher": "shopro"
+  },
+  {
+   "no": 16,
+   "title": "スパイダーマン：アメリカン・サン",
+   "series": "スパイダーマン",
+   "isbn": "978-4-7968-7180-8",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 2090,
+   "price_digital": 1710,
+   "publisher": "shopro"
+  },
+  {
+   "no": 17,
+   "title": "スパイダーマン：スパイダーアイランド",
+   "series": "スパイダーマン",
+   "isbn": "978-4-7968-7865-4",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 3300,
+   "price_digital": 2700,
+   "publisher": "shopro"
+  },
+  {
+   "no": 18,
+   "title": "スパイダーマン：クローン・コンスピラシー",
+   "series": "スパイダーマン",
+   "isbn": "978-4-7968-7884-5",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 2530,
+   "price_digital": 2070,
+   "publisher": "shopro"
+  },
+  {
+   "no": 19,
+   "title": "スパイダーマン：ワールド・ウィズアウト・ラブ",
+   "series": "スパイダーマン",
+   "isbn": "978-4-7968-7404-5",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 2860,
+   "price_digital": 2340,
+   "publisher": "shopro"
+  },
+  {
+   "no": 20,
+   "title": "スパイダーマン：ニュー・シニスタ―",
+   "series": "スパイダーマン",
+   "isbn": "978-4-7968-7405-2",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 2970,
+   "price_digital": 2430,
+   "publisher": "shopro"
+  },
+  {
+   "no": 21,
+   "title": "スパイダーマン：ホブゴブリン",
+   "series": "スパイダーマン",
+   "isbn": "978-4-7968-7406-9",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 2860,
+   "price_digital": 2340,
+   "publisher": "shopro"
+  },
+  {
+   "no": 22,
+   "title": "ダーク・ウェブ",
+   "series": "スパイダーマン",
+   "isbn": "978-4-7968-7407-6",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 5500,
+   "price_digital": 4500,
+   "publisher": "shopro"
+  },
+  {
+   "no": 23,
+   "title": "スパイダーマン：デッド・ランゲージ",
+   "series": "スパイダーマン",
+   "isbn": "978-4-7968-7408-3",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 4620,
+   "price_digital": 3780,
+   "publisher": "shopro"
+  },
+  {
+   "no": 24,
+   "title": "スパイダーマン：ステイシーの悲劇",
+   "series": "スパイダーマン",
+   "isbn": "978-4-7968-7512-7",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 2200,
+   "price_digital": 1800,
+   "publisher": "shopro"
+  },
+  {
+   "no": 25,
+   "title": "スパイダーマン：ワン・モーメント・イン・タイム",
+   "series": "スパイダーマン",
+   "isbn": "978-4-7968-7525-7",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 2200,
+   "price_digital": 1800,
+   "publisher": "shopro"
+  },
+  {
+   "no": 26,
+   "title": "スパイダーマン：クローン・サーガ・オリジナル",
+   "series": "スパイダーマン",
+   "isbn": "978-4-7968-7328-4",
+   "status": "流通限定",
+   "status_code": "R",
+   "price_paper": 4950,
+   "price_digital": 4050,
+   "publisher": "shopro"
+  },
+  {
+   "no": 27,
+   "title": "スパイダーマン：クローン・サーガ",
+   "series": "スパイダーマン",
+   "isbn": "978-4-7968-7351-2",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 5830,
+   "price_digital": 4770,
+   "publisher": "shopro"
+  },
+  {
+   "no": 28,
+   "title": "スパイダーマン：レイン",
+   "series": "スパイダーマン",
+   "isbn": "978-4-7968-7421-2",
+   "status": "流通限定",
+   "status_code": "R",
+   "price_paper": 4400,
+   "price_digital": 2430,
+   "publisher": "shopro"
+  },
+  {
+   "no": 29,
+   "title": "スペクタキュラー・スパイダーマン：イントゥ・ザ・トワイライト",
+   "series": "スパイダーマン",
+   "isbn": "978-4-7968-7738-1",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 2530,
+   "price_digital": 2070,
+   "publisher": "shopro"
+  },
+  {
+   "no": 30,
+   "title": "スパイダーマン：ライフストーリー",
+   "series": "スパイダーマン",
+   "isbn": "978-4-7968-7822-7",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 3080,
+   "price_digital": 2520,
+   "publisher": "shopro"
+  },
+  {
+   "no": 31,
+   "title": "スパイダーマン：フル・サークル",
+   "series": "スパイダーマン",
+   "isbn": "978-4-7968-7334-5",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 2640,
+   "price_digital": 2160,
+   "publisher": "shopro"
+  },
+  {
+   "no": 32,
+   "title": "スパイディ：ファースト・デイ",
+   "series": "スパイダーマン",
+   "isbn": "978-4-7968-7686-5",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 2310,
+   "price_digital": 1890,
+   "publisher": "shopro"
+  },
+  {
+   "no": 33,
+   "title": "スパイディ：アフタースクール・スペシャル",
+   "series": "スパイダーマン",
+   "isbn": "978-4-7968-7726-8",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 2310,
+   "price_digital": 1890,
+   "publisher": "shopro"
+  },
+  {
+   "no": 34,
+   "title": "スパイダーメン",
+   "series": "スパイダーマン",
+   "isbn": "978-4-7968-7737-4",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 2310,
+   "price_digital": 1890,
+   "publisher": "shopro"
+  },
+  {
+   "no": 35,
+   "title": "スパイダーメンⅡ",
+   "series": "スパイダーマン",
+   "isbn": "978-4-7968-7754-1",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 2310,
+   "price_digital": 1890,
+   "publisher": "shopro"
+  },
+  {
+   "no": 36,
+   "title": "ピーター・パーカー＆マイルス・モラレス スパイダーメン：ダブル・トラブル",
+   "series": "スパイダーマン",
+   "isbn": "978-4-7968-7403-8",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 2640,
+   "price_digital": 2160,
+   "publisher": "shopro"
+  },
+  {
+   "no": 37,
+   "title": "マイルス・モラレス：ストレイト・アウタ・ブルックリン",
+   "series": "マイルス・モラレス",
+   "isbn": "978-4-7968-7329-1",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 2750,
+   "price_digital": 2250,
+   "publisher": "shopro"
+  },
+  {
+   "no": 38,
+   "title": "マイルス・モラレス：ブリング・オン・ザ・バッド・ガイズ",
+   "series": "マイルス・モラレス",
+   "isbn": "978-4-7968-7386-4",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 2750,
+   "price_digital": 2250,
+   "publisher": "shopro"
+  },
+  {
+   "no": 39,
+   "title": "スパイダーグウェン",
+   "series": "スパイダーグウェン",
+   "isbn": "978-4-7968-7659-9",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 2310,
+   "price_digital": 1890,
+   "publisher": "shopro"
+  },
+  {
+   "no": 40,
+   "title": "スパイダーグウェン：グレイター・パワー",
+   "series": "スパイダーグウェン",
+   "isbn": "978-4-7968-7715-2",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 2310,
+   "price_digital": 1890,
+   "publisher": "shopro"
+  },
+  {
+   "no": 41,
+   "title": "スパイダーグウェン：ウェポン・オブ・チョイス",
+   "series": "スパイダーグウェン",
+   "isbn": "978-4-7968-7330-7",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 2530,
+   "price_digital": 2070,
+   "publisher": "shopro"
+  },
+  {
+   "no": 42,
+   "title": "スパイダーバース：スパイダーゼロ",
+   "series": "スパイダーバース",
+   "isbn": "978-4-7968-7409-0",
+   "status": "流通限定",
+   "status_code": "R",
+   "price_paper": 3740,
+   "price_digital": 3060,
+   "publisher": "shopro"
+  },
+  {
+   "no": 43,
+   "title": "エンド・オブ・ザ・スパイダーバース",
+   "series": "スパイダーバース",
+   "isbn": "978-4-7968-7410-6",
+   "status": "流通限定",
+   "status_code": "R",
+   "price_paper": 4400,
+   "price_digital": 3600,
+   "publisher": "shopro"
+  },
+  {
+   "no": 44,
+   "title": "スパイダーマン／スパイダーグウェン：シッティング・イン・ア・ツリー",
+   "series": "スパイダーバース関連",
+   "isbn": "978-4-7968-7413-7",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 2860,
+   "price_digital": 2340,
+   "publisher": "shopro"
+  },
+  {
+   "no": 45,
+   "title": "スパイダーマン・ノワール",
+   "series": "スパイダーバース関連",
+   "isbn": "978-4-7968-7331-4",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 2640,
+   "price_digital": 2160,
+   "publisher": "shopro"
+  },
+  {
+   "no": 46,
+   "title": "スパイダーハム",
+   "series": "スパイダーバース関連",
+   "isbn": "978-4-7968-7332-2",
+   "status": "流通限定",
+   "status_code": "R",
+   "price_paper": 2970,
+   "price_digital": 2430,
+   "publisher": "shopro"
+  },
+  {
+   "no": 47,
+   "title": "スパイダーマン2099：エクソダス",
+   "series": "スパイダーバース関連",
+   "isbn": "978-4-7968-7411-3",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 3300,
+   "price_digital": 2700,
+   "publisher": "shopro"
+  },
+  {
+   "no": 48,
+   "title": "スパイダーパンク：バトル・オブ・ザ・バンド",
+   "series": "スパイダーバース関連",
+   "isbn": "978-4-7968-7412-0",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 2640,
+   "price_digital": 2160,
+   "publisher": "shopro"
+  },
+  {
+   "no": 49,
+   "title": "スパイダーウィメン",
+   "series": "スパイダーバース関連",
+   "isbn": "978-4-7968-7325-3",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 3300,
+   "price_digital": 2700,
+   "publisher": "shopro"
+  },
+  {
+   "no": 50,
+   "title": "シルク",
+   "series": "スパイダーバース関連",
+   "isbn": "978-4-7968-7347-5",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 2640,
+   "price_digital": 2160,
+   "publisher": "shopro"
+  },
+  {
+   "no": 51,
+   "title": "スパイダーマン／ファンタスティック・フォー",
+   "series": "スパイダーマン／FF",
+   "isbn": "978-4-7968-7846-3",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 2640,
+   "price_digital": 2160,
+   "publisher": "shopro"
+  },
+  {
+   "no": 52,
+   "title": "スパイダーマン／デッドプール：プロローグ",
+   "series": "スパイダーマン／デッドプール",
+   "isbn": "978-4-7968-7682-7",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 2640,
+   "price_digital": 2160,
+   "publisher": "shopro"
+  },
+  {
+   "no": 53,
+   "title": "スパイダーマン／デッドプール：ブロマンス",
+   "series": "スパイダーマン／デッドプール",
+   "isbn": "978-4-7968-7688-9",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 2310,
+   "price_digital": 1890,
+   "publisher": "shopro"
+  },
+  {
+   "no": 54,
+   "title": "スパイダーマン／デッドプール：サイドピース",
+   "series": "スパイダーマン／デッドプール",
+   "isbn": "978-4-7968-7719-0",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 2200,
+   "price_digital": 1800,
+   "publisher": "shopro"
+  },
+  {
+   "no": 55,
+   "title": "スパイダーマン／デッドプール：イッツィ・ビッツィ",
+   "series": "スパイダーマン／デッドプール",
+   "isbn": "978-4-7968-7731-2",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 2310,
+   "price_digital": 1890,
+   "publisher": "shopro"
+  },
+  {
+   "no": 56,
+   "title": "続 スパイダーマン／デッドプール：破壊兵器、売ります",
+   "series": "スパイダーマン／デッドプール",
+   "isbn": "978-4-7968-7752-7",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 2310,
+   "price_digital": 1890,
+   "publisher": "shopro"
+  },
+  {
+   "no": 57,
+   "title": "続 スパイダーマン／デッドプール：デップ―が多すぎる",
+   "series": "スパイダーマン／デッドプール",
+   "isbn": "978-4-7968-7755-8",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 2310,
+   "price_digital": 1890,
+   "publisher": "shopro"
+  },
+  {
+   "no": 58,
+   "title": "続 スパイダーマン／デッドプール：スパデプ、パパになる",
+   "series": "スパイダーマン／デッドプール",
+   "isbn": "978-4-7968-7826-5",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 2640,
+   "price_digital": 2160,
+   "publisher": "shopro"
+  },
+  {
+   "no": 59,
+   "title": "続 スパイダーマン／デッドプール：スパデプの異次元旅行",
+   "series": "スパイダーマン／デッドプール",
+   "isbn": "978-4-7968-7837-1",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 2310,
+   "price_digital": 1890,
+   "publisher": "shopro"
+  },
+  {
+   "no": 60,
+   "title": "続 スパイダーマン／デッドプール：スパデプよ永遠に",
+   "series": "スパイダーマン／デッドプール",
+   "isbn": "978-4-7968-7843-2",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 2420,
+   "price_digital": 1980,
+   "publisher": "shopro"
+  },
+  {
+   "no": 61,
+   "title": "スーペリア・フォーズ・オブ・スパイダーマン：嘘つきは泥棒（ヴィラン）のはじまり",
+   "series": "スパイダーマン関連",
+   "isbn": "978-4-7968-7829-6",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 2530,
+   "price_digital": 2070,
+   "publisher": "shopro"
+  },
+  {
+   "no": 62,
+   "title": "スーペリア・フォーズ・オブ・スパイダーマン：盗人（ヴィラン）にも三分の理",
+   "series": "スパイダーマン関連",
+   "isbn": "978-4-7968-7841-8",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 2420,
+   "price_digital": 1980,
+   "publisher": "shopro"
+  },
+  {
+   "no": 63,
+   "title": "スーペリア・フォーズ・オブ・スパイダーマン：悪人（ヴィラン）には友多し",
+   "series": "スパイダーマン関連",
+   "isbn": "978-4-7968-7847-0",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 2640,
+   "price_digital": 2160,
+   "publisher": "shopro"
+  },
+  {
+   "no": 64,
+   "title": "ハウス・オブ・X／パワーズ・オブ・Ｘ",
+   "series": "X-MEN",
+   "isbn": "978-4-7968-7848-7",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 5280,
+   "price_digital": 4320,
+   "publisher": "shopro",
+   "screen": [
+    "MCU版X-MEN予習"
+   ],
+   "doomsday_prep": true
+  },
+  {
+   "no": 65,
+   "title": "X-MEN Vol.1：黎明",
+   "series": "X-MEN",
+   "isbn": "978-4-7968-7312-3",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 2750,
+   "price_digital": 2250,
+   "publisher": "shopro"
+  },
+  {
+   "no": 66,
+   "title": "X-MEN Vol.2：戦雲",
+   "series": "X-MEN",
+   "isbn": "978-4-7968-7339-0",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 2860,
+   "price_digital": 2340,
+   "publisher": "shopro"
+  },
+  {
+   "no": 67,
+   "title": "X-MEN Vol.3：弔愛",
+   "series": "X-MEN",
+   "isbn": "978-4-7968-7340-6",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 2860,
+   "price_digital": 2340,
+   "publisher": "shopro"
+  },
+  {
+   "no": 68,
+   "title": "X・オブ・ソーズ",
+   "series": "X-MEN",
+   "isbn": "978-4-7968-7341-3",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 8800,
+   "price_digital": 7200,
+   "publisher": "shopro"
+  },
+  {
+   "no": 69,
+   "title": "X-MEN：ヘルファイア・ガラ",
+   "series": "X-MEN",
+   "isbn": "978-4-7968-7342-0",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 2860,
+   "price_digital": 2340,
+   "publisher": "shopro"
+  },
+  {
+   "no": 70,
+   "title": "X-MEN：トライアル・オブ・マグニートー",
+   "series": "X-MEN",
+   "isbn": "978-4-7968-7343-7",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 2860,
+   "price_digital": 2340,
+   "publisher": "shopro"
+  },
+  {
+   "no": 71,
+   "title": "インフェルノ",
+   "series": "X-MEN",
+   "isbn": "978-4-7968-7344-4",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 3520,
+   "price_digital": 2880,
+   "publisher": "shopro"
+  },
+  {
+   "no": 72,
+   "title": "X・ライブズ・オブ・ウルヴァリン／X・デス・オブ・ウルヴァリン",
+   "series": "X-MEN",
+   "isbn": "978-4-7968-7345-1",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 4620,
+   "price_digital": 3780,
+   "publisher": "shopro"
+  },
+  {
+   "no": 73,
+   "title": "X-MEN Vol.1：栄華",
+   "series": "X-MEN",
+   "isbn": "978-4-7968-7391-8",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 3300,
+   "price_digital": 2700,
+   "publisher": "shopro"
+  },
+  {
+   "no": 74,
+   "title": "X-MEN Vol.2：徒花",
+   "series": "X-MEN",
+   "isbn": "978-4-7968-7392-5",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 3300,
+   "price_digital": 2700,
+   "publisher": "shopro"
+  },
+  {
+   "no": 75,
+   "title": "X-MEN Vol.3：双樹",
+   "series": "X-MEN",
+   "isbn": "978-4-7968-7393-2",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 3850,
+   "price_digital": 3150,
+   "publisher": "shopro"
+  },
+  {
+   "no": 76,
+   "title": "X-MEN Vol.4：侵蝕",
+   "series": "X-MEN",
+   "isbn": null,
+   "status": "流通限定",
+   "status_code": "R",
+   "price_paper": 4290,
+   "price_digital": 3510,
+   "publisher": "shopro"
+  },
+  {
+   "no": 77,
+   "title": "イモータルX-MEN Vol.1：不滅",
+   "series": "X-MEN",
+   "isbn": "978-4-7968-7395-6",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 3520,
+   "price_digital": 2880,
+   "publisher": "shopro"
+  },
+  {
+   "no": 78,
+   "title": "イモータルX-MEN Vol.2：不義",
+   "series": "X-MEN",
+   "isbn": null,
+   "status": "流通限定",
+   "status_code": "R",
+   "price_paper": 3520,
+   "price_digital": 2880,
+   "publisher": "shopro"
+  },
+  {
+   "no": 79,
+   "title": "イモータルX-MEN Vol.3：不和",
+   "series": "X-MEN",
+   "isbn": null,
+   "status": "流通限定",
+   "status_code": "R",
+   "price_paper": 3520,
+   "price_digital": 2880,
+   "publisher": "shopro"
+  },
+  {
+   "no": 80,
+   "title": "X-MEN：ヘルファイア・ガラ／イモータル",
+   "series": "X-MEN",
+   "isbn": "978-4-7968-7398-7",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 3520,
+   "price_digital": 2880,
+   "publisher": "shopro"
+  },
+  {
+   "no": 81,
+   "title": "A.X.E.: ジャッジメント・デイ",
+   "series": "X-MEN",
+   "isbn": "978-4-7968-7399-4",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 4180,
+   "price_digital": 3420,
+   "publisher": "shopro"
+  },
+  {
+   "no": 82,
+   "title": "A.X.E.: ジャッジメント・デイ・コンパニオン",
+   "series": "X-MEN",
+   "isbn": null,
+   "status": "流通限定",
+   "status_code": "R",
+   "price_paper": 5060,
+   "price_digital": 4140,
+   "publisher": "shopro"
+  },
+  {
+   "no": 83,
+   "title": "シンズ・オブ・シニスタ―",
+   "series": "X-MEN",
+   "isbn": null,
+   "status": "流通限定",
+   "status_code": "R",
+   "price_paper": 7590,
+   "price_digital": 6210,
+   "publisher": "shopro"
+  },
+  {
+   "no": 84,
+   "title": "X-MEN：ヘルファイア・ガラ／フォール・オブ・X",
+   "series": "X-MEN",
+   "isbn": "978-4-7968-7402-1",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 3740,
+   "price_digital": 3060,
+   "publisher": "shopro"
+  },
+  {
+   "no": 85,
+   "title": "X-MEN：シーズンワン",
+   "series": "X-MEN",
+   "isbn": "978-4-7968-7604-9",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 2200,
+   "price_digital": 1800,
+   "publisher": "shopro"
+  },
+  {
+   "no": 86,
+   "title": "X-MEN:ファーストクラス 明日への架け橋",
+   "series": "X-MEN",
+   "isbn": "978-4-7968-7094-8",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 2420,
+   "price_digital": 1980,
+   "publisher": "shopro"
+  },
+  {
+   "no": 87,
+   "title": "A+X：アベンジャーズ＋X-MEN＝最強",
+   "series": "X-MEN／アベンジャーズ",
+   "isbn": "978-4-7968-7551-6",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 2200,
+   "price_digital": 1800,
+   "publisher": "shopro"
+  },
+  {
+   "no": 88,
+   "title": "X-MEN VS. アベンジャーズ（プレミア・クラシック）",
+   "series": "X-MEN／アベンジャーズ",
+   "isbn": "978-4-7968-7758-9",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 2530,
+   "price_digital": 2070,
+   "publisher": "shopro"
+  },
+  {
+   "no": 89,
+   "title": "A+X：アベンジャーズ+X-MEN=最驚",
+   "series": "X-MEN／アベンジャーズ",
+   "isbn": "978-4-7968-7650-6",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 2200,
+   "price_digital": 1800,
+   "publisher": "shopro"
+  },
+  {
+   "no": 90,
+   "title": "X-MEN／スパイダーマン",
+   "series": "X-MEN／スパイダーマン",
+   "isbn": "978-4-7968-7517-2",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 1980,
+   "price_digital": 1620,
+   "publisher": "shopro"
+  },
+  {
+   "no": 91,
+   "title": "アルティメッツ",
+   "series": "アベンジャーズ",
+   "isbn": "978-4-7968-7138-9",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 3520,
+   "price_digital": 2880,
+   "publisher": "shopro"
+  },
+  {
+   "no": 92,
+   "title": "アルティメッツ２",
+   "series": "アベンジャーズ",
+   "isbn": "978-4-7968-7184-6",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 4180,
+   "price_digital": 3420,
+   "publisher": "shopro"
+  },
+  {
+   "no": 93,
+   "title": "アベンジャーズ：シーズンワン",
+   "series": "アベンジャーズ",
+   "isbn": "978-4-7968-7522-6",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 2200,
+   "price_digital": 1800,
+   "publisher": "shopro"
+  },
+  {
+   "no": 94,
+   "title": "アベンジャーズ：プレリュード",
+   "series": "アベンジャーズ",
+   "isbn": "978-4-7968-7126-6",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 1980,
+   "price_digital": 1620,
+   "publisher": "shopro"
+  },
+  {
+   "no": 95,
+   "title": "アベンジャーズ／エイジ・オブ・ウルトロン：プレリュード",
+   "series": "アベンジャーズ",
+   "isbn": "978-4-7968-7550-9",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 2420,
+   "price_digital": 1980,
+   "publisher": "shopro"
+  },
+  {
+   "no": 96,
+   "title": "インフィニティ・ガントレット",
+   "series": "マーベル・ユニバース",
+   "isbn": "978-4-7968-7627-8",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 3080,
+   "price_digital": 2520,
+   "publisher": "shopro",
+   "screen": [
+    "infinity-war",
+    "endgame"
+   ],
+   "doomsday_prep": true
+  },
+  {
+   "no": 97,
+   "title": "インフィニティ・カウントダウン",
+   "series": "マーベル・ユニバース",
+   "isbn": "978-4-7968-7314-7",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 3740,
+   "price_digital": 3060,
+   "publisher": "shopro"
+  },
+  {
+   "no": 98,
+   "title": "インフィニティ・ウォーズ",
+   "series": "マーベル・ユニバース",
+   "isbn": "978-4-7968-7315-4",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 4070,
+   "price_digital": 3330,
+   "publisher": "shopro"
+  },
+  {
+   "no": 99,
+   "title": "インフィニティ・ワープス",
+   "series": "マーベル・ユニバース",
+   "isbn": "978-4-7968-7316-1",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 4620,
+   "price_digital": 3780,
+   "publisher": "shopro"
+  },
+  {
+   "no": 100,
+   "title": "ウォー・オブ・ザ・レルムス",
+   "series": "マーベル・ユニバース",
+   "isbn": "978-4-7968-7335-2",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 3300,
+   "price_digital": 2700,
+   "publisher": "shopro"
+  },
+  {
+   "no": 101,
+   "title": "アベンジャーズ／ファンタスティック・フォー：エンパイヤ",
+   "series": "マーベル・ユニバース",
+   "isbn": "978-4-7968-7336-9",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 4400,
+   "price_digital": 3600,
+   "publisher": "shopro"
+  },
+  {
+   "no": 102,
+   "title": "アベンジャーズ：ヒーローズ・リボーン",
+   "series": "マーベル・ユニバース",
+   "isbn": "978-4-7968-7338-3",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 3850,
+   "price_digital": 3150,
+   "publisher": "shopro"
+  },
+  {
+   "no": 103,
+   "title": "アイデンティティ・ウォー：デッドプール／スパイダーマン／ハルク",
+   "series": "マーベル・ユニバース",
+   "isbn": "978-4-7968-7554-7",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 1980,
+   "price_digital": 1620,
+   "publisher": "shopro"
+  },
+  {
+   "no": 104,
+   "title": "ホワット・イフ？ side A",
+   "series": "マーベル・ユニバース",
+   "isbn": "978-4-7968-7830-2",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 2970,
+   "price_digital": 2430,
+   "publisher": "shopro",
+   "screen": [
+    "what-if"
+   ]
+  },
+  {
+   "no": 105,
+   "title": "ホワット・イフ？ side B",
+   "series": "マーベル・ユニバース",
+   "isbn": "978-4-7968-7842-5",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 2750,
+   "price_digital": 2250,
+   "publisher": "shopro",
+   "screen": [
+    "what-if"
+   ]
+  },
+  {
+   "no": 106,
+   "title": "マーベルズ",
+   "series": "マーベル・ユニバース",
+   "isbn": "978-4-7968-7157-0",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 2530,
+   "price_digital": 2070,
+   "publisher": "shopro"
+  },
+  {
+   "no": 107,
+   "title": "マーベルズ・スナップショット",
+   "series": "マーベル・ユニバース",
+   "isbn": "978-4-7968-7420-5",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 4620,
+   "price_digital": 3780,
+   "publisher": "shopro"
+  },
+  {
+   "no": 108,
+   "title": "イヤー・オブ・マーベルズ",
+   "series": "マーベル・ユニバース",
+   "isbn": "978-4-7968-7699-5",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 2640,
+   "price_digital": 2160,
+   "publisher": "shopro"
+  },
+  {
+   "no": 109,
+   "title": "マーベル：ダーク・エイジズ",
+   "series": "マーベル・ユニバース",
+   "isbn": "978-4-7968-7349-9",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 2970,
+   "price_digital": 2430,
+   "publisher": "shopro"
+  },
+  {
+   "no": 110,
+   "title": "テック・オン・アベンジャーズ",
+   "series": "マーベル・ユニバース",
+   "isbn": "978-4-7968-7883-8",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 2750,
+   "price_digital": 2250,
+   "publisher": "shopro"
+  },
+  {
+   "no": 111,
+   "title": "アベンジャーズ・メカニカル・ストライク",
+   "series": "マーベル・ユニバース",
+   "isbn": "978-4-7968-7878-4",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 2530,
+   "price_digital": 2070,
+   "publisher": "shopro"
+  },
+  {
+   "no": 112,
+   "title": "マーベル・ミャオ",
+   "series": "マーベル・ユニバース",
+   "isbn": "978-4-7968-7793-0",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 1540,
+   "price_digital": 1260,
+   "publisher": "shopro"
+  },
+  {
+   "no": 113,
+   "title": "マーベル　ツムツム：テイクオーバー！",
+   "series": "マーベル・ユニバース",
+   "isbn": "978-4-7968-7672-8",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 1980,
+   "price_digital": 1620,
+   "publisher": "shopro"
+  },
+  {
+   "no": 114,
+   "title": "マーベル・シネマティック・ユニバース・ガイドブック",
+   "series": "マーベル・ユニバース",
+   "isbn": "978-4-7968-8035-0",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 2970,
+   "price_digital": 2430,
+   "publisher": "shopro"
+  },
+  {
+   "no": 115,
+   "title": "マーベル・スーパーヒーローズ",
+   "series": "マーベル・ユニバース",
+   "isbn": "978-4-7968-7756-5",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 2420,
+   "price_digital": 1980,
+   "publisher": "shopro"
+  },
+  {
+   "no": 116,
+   "title": "デーモン・デイズ",
+   "series": "モモコバース",
+   "isbn": "978-4-7968-7313-0",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 3300,
+   "price_digital": 2700,
+   "publisher": "shopro"
+  },
+  {
+   "no": 117,
+   "title": "デーモン・ウォーズ",
+   "series": "モモコバース",
+   "isbn": "978-4-7968-7390-1",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 2970,
+   "price_digital": 2430,
+   "publisher": "shopro"
+  },
+  {
+   "no": 118,
+   "title": "スパイダーマン：ブルー",
+   "series": "マーベルカラーシリーズ",
+   "isbn": "978-4-7968-7513-4",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 2200,
+   "price_digital": 1800,
+   "publisher": "shopro"
+  },
+  {
+   "no": 119,
+   "title": "デアデビル：イエロー",
+   "series": "マーベルカラーシリーズ",
+   "isbn": "978-4-7968-7598-1",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 2420,
+   "price_digital": 1980,
+   "publisher": "shopro"
+  },
+  {
+   "no": 120,
+   "title": "ハルク：グレイ",
+   "series": "マーベルカラーシリーズ",
+   "isbn": "978-4-7968-7694-0",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 2420,
+   "price_digital": 1980,
+   "publisher": "shopro"
+  },
+  {
+   "no": 121,
+   "title": "キャプテン・アメリカ：ホワイト",
+   "series": "マーベルカラーシリーズ",
+   "isbn": "978-4-7968-7611-7",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 2420,
+   "price_digital": 1980,
+   "publisher": "shopro"
+  },
+  {
+   "no": 122,
+   "title": "インビンシブル・アイアンマン：リブート",
+   "series": "アイアンマン",
+   "isbn": "978-4-7968-7729-9",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 2310,
+   "price_digital": 1890,
+   "publisher": "shopro"
+  },
+  {
+   "no": 123,
+   "title": "インビンシブル・アイアンマン：ウォーマシン",
+   "series": "アイアンマン",
+   "isbn": "978-4-7968-7732-9",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 2310,
+   "price_digital": 1890,
+   "publisher": "shopro"
+  },
+  {
+   "no": 124,
+   "title": "インビンシブル・アイアンマン：アイアンハート",
+   "series": "アイアンマン",
+   "isbn": "978-4-7968-7888-3",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 2750,
+   "price_digital": 2250,
+   "publisher": "shopro",
+   "screen": [
+    "ironheart"
+   ]
+  },
+  {
+   "no": 125,
+   "title": "インビンシブル・アイアンマン：アイアンハート２／リリの選択",
+   "series": "アイアンマン",
+   "isbn": "978-4-7968-7333-8",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 2970,
+   "price_digital": 2430,
+   "publisher": "shopro",
+   "screen": [
+    "ironheart"
+   ]
+  },
+  {
+   "no": 126,
+   "title": "インビンシブル・アイアンマン：サーチ・フォー・トニー・スターク",
+   "series": "アイアンマン",
+   "isbn": "978-4-7968-7326-0",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 3300,
+   "price_digital": 2700,
+   "publisher": "shopro"
+  },
+  {
+   "no": 127,
+   "title": "アイ・アム・アイアンマン",
+   "series": "アイアンマン",
+   "isbn": "978-4-7968-7072-6",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 2640,
+   "price_digital": 2160,
+   "publisher": "shopro"
+  },
+  {
+   "no": 128,
+   "title": "アイアンマン:エンター・ザ・マンダリン",
+   "series": "アイアンマン",
+   "isbn": "978-4-7968-7151-8",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 2200,
+   "price_digital": 1800,
+   "publisher": "shopro"
+  },
+  {
+   "no": 129,
+   "title": "アイアンマン2020：ロボット・レボリューション",
+   "series": "アイアンマン",
+   "isbn": "978-4-7968-7414-4",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 2860,
+   "price_digital": 2340,
+   "publisher": "shopro"
+  },
+  {
+   "no": 130,
+   "title": "アイアンマン３:プレリュード",
+   "series": "アイアンマン",
+   "isbn": "978-4-7968-7149-5",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 1980,
+   "price_digital": 1620,
+   "publisher": "shopro"
+  },
+  {
+   "no": 131,
+   "title": "キャプテン・アメリカ：ウィンターソルジャー",
+   "series": "キャプテン・アメリカ",
+   "isbn": "978-4-7968-7100-6",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 2860,
+   "price_digital": 2340,
+   "publisher": "shopro",
+   "screen": [
+    "cap-tws"
+   ]
+  },
+  {
+   "no": 132,
+   "title": "キャプテン・アメリカ：トゥルース",
+   "series": "キャプテン・アメリカ",
+   "isbn": "978-4-7968-7319-2",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 3850,
+   "price_digital": 3150,
+   "publisher": "shopro",
+   "screen": [
+    "cap-bnw(イザイア・ブラッドリー)"
+   ]
+  },
+  {
+   "no": 133,
+   "title": "ザ・ユナイテッド・ステイツ・オブ・キャプテン・アメリカ",
+   "series": "キャプテン・アメリカ",
+   "isbn": "978-4-7968-7415-1",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 3080,
+   "price_digital": 2520,
+   "publisher": "shopro"
+  },
+  {
+   "no": 134,
+   "title": "オールニュー・キャプテン・アメリカ：ヒドラの逆襲",
+   "series": "キャプテン・アメリカ",
+   "isbn": "978-4-7968-7868-5",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 2640,
+   "price_digital": 2160,
+   "publisher": "shopro"
+  },
+  {
+   "no": 135,
+   "title": "シビル・ウォー／キャプテン・アメリカ：プレリュード",
+   "series": "キャプテン・アメリカ",
+   "isbn": "978-4-7968-7591-2",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 2200,
+   "price_digital": 1800,
+   "publisher": "shopro"
+  },
+  {
+   "no": 136,
+   "title": "ファルコン＆ウィンター・ソルジャー",
+   "series": "ファルコン／ウィンター・ソルジャー",
+   "isbn": "978-4-7968-7815-9",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 2310,
+   "price_digital": 1890,
+   "publisher": "shopro",
+   "screen": [
+    "fatws"
+   ]
+  },
+  {
+   "no": 137,
+   "title": "サンダーボルツ",
+   "series": "サンダーボルツ",
+   "isbn": "978-4-7968-7445-8",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 3300,
+   "price_digital": 2700,
+   "publisher": "shopro",
+   "screen": [
+    "thunderbolts"
+   ]
+  },
+  {
+   "no": 138,
+   "title": "マイティ・ソー：アスガルドの伝説",
+   "series": "ソー",
+   "isbn": "978-4-7968-7095-5",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 2860,
+   "price_digital": 2340,
+   "publisher": "shopro"
+  },
+  {
+   "no": 139,
+   "title": "アストニッシング・ソー",
+   "series": "ソー",
+   "isbn": "978-4-7968-7697-1",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 2200,
+   "price_digital": 1800,
+   "publisher": "shopro"
+  },
+  {
+   "no": 140,
+   "title": "マイティ・ソー：シーズンワン",
+   "series": "ソー",
+   "isbn": "978-4-7968-7693-3",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 2200,
+   "price_digital": 1800,
+   "publisher": "shopro"
+  },
+  {
+   "no": 141,
+   "title": "ソー＆ロキ：ダブル・トラブル",
+   "series": "ソー／ロキ",
+   "isbn": "978-4-7968-7877-7",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 2420,
+   "price_digital": 1980,
+   "publisher": "shopro"
+  },
+  {
+   "no": 142,
+   "title": "ソー＆ロキ：ブラッド・ブラザーズ",
+   "series": "ソー／ロキ",
+   "isbn": "978-4-7968-7593-6",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 2420,
+   "price_digital": 1980,
+   "publisher": "shopro"
+  },
+  {
+   "no": 143,
+   "title": "ロキ：地球に落ちて来た神",
+   "series": "ロキ",
+   "isbn": "978-4-7968-7867-8",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 2640,
+   "price_digital": 2160,
+   "publisher": "shopro"
+  },
+  {
+   "no": 144,
+   "title": "ブラック・ウィドウ：イッツィ・ビッツィ・スパイダー",
+   "series": "ブラック・ウィドウ",
+   "isbn": "978-4-7968-7812-8",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 2640,
+   "price_digital": 2160,
+   "publisher": "shopro"
+  },
+  {
+   "no": 145,
+   "title": "ブラック・ウィドウ：プレリュード",
+   "series": "ブラック・ウィドウ",
+   "isbn": "978-4-7968-7814-2",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 2420,
+   "price_digital": 1980,
+   "publisher": "shopro"
+  },
+  {
+   "no": 146,
+   "title": "ブラックパンサー：暁の黒豹",
+   "series": "ブラックパンサー",
+   "isbn": "978-4-7968-7590-5",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 2860,
+   "price_digital": 2340,
+   "publisher": "shopro"
+  },
+  {
+   "no": 147,
+   "title": "ブラックパンサー：黒豹を継ぐ者",
+   "series": "ブラックパンサー",
+   "isbn": "978-4-7968-7881-4",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 2750,
+   "price_digital": 2250,
+   "publisher": "shopro"
+  },
+  {
+   "no": 148,
+   "title": "ライズ・オブ・ザ・ブラックパンサー",
+   "series": "ブラックパンサー",
+   "isbn": "978-4-7968-7310-9",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 2750,
+   "price_digital": 2250,
+   "publisher": "shopro"
+  },
+  {
+   "no": 149,
+   "title": "ホークアイ：リトル・ヒッツ",
+   "series": "ホークアイ",
+   "isbn": "978-4-7968-7556-1",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 2200,
+   "price_digital": 1800,
+   "publisher": "shopro"
+  },
+  {
+   "no": 150,
+   "title": "ホークアイ：L.A.ウーマン",
+   "series": "ホークアイ",
+   "isbn": "978-4-7968-7567-7",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 2200,
+   "price_digital": 1800,
+   "publisher": "shopro"
+  },
+  {
+   "no": 151,
+   "title": "ホークアイ VS. デッドプール",
+   "series": "ホークアイ",
+   "isbn": "978-4-7968-7596-7",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 2420,
+   "price_digital": 1980,
+   "publisher": "shopro"
+  },
+  {
+   "no": 152,
+   "title": "ホークアイ：マイ・ライフ・アズ・ア・ウェポン",
+   "series": "ホークアイ",
+   "isbn": "978-4-7968-7523-3",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 2420,
+   "price_digital": 1980,
+   "publisher": "shopro"
+  },
+  {
+   "no": 153,
+   "title": "ホークアイ：リオ・ブラボー",
+   "series": "ホークアイ",
+   "isbn": "978-4-7968-7583-7",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 2420,
+   "price_digital": 1980,
+   "publisher": "shopro"
+  },
+  {
+   "no": 154,
+   "title": "ドクター・ストレンジ＆ドクター・ドゥーム",
+   "series": "ドクター・ストレンジ",
+   "isbn": "978-4-7968-7670-4",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 2420,
+   "price_digital": 1980,
+   "publisher": "shopro"
+  },
+  {
+   "no": 155,
+   "title": "ドクター・ストレンジ：ゴッド・オブ・マジック",
+   "series": "ドクター・ストレンジ",
+   "isbn": "978-4-7968-7869-2",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 2640,
+   "price_digital": 2160,
+   "publisher": "shopro"
+  },
+  {
+   "no": 156,
+   "title": "ドクター・ストレンジ：プレリュード",
+   "series": "ドクター・ストレンジ",
+   "isbn": "978-4-7968-7647-6",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 2200,
+   "price_digital": 1800,
+   "publisher": "shopro"
+  },
+  {
+   "no": 157,
+   "title": "ドクター・ストレンジ：シーズンワン",
+   "series": "ドクター・ストレンジ",
+   "isbn": "978-4-7968-7626-1",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 2200,
+   "price_digital": 1800,
+   "publisher": "shopro"
+  },
+  {
+   "no": 158,
+   "title": "ストレンジ・アカデミー１：ファースト・クラス",
+   "series": "ストレンジ・アカデミー",
+   "isbn": "978-4-7968-7844-9",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 2640,
+   "price_digital": 2160,
+   "publisher": "shopro"
+  },
+  {
+   "no": 159,
+   "title": "ストレンジ・アカデミー２：ブライト・サイド",
+   "series": "ストレンジ・アカデミー",
+   "isbn": "978-4-7968-7885-2",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 2750,
+   "price_digital": 2250,
+   "publisher": "shopro"
+  },
+  {
+   "no": 160,
+   "title": "ストレンジ・アカデミー３：ウィッシュクラフト",
+   "series": "ストレンジ・アカデミー",
+   "isbn": "978-4-7968-7388-8",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 2860,
+   "price_digital": 2340,
+   "publisher": "shopro"
+  },
+  {
+   "no": 161,
+   "title": "ストレンジ・アカデミー４：ファイナルズ",
+   "series": "ストレンジ・アカデミー",
+   "isbn": "978-4-7968-7389-5",
+   "status": "流通限定",
+   "status_code": "R",
+   "price_paper": 4950,
+   "price_digital": 4050,
+   "publisher": "shopro"
+  },
+  {
+   "no": 162,
+   "title": "アントマン：シーズンワン",
+   "series": "アントマン",
+   "isbn": "978-4-7968-7529-5",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 2200,
+   "price_digital": 1800,
+   "publisher": "shopro"
+  },
+  {
+   "no": 163,
+   "title": "アントマン：プレリュード",
+   "series": "アントマン",
+   "isbn": "978-4-7968-7557-8",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 2200,
+   "price_digital": 1800,
+   "publisher": "shopro"
+  },
+  {
+   "no": 164,
+   "title": "ヤング・アベンジャーズ：サイド・キックス",
+   "series": "ヤング・アベンジャーズ",
+   "isbn": "978-4-7968-7871-5",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 2750,
+   "price_digital": 2250,
+   "publisher": "shopro"
+  },
+  {
+   "no": 165,
+   "title": "ヤング・アベンジャーズ：ファミリー・マターズ",
+   "series": "ヤング・アベンジャーズ",
+   "isbn": "978-4-7968-7311-6",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 3080,
+   "price_digital": 2520,
+   "publisher": "shopro"
+  },
+  {
+   "no": 166,
+   "title": "アベンジャーズ：チルドレンズ・クルセイド",
+   "series": "ヤング・アベンジャーズ",
+   "isbn": "978-4-7968-7324-6",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 3410,
+   "price_digital": 2790,
+   "publisher": "shopro",
+   "screen": [
+    "wandavision",
+    "ヤング・アベンジャーズ企画?"
+   ]
+  },
+  {
+   "no": 167,
+   "title": "チャンピオンズ：チェンジ・ザ・ワールド",
+   "series": "チャンピオンズ",
+   "isbn": "978-4-7968-7827-2",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 2530,
+   "price_digital": 2070,
+   "publisher": "shopro"
+  },
+  {
+   "no": 168,
+   "title": "チャンピオンズ：フリーランサー・ライフスタイル",
+   "series": "チャンピオンズ",
+   "isbn": "978-4-7968-7839-5",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 2640,
+   "price_digital": 2160,
+   "publisher": "shopro"
+  },
+  {
+   "no": 169,
+   "title": "アベンジャーズ＆チャンピオンズ：ワールド・コライド",
+   "series": "チャンピオンズ",
+   "isbn": "978-4-7968-7870-8",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 3190,
+   "price_digital": 2610,
+   "publisher": "shopro"
+  },
+  {
+   "no": 170,
+   "title": "ウエスト・コースト・アベンジャーズ：あぶない!? 新チーム誕生",
+   "series": "ウエスト・コースト・アベンジャーズ",
+   "isbn": "978-4-7968-7828-9",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 2530,
+   "price_digital": 2070,
+   "publisher": "shopro",
+   "screen": [
+    "wonder-man?(WCA)"
+   ]
+  },
+  {
+   "no": 171,
+   "title": "ウエスト・コースト・アベンジャーズ：怒りのサンダードーム",
+   "series": "ウエスト・コースト・アベンジャーズ",
+   "isbn": "978-4-7968-7840-1",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 2640,
+   "price_digital": 2160,
+   "publisher": "shopro",
+   "screen": [
+    "wonder-man?(WCA)"
+   ]
+  },
+  {
+   "no": 172,
+   "title": "インヒューマンズ",
+   "series": "インヒューマンズ",
+   "isbn": "978-4-7968-7723-7",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 3520,
+   "price_digital": 2880,
+   "publisher": "shopro"
+  },
+  {
+   "no": 173,
+   "title": "イモータル・アイアンフィスト",
+   "series": "アイアンフィスト",
+   "isbn": "978-4-7968-7667-4",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 2420,
+   "price_digital": 1980,
+   "publisher": "shopro"
+  },
+  {
+   "no": 174,
+   "title": "ヴェノム：リーサル・プロテクター",
+   "series": "ヴェノム",
+   "isbn": "978-4-7968-7753-4",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 2420,
+   "price_digital": 1980,
+   "publisher": "shopro"
+  },
+  {
+   "no": 175,
+   "title": "スパイダーマン：ヴェノム・インク",
+   "series": "ヴェノム",
+   "isbn": "978-4-7968-7820-3",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 2640,
+   "price_digital": 2160,
+   "publisher": "shopro"
+  },
+  {
+   "no": 176,
+   "title": "キング・イン・ブラック",
+   "series": "ヴェノム",
+   "isbn": "978-4-7968-7337-6",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 2970,
+   "price_digital": 2430,
+   "publisher": "shopro"
+  },
+  {
+   "no": 177,
+   "title": "エクストリーム・ヴェノムバース",
+   "series": "ヴェノム",
+   "isbn": "978-4-7968-7419-9",
+   "status": "流通限定",
+   "status_code": "R",
+   "price_paper": 3960,
+   "price_digital": 3240,
+   "publisher": "shopro"
+  },
+  {
+   "no": 178,
+   "title": "スパイダーマン：ヴェノム VS. カーネイジ",
+   "series": "ヴェノム",
+   "isbn": "978-4-7968-7744-2",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 1980,
+   "price_digital": 1620,
+   "publisher": "shopro"
+  },
+  {
+   "no": 179,
+   "title": "アブソリュート・カーネイジ",
+   "series": "ヴェノム／カーネイジ",
+   "isbn": "978-4-7968-7836-4",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 2970,
+   "price_digital": 2430,
+   "publisher": "shopro"
+  },
+  {
+   "no": 180,
+   "title": "カーネイジ：ブラック、ホワイト＆ブラッド",
+   "series": "ヴェノム／カーネイジ",
+   "isbn": "978-4-7968-7887-6",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 2750,
+   "price_digital": 2250,
+   "publisher": "shopro"
+  },
+  {
+   "no": 181,
+   "title": "X-MEN ウルヴァリン：オリジン",
+   "series": "ウルヴァリン",
+   "isbn": "978-4-7968-7060-3",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 2750,
+   "price_digital": 2250,
+   "publisher": "shopro"
+  },
+  {
+   "no": 182,
+   "title": "ウルヴァリン:エネミー・オブ・ステイト",
+   "series": "ウルヴァリン",
+   "isbn": "978-4-7968-7162-4",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 3520,
+   "price_digital": 2880,
+   "publisher": "shopro"
+  },
+  {
+   "no": 183,
+   "title": "ウルヴァリン：バック・イン・ジャパン",
+   "series": "ウルヴァリン",
+   "isbn": "978-4-7968-7676-6",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 2200,
+   "price_digital": 1800,
+   "publisher": "shopro"
+  },
+  {
+   "no": 184,
+   "title": "ウルヴァリン：シーズンワン",
+   "series": "ウルヴァリン",
+   "isbn": "978-4-7968-7673-5",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 2200,
+   "price_digital": 1800,
+   "publisher": "shopro"
+  },
+  {
+   "no": 185,
+   "title": "ウルヴァリン：ブラック、ホワイト＆ブラッド",
+   "series": "ウルヴァリン",
+   "isbn": "978-4-7968-7874-6",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 2750,
+   "price_digital": 2250,
+   "publisher": "shopro"
+  },
+  {
+   "no": 186,
+   "title": "デッドプール Vol.1：デッド・プレジデント",
+   "series": "デッドプール",
+   "isbn": "978-4-7968-7566-0",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 1980,
+   "price_digital": 1620,
+   "publisher": "shopro"
+  },
+  {
+   "no": 187,
+   "title": "デッドプール Vol.2：ソウル・ハンター",
+   "series": "デッドプール",
+   "isbn": "978-4-7968-7568-4",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 1980,
+   "price_digital": 1620,
+   "publisher": "shopro"
+  },
+  {
+   "no": 188,
+   "title": "デッドプール Vol.3：グッド・バッド・アンド・アグリー",
+   "series": "デッドプール",
+   "isbn": "978-4-7968-7569-1",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 2200,
+   "price_digital": 1800,
+   "publisher": "shopro"
+  },
+  {
+   "no": 189,
+   "title": "デッドプール Vol.4：デッドプール VS. シールド",
+   "series": "デッドプール",
+   "isbn": "978-4-7968-7585-1",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 1980,
+   "price_digital": 1620,
+   "publisher": "shopro"
+  },
+  {
+   "no": 190,
+   "title": "デッドプール：ドラキュラズ・ガントレット",
+   "series": "デッドプール",
+   "isbn": "978-4-7968-7597-4",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 2640,
+   "price_digital": 2160,
+   "publisher": "shopro"
+  },
+  {
+   "no": 191,
+   "title": "デッドプール Vol.5：ウェディング・オブ・デッドプール",
+   "series": "デッドプール",
+   "isbn": "978-4-7968-7601-8",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 2310,
+   "price_digital": 1890,
+   "publisher": "shopro"
+  },
+  {
+   "no": 192,
+   "title": "デッドプール Vol.6：オリジナル・シン",
+   "series": "デッドプール",
+   "isbn": "978-4-7968-7602-5",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 2200,
+   "price_digital": 1800,
+   "publisher": "shopro"
+  },
+  {
+   "no": 193,
+   "title": "デッドプール Vol.7：アクシス",
+   "series": "デッドプール",
+   "isbn": "978-4-7968-7603-2",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 1980,
+   "price_digital": 1620,
+   "publisher": "shopro"
+  },
+  {
+   "no": 194,
+   "title": "デッドプール Vol.8：オール・グッド・シングス",
+   "series": "デッドプール",
+   "isbn": "978-4-7968-7618-6",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 2530,
+   "price_digital": 2070,
+   "publisher": "shopro"
+  },
+  {
+   "no": 195,
+   "title": "デッドプール：マーク・ウィズ・ア・マウス",
+   "series": "デッドプール",
+   "isbn": "978-4-7968-7167-9",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 3080,
+   "price_digital": 2520,
+   "publisher": "shopro"
+  },
+  {
+   "no": 196,
+   "title": "デッドプール：スーサイド・キングス",
+   "series": "デッドプール",
+   "isbn": "978-4-7968-7520-2",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 2200,
+   "price_digital": 1800,
+   "publisher": "shopro"
+  },
+  {
+   "no": 197,
+   "title": "デッドプール：モンキー・ビジネス",
+   "series": "デッドプール",
+   "isbn": "978-4-7968-7561-5",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 1980,
+   "price_digital": 1620,
+   "publisher": "shopro"
+  },
+  {
+   "no": 198,
+   "title": "デッドプール：デッド・ヘッド・リデンプション",
+   "series": "デッドプール",
+   "isbn": "978-4-7968-7528-8",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 2640,
+   "price_digital": 2160,
+   "publisher": "shopro"
+  },
+  {
+   "no": 199,
+   "title": "デッドプールの兵法入門",
+   "series": "デッドプール",
+   "isbn": "978-4-7968-7564-6",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 1540,
+   "price_digital": 1260,
+   "publisher": "shopro"
+  },
+  {
+   "no": 200,
+   "title": "デッドプール & ケーブル：スプリット・セカンド",
+   "series": "デッドプール",
+   "isbn": "978-4-7968-7649-0",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 1980,
+   "price_digital": 1620,
+   "publisher": "shopro"
+  },
+  {
+   "no": 201,
+   "title": "デッドプール：トゥー・スーン？",
+   "series": "デッドプール",
+   "isbn": "978-4-7968-7689-6",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 2200,
+   "price_digital": 1800,
+   "publisher": "shopro"
+  },
+  {
+   "no": 202,
+   "title": "デッドプール：バック・イン・ブラック",
+   "series": "デッドプール",
+   "isbn": "978-4-7968-7679-7",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 1980,
+   "price_digital": 1620,
+   "publisher": "shopro"
+  },
+  {
+   "no": 203,
+   "title": "デッドプール：ミリオネア・ウィズ・ア・マウス",
+   "series": "デッドプール",
+   "isbn": "978-4-7968-7692-6",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 1980,
+   "price_digital": 1620,
+   "publisher": "shopro"
+  },
+  {
+   "no": 204,
+   "title": "デッドプール：エンド・オブ・エラー",
+   "series": "デッドプール",
+   "isbn": "978-4-7968-7733-6",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 2310,
+   "price_digital": 1890,
+   "publisher": "shopro"
+  },
+  {
+   "no": 205,
+   "title": "デッドプール・ザ・ダック",
+   "series": "デッドプール",
+   "isbn": "978-4-7968-7735-0",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 2200,
+   "price_digital": 1800,
+   "publisher": "shopro"
+  },
+  {
+   "no": 206,
+   "title": "デッドプール：デッドプール VS. セイバートゥース",
+   "series": "デッドプール",
+   "isbn": "978-4-7968-7743-5",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 2310,
+   "price_digital": 1890,
+   "publisher": "shopro"
+  },
+  {
+   "no": 207,
+   "title": "ユー・アー・デッドプール",
+   "series": "デッドプール",
+   "isbn": "978-4-7968-7757-2",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 1980,
+   "price_digital": 1620,
+   "publisher": "shopro"
+  },
+  {
+   "no": 208,
+   "title": "ナイト・オブ・ザ・リビング・デッドプール",
+   "series": "デッドプール",
+   "isbn": "978-4-7968-7873-9",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 2420,
+   "price_digital": 1980,
+   "publisher": "shopro"
+  },
+  {
+   "no": 209,
+   "title": "リターン・オブ・ザ・リビング・デッドプール",
+   "series": "デッドプール",
+   "isbn": "978-4-7968-7886-9",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 2420,
+   "price_digital": 1980,
+   "publisher": "shopro"
+  },
+  {
+   "no": 210,
+   "title": "デッドプール：ブラック、ホワイト＆ブラッド",
+   "series": "デッドプール",
+   "isbn": "978-4-7968-7327-7",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 2750,
+   "price_digital": 2250,
+   "publisher": "shopro"
+  },
+  {
+   "no": 211,
+   "title": "デッドプール VS. ウルヴァリン",
+   "series": "デッドプール／ウルヴァリン",
+   "isbn": "978-4-7968-7418-2",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 3080,
+   "price_digital": 2520,
+   "publisher": "shopro",
+   "screen": [
+    "dp-wolverine"
+   ]
+  },
+  {
+   "no": 212,
+   "title": "デッドプール VS. カーネイジ",
+   "series": "デッドプール／カーネイジ",
+   "isbn": "978-4-7968-7555-4",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 1980,
+   "price_digital": 1620,
+   "publisher": "shopro"
+  },
+  {
+   "no": 213,
+   "title": "デッドプール VS. パニッシャー",
+   "series": "デッドプール／パニッシャー",
+   "isbn": "978-4-7968-7821-0",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 2310,
+   "price_digital": 1890,
+   "publisher": "shopro"
+  },
+  {
+   "no": 214,
+   "title": "デッドプール VS. サノス",
+   "series": "デッドプール／サノス",
+   "isbn": "978-4-7968-7623-0",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 1980,
+   "price_digital": 1620,
+   "publisher": "shopro"
+  },
+  {
+   "no": 215,
+   "title": "デッドプール VS. ガンビット",
+   "series": "デッドプール／ガンビット",
+   "isbn": "978-4-7968-7665-0",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 1980,
+   "price_digital": 1620,
+   "publisher": "shopro"
+  },
+  {
+   "no": 216,
+   "title": "ブラックパンサー VS. デッドプール",
+   "series": "デッドプール／ブラックパンサー",
+   "isbn": "978-4-7968-7879-1",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 2420,
+   "price_digital": 1980,
+   "publisher": "shopro"
+  },
+  {
+   "no": 217,
+   "title": "ガーディアンズ・オブ・ギャラクシー:プレリュード",
+   "series": "ガーディアンズ・オブ・ギャラクシー",
+   "isbn": "978-4-7968-7519-6",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 2200,
+   "price_digital": 1800,
+   "publisher": "shopro",
+   "screen": [
+    "gotg"
+   ]
+  },
+  {
+   "no": 218,
+   "title": "ガーディアンズ：チームアップ",
+   "series": "ガーディアンズ・オブ・ギャラクシー",
+   "isbn": "978-4-7968-7610-0",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 2310,
+   "price_digital": 1890,
+   "publisher": "shopro",
+   "screen": [
+    "gotg"
+   ]
+  },
+  {
+   "no": 219,
+   "title": "ガーディアンズ：チームアップ 2",
+   "series": "ガーディアンズ・オブ・ギャラクシー",
+   "isbn": "978-4-7968-7666-7",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 2310,
+   "price_digital": 1890,
+   "publisher": "shopro",
+   "screen": [
+    "gotg"
+   ]
+  },
+  {
+   "no": 220,
+   "title": "サノス・ライジング",
+   "series": "サノス",
+   "isbn": "978-4-7968-7624-7",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 2200,
+   "price_digital": 1800,
+   "publisher": "shopro",
+   "screen": [
+    "infinity-war"
+   ]
+  },
+  {
+   "no": 221,
+   "title": "サノス・ウィンズ",
+   "series": "サノス",
+   "isbn": "978-4-7968-7834-0",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 2640,
+   "price_digital": 2160,
+   "publisher": "shopro"
+  },
+  {
+   "no": 222,
+   "title": "シルバーサーファー：ブラック",
+   "series": "シルバーサーファー",
+   "isbn": "978-4-7968-7833-3",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 2750,
+   "price_digital": 2250,
+   "publisher": "shopro",
+   "screen": [
+    "ff-first-steps"
+   ]
+  },
+  {
+   "no": 223,
+   "title": "コズミック・ゴーストライダー・デストロイズ・マーベル・ヒストリー",
+   "series": "コズミック・ゴーストライダー",
+   "isbn": "978-4-7968-7882-1",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 2750,
+   "price_digital": 2250,
+   "publisher": "shopro"
+  },
+  {
+   "no": 224,
+   "title": "コズミック・ゴーストライダー：ベビーサノス・マスト・ダイ",
+   "series": "コズミック・ゴーストライダー",
+   "isbn": "978-4-7968-7845-6",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 2530,
+   "price_digital": 2070,
+   "publisher": "shopro"
+  },
+  {
+   "no": 225,
+   "title": "キャプテン・マーベル",
+   "series": "キャプテン・マーベル",
+   "isbn": "978-4-7968-7746-6",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 2420,
+   "price_digital": 1980,
+   "publisher": "shopro"
+  },
+  {
+   "no": 226,
+   "title": "ミズ・マーベル：チーム・アップ",
+   "series": "ミズ・マーベル",
+   "isbn": "978-4-7968-7318-5",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 2750,
+   "price_digital": 2250,
+   "publisher": "shopro",
+   "screen": [
+    "ms-marvel"
+   ]
+  },
+  {
+   "no": 227,
+   "title": "デアデビル：ノウ・フィアー",
+   "series": "デアデビル",
+   "isbn": "978-4-7968-7348-2",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 2750,
+   "price_digital": 2250,
+   "publisher": "shopro"
+  },
+  {
+   "no": 228,
+   "title": "デアデビル：ノーデビルズ、オンリー・ゴッド",
+   "series": "デアデビル",
+   "isbn": "978-4-7968-7387-1",
+   "status": "流通限定",
+   "status_code": "R",
+   "price_paper": 3300,
+   "price_digital": 2700,
+   "publisher": "shopro"
+  },
+  {
+   "no": 229,
+   "title": "シーハルク：シングル・グリーン・フィメール",
+   "series": "シーハルク",
+   "isbn": "978-4-7968-7880-7",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 2750,
+   "price_digital": 2250,
+   "publisher": "shopro"
+  },
+  {
+   "no": 230,
+   "title": "シーハルク：超人法規（スーパーヒューマン・ロウ）",
+   "series": "シーハルク",
+   "isbn": "978-4-7968-7317-8",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 2860,
+   "price_digital": 2340,
+   "publisher": "shopro"
+  },
+  {
+   "no": 231,
+   "title": "シャン・チー：ブラザーズ・アンド・シスターズ",
+   "series": "シャン・チー",
+   "isbn": "978-4-7968-7838-8",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 2530,
+   "price_digital": 2070,
+   "publisher": "shopro",
+   "screen": [
+    "shang-chi"
+   ]
+  },
+  {
+   "no": 232,
+   "title": "ゴーストライダー：破滅への道",
+   "series": "ゴーストライダー",
+   "isbn": "978-4-7968-7655-1",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 2310,
+   "price_digital": 1890,
+   "publisher": "shopro"
+  },
+  {
+   "no": 233,
+   "title": "征服者カーン",
+   "series": "カーン",
+   "isbn": "978-4-7968-7346-8",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 2640,
+   "price_digital": 2160,
+   "publisher": "shopro",
+   "screen": [
+    "quantumania"
+   ]
+  },
+  {
+   "no": 234,
+   "title": "タスクマスター：失われた過去",
+   "series": "タスクマスター",
+   "isbn": "978-4-7968-7716-9",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 1980,
+   "price_digital": 1620,
+   "publisher": "shopro"
+  },
+  {
+   "no": 235,
+   "title": "ムーンナイト／光",
+   "series": "ムーンナイト",
+   "isbn": "978-4-7968-7605-6",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 2530,
+   "price_digital": 2070,
+   "publisher": "shopro",
+   "screen": [
+    "moon-knight"
+   ]
+  },
+  {
+   "no": 236,
+   "title": "ムーンナイト／影",
+   "series": "ムーンナイト",
+   "isbn": "978-4-7968-7619-3",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 2090,
+   "price_digital": 1710,
+   "publisher": "shopro",
+   "screen": [
+    "moon-knight"
+   ]
+  },
+  {
+   "no": 237,
+   "title": "ムーンナイト：フロム・ザ・デッド",
+   "series": "ムーンナイト",
+   "isbn": "978-4-7968-7872-2",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 2750,
+   "price_digital": 2250,
+   "publisher": "shopro",
+   "screen": [
+    "moon-knight"
+   ]
+  },
+  {
+   "no": 238,
+   "title": "ブレイド：マザー・オブ・イービル",
+   "series": "ブレイド",
+   "isbn": "978-4-7968-7417-5",
+   "status": "在庫あり",
+   "status_code": "A",
+   "price_paper": 2970,
+   "price_digital": 2430,
+   "publisher": "shopro"
+  },
+  {
+   "no": 239,
+   "title": "ハワード・ザ・ダック：アヒルの探偵物語",
+   "series": "ハワード・ザ・ダック",
+   "isbn": "978-4-7968-7654-4",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 2200,
+   "price_digital": 1800,
+   "publisher": "shopro"
+  },
+  {
+   "no": 240,
+   "title": "モービウス",
+   "series": "モービウス",
+   "isbn": "978-4-7968-7835-7",
+   "status": "店頭在庫・電子版のみ",
+   "status_code": "S",
+   "price_paper": 2420,
+   "price_digital": 1980,
+   "publisher": "shopro"
+  },
+  {
+   "no": 241,
+   "title": "スパイダーマン＆ヴェノム：ダブル・トラブル",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 1890,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 242,
+   "title": "アストニッシングX-MEN：ギフテッド",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2520,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 243,
+   "title": "アストニッシングX-MEN：デンジャラス",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2520,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 244,
+   "title": "X-MEN／アベンジャーズ ハウス・オブ・M",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2970,
+   "publisher": "village_legacy",
+   "screen": [
+    "wandavision",
+    "mom"
+   ]
+  },
+  {
+   "no": 245,
+   "title": "X-MEN：デッドリー・ジェネシス",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2700,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 246,
+   "title": "X-MEN：メサイア・コンプレックス Vol.1",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2682,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 247,
+   "title": "X-MEN：メサイア・コンプレックス Vol.2",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2682,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 248,
+   "title": "X-MEN：セカンド・カミング Vol.1",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2862,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 249,
+   "title": "X-MEN：セカンド・カミング Vol.2",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2862,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 250,
+   "title": "X-MEN：デイズ・オブ・フューチャーパスト",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2430,
+   "publisher": "village_legacy",
+   "screen": [
+    "FOX版DOFP"
+   ]
+  },
+  {
+   "no": 251,
+   "title": "アベンジャーズ：ディスアセンブルド",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2430,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 252,
+   "title": "ニューアベンジャーズ：ブレイクアウト",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2520,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 253,
+   "title": "ニューアベンジャーズ：セントリー",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2610,
+   "publisher": "village_legacy",
+   "screen": [
+    "thunderbolts(セントリー)"
+   ],
+   "doomsday_prep": true
+  },
+  {
+   "no": 254,
+   "title": "ニューアベンジャーズ：コレクティブ",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2610,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 255,
+   "title": "ニューアベンジャーズ：レボリューション",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2430,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 256,
+   "title": "ニューアベンジャーズ：トラスト",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2610,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 257,
+   "title": "ニューアベンジャーズ：シークレット・インベージョン",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2970,
+   "publisher": "village_legacy",
+   "screen": [
+    "secret-invasion"
+   ]
+  },
+  {
+   "no": 258,
+   "title": "ニューアベンジャーズ：ダークレイン",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2880,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 259,
+   "title": "ニューアベンジャーズ：パワーロス",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2340,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 260,
+   "title": "ニューアベンジャーズ：シージ",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2790,
+   "publisher": "village_legacy",
+   "screen": [
+    "thunderbolts(シージ文脈)"
+   ]
+  },
+  {
+   "no": 261,
+   "title": "ニューアベンジャーズ：イルミナティ",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2340,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 262,
+   "title": "シークレット・インベージョン",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2970,
+   "publisher": "village_legacy",
+   "screen": [
+    "secret-invasion"
+   ]
+  },
+  {
+   "no": 263,
+   "title": "シージ",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2682,
+   "publisher": "village_legacy",
+   "screen": [
+    "thunderbolts(シージ文脈)"
+   ]
+  },
+  {
+   "no": 264,
+   "title": "AVX：アベンジャーズ VS X-MEN ROUND 1",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2610,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 265,
+   "title": "AVX：アベンジャーズ VS X-MEN ROUND 2",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2880,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 266,
+   "title": "AVX：アベンジャーズ VS X-MEN VS",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2430,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 267,
+   "title": "AVX：アベンジャーズ VS X-MEN アルファ＆オメガ",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2700,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 268,
+   "title": "マイティ・アベンジャーズ：ウルトロン・イニシアティブ",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2520,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 269,
+   "title": "マイティ・アベンジャーズ：ベノム・ボム",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2340,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 270,
+   "title": "マイティ・アベンジャーズ：シークレット・インベージョン",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2880,
+   "publisher": "village_legacy",
+   "screen": [
+    "secret-invasion"
+   ]
+  },
+  {
+   "no": 271,
+   "title": "ダークアベンジャーズ：アセンブル",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2430,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 272,
+   "title": "ダークアベンジャーズ：モレキュールマン",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 1980,
+   "publisher": "village_legacy",
+   "screen": [
+    "doomsday予習(モレキュール・マン)"
+   ],
+   "doomsday_prep": true
+  },
+  {
+   "no": 273,
+   "title": "ダークアベンジャーズ：シージ",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2250,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 274,
+   "title": "マーベルスーパーヒーローズ：シークレット・ウォーズ 1",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2340,
+   "publisher": "village_legacy",
+   "screen": [
+    "doomsday",
+    "avengers-secret-wars"
+   ],
+   "doomsday_prep": true
+  },
+  {
+   "no": 275,
+   "title": "マーベルスーパーヒーローズ：シークレット・ウォーズ 2",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 3150,
+   "publisher": "village_legacy",
+   "screen": [
+    "doomsday",
+    "avengers-secret-wars"
+   ],
+   "doomsday_prep": true
+  },
+  {
+   "no": 276,
+   "title": "シルバーサーファー：パラブル",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2430,
+   "publisher": "village_legacy",
+   "screen": [
+    "ff-first-steps"
+   ]
+  },
+  {
+   "no": 277,
+   "title": "ファンタスティック・フォー：カミング・オブ・ギャラクタス",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 3510,
+   "publisher": "village_legacy",
+   "screen": [
+    "ff-first-steps(ギャラクタス初登場)"
+   ],
+   "doomsday_prep": true
+  },
+  {
+   "no": 278,
+   "title": "デアデビル：ボーン・アゲイン",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2970,
+   "publisher": "village_legacy",
+   "screen": [
+    "ddba-s1",
+    "ddba-s2"
+   ]
+  },
+  {
+   "no": 279,
+   "title": "ロード・トゥ・シビル・ウォー",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2476,
+   "publisher": "village_legacy",
+   "screen": [
+    "civil-war"
+   ]
+  },
+  {
+   "no": 280,
+   "title": "シビル・ウォー",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2880,
+   "publisher": "village_legacy",
+   "screen": [
+    "civil-war"
+   ]
+  },
+  {
+   "no": 281,
+   "title": "ニューアベンジャーズ：シビル・ウォー",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2520,
+   "publisher": "village_legacy",
+   "screen": [
+    "civil-war(タイイン)"
+   ]
+  },
+  {
+   "no": 282,
+   "title": "ウルヴァリン：シビル・ウォー",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2476,
+   "publisher": "village_legacy",
+   "screen": [
+    "civil-war(タイイン)"
+   ]
+  },
+  {
+   "no": 283,
+   "title": "アメイジング・スパイダーマン：シビル・ウォー",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2476,
+   "publisher": "village_legacy",
+   "screen": [
+    "civil-war(タイイン)"
+   ]
+  },
+  {
+   "no": 284,
+   "title": "X-MENユニバース：シビル・ウォー",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2133,
+   "publisher": "village_legacy",
+   "screen": [
+    "civil-war(タイイン)"
+   ]
+  },
+  {
+   "no": 285,
+   "title": "キャプテン・アメリカ：シビル・ウォー",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2133,
+   "publisher": "village_legacy",
+   "screen": [
+    "civil-war(タイイン)"
+   ]
+  },
+  {
+   "no": 286,
+   "title": "アイアンマン：シビル・ウォー",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2133,
+   "publisher": "village_legacy",
+   "screen": [
+    "civil-war(タイイン)"
+   ]
+  },
+  {
+   "no": 287,
+   "title": "パニッシャー・ウォージャーナル：シビル・ウォー",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2476,
+   "publisher": "village_legacy",
+   "screen": [
+    "civil-war(タイイン)"
+   ]
+  },
+  {
+   "no": 288,
+   "title": "ヤング・アベンジャーズ＆ランナウェイズ：シビル・ウォー",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2160,
+   "publisher": "village_legacy",
+   "screen": [
+    "civil-war(タイイン)"
+   ]
+  },
+  {
+   "no": 289,
+   "title": "X-MEN：シビル・ウォー",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2160,
+   "publisher": "village_legacy",
+   "screen": [
+    "civil-war(タイイン)"
+   ]
+  },
+  {
+   "no": 290,
+   "title": "ファンタスティック・フォー：シビル・ウォー",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2475,
+   "publisher": "village_legacy",
+   "screen": [
+    "civil-war(タイイン)"
+   ]
+  },
+  {
+   "no": 291,
+   "title": "フロントライン：シビル・ウォー Book1",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2790,
+   "publisher": "village_legacy",
+   "screen": [
+    "civil-war(タイイン)"
+   ]
+  },
+  {
+   "no": 292,
+   "title": "フロントライン：シビル・ウォー Book2",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2475,
+   "publisher": "village_legacy",
+   "screen": [
+    "civil-war(タイイン)"
+   ]
+  },
+  {
+   "no": 293,
+   "title": "マーベルユニバース：シビル・ウォー",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2340,
+   "publisher": "village_legacy",
+   "screen": [
+    "civil-war(タイイン)"
+   ]
+  },
+  {
+   "no": 294,
+   "title": "ブラックパンサー：シビル・ウォー",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2475,
+   "publisher": "village_legacy",
+   "screen": [
+    "civil-war(タイイン)"
+   ]
+  },
+  {
+   "no": 295,
+   "title": "ピーター・パーカー、スパイダーマン：シビル・ウォー",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2430,
+   "publisher": "village_legacy",
+   "screen": [
+    "civil-war(タイイン)"
+   ]
+  },
+  {
+   "no": 296,
+   "title": "ヒーローズ・フォー・ハイヤー：シビル・ウォー",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2340,
+   "publisher": "village_legacy",
+   "screen": [
+    "civil-war(タイイン)"
+   ]
+  },
+  {
+   "no": 297,
+   "title": "サンダーボルツ：シビル・ウォー",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2250,
+   "publisher": "village_legacy",
+   "screen": [
+    "civil-war(タイイン)"
+   ]
+  },
+  {
+   "no": 298,
+   "title": "ウォークライム：シビル・ウォー",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2430,
+   "publisher": "village_legacy",
+   "screen": [
+    "civil-war(タイイン)"
+   ]
+  },
+  {
+   "no": 299,
+   "title": "Ms.マーベル：シビル・ウォー",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2340,
+   "publisher": "village_legacy",
+   "screen": [
+    "civil-war(タイイン)"
+   ]
+  },
+  {
+   "no": 300,
+   "title": "フレンドリー・ネイバーフッド・スパイダーマン：シビル・ウォー",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2340,
+   "publisher": "village_legacy",
+   "screen": [
+    "civil-war(タイイン)"
+   ]
+  },
+  {
+   "no": 301,
+   "title": "アンダーサイド：シビル・ウォー",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 3060,
+   "publisher": "village_legacy",
+   "screen": [
+    "civil-war(タイイン)"
+   ]
+  },
+  {
+   "no": 302,
+   "title": "スパイダーバース",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 1980,
+   "publisher": "village_legacy",
+   "screen": [
+    "スパイダーバース(ソニー)"
+   ]
+  },
+  {
+   "no": 303,
+   "title": "ワールド・オブ・スパイダーバース",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 3060,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 304,
+   "title": "エッジ・オブ・スパイダーバース",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2475,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 305,
+   "title": "スパイダーゲドン",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2250,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 306,
+   "title": "エッジ・オブ・スパイダーゲドン",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2520,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 307,
+   "title": "ヴェノムバース",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2070,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 308,
+   "title": "エッジ・オブ・ヴェノムバース",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2340,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 309,
+   "title": "エンド・オブ・ヴェノムバース",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2250,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 310,
+   "title": "マーベルゾンビーズ",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2430,
+   "publisher": "village_legacy",
+   "screen": [
+    "marvel-zombies"
+   ]
+  },
+  {
+   "no": 311,
+   "title": "マーベルゾンビーズ 2",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2250,
+   "publisher": "village_legacy",
+   "screen": [
+    "marvel-zombies"
+   ]
+  },
+  {
+   "no": 312,
+   "title": "マーベルゾンビーズ：デッドデイズ",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2970,
+   "publisher": "village_legacy",
+   "screen": [
+    "marvel-zombies"
+   ]
+  },
+  {
+   "no": 313,
+   "title": "ミラクルマン BOOK1：ドリーム・オブ・フライング",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2340,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 314,
+   "title": "アベンジャーズ／X-MEN：ロード・トゥ・ユートピア",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2880,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 315,
+   "title": "アベンジャーズ／X-MEN：ユートピア",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2700,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 316,
+   "title": "X-フォース／ケーブル：メサイア・ウォー Vol.1",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2700,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 317,
+   "title": "X-フォース／ケーブル：メサイア・ウォー Vol.2",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2790,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 318,
+   "title": "アンキャニィX-MEN：レボリューション",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2160,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 319,
+   "title": "Ｘ-MEN：スキズム",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2700,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 320,
+   "title": "X-MEN：アンキャニィ・ジェネシス",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2917,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 321,
+   "title": "X-MEN：ダーク・フェニックス・サーガ",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2790,
+   "publisher": "village_legacy",
+   "screen": [
+    "xmen97",
+    "FOX版ダーク・フェニックス"
+   ]
+  },
+  {
+   "no": 322,
+   "title": "ニューミュータンツ：デーモンベア",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2340,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 323,
+   "title": "ケーブル＆デッドプール：青の洗礼",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2160,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 324,
+   "title": "ケーブル＆デッドプール：銀の衝撃",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2250,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 325,
+   "title": "ケーブル＆デッドプール：こんにちは赤ちゃん",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2250,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 326,
+   "title": "ケーブル＆デッドプール：桃色の誘惑",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2250,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 327,
+   "title": "デッドプール／パニッシャー・キルズ・マーベルユニバース",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2250,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 328,
+   "title": "デッドプール・キラストレイテッド／デッドプール・キルズ・デッドプール",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2520,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 329,
+   "title": "デッドプール・キルズ・マーベルユニバース・アゲイン",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 1890,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 330,
+   "title": "ウルヴァリン",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2160,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 331,
+   "title": "ウルヴァリン：オールドマン・ローガン",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2682,
+   "publisher": "village_legacy",
+   "screen": [
+    "FOX版LOGAN"
+   ]
+  },
+  {
+   "no": 332,
+   "title": "デス・オブ・ウルヴァリン",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2160,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 333,
+   "title": "エイジ・オブ・ウルトロン Vol.1",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2160,
+   "publisher": "village_legacy",
+   "screen": [
+    "aou(タイトル元)"
+   ]
+  },
+  {
+   "no": 334,
+   "title": "エイジ・オブ・ウルトロン Vol.2",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2070,
+   "publisher": "village_legacy",
+   "screen": [
+    "aou(タイトル元)"
+   ]
+  },
+  {
+   "no": 335,
+   "title": "エイジ・オブ・ウルトロン コンパニオン",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2700,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 336,
+   "title": "アンキャニィ・アベンジャーズ：レッドシャドウ",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2160,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 337,
+   "title": "ヤング・アベンジャーズ：スタイル＞サブスタンス",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2160,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 338,
+   "title": "アベンジャーズ：アベンジャーズ・ワールド",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2340,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 339,
+   "title": "アベンジャーズ：ラスト・ホワイト・イベント",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2430,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 340,
+   "title": "ニューアベンジャーズ：エブリシング・ダイ",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2340,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 341,
+   "title": "フィアー・イットセルフ",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2880,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 342,
+   "title": "インフィニティ I",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2520,
+   "publisher": "village_legacy",
+   "screen": [
+    "infinity-war"
+   ]
+  },
+  {
+   "no": 343,
+   "title": "インフィニティ II",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2880,
+   "publisher": "village_legacy",
+   "screen": [
+    "infinity-war"
+   ]
+  },
+  {
+   "no": 344,
+   "title": "インフィニティ III",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2970,
+   "publisher": "village_legacy",
+   "screen": [
+    "infinity-war"
+   ]
+  },
+  {
+   "no": 345,
+   "title": "オリジナル・シン",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2880,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 346,
+   "title": "アベンジャーズ＆X-MEN：アクシス",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2970,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 347,
+   "title": "アベンジャーズ：タイム・ランズ・アウト I",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2520,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 348,
+   "title": "アベンジャーズ：タイム・ランズ・アウト II",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2520,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 349,
+   "title": "アベンジャーズ：タイム・ランズ・アウト III",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2700,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 350,
+   "title": "シークレット・ウォーズ",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 3240,
+   "publisher": "village_legacy",
+   "screen": [
+    "doomsday",
+    "avengers-secret-wars"
+   ],
+   "doomsday_prep": true
+  },
+  {
+   "no": 351,
+   "title": "シビル・ウォーⅡ",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 3150,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 352,
+   "title": "アベンジャーズ：エンドレス・ウォータイム",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2160,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 353,
+   "title": "アベンジャーズ：プライム",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2520,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 354,
+   "title": "アベンジャーズ：クリー／スクラル・ウォー",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 3330,
+   "publisher": "village_legacy",
+   "screen": [
+    "captain-marvel",
+    "secret-invasion"
+   ]
+  },
+  {
+   "no": 355,
+   "title": "キャプテン・アメリカ：ニュー・ディール",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2520,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 356,
+   "title": "デス・オブ・キャプテン・アメリカ：デス・オブ・ドリーム",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2970,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 357,
+   "title": "デス・オブ・キャプテン・アメリカ：バーデン・オブ・ドリーム",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2970,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 358,
+   "title": "フォールン・サン：デス・オブ・キャプテン・アメリカ",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2430,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 359,
+   "title": "キャプテン・アメリカ：ロード・トゥ・リボーン",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2610,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 360,
+   "title": "キャプテン・アメリカ：リボーン",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2880,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 361,
+   "title": "キャプテン・アメリカ：ロード・トゥ・シークレット・エンパイア",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 3060,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 362,
+   "title": "シークレット・エンパイア 1",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2610,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 363,
+   "title": "シークレット・エンパイア 2",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 3240,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 364,
+   "title": "マーベル：レガシー",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2880,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 365,
+   "title": "ウィンターソルジャー：セカンド・チャンス",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2070,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 366,
+   "title": "マーベルマスターワークス：アメイジング・スパイダーマン",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 3582,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 367,
+   "title": "スパイダーマン：ウィズ・グレート・パワー",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2160,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 368,
+   "title": "スーペリア・スパイダーマン：ワースト・エネミー",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2700,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 369,
+   "title": "スーペリア・スパイダーマン：トラブル・マインド",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 1980,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 370,
+   "title": "スーペリア・スパイダーマン：ノー・エスケープ",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2160,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 371,
+   "title": "スーペリア・スパイダーマン：ネセサリー・イービル／スーペリア・ヴェノム",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 3240,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 372,
+   "title": "スーペリア・スパイダーマン：ゴブリン・ネイション",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 3420,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 373,
+   "title": "アイアンマン：エクストリミス",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2232,
+   "publisher": "village_legacy",
+   "screen": [
+    "iron-man-3"
+   ]
+  },
+  {
+   "no": 374,
+   "title": "アイアンマン：ホーンテッド",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2880,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 375,
+   "title": "アベンジャーズ：ハルク・ウェーブ！",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2250,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 376,
+   "title": "ワールド・ウォー・ハルク",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2682,
+   "publisher": "village_legacy",
+   "screen": [
+    "she-hulk関連"
+   ]
+  },
+  {
+   "no": 377,
+   "title": "ハルク：レッドハルク",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2700,
+   "publisher": "village_legacy",
+   "screen": [
+    "cap-bnw(レッドハルク)"
+   ]
+  },
+  {
+   "no": 378,
+   "title": "ハルク：フォール・オブ・ハルクス／ワールド・ウォー・ハルクス",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 3060,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 379,
+   "title": "プラネット・ハルク：天の巻",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2340,
+   "publisher": "village_legacy",
+   "screen": [
+    "ragnarok"
+   ]
+  },
+  {
+   "no": 380,
+   "title": "プラネット・ハルク：地の巻",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2610,
+   "publisher": "village_legacy",
+   "screen": [
+    "ragnarok"
+   ]
+  },
+  {
+   "no": 381,
+   "title": "ソー：マイティ・アベンジャー",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2520,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 382,
+   "title": "ソー Vol.1 -帰還-",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2610,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 383,
+   "title": "ソー Vol.2 -邂逅-",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2880,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 384,
+   "title": "ソー Vol.3 -別離-",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2880,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 385,
+   "title": "ソー：ゴッデス・オブ・サンダー",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2880,
+   "publisher": "village_legacy",
+   "screen": [
+    "love-thunder(ジェーン・ソー)"
+   ]
+  },
+  {
+   "no": 386,
+   "title": "ロキ エージェント・オブ・アスガルド：トラスト・ミー",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2160,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 387,
+   "title": "デアデビル：マン・ウィズアウト・フィアー",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2340,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 388,
+   "title": "デアデビル vs パニッシャー",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2250,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 389,
+   "title": "ドクター・ストレンジ：ウェイ・オブ・ウィアード",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2160,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 390,
+   "title": "ガーディアンズ・オブ・ギャラクシー：レガシー",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2340,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 391,
+   "title": "ロケット・ラクーン＆グルート",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2700,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 392,
+   "title": "Ms.マーベル：もうフツーじゃないの",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 1980,
+   "publisher": "village_legacy",
+   "screen": [
+    "ms-marvel"
+   ]
+  },
+  {
+   "no": 393,
+   "title": "Ms.マーベル：スマホ世代とか言われても",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2070,
+   "publisher": "village_legacy",
+   "screen": [
+    "ms-marvel"
+   ]
+  },
+  {
+   "no": 394,
+   "title": "Ms.マーベル：もしかしてこれって…恋？",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2070,
+   "publisher": "village_legacy",
+   "screen": [
+    "ms-marvel"
+   ]
+  },
+  {
+   "no": 395,
+   "title": "Ms.マーベル：キャプテンといっしょなら",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2025,
+   "publisher": "village_legacy",
+   "screen": [
+    "ms-marvel"
+   ]
+  },
+  {
+   "no": 396,
+   "title": "グウェンプール：こっちの世界にオジャマしま～す",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2160,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 397,
+   "title": "グウェンプール：イカしたやつらが攻めてきた！",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2070,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 398,
+   "title": "グウェンプール：デップーなんかこわくない",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2250,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 399,
+   "title": "グウェンプール：第四の壁、破っちゃいました",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2070,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 400,
+   "title": "グウェンプール：さよならするのはつらいけど",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2160,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 401,
+   "title": "グウェンプール・ストライクス・バック！",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2160,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 402,
+   "title": "絶対無敵スクイレルガール：けものがフレンド",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2070,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 403,
+   "title": "マーベルライジング",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2430,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 404,
+   "title": "ニック・フューリー、エージェント・オブ・シールド",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 4950,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 405,
+   "title": "アントマン：セカンド・チャンスマン",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2070,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 406,
+   "title": "ワスプ 1",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2160,
+   "publisher": "village_legacy",
+   "screen": [
+    "ant-man-wasp"
+   ]
+  },
+  {
+   "no": 407,
+   "title": "ワスプ 2",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2250,
+   "publisher": "village_legacy",
+   "screen": [
+    "ant-man-wasp"
+   ]
+  },
+  {
+   "no": 408,
+   "title": "ヴィジョン 1",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2070,
+   "publisher": "village_legacy",
+   "screen": [
+    "vision-quest"
+   ],
+   "doomsday_prep": true
+  },
+  {
+   "no": 409,
+   "title": "ヴィジョン 2",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2070,
+   "publisher": "village_legacy",
+   "screen": [
+    "vision-quest"
+   ],
+   "doomsday_prep": true
+  },
+  {
+   "no": 410,
+   "title": "エターナルズ",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 3060,
+   "publisher": "village_legacy",
+   "screen": [
+    "eternals"
+   ]
+  },
+  {
+   "no": 411,
+   "title": "ヤング・マーベル：リトルアベンジャーズ VS リトルX-MEN",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2430,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 412,
+   "title": "マーベル怪獣大決戦",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2520,
+   "publisher": "village_legacy"
+  },
+  {
+   "no": 413,
+   "title": "ジェシカ・ジョーンズ：エイリアス AKA 謎の依頼者",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2790,
+   "publisher": "village_legacy",
+   "screen": [
+    "ジェシカ・ジョーンズ(ディフェンダーズ)"
+   ]
+  },
+  {
+   "no": 414,
+   "title": "ルーク・ケイジ：無慈悲の街",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2430,
+   "publisher": "village_legacy",
+   "screen": [
+    "ルーク・ケイジ(ディフェンダーズ)"
+   ]
+  },
+  {
+   "no": 415,
+   "title": "パニッシャーMAX：ビギニング",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2250,
+   "publisher": "village_legacy",
+   "screen": [
+    "パニッシャー(ディフェンダーズ)"
+   ]
+  },
+  {
+   "no": 416,
+   "title": "パワーパック：デイ・ワン",
+   "series": "ヴィレッジブックス",
+   "isbn": null,
+   "status": "電子版のみ(ヴィレッジ引継)",
+   "status_code": "D",
+   "price_paper": null,
+   "price_digital": 2610,
+   "publisher": "village_legacy"
+  }
+ ]
+}

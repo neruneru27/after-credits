@@ -1,0 +1,27 @@
+---
+layout: layouts/base.njk
+ogType: article
+---
+<script type="application/ld+json">{{ {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": title,
+  "datePublished": articleDate,
+  "dateModified": articleDate,
+  "inLanguage": "ja",
+  "author": { "@type": "Organization", "name": site.name },
+  "publisher": { "@type": "Organization", "name": site.name },
+  "mainEntityOfPage": site.url + page.url
+} | jsonify | safe }}</script>
+<section data-page="article">
+  <div class="wrap">
+    <p class="crumb"><a href="{{ '/' | url }}">ホーム</a> › <a href="{{ '/articles/' | url }}">記事</a> › {{ title }}</p>
+    <article class="article-body">
+      <div class="sec-head">
+        <span class="en">ARTICLE</span>
+        <h2>{{ title }}</h2>
+      </div>
+      {{ content | safe }}
+    </article>
+  </div>
+</section>

@@ -1,0 +1,67 @@
+---
+layout: layouts/base.njk
+permalink: /
+---
+<section data-page="home">
+  <div class="wrap">
+    <div class="hero-mini">
+      <p class="en">PICK YOUR UNIVERSE</p>
+      <h1>コミックか、アニメか、実写か。<br><span class="marker">どこから入っても、迷わせない。</span></h1>
+      <p>マーベルは広大です。だからこのサイトは入口を3つに絞りました。時系列・見る順番・各巻のあらすじまで、あなたの「次の1本/1冊」をここで決められます。</p>
+    </div>
+
+    <div class="gate-grid">
+      <a class="gate" href="{{ '/comics/' | url }}">
+        <div class="gate-visual c">COMICS</div>
+        <div class="gate-body">
+          <h3>コミックサイド</h3>
+          <p>60年分の原作を「イベント時系列」で整理。各巻のあらすじ、US原書と日本翻訳版の対応、購入リンクまで。</p>
+        </div>
+        <span class="go">時系列ガイドへ →</span>
+      </a>
+      <a class="gate" href="{{ '/anime/' | url }}">
+        <div class="gate-visual y">ANIME</div>
+        <div class="gate-body">
+          <h3>アニメサイド</h3>
+          <p>『X-MEN '97』『ホワット・イフ...?』など、映像と原作の橋渡しになるアニメ作品を紹介。</p>
+        </div>
+        <span class="go">アニメガイドへ →</span>
+      </a>
+      <a class="gate" href="{{ '/live/' | url }}">
+        <div class="gate-visual m">LIVE ACTION</div>
+        <div class="gate-body">
+          <h3>実写サイド</h3>
+          <p>MCUを「公開順」「時系列順」で切り替え表示。キャラにフォーカスした視聴コースも用意。</p>
+        </div>
+        <span class="go">視聴順ガイドへ →</span>
+      </a>
+    </div>
+
+    <div class="tool-row">
+      <a class="tool" href="{{ '/characters/' | url }}">
+        <span class="icon c">?</span>
+        <div>
+          <h3>キャラ検索</h3>
+          <p>名前・別名から横断検索。コミック/実写/アニメの登場先がひと目で分かる</p>
+        </div>
+      </a>
+      <a class="tool" href="{{ '/glossary/' | url }}">
+        <span class="icon y">A</span>
+        <div>
+          <h3>用語辞典</h3>
+          <p>「アース616」「TVA」…作中用語をその場で調べられるミニ辞典</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="tool-row" style="margin-top:16px;">
+      <a class="tool" href="{{ '/articles/' | url }}">
+        <span class="icon m">✎</span>
+        <div>
+          <h3>特集記事</h3>
+          <p>ドゥームズデイ予習・電子版配信停止・視聴ガイドなどの読みもの</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>

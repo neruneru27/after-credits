@@ -1,0 +1,77 @@
+---
+layout: layouts/base.njk
+title: コミック・イベント時系列と邦訳コミックDB(全416冊)
+description: マーベルコミックの大事件(イベント)を時系列で整理し、ShoPro刊行の邦訳全416冊をデータベース化。在庫区分・電子版配信停止(2026/9/30)情報・ドゥームズデイ予習優先枠つき。
+permalink: /comics/
+pageJs: /assets/js/comics.js
+---
+<section data-page="comic">
+  <div class="wrap">
+    <p class="crumb"><a href="{{ '/' | url }}">ホーム</a> › コミックサイド</p>
+    <div class="sec-head">
+      <span class="en">COMICS TIMELINE</span>
+      <h2>コミック・イベント時系列</h2>
+      <p>大事件(イベント)を軸にした読みどころマップです。各項目に〈あらすじ/US原書情報/日本翻訳版情報〉を併記。刊行年はUS初出年です。</p>
+    </div>
+
+    <div class="timeline">
+      {%- for ev in timeline %}
+      <div class="t-item">
+        <div class="t-year">{{ ev.year }}</div>
+        <div class="t-card">
+          <h3>{{ ev.title }}<small>{{ ev.en }}</small></h3>
+          <p class="synopsis"><b>あらすじ:</b>{{ ev.synopsis }}</p>
+          <div class="edition-grid">
+            <div class="edition us">
+              <span class="ed-label">US原書</span>
+              <strong>{{ ev.us.title }}</strong>
+              <span class="meta">{{ ev.us.credits }}</span>
+            </div>
+            <div class="edition jp">
+              <span class="ed-label">日本翻訳版</span>
+              <strong>{{ ev.jp.title }}</strong>
+              <span class="meta">{{ ev.jp.note }}</span>
+              <a class="amz-btn" href="{% amazonLink ev.jp.asin, site.amazonTag %}" rel="sponsored noopener" target="_blank">Amazonで見る</a><span class="pr-label">[PR] ダミー</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      {%- endfor %}
+    </div>
+
+    <div class="sec-head" style="margin-top:56px;">
+      <span class="en">DATABASE</span>
+      <h2>邦訳コミックDB(全416冊)</h2>
+      <p>ShoPro公式の刊行作品一覧(在庫状況は2026年2月時点)に基づく全邦訳データ。⚠ <b>全タイトルの電子版が2026年9月30日で配信停止</b>。「9/30消滅」区分は紙の受け皿がなく、市場から完全に消えます。購入前に各ストアで最新の在庫をご確認ください。</p>
+    </div>
+
+    <div class="searchbox">
+      <input type="search" id="comic-input" placeholder="例:シークレット・ウォーズ / デアデビル / X-MEN" aria-label="コミックを検索">
+      <span class="sicon">検索</span>
+    </div>
+    <div class="filter-row" id="comic-status-row" role="group" aria-label="区分で絞り込み">
+      <button class="fbtn" data-cs="all" aria-pressed="true">すべて</button>
+      <button class="fbtn" data-cs="A" aria-pressed="false">在庫あり</button>
+      <button class="fbtn" data-cs="S" aria-pressed="false">店頭在庫のみ</button>
+      <button class="fbtn" data-cs="R" aria-pressed="false">流通限定</button>
+      <button class="fbtn" data-cs="D" aria-pressed="false">⚠9/30消滅</button>
+      <button class="fbtn" data-cs="screen" aria-pressed="false">🎬映像関連</button>
+      <button class="fbtn" data-cs="doom" aria-pressed="false">ドゥームズデイ予習</button>
+    </div>
+    <p class="db-count" id="comic-count">{{ comics.items.length }} / {{ comics.items.length }}冊を表示(★=ドゥームズデイ予習優先)</p>
+    <div class="comic-list" id="comic-list">
+      {%- set csLabel = { A: '在庫あり', S: '店頭在庫のみ', R: '流通限定', D: '9/30消滅' } %}
+      {%- for c in comics.items %}
+      <div class="crow" data-cs="{{ c.status_code }}"{% if c.screen %} data-screen="1"{% endif %}{% if c.doomsday_prep %} data-doom="1"{% endif %} data-key="{{ c.series }}{% if c.screen %} {{ c.screen | join(' ') }}{% endif %}">
+        <span class="cs-badge {{ c.status_code }}">{{ csLabel[c.status_code] }}</span>
+        <div>
+          <h3>{% if c.doomsday_prep %}<span class="doom-star">★</span> {% endif %}{{ c.title }}</h3>
+          <p class="c-meta">{{ c.series }} / {% if c.price_paper %}紙¥{{ c.price_paper | yen }}・{% endif %}電子¥{{ c.price_digital | yen }}{% if c.isbn %} / {{ c.isbn }}{% endif %}</p>
+          {%- if c.screen %}<p class="c-screen">🎬 {{ c.screen | join(' , ') }}</p>{% endif %}
+        </div>
+      </div>
+      {%- endfor %}
+    </div>
+    <p class="no-hit" id="comic-nohit">該当するタイトルが見つかりませんでした。別のキーワードでお試しください。</p>
+  </div>
+</section>

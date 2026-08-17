@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+{%- set fullTitle = (title + " | " + site.name) if title else (site.name + " | " + site.tagline) %}
+<title>{{ fullTitle }}</title>
+<meta name="description" content="{{ description or site.description }}">
+<link rel="canonical" href="{{ site.url }}{{ page.url }}">
+<meta property="og:type" content="{{ ogType or 'website' }}">
+<meta property="og:title" content="{{ fullTitle }}">
+<meta property="og:description" content="{{ description or site.description }}">
+<meta property="og:url" content="{{ site.url }}{{ page.url }}">
+<meta property="og:site_name" content="{{ site.name }}">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="{{ '/assets/favicon.svg' | url }}" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Rampart+One&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ '/assets/css/style.css' | url }}">
+{%- if structuredData %}
+<script type="application/ld+json">{{ structuredData | safe }}</script>
+{%- endif %}
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="{{ '/' | url }}">
+      AFTER<span class="dot-c">•</span>CREDITS
+      <span class="logo-jp">{{ site.name }}</span>
+    </a>
+    <nav id="nav">
+      <a href="{{ '/' | url }}" {% if page.url == '/' %}data-active{% endif %}>ホーム</a>
+      <a href="{{ '/comics/' | url }}" {% if '/comics/' in page.url %}data-active{% endif %}>コミック</a>
+      <a href="{{ '/anime/' | url }}" {% if '/anime/' in page.url %}data-active{% endif %}>アニメ</a>
+      <a href="{{ '/live/' | url }}" {% if '/live/' in page.url %}data-active{% endif %}>実写</a>
+      <a href="{{ '/characters/' | url }}" {% if '/characters/' in page.url %}data-active{% endif %}>キャラ検索</a>
+      <a href="{{ '/glossary/' | url }}" {% if '/glossary/' in page.url %}data-active{% endif %}>用語辞典</a>
+      <a href="{{ '/articles/' | url }}" {% if '/articles/' in page.url %}data-active{% endif %}>記事</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+{{ content | safe }}
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="disclosure">当サイト「{{ site.name }}」は、Amazonアソシエイト・プログラムの参加者です。適格販売により収入を得ています。</p>
+    <p class="legal">{{ site.legal }}</p>
+    <p class="credit">AFTER<span style="color:var(--cyan)">•</span>CREDITS — PICK YOUR UNIVERSE.</p>
+  </div>
+</footer>
+
+{%- if pageJs %}
+<script src="{{ pageJs | url }}" defer></script>
+{%- endif %}
+</body>
+</html>

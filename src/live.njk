@@ -1,0 +1,74 @@
+---
+layout: layouts/base.njk
+title: MCU視聴順ガイド(全68作品・公開順/時系列順)
+description: MCU実写全68作品を日本公開順・物語時系列順で切り替え表示。あらすじ(ネタバレなし)とネタバレあり要約の2段構え。目的別視聴コース・ディフェンダーズ・サーガも収録。
+permalink: /live/
+pageJs: /assets/js/live.js
+---
+{% from "partials/work-item.njk" import workItem %}
+<section data-page="live">
+  <div class="wrap">
+    <p class="crumb"><a href="{{ '/' | url }}">ホーム</a> › 実写サイド</p>
+    <div class="sec-head">
+      <span class="en">LIVE ACTION</span>
+      <h2>MCU 全作品・視聴順ガイド</h2>
+      <p>『アイアンマン』(2008)から2027年予定作まで全68作品を収録。「日本公開順」と「物語の時系列順」をワンタップで切り替え、種別での絞り込みもできます。<b>「単独OK」</b>は予習なしで観られる公式ブランド作品の印です。各作品をタップすると<b>あらすじ(ネタバレなし)</b>が開き、さらにその中の赤いボタンから<b>ネタバレあり要約</b>(結末まで記載)を読めます。時間がなくて観られない人向けの2段構えです。</p>
+    </div>
+
+    <div class="toggle-row" role="group" aria-label="並び順の切り替え">
+      <button id="btn-release" aria-pressed="true">公開順(日本)</button>
+      <button id="btn-chrono" aria-pressed="false">時系列順</button>
+    </div>
+    <div class="filter-row" id="live-filter-row" role="group" aria-label="種別で絞り込み">
+      <button class="fbtn" data-filter="all" aria-pressed="true">すべて</button>
+      <button class="fbtn" data-filter="movie" aria-pressed="false">映画</button>
+      <button class="fbtn" data-filter="drama" aria-pressed="false">ドラマ</button>
+      <button class="fbtn" data-filter="anime" aria-pressed="false">アニメ</button>
+      <button class="fbtn" data-filter="special" aria-pressed="false">SP</button>
+    </div>
+
+    <div class="watch-list" id="watch-list">
+      {%- for w in mcu.works | sortJpRelease %}
+      {{ workItem(w, loop.index) }}
+      {%- endfor %}
+    </div>
+
+    <div id="offtime-block" style="display:none;">
+      <h3 class="offtime-head">時間軸の外にある作品</h3>
+      <div class="watch-list" id="offtime-list"></div>
+    </div>
+
+    <div class="defenders">
+      <h3>ザ・ディフェンダーズ・サーガ(旧Netflix作品群)</h3>
+      <p>{{ mcu.defenders_saga.note }}</p>
+      <ul id="defenders-list">
+        {%- for w in mcu.defenders_saga.works %}
+        <li><b>{{ w.title }}</b><span>{{ w.years }}{% if w.priority %} / {{ w.priority }}{% endif %}</span></li>
+        {%- endfor %}
+      </ul>
+    </div>
+
+    <div class="sec-head" style="margin-top:56px;">
+      <span class="en">CHARACTER COURSE</span>
+      <h2>目的別・視聴コース</h2>
+      <p>「全部は無理」な人のための最短ルート集。『ドゥームズデイ』(12/18公開)予習はここから。</p>
+    </div>
+    <div class="course-grid" id="course-grid">
+      {%- set titleById = {} %}
+      {%- for c in mcu.courses %}
+      <div class="course">
+        <h3>{{ c.title }}</h3>
+        {%- if c.target %}<p class="course-target">{{ c.target }}</p>{% endif %}
+        <ol>
+          {%- for it in c.items %}
+          {%- set found = mcu.works | selectattr("id", "equalto", it) | first %}
+          <li>{{ found.title if found else it }}</li>
+          {%- endfor %}
+        </ol>
+      </div>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<script id="mcu-data" type="application/json">{{ mcu.works | jsonify | safe }}</script>

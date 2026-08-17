@@ -1,0 +1,57 @@
+---
+layout: layouts/base.njk
+title: キャラ検索・注目キャラ詳細解説
+description: マーベルの注目キャラ17体をコミック/実写の違いまで詳細解説。ドクター・ドゥーム、フランクリン・リチャーズなどドゥームズデイ関連キャラを網羅。全56キャラの横断検索つき。
+permalink: /characters/
+pageJs: /assets/js/characters.js
+---
+<section data-page="chara">
+  <div class="wrap">
+    <p class="crumb"><a href="{{ '/' | url }}">ホーム</a> › キャラ検索</p>
+    <div class="sec-head">
+      <span class="en">CHARACTER SEARCH</span>
+      <h2>キャラ検索</h2>
+      <p>注目キャラの詳細解説(開閉式)と、全キャラの横断検索。タグは登場メディアを表します。</p>
+    </div>
+
+    <div class="spotlight">
+      <h3 class="offtime-head">SPOTLIGHT:注目キャラ詳細(全{{ characters.characters.length }}キャラ・📖コミック/🎬実写の違いも解説)</h3>
+      {%- for ch in characters.characters %}
+      <details class="spot-item" id="spot-{{ ch.id }}">
+        <summary>
+          <span class="spot-badge">{{ ch.badge }}</span>
+          <span class="spot-name">{{ ch.name }}<small>{{ ch.en }}</small></span>
+          <span class="arrow">&gt;</span>
+        </summary>
+        <div class="spot-body">
+          <div class="spot-facts"><div><b>本名</b>{{ ch.real_name }}</div><div><b>初登場</b>{{ ch.first_appearance }}</div><div><b>原作者</b>{{ ch.creators }}</div><div><b>実写</b>{{ ch.live_status }}</div></div>
+          {%- for heading, body in ch.sections %}
+          <h4>{{ heading }}</h4><p>{{ body }}</p>
+          {%- endfor %}
+          <div class="spot-read"><h4>最初に読むなら</h4>
+            {%- for b in ch.reading_guide %}
+            <div class="rbook"><b>{{ b.title }}</b> — {{ b.why }}<span>{{ b.jp }}</span></div>
+            {%- endfor %}
+          </div>
+        </div>
+      </details>
+      {%- endfor %}
+    </div>
+
+    <div class="searchbox">
+      <input type="search" id="chara-input" placeholder="例:ワンダ / doom / 弁護士" aria-label="キャラクターを検索">
+      <span class="sicon">検索</span>
+    </div>
+
+    <div class="chara-grid" id="chara-grid">
+      {%- for c in charaCards.cards %}
+      <div class="chara" data-key="{{ c.key }}">
+        <div class="chara-top"><span class="badge {{ c.badge }}">{{ c.badge_code }}</span><h3>{{ c.name }}<small>{{ c.en }}</small></h3></div>
+        <p>{{ c.desc }}</p>
+        <div class="chips">{% for m in c.media %}<span class="chip {{ m }}">{{ {'comic':'コミック','live':'実写','anime':'アニメ'}[m] }}</span>{% endfor %}</div>
+      </div>
+      {%- endfor %}
+    </div>
+    <p class="no-hit" id="chara-nohit">該当するキャラクターが見つかりませんでした。別のキーワードでお試しください。</p>
+  </div>
+</section>

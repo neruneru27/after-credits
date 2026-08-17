@@ -1,0 +1,42 @@
+[
+  {
+    "year": 1984,
+    "title": "シークレット・ウォーズ",
+    "en": "SECRET WARS (1984)",
+    "synopsis": "全能の存在ビヨンダーにより、ヒーローとヴィランが惑星バトルワールドに集められ、強制的に戦わされる。マーベル初の全社横断クロスオーバーイベントで、スパイダーマンの黒コスチューム(のちのヴェノム)初登場でも有名。",
+    "us": { "title": "Marvel Super Heroes Secret Wars #1–12", "credits": "Jim Shooter(作)/ Mike Zeck(画)" },
+    "jp": { "title": "シークレット・ウォーズ", "note": "邦訳単行本あり ※在庫・版元は要確認", "asin": "XXXXXXXXXX" }
+  },
+  {
+    "year": 1991,
+    "title": "インフィニティ・ガントレット",
+    "en": "THE INFINITY GAUNTLET",
+    "synopsis": "6つのインフィニティ・ジェムを手にしたサノスが、指パッチンで全宇宙の生命の半分を消し去る——。映画『インフィニティ・ウォー』『エンドゲーム』の直接の原案。原作のサノスは「死の女神に恋する男」であり、映画版とは動機が大きく異なるのが読みどころ。",
+    "us": { "title": "The Infinity Gauntlet #1–6", "credits": "Jim Starlin(作)/ George Pérez, Ron Lim(画)" },
+    "jp": { "title": "インフィニティ・ガントレット", "note": "邦訳単行本あり ※在庫・版元は要確認", "asin": "XXXXXXXXXX" }
+  },
+  {
+    "year": 2005,
+    "title": "ハウス・オブ・M",
+    "en": "HOUSE OF M",
+    "synopsis": "精神が崩壊したスカーレット・ウィッチが現実そのものを書き換え、ミュータントが支配する世界を作り出す。『ワンダヴィジョン』を観た人が読むと衝撃を受ける、ワンダの「原点の悲劇」。ラストの一言はコミック史に残る名(迷)台詞。",
+    "us": { "title": "House of M #1–8", "credits": "Brian Michael Bendis(作)/ Olivier Coipel(画)" },
+    "jp": { "title": "ハウス・オブ・M", "note": "邦訳単行本あり ※在庫・版元は要確認", "asin": "XXXXXXXXXX" }
+  },
+  {
+    "year": 2006,
+    "title": "シビル・ウォー",
+    "en": "CIVIL WAR",
+    "synopsis": "ヒーローの活動が引き起こした大惨事をきっかけに「超人登録法」が成立。賛成派アイアンマンと反対派キャプテン・アメリカでヒーロー社会が真っ二つに割れる。映画版よりスケールも対立の深刻さも段違いで、結末も異なる。",
+    "us": { "title": "Civil War #1–7", "credits": "Mark Millar(作)/ Steve McNiven(画)" },
+    "jp": { "title": "シビル・ウォー", "note": "邦訳単行本あり ※在庫・版元は要確認", "asin": "XXXXXXXXXX" }
+  },
+  {
+    "year": 2015,
+    "title": "シークレット・ウォーズ(2015)",
+    "en": "SECRET WARS (2015)",
+    "synopsis": "マルチバースが完全崩壊し、ドクター・ドゥームが全世界の残骸から「バトルワールド」を作り神として君臨する。映画『アベンジャーズ:ドゥームズデイ』『シークレット・ウォーズ』2部作の元ネタと目される、2010年代最大のイベント。",
+    "us": { "title": "Secret Wars #1–9", "credits": "Jonathan Hickman(作)/ Esad Ribić(画)" },
+    "jp": { "title": "シークレット・ウォーズ", "note": "邦訳単行本あり ※在庫・版元は要確認", "asin": "XXXXXXXXXX" }
+  }
+]

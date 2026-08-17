@@ -1,0 +1,27 @@
+---
+layout: layouts/base.njk
+title: 特集記事一覧
+description: マーベル映像・コミックの特集記事。ドゥームズデイ予習ガイド、邦訳電子版配信停止(2026/9/30)の最終購入ガイド、ディフェンダーズ・サーガや旧フォックス版X-MENの視聴ガイドなど。
+permalink: /articles/
+---
+<section data-page="articles">
+  <div class="wrap">
+    <p class="crumb"><a href="{{ '/' | url }}">ホーム</a> › 記事</p>
+    <div class="sec-head">
+      <span class="en">ARTICLES</span>
+      <h2>特集記事</h2>
+      <p>視聴ガイド・購入ガイド・予習特集などの読みものです。</p>
+    </div>
+    <div class="article-list">
+      {%- for post in collections.articles | reverse %}
+      <a class="tool" href="{{ post.url | url }}">
+        <span class="icon m">✎</span>
+        <div>
+          <h3>{{ post.data.title }}</h3>
+          <p>{{ post.data.description }}</p>
+        </div>
+      </a>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
