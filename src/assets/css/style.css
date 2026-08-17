@@ -451,3 +451,48 @@
   .article-body th { background: var(--paper-dark); }
   .article-body em { font-style: normal; font-size: 0.8rem; color: #6b5f52; }
   .article-body a { color: var(--magenta); font-weight: 700; }
+
+  /* ---------- 3層ターゲット導線(ホーム) ---------- */
+  .type-band { margin: 0 0 40px; }
+  .type-band-head {
+    font-family: var(--font-body); font-weight: 900; font-size: 1.15rem;
+    text-align: center; margin-bottom: 16px;
+  }
+  .type-band-head::before, .type-band-head::after { content: " — "; color: var(--magenta); }
+  .type-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  @media (max-width: 760px) { .type-grid { grid-template-columns: 1fr; } }
+  .type-card {
+    background: #fff; border: 3px solid var(--ink); box-shadow: 5px 5px 0 var(--ink);
+    text-decoration: none; padding: 16px 18px 12px;
+    display: flex; flex-direction: column; gap: 8px;
+    transition: transform 0.15s, box-shadow 0.15s;
+  }
+  .type-card:hover { transform: translate(-2px,-2px); box-shadow: 8px 8px 0 var(--ink); }
+  .type-tag {
+    align-self: flex-start; font-family: var(--font-en); font-size: 0.85rem;
+    letter-spacing: 2px; color: #fff; text-shadow: 1px 1px 0 var(--ink);
+    border: 2px solid var(--ink); padding: 1px 10px;
+  }
+  .type-tag.c { background: var(--cyan); }
+  .type-tag.y { background: var(--yellow); }
+  .type-tag.m { background: var(--magenta); }
+  .type-card h3 { font-size: 1rem; font-weight: 900; line-height: 1.5; }
+  .type-card p { font-size: 0.8rem; color: #4a4238; flex: 1; }
+  .type-card .go { font-weight: 900; font-size: 0.8rem; color: var(--magenta); border-top: 2px dashed var(--paper-dark); padding-top: 8px; }
+
+  /* ---------- 見出しフォントの使い分け ----------
+     Rampart One(中抜き)は約15文字以内の飾り見出しのみ。
+     記事タイトル・作品名を含む見出し・2行以上に折り返す見出しは Zen Kaku Gothic New 900。
+     迷ったら太ゴシック側に倒す(チャット側Claude指定の基準) */
+  [data-page="article"] .sec-head h2,
+  .article-body h2 {
+    font-family: var(--font-body);
+    font-weight: 900;
+    letter-spacing: 0.02em;
+    overflow-wrap: break-word;
+  }
+  [data-page="article"] .sec-head h2 {
+    font-size: clamp(1.15rem, 3.2vw, 1.6rem);
+    line-height: 1.6;
+    display: block; border-bottom: 4px solid var(--ink);
+  }
