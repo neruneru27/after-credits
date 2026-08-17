@@ -31,10 +31,13 @@ pageJs: /assets/js/comics.js
               <span class="ed-label">日本翻訳版</span>
               <strong>{{ ev.jp.title }}</strong>
               <span class="meta">{{ ev.jp.note }}</span>
-              {%- if site.affiliateEnabled %}
-              <a class="amz-btn" href="{% amazonLink ev.jp.asin, site.amazonTag %}" rel="sponsored noopener" target="_blank">Amazonで見る</a><span class="pr-label">[PR]</span>
-              {%- else %}
+              {%- if not site.affiliateEnabled %}
               <span class="amz-pending">購入リンク準備中</span>
+              {%- elif ev.jp.asin == 'XXXXXXXXXX' %}
+              {%- set searchKw = 'マーベル ' + ev.jp.title %}
+              <a class="amz-btn" href="{% amazonSearch searchKw, site.amazonTag %}" rel="sponsored noopener" target="_blank">Amazonで探す</a><span class="pr-label">[PR]</span>
+              {%- else %}
+              <a class="amz-btn" href="{% amazonLink ev.jp.asin, site.amazonTag %}" rel="sponsored noopener" target="_blank">Amazonで見る</a><span class="pr-label">[PR]</span>
               {%- endif %}
             </div>
           </div>

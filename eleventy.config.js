@@ -7,6 +7,11 @@ module.exports = function (eleventyConfig) {
     return `https://www.amazon.co.jp/dp/${id}?tag=${tag}`;
   });
 
+  // ASIN未設定(プレースホルダ)の商品はAmazon検索結果へリンク
+  eleventyConfig.addShortcode('amazonSearch', function (keyword, tag) {
+    return `https://www.amazon.co.jp/s?k=${encodeURIComponent(keyword)}&tag=${tag}`;
+  });
+
   eleventyConfig.addFilter('jsonify', (v) => JSON.stringify(v));
 
   // 日本公開順ソート(SPA jpSortKey と同一ロジック)
