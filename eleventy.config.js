@@ -33,6 +33,9 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addFilter('pluck', (arr, key) => (arr || []).map((x) => x[key]));
 
+  // 百科appearances: comics-dbのno→書籍情報解決
+  eleventyConfig.addFilter('comicByNo', (no, items) => (items || []).find((b) => b.no === no) || null);
+
   // 視聴コース: 作品id→タイトル解決(見つからなければidをそのまま返す)
   eleventyConfig.addFilter('workTitle', (id, works) => {
     const w = (works || []).find((x) => x.id === id);

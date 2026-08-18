@@ -50,6 +50,36 @@ eleventyComputed:
       <p>{{ ch.anime }}</p>
       {%- endif %}
 
+      {%- if ch.appearances %}
+      {%- if ch.appearances.live and ch.appearances.live.length %}
+      <h3>🎬 実写出演作</h3>
+      <div class="app-list">
+        {%- for x in ch.appearances.live %}
+        <div class="app-item">
+          <p class="app-head"><b>{{ (x.work_id | workTitle(mcu.works)) if x.work_id else x.title }}</b><span class="app-role">{{ x.role }}</span></p>
+          {%- if x.sp %}
+          <details class="spoiler-box"><summary>⚠ ネタバレあり解説を表示</summary><p>{{ x.sp }}</p></details>
+          {%- endif %}
+        </div>
+        {%- endfor %}
+      </div>
+      {%- endif %}
+      {%- if ch.appearances.comic and ch.appearances.comic.length %}
+      <h3>📖 コミック出演作(邦訳基準)</h3>
+      <div class="app-list">
+        {%- for x in ch.appearances.comic %}
+        {%- set book = (x.db_no | comicByNo(comics.items)) if x.db_no else null %}
+        <div class="app-item">
+          <p class="app-head"><b>{{ book.title if book else x.title }}</b><span class="app-role">{{ x.role }}</span>{% if not book and x.jp %}<span class="app-jp">{{ x.jp }}</span>{% endif %}</p>
+          {%- if x.sp %}
+          <details class="spoiler-box"><summary>⚠ ネタバレあり解説を表示</summary><p>{{ x.sp }}</p></details>
+          {%- endif %}
+        </div>
+        {%- endfor %}
+      </div>
+      {%- endif %}
+      {%- endif %}
+
       {%- if ch.note %}
       <p class="term-note">{{ ch.note }}</p>
       {%- endif %}

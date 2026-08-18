@@ -1,9 +1,9 @@
 {
  "meta": {
   "name": "アフタークレジット キャラ検索カード v2",
-  "updated": "2026-08-17",
+  "updated": "2026-08-18",
   "schema": "name/en/ini(2字)/color(c,m,y,k)/desc(1-2文)/live(実写ガイド1行)/keys(検索用)/tags(comic,live,anime)",
-  "note": "liveフィールドは新設。カード内でdescの下にメタ行として表示する想定。SPOTLIGHT詳細(characters-doomsday-data.json)とは別レイヤー / tagsとenc_id(百科への連結キー)を付与済み"
+  "note": "liveフィールドは新設。カード内でdescの下にメタ行として表示する想定。SPOTLIGHT詳細(characters-doomsday-data.json)とは別レイヤー / tagsとenc_id(百科への連結キー)を付与済み / 未実写4体(nova/beyonder/molecule-man/doombot)のカードを追加し百科124体と完全対応"
  },
  "cards": [
   {
@@ -2691,6 +2691,87 @@
     "doomsday": true
    },
    "enc_id": "mystique"
+  },
+  {
+   "name": "ノヴァ",
+   "en": "NOVA",
+   "ini": "NV",
+   "color": "y",
+   "desc": "ノヴァ軍団の力を継いだ地球の青年リチャード・ライダー。\"宇宙版スパイダーマン\"と呼ばれる等身大ヒーロー。",
+   "live": "実写未登場(単独ドラマ企画が報じられ、軍団はGotGで既出)",
+   "keys": "ノヴァ nova リチャード・ライダー 軍団 宇宙警察",
+   "tags": {
+    "faction": [
+     "hero"
+    ],
+    "origin": "cosmic",
+    "series": [
+     "none"
+    ],
+    "doomsday": false
+   },
+   "enc_id": "nova"
+  },
+  {
+   "name": "ビヨンダー",
+   "en": "BEYONDER",
+   "ini": "BY",
+   "color": "k",
+   "desc": "次元の外に立つ全能の観察者。84年版シークレット・ウォーズでヒーローたちをバトルワールドへ攫った張本人。",
+   "live": "実写未登場(『シークレット・ウォーズ』での登場期待筆頭・考察)",
+   "keys": "ビヨンダー beyonder バトルワールド 全能 シークレットウォーズ",
+   "tags": {
+    "faction": [
+     "villain"
+    ],
+    "origin": "cosmic",
+    "series": [
+     "none"
+    ],
+    "doomsday": true
+   },
+   "enc_id": "beyonder"
+  },
+  {
+   "name": "モレキュール・マン",
+   "en": "MOLECULE MAN",
+   "ini": "MO",
+   "color": "c",
+   "desc": "分子を完全支配する事実上の全能者オーウェン・リース。SW2015ではドゥームの神権の\"電源\"という最重要枠。",
+   "live": "実写未登場(ドゥームズデイ/SWの隠し玉候補・考察)",
+   "keys": "モレキュールマン molecule man オーウェン・リース 全能",
+   "tags": {
+    "faction": [
+     "antihero",
+     "villain"
+    ],
+    "origin": "cosmic",
+    "series": [
+     "none"
+    ],
+    "doomsday": true
+   },
+   "enc_id": "molecule-man"
+  },
+  {
+   "name": "ドゥームボット",
+   "en": "DOOMBOT",
+   "ini": "DB",
+   "color": "m",
+   "desc": "ドゥーム本人と見分けのつかない複製ロボット群。\"倒したドゥームは偽物\"を60年支えるラトヴェリアの発明。",
+   "live": "実写未登場(ドゥーム実写化とセットでの初登場が待たれる)",
+   "keys": "ドゥームボット doombot ロボット ラトヴェリア 替え玉",
+   "tags": {
+    "faction": [
+     "villain"
+    ],
+    "origin": "tech",
+    "series": [
+     "none"
+    ],
+    "doomsday": true
+   },
+   "enc_id": "doombot"
   }
  ]
 }

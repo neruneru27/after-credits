@@ -108,7 +108,7 @@ let encIds = new Set();
 // ---- charaCards(検索カード120体) ----
 {
   const c = load('charaCards.json');
-  if (c.cards.length !== 120) err(`charaCards: 件数が 120 でない: ${c.cards.length}`);
+  if (c.cards.length !== 124) err(`charaCards: 件数が 124 でない: ${c.cards.length}`);
   const seen = new Set();
   for (const card of c.cards) {
     if (!['c', 'm', 'y', 'k'].includes(card.color)) {
@@ -120,6 +120,27 @@ let encIds = new Set();
     else if (!encIds.has(card.enc_id)) err(`charaCards: "${card.name}" の enc_id が百科に存在しない: ${card.enc_id}`);
     if (seen.has(card.enc_id)) err(`charaCards: enc_id 重複: ${card.enc_id}`);
     seen.add(card.enc_id);
+  }
+}
+
+// ---- appearances(百科の出演作リスト、Tier1〜段階追加) ----
+{
+  const e = load('encyclopedia.json');
+  const wids = new Set(load('mcu.json').works.map((w) => w.id));
+  const nos = new Set(load('comics.json').items.map((b) => b.no));
+  for (const ch of e.entries) {
+    const ap = ch.appearances;
+    if (!ap) continue;
+    for (const x of ap.live || []) {
+      if (!x.work_id && !x.title) err(`appearances: ${ch.id} のlive項目に work_id も title も無い`);
+      if (x.work_id && !wids.has(x.work_id)) err(`appearances: ${ch.id} の work_id が mcu に無い: ${x.work_id}`);
+      if (!x.role) err(`appearances: ${ch.id} のlive項目に role が無い`);
+    }
+    for (const x of ap.comic || []) {
+      if (!x.db_no && !x.title) err(`appearances: ${ch.id} のcomic項目に db_no も title も無い`);
+      if (x.db_no && !nos.has(x.db_no)) err(`appearances: ${ch.id} の db_no が comics に無い: ${x.db_no}`);
+      if (!x.role) err(`appearances: ${ch.id} のcomic項目に role が無い`);
+    }
   }
 }
 
@@ -137,4 +158,4 @@ if (errors.length) {
   for (const e of errors) console.error('  - ' + e);
   process.exit(1);
 }
-console.log("✔ データ検証 OK(glossary 149 / mcu 68 / comics 416 / encyclopedia 124 / cards 120)");
+console.log("✔ データ検証 OK(glossary 149 / mcu 68 / comics 416 / encyclopedia 124 / cards 124)");
