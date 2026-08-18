@@ -24,6 +24,18 @@
   },
   "series": [
     {
+      "id": "raimi-webb",
+      "en": "SPIDER-MAN LEGACY FILMS",
+      "title": "旧スパイダーマン映画(ライミ版3部作+アメイジング2作)",
+      "items": [
+        { "title": "スパイダーマン", "year": "2002" },
+        { "title": "スパイダーマン2", "year": "2004" },
+        { "title": "スパイダーマン3", "year": "2007" },
+        { "title": "アメイジング・スパイダーマン", "year": "2012" },
+        { "title": "アメイジング・スパイダーマン2", "year": "2014" }
+      ]
+    },
+    {
       "id": "ssu",
       "en": "SONY'S SPIDER-MAN UNIVERSE",
       "title": "SSU(ソニー・スパイダーマン・ユニバース)",
