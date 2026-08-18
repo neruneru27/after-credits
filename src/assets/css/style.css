@@ -552,3 +552,24 @@
   }
   .app-jp { font-size: 0.72rem; font-weight: 700; color: #6b5f52; margin-left: 10px; }
   .app-item .spoiler-box { margin-top: 8px; }
+
+  /* ---------- MCU外シリーズ・視聴順リスト ---------- */
+  .series-order-head { font-size: 0.95rem; font-weight: 900; margin: 24px 0 4px; border-top: 2px dashed var(--paper-dark); padding-top: 16px; }
+  .series-order-note { font-size: 0.8rem; color: #4a4238; margin-bottom: 10px; }
+  .series-order { list-style: none; counter-reset: so; margin: 0; }
+  .series-order li {
+    counter-increment: so; position: relative;
+    padding: 8px 0 8px 44px; border-bottom: 2px dashed var(--paper-dark);
+    font-size: 0.9rem;
+  }
+  .series-order li::before {
+    content: counter(so); position: absolute; left: 0; top: 8px;
+    width: 30px; height: 30px; border-radius: 50%;
+    background: var(--ink); color: var(--yellow);
+    font-family: var(--font-en); font-size: 0.95rem;
+    display: flex; align-items: center; justify-content: center;
+    border: 2px solid var(--ink);
+  }
+  .series-order li span { font-size: 0.75rem; color: #6b5f52; font-weight: 700; margin-left: 10px; }
+  .series-desc { font-size: 0.8rem; color: #4a4238; margin-top: 4px; }
+  .other-series { margin-top: 20px; }

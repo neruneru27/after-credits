@@ -46,7 +46,30 @@ pageJs: /assets/js/live.js
         <li><b>{{ w.title }}</b><span>{{ w.years }}{% if w.priority %} / {{ w.priority }}{% endif %}</span></li>
         {%- endfor %}
       </ul>
+      <h4 class="series-order-head">視聴順(シーズン時系列・全13シーズン)</h4>
+      <p class="series-order-note">{{ otherSeries.defenders_order.note_key }}</p>
+      <ol class="series-order">
+        {%- for w in otherSeries.defenders_order.items %}
+        <li><b>{{ w.title }}</b><span>{{ w.year }}</span>{% if w.desc %}<p class="series-desc">{{ w.desc }}</p>{% endif %}</li>
+        {%- endfor %}
+      </ol>
     </div>
+
+    <div class="sec-head" style="margin-top:56px;">
+      <span class="en">BEYOND MCU</span>
+      <h2>MCU外の関連実写シリーズ</h2>
+      <p>MCU本編ではないものの、クロスオーバーやキャラクターの再登場で繋がりのある実写シリーズです。並びは公開順(=推奨視聴順)。</p>
+    </div>
+    {%- for s in otherSeries.series %}
+    <div class="defenders other-series">
+      <h3>{{ s.title }}</h3>
+      <ol class="series-order">
+        {%- for w in s.items %}
+        <li><b>{{ w.title }}</b><span>{{ w.year }}</span>{% if w.desc %}<p class="series-desc">{{ w.desc }}</p>{% endif %}</li>
+        {%- endfor %}
+      </ol>
+    </div>
+    {%- endfor %}
 
     <div class="sec-head" style="margin-top:56px;">
       <span class="en">CHARACTER COURSE</span>
