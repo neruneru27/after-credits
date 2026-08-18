@@ -34,7 +34,7 @@ const err = (msg) => errors.push(msg);
       if (!seen.has(r)) err(`glossary: "${t.term}" の rel 参照先が存在しない: "${r}"`);
     }
   }
-  if (g.terms.length !== 296) err(`glossary: terms 件数が 296 でない: ${g.terms.length}`);
+  if (g.terms.length !== 298) err(`glossary: terms 件数が 298 でない: ${g.terms.length}`);
 }
 
 // ---- mcu-works ----
@@ -89,7 +89,7 @@ const err = (msg) => errors.push(msg);
 let encIds = new Set();
 {
   const e = load('encyclopedia.json');
-  if (e.entries.length !== 124) err(`encyclopedia: 件数が 124 でない: ${e.entries.length}`);
+  if (e.entries.length !== 125) err(`encyclopedia: 件数が 125 でない: ${e.entries.length}`);
   const factions = Object.keys(e.meta.filters.faction);
   const origins = Object.keys(e.meta.filters.origin);
   const seriesKeys = Object.keys(e.meta.filters.series);
@@ -113,7 +113,7 @@ let encIds = new Set();
 // ---- charaCards(検索カード120体) ----
 {
   const c = load('charaCards.json');
-  if (c.cards.length !== 124) err(`charaCards: 件数が 124 でない: ${c.cards.length}`);
+  if (c.cards.length !== 125) err(`charaCards: 件数が 125 でない: ${c.cards.length}`);
   const seen = new Set();
   for (const card of c.cards) {
     if (!['c', 'm', 'y', 'k'].includes(card.color)) {
@@ -155,9 +155,12 @@ let encIds = new Set();
   if (o.defenders_order.items.length !== 13) {
     err(`otherSeries: defenders_order が 13 でない: ${o.defenders_order.items.length}`);
   }
+  if (o.series.length !== 6) err(`otherSeries: ブロック数が 6 でない: ${o.series.length}`);
   for (const s of o.series) {
     for (const w of s.items) {
-      for (const k of ['title', 'year', 'desc', 'syn', 'sp']) {
+      const upcoming = /予定/.test(w.year || '');
+      const req = upcoming ? ['title', 'year', 'desc'] : ['title', 'year', 'desc', 'syn', 'sp'];
+      for (const k of req) {
         if (!w[k]) err(`otherSeries: ${s.id} "${w.title || '?'}" に ${k} が無い`);
       }
     }
@@ -257,7 +260,7 @@ let encIds = new Set();
   const g = load('charaGoods.json');
   const encIds2 = new Set(load('encyclopedia.json').entries.map((x) => x.id));
   const keys = Object.keys(g.chars);
-  if (keys.length !== 124) err(`goods: 件数が 124 でない: ${keys.length}`);
+  if (keys.length !== 125) err(`goods: 件数が 125 でない: ${keys.length}`);
   for (const id of encIds2) if (!g.chars[id]) err(`goods: 未網羅のキャラ: ${id}`);
   for (const [id, v] of Object.entries(g.chars)) {
     if (!v.query) err(`goods: ${id} に query が無い`);
@@ -316,4 +319,4 @@ if (errors.length) {
   for (const e of errors) console.error('  - ' + e);
   process.exit(1);
 }
-console.log("✔ データ検証 OK(glossary 296 / mcu 68 / comics 416 / encyclopedia 124 / cards 124)");
+console.log("✔ データ検証 OK(glossary 298 / mcu 68 / comics 416 / encyclopedia 125 / cards 125)");

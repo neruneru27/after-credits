@@ -236,6 +236,18 @@
   "defenders": {
    "dplus": true,
    "note": "旧ネトフリ勢は2022年以降D+へ移管済み"
+  },
+  "gr-films": {
+   "dplus": false,
+   "note": "運営者確認済み(2026-08-18): 日本のD+に配信なし"
+  },
+  "abc-tv": {
+   "dplus": true,
+   "note": "エージェント・オブ・シールド等ABC系は全てD+配信中(運営者情報と整合)"
+  },
+  "spider-verse": {
+   "dplus": "check",
+   "note": "ソニーのアニメ映画。日本のD+配信有無を運営者確認(他社配信の可能性が高い)"
   }
  }
 }
