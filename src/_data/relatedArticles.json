@@ -1,0 +1,4 @@
+{
+  "_readme": "実写個別ページ(/live/<id>/)に出す関連記事リンク。キーはwork_id",
+  "spiderman-bnd": { "url": "/articles/bnd-comics-guide/", "title": "『ブランド・ニュー・デイ』の次に読む原作ガイド — 共闘の元ネタから「あの設定」の源流まで" }
+}

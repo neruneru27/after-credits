@@ -93,6 +93,11 @@ eleventyComputed:
       </div>
       {%- endif %}
 
+      {%- set rel = relatedArticles[w.id] %}
+      {%- if rel %}
+      <p class="term-note">📚 関連記事: <a href="{{ rel.url | url }}">{{ rel.title }}</a></p>
+      {%- endif %}
+
       {%- set books = comics.items | comicsForWork(w.id) %}
       {%- if not books.length and chars.length %}
       <h3>📖 原作で読む</h3>

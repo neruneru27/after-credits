@@ -613,3 +613,14 @@
   }
   .rel-chip:hover { background: var(--yellow); }
   .term:target { outline: 4px solid var(--magenta); outline-offset: 4px; }
+
+  /* ---------- 記事: DB参照チップ ---------- */
+  .db-refs { white-space: nowrap; }
+  .db-ref {
+    display: inline-block; font-size: 0.75rem; font-weight: 900;
+    border: 2px solid var(--ink); background: #fff; padding: 1px 8px 1px 2px;
+    margin: 0 3px; text-decoration: none; color: var(--ink) !important;
+    box-shadow: 2px 2px 0 var(--ink); vertical-align: 1px;
+  }
+  .db-ref .cs-badge { margin-right: 6px; }
+  .crow:target { outline: 4px solid var(--magenta); outline-offset: 2px; }

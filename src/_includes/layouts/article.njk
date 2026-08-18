@@ -21,7 +21,7 @@ ogType: article
         <span class="en">ARTICLE</span>
         <h2>{{ title }}</h2>
       </div>
-      {{ content | safe }}
+      {{ content | dbRefs(comics.items) | safe }}
     </article>
   </div>
 </section>

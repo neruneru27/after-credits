@@ -33,6 +33,31 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addFilter('pluck', (arr, key) => (arr || []).map((x) => x[key]));
 
+  // 記事本文の【DB◯◯】マーカー → コミックDBリンク+在庫区分バッジ(区分はビルド時にDBから取得)
+  // 対応形式: 【DB10】【DB11〜13】【DB379・380】および末尾の手書き注記(・以降の非数値)は破棄して動的表示に置換
+  eleventyConfig.addFilter('dbRefs', function (content, items) {
+    const byNo = Object.fromEntries((items || []).map((b) => [b.no, b]));
+    const csLabel = { A: '在庫あり', S: '店頭在庫のみ', R: '流通限定', D: '9/30消滅' };
+    const prefix = (process.env.PATH_PREFIX || '/').replace(/\/$/, '');
+    return String(content).replace(/【DB([^】]*)】/g, (whole, spec) => {
+      const nums = [];
+      for (const tok of spec.split('・')) {
+        const range = tok.match(/^(\d+)[〜~](\d+)$/);
+        if (range) {
+          for (let i = +range[1]; i <= +range[2]; i++) nums.push(i);
+        } else if (/^\d+$/.test(tok)) {
+          nums.push(+tok);
+        } else break; // 数値でないトークン以降は手書き注記なので破棄
+      }
+      if (!nums.length || nums.some((n) => !byNo[n])) return whole; // 不明な番号はそのまま残す(validateで検出)
+      const links = nums.map((n) => {
+        const b = byNo[n];
+        return `<a class="db-ref" href="${prefix}/comics/#db-${n}"><span class="cs-badge ${b.status_code}">${csLabel[b.status_code]}</span>No.${n}</a>`;
+      });
+      return `<span class="db-refs">${links.join('')}</span>`;
+    });
+  });
+
   // 百科appearances: 実写出演を公開順にソート(work_id→mcuのdate、title直書きは西暦抽出、不明は元順維持)
   eleventyConfig.addFilter('sortAppLive', (items, works) => {
     const byId = Object.fromEntries((works || []).map((w) => [w.id, w]));
@@ -77,6 +102,17 @@ module.exports = function (eleventyConfig) {
     const w = (works || []).find((x) => x.id === id);
     return w ? w.title : id;
   });
+
+  // 記事等のルート相対リンク(/live/… /comics/…)にpathPrefixを自動付与
+  const prefix = (process.env.PATH_PREFIX || '/').replace(/\/$/, '');
+  if (prefix) {
+    const esc = prefix.slice(1).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const re = new RegExp(`(href|src)="/(?!/)(?!${esc}/)`, 'g');
+    eleventyConfig.addTransform('prefixRootLinks', function (content) {
+      if (!(this.page.outputPath || '').endsWith('.html')) return content;
+      return content.replace(re, `$1="${prefix}/`);
+    });
+  }
 
   return {
     dir: {

@@ -69,7 +69,7 @@ pageJs: /assets/js/comics.js
     <div class="comic-list" id="comic-list">
       {%- set csLabel = { A: '在庫あり', S: '店頭在庫のみ', R: '流通限定', D: '9/30消滅' } %}
       {%- for c in comics.items %}
-      <div class="crow" data-cs="{{ c.status_code }}"{% if c.screen %} data-screen="1"{% endif %}{% if c.doomsday_prep %} data-doom="1"{% endif %} data-key="{{ c.series }}{% if c.screen %} {{ c.screen | join(' ') }}{% endif %}">
+      <div class="crow" id="db-{{ c.no }}" data-cs="{{ c.status_code }}"{% if c.screen %} data-screen="1"{% endif %}{% if c.doomsday_prep %} data-doom="1"{% endif %} data-key="{{ c.series }}{% if c.screen %} {{ c.screen | join(' ') }}{% endif %}">
         <span class="cs-badge {{ c.status_code }}">{{ csLabel[c.status_code] }}</span>
         <div>
           <h3>{% if c.doomsday_prep %}<span class="doom-star">★</span> {% endif %}{{ c.title }}</h3>
