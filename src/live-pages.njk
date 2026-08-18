@@ -1,0 +1,122 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: mcu.works
+  size: 1
+  alias: w
+  addAllPagesToCollections: true
+permalink: "/live/{{ w.id }}/"
+eleventyComputed:
+  title: "{{ w.title }}|あらすじ・クレジットシーン・登場キャラ解説"
+  description: "{{ w.title }}({{ w.date_jp | fmtDate }})の基本情報・あらすじ(ネタバレなし)・ネタバレあり要約・クレジットシーンの有無と内容・登場キャラクター・原作コミックを解説。"
+---
+{%- set ex = liveExtra.works[w.id] %}
+<section data-page="live-detail">
+  <div class="wrap">
+    <p class="crumb"><a href="{{ '/' | url }}">ホーム</a> › <a href="{{ '/live/' | url }}">実写サイド</a> › {{ w.title }}</p>
+
+    <div class="sec-head">
+      <span class="en">{{ {'movie':'MOVIE','drama':'DRAMA','anime':'ANIMATION','special':'SPECIAL'}[w.type] }}</span>
+      <h2 class="chara-name-h">{{ w.title }}{% if w.brand %}<span class="w-badge">単独OK</span>{% endif %}{% if w.status == 'upcoming' %}<span class="w-badge upcoming">公開予定</span>{% endif %}</h2>
+      {%- if w.desc %}<p>{{ w.desc }}</p>{% endif %}
+    </div>
+
+    <div class="enc-facts">
+      <div><b>日本公開</b>{{ w.date_jp | fmtDate }}{% if w.date_jp_note %}({{ w.date_jp_note }}){% endif %}</div>
+      <div><b>監督</b>{{ ex.director }}</div>
+      {%- if ex.eps %}
+      <div><b>話数</b>全{{ ex.eps }}話</div>
+      {%- elif ex.runtime %}
+      <div><b>上映時間</b>{{ ex.runtime }}分</div>
+      {%- endif %}
+      <div><b>フェーズ</b>フェーズ{{ w.phase }}</div>
+      <div><b>単独OK</b>{{ '○(予習なしで観られる)' if w.brand else '—' }}</div>
+    </div>
+
+    <div class="enc-body article-body">
+      {%- if w.syn %}
+      <h3>あらすじ(ネタバレなし)</h3>
+      <p>{{ w.syn }}</p>
+      {%- if w.sp %}
+      <details class="spoiler-box"><summary>⚠ ネタバレあり要約を表示(結末まで書いています)</summary><p>{{ w.sp }}</p></details>
+      {%- endif %}
+      {%- endif %}
+
+      <h3>🎬 クレジットシーン</h3>
+      {%- if ex.credits and ex.credits.length %}
+      <div class="app-list">
+        {%- for c in ex.credits %}
+        <div class="app-item">
+          <p class="app-head"><span class="credit-pos {{ c.pos }}">{{ '本編中盤後' if c.pos == 'mid' else 'エンドクレジット後' }}</span></p>
+          <details class="spoiler-box"><summary>⚠ シーンの内容を表示(ネタバレ)</summary><p>{{ c.sp }}</p></details>
+        </div>
+        {%- endfor %}
+      </div>
+      {%- else %}
+      <p><b>クレジットシーン: なし</b></p>
+      {%- if ex.note %}<p class="term-note">{{ ex.note }}</p>{% endif %}
+      {%- endif %}
+
+      {%- if ex.requires.length or ex.leads_to.length %}
+      <h3>📌 観る前に / この次に</h3>
+      <div class="nav-grid">
+        {%- if ex.requires.length %}
+        <div class="nav-col">
+          <p class="nav-label">観る前に(前提作品)</p>
+          <ul>
+            {%- for r in ex.requires %}
+            <li><a href="{{ ('/live/' + r + '/') | url }}">{{ r | workTitle(mcu.works) }}</a></li>
+            {%- endfor %}
+          </ul>
+        </div>
+        {%- endif %}
+        {%- if ex.leads_to.length %}
+        <div class="nav-col">
+          <p class="nav-label">この次に(繋がる作品)</p>
+          <ul>
+            {%- for r in ex.leads_to %}
+            <li><a href="{{ ('/live/' + r + '/') | url }}">{{ r | workTitle(mcu.works) }}</a></li>
+            {%- endfor %}
+          </ul>
+        </div>
+        {%- endif %}
+      </div>
+      {%- endif %}
+
+      {%- set chars = encyclopedia.entries | charsInWork(w.id) %}
+      {%- if chars.length %}
+      <h3>👥 登場キャラクター</h3>
+      <div class="char-links">
+        {%- for c in chars %}
+        <a class="char-link" href="{{ ('/characters/' + c.id + '/') | url }}"><b>{{ c.name }}</b><span class="app-role">{{ c.role }}</span></a>
+        {%- endfor %}
+      </div>
+      {%- endif %}
+
+      {%- set books = comics.items | comicsForWork(w.id) %}
+      {%- if books.length %}
+      <h3>📖 原作で読む</h3>
+      <div class="app-list">
+        {%- set csLabel = { A: '在庫あり', S: '店頭在庫のみ', R: '流通限定', D: '9/30消滅' } %}
+        {%- for b in books %}
+        <div class="app-item">
+          <p class="app-head"><span class="cs-badge {{ b.status_code }}">{{ csLabel[b.status_code] }}</span><b>{{ b.title }}</b><span class="app-jp">{{ b.series }}</span></p>
+        </div>
+        {%- endfor %}
+      </div>
+      {%- endif %}
+
+      {%- set amz = amazonLinks[w.id] %}
+      {%- if site.affiliateEnabled and amz %}
+      <h3>🛒 この作品を観る・買う</h3>
+      <p class="w-buy">
+        {%- if amz.bd %}<a class="amz-btn" href="https://www.amazon.co.jp/dp/{{ amz.bd }}?tag={{ site.amazonTag }}" rel="sponsored noopener" target="_blank">Blu-ray</a>{% endif %}
+        {%- if amz.dvd %}<a class="amz-btn" href="https://www.amazon.co.jp/dp/{{ amz.dvd }}?tag={{ site.amazonTag }}" rel="sponsored noopener" target="_blank">DVD</a>{% endif %}
+        {%- if amz.pv %}<a class="amz-btn" href="https://www.amazon.co.jp/dp/{{ amz.pv }}?tag={{ site.amazonTag }}" rel="sponsored noopener" target="_blank">プライムビデオ</a>{% endif %}
+        <span class="pr-label">[PR]</span></p>
+      {%- endif %}
+    </div>
+
+    <p class="enc-back"><a href="{{ '/live/' | url }}">← 視聴順ガイドに戻る</a></p>
+  </div>
+</section>

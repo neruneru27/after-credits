@@ -1,0 +1,1121 @@
+{
+ "meta": {
+  "name": "実写作品 個別ページ用 拡張データ(live-extra)",
+  "updated": "2026-08-18",
+  "schema": "works[work_id] = {director, runtime(分), requires[前に観るべき], leads_to[次に繋がる], credits[{pos: mid|post, sp(ネタバレ・2段防御表示)}]}",
+  "progress": "全68作品完備(2026-08-18)。映画=runtime分、ドラマ=eps話数。クレジットシーン無し作品はnoteに明記",
+  "note": "登場キャラ一覧はencyclopediaのappearances逆引きで、関連コミックはcomics-dbのscreen連結で自動生成可能(データ追加不要)"
+ },
+ "works": {
+  "iron-man": {
+   "director": "ジョン・ファヴロー",
+   "runtime": 126,
+   "requires": [],
+   "leads_to": [
+    "iron-man-2",
+    "avengers"
+   ],
+   "credits": [
+    {
+     "pos": "post",
+     "sp": "ニック・フューリーが自宅に現れ「アベンジャーズ計画の話をしに来た」。共有ユニバース構想の産声で、すべてはこの1分から始まった。"
+    }
+   ]
+  },
+  "incredible-hulk": {
+   "director": "ルイ・レテリエ",
+   "runtime": 112,
+   "requires": [],
+   "leads_to": [
+    "avengers",
+    "cap-bnw"
+   ],
+   "credits": [
+    {
+     "pos": "post",
+     "sp": "バーで飲んだくれるロス将軍の前にトニー・スタークが現れ「チームを組む話がある」。※クレジット後ではなく本編ラストに配置されている珍しい形式。"
+    }
+   ]
+  },
+  "iron-man-2": {
+   "director": "ジョン・ファヴロー",
+   "runtime": 125,
+   "requires": [
+    "iron-man"
+   ],
+   "leads_to": [
+    "avengers",
+    "black-widow"
+   ],
+   "credits": [
+    {
+     "pos": "post",
+     "sp": "コールソンがニューメキシコの砂漠でクレーターを報告——中心には1本のハンマー(ムジョルニア)。『マイティ・ソー』への直結予告。"
+    }
+   ]
+  },
+  "thor": {
+   "director": "ケネス・ブラナー",
+   "runtime": 115,
+   "requires": [],
+   "leads_to": [
+    "avengers",
+    "thor-tdw"
+   ],
+   "credits": [
+    {
+     "pos": "post",
+     "sp": "セルヴィグ博士がフューリーから四次元キューブを見せられる。その瞳の奥にはロキの影——『アベンジャーズ』の火種。"
+    }
+   ]
+  },
+  "cap-tfa": {
+   "director": "ジョー・ジョンストン",
+   "runtime": 124,
+   "requires": [],
+   "leads_to": [
+    "avengers"
+   ],
+   "credits": [
+    {
+     "pos": "post",
+     "sp": "現代で目覚めたスティーブにフューリーが任務を持ちかける『アベンジャーズ』特報映像。"
+    }
+   ]
+  },
+  "avengers": {
+   "director": "ジョス・ウェドン",
+   "runtime": 143,
+   "requires": [
+    "iron-man",
+    "thor",
+    "cap-tfa"
+   ],
+   "leads_to": [
+    "iron-man-3",
+    "thor-tdw",
+    "cap-tws"
+   ],
+   "credits": [
+    {
+     "pos": "mid",
+     "sp": "玉座で振り返り微笑む紫の巨人——サノス初登場。「死に挑むことになるぞ」に笑う男の正体を、観客はまだ知らない。"
+    },
+    {
+     "pos": "post",
+     "sp": "満身創痍の6人が無言でシャワルマを頬張る脱力の名場面。"
+    }
+   ]
+  },
+  "iron-man-3": {
+   "director": "シェーン・ブラック",
+   "runtime": 130,
+   "requires": [
+    "avengers"
+   ],
+   "leads_to": [
+    "aou"
+   ],
+   "credits": [
+    {
+     "pos": "post",
+     "sp": "トニーの長い身の上話は、実はバナー博士への愚痴だった——「僕はそういう医者じゃない」。"
+    }
+   ]
+  },
+  "thor-tdw": {
+   "director": "アラン・テイラー",
+   "runtime": 112,
+   "requires": [
+    "thor",
+    "avengers"
+   ],
+   "leads_to": [
+    "ragnarok",
+    "infinity-war"
+   ],
+   "credits": [
+    {
+     "pos": "mid",
+     "sp": "シフとヴォルスタッグがエーテルをコレクターに預ける。「1つ目か……残り5つ」——ストーン収集の構図が初めて明示された。"
+    },
+    {
+     "pos": "post",
+     "sp": "ソーが地球に帰還しジェーンと再会。ロンドンには異界の怪獣が置き去りに。"
+    }
+   ]
+  },
+  "cap-tws": {
+   "director": "ルッソ兄弟",
+   "runtime": 136,
+   "requires": [
+    "cap-tfa",
+    "avengers"
+   ],
+   "leads_to": [
+    "aou",
+    "civil-war"
+   ],
+   "credits": [
+    {
+     "pos": "mid",
+     "sp": "ストラッカー男爵の研究所に\"双子\"——ワンダとピエトロが囚われている。ヒドラ残党と『AoU』への布石。"
+    },
+    {
+     "pos": "post",
+     "sp": "スミソニアンのキャップ展で、バッキーが自分の展示を見つめている。記憶の欠片を追う旅の始まり。"
+    }
+   ]
+  },
+  "gotg": {
+   "director": "ジェームズ・ガン",
+   "runtime": 121,
+   "requires": [],
+   "leads_to": [
+    "gotg2",
+    "infinity-war"
+   ],
+   "credits": [
+    {
+     "pos": "post",
+     "sp": "コレクターの廃墟でハワード・ザ・ダックが一杯やっている。実用情報ゼロの完全な悪ふざけ(それがいい)。"
+    }
+   ]
+  },
+  "aou": {
+   "director": "ジョス・ウェドン",
+   "runtime": 141,
+   "requires": [
+    "avengers",
+    "cap-tws"
+   ],
+   "leads_to": [
+    "civil-war",
+    "ragnarok"
+   ],
+   "credits": [
+    {
+     "pos": "mid",
+     "sp": "サノスがガントレットを自ら装着し「自分でやるか」。※本作にポストクレジットは無し。"
+    }
+   ]
+  },
+  "ant-man": {
+   "director": "ペイトン・リード",
+   "runtime": 117,
+   "requires": [],
+   "leads_to": [
+    "civil-war",
+    "ant-man-wasp"
+   ],
+   "credits": [
+    {
+     "pos": "mid",
+     "sp": "ハンクがホープに新型ワスプ・スーツを見せる。「時間かかりすぎ」。"
+    },
+    {
+     "pos": "post",
+     "sp": "サムとスティーブがバッキーを発見している——『シビル・ウォー』本編映像の先行使用。"
+    }
+   ]
+  },
+  "civil-war": {
+   "director": "ルッソ兄弟",
+   "runtime": 147,
+   "requires": [
+    "avengers",
+    "cap-tws",
+    "aou",
+    "ant-man"
+   ],
+   "leads_to": [
+    "black-panther",
+    "infinity-war",
+    "black-widow"
+   ],
+   "credits": [
+    {
+     "pos": "mid",
+     "sp": "バッキーが自らの意思で再冷凍を選ぶ。場所はワカンダ——「彼らが治し方を見つけるまで」。"
+    },
+    {
+     "pos": "post",
+     "sp": "ピーターの手首に新しいウェブシューター。「メイおばさんには内緒だ」。"
+    }
+   ]
+  },
+  "doctor-strange": {
+   "director": "スコット・デリクソン",
+   "runtime": 115,
+   "requires": [],
+   "leads_to": [
+    "ragnarok",
+    "infinity-war",
+    "mom"
+   ],
+   "credits": [
+    {
+     "pos": "mid",
+     "sp": "ストレンジがソーと面談し「オーディン探しに協力しよう」——『ラグナロク』の1場面を先出し。"
+    },
+    {
+     "pos": "post",
+     "sp": "モルドがパングボーンの魔力を奪い去る。「魔術師が多すぎる」——ヴィラン化宣言(いまだ未回収)。"
+    }
+   ]
+  },
+  "gotg2": {
+   "director": "ジェームズ・ガン",
+   "runtime": 136,
+   "requires": [
+    "gotg"
+   ],
+   "leads_to": [
+    "infinity-war",
+    "gotg3"
+   ],
+   "credits": [
+    {
+     "pos": "mid",
+     "sp": "クラグリンが口笛矢を練習中(うなじに刺さる)/スタカーら初代ガーディアンズ級の面々が再集結。"
+    },
+    {
+     "pos": "post",
+     "sp": "ソヴリンのアイーシャが復讐兵器の繭を披露——名は「アダム」。アダム・ウォーロックの予告(回収はVol.3)。ほかティーン化した反抗期グルート、ウォッチャーと語り部スタン・リーの計5本立て。"
+    }
+   ]
+  },
+  "homecoming": {
+   "director": "ジョン・ワッツ",
+   "runtime": 133,
+   "requires": [
+    "civil-war"
+   ],
+   "leads_to": [
+    "ffh"
+   ],
+   "credits": [
+    {
+     "pos": "mid",
+     "sp": "獄中のトゥームスが「スパイダーマンの正体を知ってるんだろ?」に「知ってたら死んでる」と嘯く——仁義の男。"
+    },
+    {
+     "pos": "post",
+     "sp": "キャップの学校教材ビデオ:「忍耐には価値がある。……こうして君は無駄に待った」。"
+    }
+   ]
+  },
+  "ragnarok": {
+   "director": "タイカ・ワイティティ",
+   "runtime": 130,
+   "requires": [
+    "thor",
+    "aou",
+    "doctor-strange"
+   ],
+   "leads_to": [
+    "infinity-war"
+   ],
+   "credits": [
+    {
+     "pos": "mid",
+     "sp": "難民船の前に現れる巨大な影——サノスの旗艦サンクチュアリII。『IW』冒頭の惨劇へ直結。"
+    },
+    {
+     "pos": "post",
+     "sp": "崩壊したサカールでグランドマスターが「革命は引き分けだ」と自己弁護。"
+    }
+   ]
+  },
+  "black-panther": {
+   "director": "ライアン・クーグラー",
+   "runtime": 134,
+   "requires": [
+    "civil-war"
+   ],
+   "leads_to": [
+    "infinity-war",
+    "wakanda-forever"
+   ],
+   "credits": [
+    {
+     "pos": "mid",
+     "sp": "ティチャラが国連で鎖国終了を宣言。「賢い者は橋を架ける」。"
+    },
+    {
+     "pos": "post",
+     "sp": "ワカンダの村で目覚めたバッキーを子供たちが「ホワイト・ウルフ」と呼ぶ。"
+    }
+   ]
+  },
+  "infinity-war": {
+   "director": "ルッソ兄弟",
+   "runtime": 149,
+   "requires": [
+    "civil-war",
+    "ragnarok",
+    "gotg2",
+    "doctor-strange",
+    "black-panther"
+   ],
+   "leads_to": [
+    "endgame"
+   ],
+   "credits": [
+    {
+     "pos": "post",
+     "sp": "塵化するフューリーが最後の力で旧式ポケベルを起動——画面にキャプテン・マーベルの紋章。唯一にして最重要の1本。"
+    }
+   ]
+  },
+  "ant-man-wasp": {
+   "director": "ペイトン・リード",
+   "runtime": 118,
+   "requires": [
+    "ant-man",
+    "civil-war"
+   ],
+   "leads_to": [
+    "endgame"
+   ],
+   "credits": [
+    {
+     "pos": "mid",
+     "sp": "量子世界で採取中のスコットの応答が途絶える——地上ではピム一家が塵化していた。シリーズ屈指の凍りつくミッドクレジット。"
+    },
+    {
+     "pos": "post",
+     "sp": "無人の家で巨大アリがドラムの練習を続けている。"
+    }
+   ]
+  },
+  "captain-marvel": {
+   "director": "アンナ・ボーデン&ライアン・フレック",
+   "runtime": 123,
+   "requires": [],
+   "leads_to": [
+    "avengers",
+    "endgame",
+    "the-marvels"
+   ],
+   "credits": [
+    {
+     "pos": "mid",
+     "sp": "現代——ポケベルの信号が途絶え、振り返ったスティーブたちの前にキャロルが立っている。「フューリーはどこ?」。『EG』本編への直結。"
+    },
+    {
+     "pos": "post",
+     "sp": "フューリーのデスクでグースがテッセラクトを吐き出す。"
+    }
+   ]
+  },
+  "endgame": {
+   "director": "ルッソ兄弟",
+   "runtime": 181,
+   "requires": [
+    "infinity-war",
+    "ant-man-wasp",
+    "captain-marvel"
+   ],
+   "leads_to": [
+    "ffh",
+    "fatws"
+   ],
+   "credits": [
+    {
+     "pos": "post",
+     "sp": "映像なし。クレジットの最後に、初代『アイアンマン』でトニーがアーマーを鍛造する金槌の音だけが響く——11年への献辞。"
+    }
+   ]
+  },
+  "ffh": {
+   "director": "ジョン・ワッツ",
+   "runtime": 129,
+   "requires": [
+    "endgame"
+   ],
+   "leads_to": [
+    "nwh"
+   ],
+   "credits": [
+    {
+     "pos": "mid",
+     "sp": "デイリー・ビューグルのJJJ(ライミ版と同役者!)がベックの遺した映像を公開——スパイダーマンの正体は全世界に暴露される。本編級の爆弾。"
+    },
+    {
+     "pos": "post",
+     "sp": "フューリーとヒルの正体はタロス夫妻だった。本物のフューリーは宇宙ステーションでバカンス中。"
+    }
+   ]
+  },
+  "wandavision": {
+   "director": "マット・シャックマン(監督)/ジャック・シェイファー(製作)",
+   "requires": [
+    "aou",
+    "endgame"
+   ],
+   "leads_to": [
+    "mom",
+    "agatha",
+    "vision-quest"
+   ],
+   "credits": [
+    {
+     "pos": "mid",
+     "sp": "モニカを呼び出したのはスクラルの使者。「彼が宇宙で待っている」——『ザ・マーベルズ』への招待状。"
+    },
+    {
+     "pos": "post",
+     "sp": "山荘のワンダはアストラル体でダークホールドを読み耽っている。その耳に双子の助けを呼ぶ声が——『MoM』の悲劇の予告。"
+    }
+   ],
+   "eps": 9
+  },
+  "fatws": {
+   "director": "カリ・スコグランド(監督)",
+   "requires": [
+    "cap-tws",
+    "civil-war",
+    "endgame"
+   ],
+   "leads_to": [
+    "cap-bnw",
+    "thunderbolts"
+   ],
+   "credits": [
+    {
+     "pos": "post",
+     "sp": "恩赦を受けたシャロンが通話で嗤う。「政府の中に戻れた。売り物は選び放題」——パワーブローカーの時限爆弾(未回収)。"
+    }
+   ],
+   "eps": 6
+  },
+  "loki-s1": {
+   "director": "ケイト・ヘロン(監督)",
+   "requires": [
+    "avengers",
+    "endgame"
+   ],
+   "leads_to": [
+    "loki-s2",
+    "quantumania"
+   ],
+   "credits": [
+    {
+     "pos": "post",
+     "sp": "映像はS2製作決定の告知カードのみ。物語上の爆弾(時間軸分岐)は本編ラストで炸裂済み。"
+    }
+   ],
+   "eps": 6
+  },
+  "black-widow": {
+   "director": "ケイト・ショートランド",
+   "requires": [
+    "civil-war"
+   ],
+   "leads_to": [
+    "hawkeye",
+    "thunderbolts"
+   ],
+   "credits": [
+    {
+     "pos": "post",
+     "sp": "ナターシャの墓に参るイェレーナの元へヴァルが現れ、次の標的の写真を渡す——写っていたのはクリント・バートン。『ホークアイ』へ直結。"
+    }
+   ],
+   "runtime": 134
+  },
+  "shang-chi": {
+   "director": "デスティン・ダニエル・クレットン",
+   "requires": [
+    "avengers"
+   ],
+   "leads_to": [
+    "avengers-doomsday"
+   ],
+   "credits": [
+    {
+     "pos": "mid",
+     "sp": "ウォンの召喚でキャロルとバナーがリングを解析。「発信源不明のビーコンを放っている」——今も未回収の最重要伏線。"
+    },
+    {
+     "pos": "post",
+     "sp": "シアリンが組織を継承。「テン・リングスは帰ってくる」。"
+    }
+   ],
+   "runtime": 132
+  },
+  "what-if-s1": {
+   "director": "ブライアン・アンドリュース(監督)/A.C.ブラッドリー(脚本)",
+   "requires": [
+    "endgame"
+   ],
+   "leads_to": [
+    "what-if-s2",
+    "marvel-zombies"
+   ],
+   "credits": [],
+   "eps": 9,
+   "note": "クレジットシーンは基本なし(各話完結)"
+  },
+  "eternals": {
+   "director": "クロエ・ジャオ",
+   "requires": [],
+   "leads_to": [],
+   "credits": [
+    {
+     "pos": "mid",
+     "sp": "サノスの弟スターフォックス(エロス)がピップと共に登場し「仲間の居場所を知っている」——続報なきまま4年。"
+    },
+    {
+     "pos": "post",
+     "sp": "デーンが開けた箱には黒い剣エボニー・ブレード。「触れる勇気はあるか?」の声はブレイド——こちらも塩漬け中。"
+    }
+   ],
+   "runtime": 156
+  },
+  "hawkeye": {
+   "director": "リス・トーマス/バート&バーティ(監督)",
+   "requires": [
+    "avengers",
+    "endgame",
+    "black-widow"
+   ],
+   "leads_to": [
+    "echo",
+    "avengers-doomsday"
+   ],
+   "credits": [
+    {
+     "pos": "post",
+     "sp": "劇中ミュージカル『ロジャース』の「Save The City」をノーカット完全版で上演するだけの豪華な悪ふざけ。"
+    }
+   ],
+   "eps": 6
+  },
+  "moon-knight": {
+   "director": "モハメド・ディアブほか(監督)",
+   "requires": [],
+   "leads_to": [],
+   "credits": [
+    {
+     "pos": "post",
+     "sp": "精神病院からハロウを連れ出す第3の人格ジェイク・ロックリー。コンスは「契約は終わっていない」と嗤い、白いリムジンで走り去る。"
+    }
+   ],
+   "eps": 6
+  },
+  "mom": {
+   "director": "サム・ライミ",
+   "requires": [
+    "doctor-strange",
+    "wandavision",
+    "nwh"
+   ],
+   "leads_to": [
+    "avengers-secret-wars"
+   ],
+   "credits": [
+    {
+     "pos": "mid",
+     "sp": "紫の魔女クレア(シャーリーズ・セロン)が現れ「インカージョンを起こしたわね。直しに行くわよ」とダーク・ディメンションへ誘う。"
+    },
+    {
+     "pos": "post",
+     "sp": "幻術で潰されたピザ屋の店主が「終わったぞー!」と叫ぶだけの1本。"
+    }
+   ],
+   "runtime": 126
+  },
+  "ms-marvel": {
+   "director": "アディル&ビラルほか(監督)",
+   "requires": [],
+   "leads_to": [
+    "the-marvels"
+   ],
+   "credits": [
+    {
+     "pos": "post",
+     "sp": "カマラのバングルが光り、部屋に現れたのは入れ替わったキャロル本人——『ザ・マーベルズ』冒頭へ直結。"
+    }
+   ],
+   "eps": 6
+  },
+  "love-thunder": {
+   "director": "タイカ・ワイティティ",
+   "requires": [
+    "ragnarok",
+    "endgame"
+   ],
+   "leads_to": [
+    "avengers-doomsday"
+   ],
+   "credits": [
+    {
+     "pos": "mid",
+     "sp": "傷を癒すゼウスが息子ヘラクレス(ブレット・ゴールドスタイン)に復讐を命じる——未回収。"
+    },
+    {
+     "pos": "post",
+     "sp": "ヴァルハラの門でジェーンをヘイムダルが迎える。「よく戦った」。"
+    }
+   ],
+   "runtime": 119
+  },
+  "i-am-groot": {
+   "director": "カーステン・ルポフ(監督)",
+   "requires": [
+    "gotg2"
+   ],
+   "leads_to": [],
+   "credits": [],
+   "eps": 10,
+   "note": "クレジットシーンなし(短編集)"
+  },
+  "she-hulk": {
+   "director": "ジェシカ・ガオ(製作)/カット・コイロほか(監督)",
+   "requires": [
+    "endgame"
+   ],
+   "leads_to": [
+    "spiderman-bnd"
+   ],
+   "credits": [],
+   "eps": 9,
+   "note": "最終話がメタ改変で締まるため、伝統的なクレジットシーンは無し(本編内でウォンがエミルを\"回収\"する小ネタあり)"
+  },
+  "werewolf": {
+   "director": "マイケル・ジアッキノ",
+   "requires": [],
+   "leads_to": [],
+   "credits": [],
+   "runtime": 53,
+   "note": "クレジットシーンなし。単独完結"
+  },
+  "wakanda-forever": {
+   "director": "ライアン・クーグラー",
+   "requires": [
+    "black-panther",
+    "infinity-war"
+   ],
+   "leads_to": [
+    "ironheart",
+    "avengers-doomsday"
+   ],
+   "credits": [
+    {
+     "pos": "mid",
+     "sp": "ハイチでシュリが会うのは、ティチャラとナキアの息子トゥーサン——「僕の名はティチャラ」。シリーズの未来を託す1本。"
+    }
+   ],
+   "runtime": 161
+  },
+  "gotg-holiday": {
+   "director": "ジェームズ・ガン",
+   "requires": [
+    "gotg2"
+   ],
+   "leads_to": [
+    "gotg3"
+   ],
+   "credits": [],
+   "runtime": 44,
+   "note": "クレジットシーンなし(本編がまるごとご褒美)"
+  },
+  "quantumania": {
+   "director": "ペイトン・リード",
+   "requires": [
+    "ant-man-wasp",
+    "loki-s1"
+   ],
+   "leads_to": [
+    "loki-s2"
+   ],
+   "credits": [
+    {
+     "pos": "mid",
+     "sp": "無数のカーン変異体による評議会が招集される。「奴らが動き始めた」——路線変更で宙に浮いた壮大な予告。"
+    },
+    {
+     "pos": "post",
+     "sp": "『ロキ』S2の先行映像:19世紀の発明家ヴィクター・タイムリーをロキとメビウスが見つめる。"
+    }
+   ],
+   "runtime": 125
+  },
+  "gotg3": {
+   "director": "ジェームズ・ガン",
+   "requires": [
+    "gotg2",
+    "endgame",
+    "gotg-holiday"
+   ],
+   "leads_to": [],
+   "credits": [
+    {
+     "pos": "mid",
+     "sp": "新生ガーディアンズ(隊長ロケット、アダム、グルート、コスモら)が新たな任務へ。"
+    },
+    {
+     "pos": "post",
+     "sp": "地球で祖父と朝食をとるクイル。「レジェンダリー・スター・ロードは帰ってくる」の一文で三部作が閉じる。"
+    }
+   ],
+   "runtime": 150
+  },
+  "secret-invasion": {
+   "director": "アリ・セリム(監督)",
+   "requires": [
+    "captain-marvel",
+    "cap-tws"
+   ],
+   "leads_to": [
+    "the-marvels"
+   ],
+   "credits": [],
+   "eps": 6,
+   "note": "最終話にクレジットシーンなし"
+  },
+  "loki-s2": {
+   "director": "ジャスティン・ベンソン&アーロン・ムーアヘッド(監督)",
+   "requires": [
+    "loki-s1",
+    "quantumania"
+   ],
+   "leads_to": [
+    "avengers-doomsday"
+   ],
+   "credits": [],
+   "eps": 6,
+   "note": "クレジットシーンなし。玉座のロキで完結する構成"
+  },
+  "the-marvels": {
+   "director": "ニア・ダコスタ",
+   "requires": [
+    "captain-marvel",
+    "wandavision",
+    "ms-marvel",
+    "secret-invasion"
+   ],
+   "leads_to": [
+    "avengers-doomsday"
+   ],
+   "credits": [
+    {
+     "pos": "mid",
+     "sp": "別世界で目覚めたモニカの傍らにビースト(ケルシー・グラマー)。「ここは君の世界じゃない」——X-MEN合流の号砲となった歴史的1本。"
+    }
+   ],
+   "runtime": 105
+  },
+  "what-if-s2": {
+   "director": "ブライアン・アンドリュース(監督)",
+   "requires": [
+    "what-if-s1"
+   ],
+   "leads_to": [
+    "what-if-s3"
+   ],
+   "credits": [],
+   "eps": 9,
+   "note": "クレジットシーンは基本なし"
+  },
+  "echo": {
+   "director": "シドニー・フリーランドほか(監督)",
+   "requires": [
+    "hawkeye"
+   ],
+   "leads_to": [
+    "ddba-s1"
+   ],
+   "credits": [
+    {
+     "pos": "post",
+     "sp": "病院を出たフィスクが機内ニュースでNY市長選の討論を見つめる——『ボーン・アゲイン』の市長フィスク誕生の瞬間。"
+    }
+   ],
+   "eps": 5,
+   "note": "旧『デアデビル』3季の予習を強く推奨(otherSeries参照)"
+  },
+  "xmen97-s1": {
+   "director": "ジェイク・カストレーナ(監督)/ボー・デマヨ(製作)",
+   "requires": [],
+   "leads_to": [
+    "xmen97-s2"
+   ],
+   "credits": [],
+   "eps": 10,
+   "note": "伝統的なクレジットシーンなし。本編ラストの時代分断が実質の引き"
+  },
+  "dp-wolverine": {
+   "director": "ショーン・レヴィ",
+   "requires": [
+    "loki-s1"
+   ],
+   "leads_to": [
+    "avengers-doomsday"
+   ],
+   "credits": [
+    {
+     "pos": "post",
+     "sp": "\"ジョニー暴言\"の証拠映像を流して「言った通りだろ」で締める悪意ある編集。犠牲者はクリス・エヴァンス。"
+    }
+   ],
+   "runtime": 128
+  },
+  "agatha": {
+   "director": "ジャック・シェイファー(製作・監督)",
+   "requires": [
+    "wandavision"
+   ],
+   "leads_to": [
+    "vision-quest"
+   ],
+   "credits": [],
+   "eps": 9,
+   "note": "クレジットシーンなし。ビリーと幽霊アガサの旅立ちで完結"
+  },
+  "what-if-s3": {
+   "director": "ブライアン・アンドリュース(監督)",
+   "requires": [
+    "what-if-s2"
+   ],
+   "leads_to": [],
+   "credits": [],
+   "eps": 8,
+   "note": "シリーズ完結。クレジットシーンなし"
+  },
+  "yfnsm-s1": {
+   "director": "ジェフ・トランメル(製作)",
+   "requires": [],
+   "leads_to": [],
+   "credits": [],
+   "eps": 10,
+   "note": "S2『ソフォモア・イヤー』へ続く。目立ったクレジットシーンなし"
+  },
+  "cap-bnw": {
+   "director": "ジュリアス・オナー",
+   "requires": [
+    "fatws",
+    "incredible-hulk",
+    "eternals"
+   ],
+   "leads_to": [
+    "avengers-doomsday"
+   ],
+   "credits": [
+    {
+     "pos": "post",
+     "sp": "獄中のリーダーがサムに嗤う。「他の世界が、来る」——インカージョン=『ドゥームズデイ』への直接警告。"
+    }
+   ],
+   "runtime": 118
+  },
+  "thunderbolts": {
+   "director": "ジェイク・シュライアー",
+   "requires": [
+    "black-widow",
+    "fatws",
+    "ant-man-wasp"
+   ],
+   "leads_to": [
+    "avengers-doomsday"
+   ],
+   "credits": [
+    {
+     "pos": "mid",
+     "sp": "スーパーで\"サンダーボルツ\"印のシリアルが投げ売りされている小ネタ。"
+    },
+    {
+     "pos": "post",
+     "sp": "14ヶ月後。商標問題に悩むニュー・アベンジャーズの司令室に警報——深宇宙から異常な船が接近中。その意匠は「4」——『ファースト・ステップ』のFFがこの世界に来る予告。"
+    }
+   ],
+   "runtime": 127
+  },
+  "ironheart": {
+   "director": "チナカ・ホッジ(製作)/サム・ベイリーほか(監督)",
+   "requires": [
+    "wakanda-forever"
+   ],
+   "leads_to": [
+    "avengers-doomsday"
+   ],
+   "credits": [],
+   "eps": 6,
+   "note": "実質のクレジット級爆弾(メフィストとの取引)は本編ラストに配置"
+  },
+  "ff-first-steps": {
+   "director": "マット・シャックマン",
+   "requires": [],
+   "leads_to": [
+    "avengers-doomsday"
+   ],
+   "credits": [
+    {
+     "pos": "mid",
+     "sp": "4年後。フランクリンに絵本を読むスー。振り向いた先、息子の傍らに緑のフードの人物が跪いている——顔は映らないまま『ドゥームズデイ』へ。"
+    },
+    {
+     "pos": "post",
+     "sp": "アース828のレトロなFFアニメ(劇中TV)がそのまま流れる小粋な1本。"
+    }
+   ],
+   "runtime": 115
+  },
+  "eyes-of-wakanda": {
+   "director": "トッド・ハリス(監督)",
+   "requires": [
+    "black-panther"
+   ],
+   "leads_to": [],
+   "credits": [],
+   "eps": 4,
+   "note": "各話完結。クレジットシーンなし"
+  },
+  "marvel-zombies": {
+   "director": "ブライアン・アンドリュース(監督)",
+   "requires": [
+    "what-if-s1"
+   ],
+   "leads_to": [],
+   "credits": [],
+   "eps": 4,
+   "note": "R指定相当。クレジットシーンなし"
+  },
+  "wonder-man": {
+   "director": "アンドリュー・ゲスト(製作)/D・D・クレットンほか(監督)",
+   "requires": [],
+   "leads_to": [],
+   "credits": [],
+   "eps": 8,
+   "note": "クレジットシーンの有無は確認中(判明次第追記)"
+  },
+  "ddba-s1": {
+   "director": "ダリオ・スカルダパーネ(製作)",
+   "requires": [
+    "echo"
+   ],
+   "leads_to": [
+    "ddba-s2",
+    "punisher-sp"
+   ],
+   "credits": [],
+   "eps": 9,
+   "note": "配信ドラマ形式でクレジットシーンなし。旧『デアデビル』3季の視聴を強く推奨(otherSeries参照)"
+  },
+  "ddba-s2": {
+   "director": "ダリオ・スカルダパーネ(製作)",
+   "requires": [
+    "ddba-s1"
+   ],
+   "leads_to": [
+    "punisher-sp",
+    "spiderman-bnd"
+   ],
+   "credits": [],
+   "eps": 8,
+   "note": "ルーク・ケイジ登場は本編ラスト。クレジットシーンなし"
+  },
+  "punisher-sp": {
+   "director": "ダリオ・スカルダパーネ(製作)",
+   "requires": [
+    "ddba-s2"
+   ],
+   "leads_to": [
+    "spiderman-bnd"
+   ],
+   "credits": [],
+   "runtime": 62,
+   "note": "クレジットシーンなし。『BND』のフランクへ直結"
+  },
+  "xmen97-s2": {
+   "director": "ジェイク・カストレーナ(監督)/マシュー・チョウンシー(製作)",
+   "requires": [
+    "xmen97-s1"
+   ],
+   "leads_to": [],
+   "credits": [
+    {
+     "pos": "post",
+     "sp": "ミュータント排斥派グレイドン・クリードが大統領選に勝利する報道。そしてヴァル・クーパーが撃たれ、ミスティークが成り代わって機密ファイルを開く——S3の盤面を一変させる1本。"
+    }
+   ],
+   "eps": 9
+  },
+  "spiderman-bnd": {
+   "director": "デスティン・ダニエル・クレットン",
+   "requires": [
+    "nwh",
+    "punisher-sp"
+   ],
+   "leads_to": [
+    "avengers-doomsday"
+   ],
+   "credits": [
+    {
+     "pos": "post",
+     "sp": "『ドゥームズデイ』へ直結する不穏な引きが1本。バトルワールドを示唆すると読む考察が主流(公開直後のため、当欄の詳述は続報の精査後に更新)。"
+    }
+   ],
+   "runtime": 145
+  },
+  "vision-quest": {
+   "director": "テリー・マタラス(製作)",
+   "requires": [
+    "wandavision",
+    "agatha"
+   ],
+   "leads_to": [],
+   "credits": [],
+   "note": "2026年配信予定。白いヴィジョン主演"
+  },
+  "avengers-doomsday": {
+   "director": "ルッソ兄弟",
+   "requires": [
+    "ff-first-steps",
+    "thunderbolts",
+    "cap-bnw",
+    "loki-s2",
+    "dp-wolverine"
+   ],
+   "leads_to": [
+    "avengers-secret-wars"
+   ],
+   "credits": [],
+   "note": "2026/12/18公開。requiresは当サイト予習コースの中核5作(完全版はCountdownコース参照)"
+  },
+  "avengers-secret-wars": {
+   "director": "ルッソ兄弟",
+   "requires": [
+    "avengers-doomsday"
+   ],
+   "leads_to": [],
+   "credits": [],
+   "note": "2027/12/17公開予定"
+  },
+  "nwh": {
+   "director": "ジョン・ワッツ",
+   "runtime": 148,
+   "requires": [
+    "ffh",
+    "doctor-strange"
+   ],
+   "leads_to": [
+    "mom",
+    "spiderman-bnd"
+   ],
+   "credits": [
+    {
+     "pos": "mid",
+     "sp": "バーで飲んでいたエディとヴェノムが事情も分からぬまま元の世界へ送還される——だがカウンターに黒い欠片がひと欠け残った。MCU側シンビオートの未回収の種。"
+    },
+    {
+     "pos": "post",
+     "sp": "独立した映像ではなく『MoM』の予告編がそのまま流れる構成。ワンダ訪問の場面から始まる本予告が事実上の次回予告を兼ねた。"
+    }
+   ],
+   "note": "旧スパイダーマン5作(otherSeries)を先に観ておくと感動が数倍になる"
+  }
+ }
+}

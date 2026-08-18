@@ -3,6 +3,13 @@
 (function () {
   const WORKS = JSON.parse(document.getElementById('mcu-data').textContent);
   const AMZ = JSON.parse(document.getElementById('amz-data').textContent);
+  // pathPrefix対応: ビルド済みリンクから基底パスを拾う
+  const BASE = (document.querySelector('#watch-list .w-more a') || { getAttribute: () => '/live/x/' })
+    .getAttribute('href').replace(/[^/]+\/$/, '');
+
+  function moreLink(id) {
+    return '<p class="w-more"><a href="' + BASE + id + '/">→ 作品ページ(クレジットシーン・登場キャラ)</a></p>';
+  }
 
   function buyRow(id) {
     const a = AMZ.enabled && AMZ.links[id];
@@ -34,10 +41,9 @@
       '<p class="w-meta">日本: ' + fmtDate(w.date_jp) + (w.chrono_note ? ' / ' + w.chrono_note : '') + '</p></div>' +
       '<span class="w-type ' + w.type + '">' + typeLabel[w.type] + '</span>';
     if (!w.syn) {
-      const el = document.createElement('div');
-      el.className = 'watch';
-      el.innerHTML = head;
-      return el;
+      const wrap = document.createElement('div');
+      wrap.innerHTML = '<div class="watch">' + head + '</div><div class="w-more-solo">' + moreLink(w.id) + '</div>';
+      return wrap;
     }
     const el = document.createElement('details');
     el.className = 'watch-d';
@@ -48,6 +54,7 @@
         (w.sp
           ? '<details class="spoiler-box"><summary>⚠ ネタバレあり要約を表示(結末まで書いています)</summary><p>' + w.sp + '</p></details>'
           : (w.sp_pending ? '<p class="sp-pending">⚠ ネタバレあり要約は準備中です(公開から日が浅いため、確認でき次第追加します)</p>' : '')) +
+      moreLink(w.id) +
       '</div>';
     return el;
   }

@@ -4,8 +4,10 @@
 {%- set head -%}
 <span class="w-num">{{ num }}</span><div><h3>{{ w.title }}{% if w.brand %}<span class="w-badge">単独OK</span>{% endif %}{% if w.status == 'upcoming' %}<span class="w-badge upcoming">公開予定</span>{% endif %}</h3>{% if w.desc %}<p class="w-desc">{{ w.desc }}</p>{% endif %}<p class="w-meta">日本: {{ w.date_jp | fmtDate }}{% if w.chrono_note %} / {{ w.chrono_note }}{% endif %}</p></div><span class="w-type {{ w.type }}">{{ {'movie':'映画','drama':'ドラマ','anime':'アニメ','special':'SP'}[w.type] }}</span>
 {%- endset -%}
+{%- set moreLink -%}<p class="w-more"><a href="{{ ('/live/' + w.id + '/') | url }}">→ 作品ページ(クレジットシーン・登場キャラ)</a></p>{%- endset -%}
 {%- if not w.syn -%}
 <div class="watch">{{ head | safe }}</div>
+<div class="w-more-solo">{{ moreLink | safe }}</div>
 {%- else -%}
 <details class="watch-d"><summary class="watch has-detail">{{ head | safe }}</summary><div class="w-detail"><p class="w-syn"><b>あらすじ(ネタバレなし):</b> {{ w.syn }}</p>
 {%- if enabled and amz -%}
@@ -20,6 +22,7 @@
 {%- elif w.sp_pending -%}
 <p class="sp-pending">⚠ ネタバレあり要約は準備中です(公開から日が浅いため、確認でき次第追加します)</p>
 {%- endif -%}
+{{ moreLink | safe }}
 </div></details>
 {%- endif -%}
 {%- endmacro -%}

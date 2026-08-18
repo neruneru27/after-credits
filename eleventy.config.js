@@ -51,6 +51,24 @@ module.exports = function (eleventyConfig) {
       .map((o) => o.x);
   });
 
+  // 実写個別ページ: 百科appearancesの逆引き(この作品に登場するキャラ+役どころ)
+  eleventyConfig.addFilter('charsInWork', (entries, workId) => {
+    const out = [];
+    for (const ch of entries || []) {
+      const hit = ((ch.appearances || {}).live || []).find((x) => x.work_id === workId);
+      if (hit) out.push({ id: ch.id, name: ch.name, en: ch.en, role: hit.role });
+    }
+    return out;
+  });
+
+  // 実写個別ページ: comics-dbのscreen連結(この作品の原作・関連コミック)
+  // screen値は "id" / "id(注記)" / シリーズ総称("what-if"等) の3形式に対応
+  eleventyConfig.addFilter('comicsForWork', (items, workId) =>
+    (items || []).filter((b) => (b.screen || []).some((s) => {
+      const base = s.split('(')[0].replace(/\?$/, '');
+      return base === workId || workId.startsWith(base + '-');
+    })));
+
   // 百科appearances: comics-dbのno→書籍情報解決
   eleventyConfig.addFilter('comicByNo', (no, items) => (items || []).find((b) => b.no === no) || null);
 

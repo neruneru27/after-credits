@@ -159,10 +159,32 @@ let encIds = new Set();
   }
 }
 
+// ---- liveExtra(実写個別ページ用拡張データ・全68作品) ----
+{
+  const le = load('liveExtra.json');
+  const wids = new Set(load('mcu.json').works.map((w) => w.id));
+  const ids = Object.keys(le.works);
+  if (ids.length !== 68) err(`liveExtra: 件数が 68 でない: ${ids.length}`);
+  for (const id of ids) {
+    if (!wids.has(id)) err(`liveExtra: mcu に無い id: ${id}`);
+    const x = le.works[id];
+    if (!x.director) err(`liveExtra: ${id} に director が無い`);
+    for (const r of x.requires || []) if (!wids.has(r)) err(`liveExtra: ${id} の requires 不整合: ${r}`);
+    for (const r of x.leads_to || []) if (!wids.has(r)) err(`liveExtra: ${id} の leads_to 不整合: ${r}`);
+    for (const c of x.credits || []) {
+      if (!['mid', 'post'].includes(c.pos)) err(`liveExtra: ${id} の credits.pos 不正: ${c.pos}`);
+      if (!c.sp) err(`liveExtra: ${id} の credits に sp が無い`);
+    }
+    if (Array.isArray(x.credits) && x.credits.length === 0 && !x.note) {
+      err(`liveExtra: ${id} は credits 空だが note が無い`);
+    }
+  }
+}
+
 // ---- 異常文字列チェック(全JSON: キリル文字・かな漢字に挟まれた英字の混入検出) ----
 {
   // かな漢字に挟まれた小文字英字はタイポ・機械混入の疑い。スキーマ用語は除外
-  const allowTokens = new Set(['sp', 'syn', 'desc', 'jp', 'id', 'no', 'db', 'ver', 'url', 'meta', 'tags', 'live', 'key', 'keys']);
+  const allowTokens = new Set(['sp', 'syn', 'desc', 'jp', 'id', 'no', 'db', 'ver', 'url', 'meta', 'tags', 'live', 'key', 'keys', 'note', 'eps', 'pos', 'mid', 'post']);
   for (const f of fs.readdirSync(DATA).filter((x) => x.endsWith('.json'))) {
     const raw = fs.readFileSync(path.join(DATA, f), 'utf8');
     const cyr = raw.match(/[а-яА-Я]+/);
