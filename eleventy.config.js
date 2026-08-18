@@ -79,6 +79,26 @@ module.exports = function (eleventyConfig) {
       .map((o) => o.x);
   });
 
+  // 予習必要度メーター: liveExtraのrequires数から導出(0=単独OK/1-2=軽い予習/3+=本流)
+  eleventyConfig.addFilter('prepMeter', (id, liveExtra) => {
+    const x = (liveExtra.works || {})[id];
+    if (!x) return null;
+    const n = (x.requires || []).length;
+    if (n === 0) return { cls: 'g', label: '🟢 単独OK', n };
+    if (n <= 2) return { cls: 'y', label: '🟡 軽い予習', n };
+    return { cls: 'r', label: '🔴 本流(要予習)', n };
+  });
+
+  // 全作品分のメーターmap(クライアントJSの再描画用)
+  eleventyConfig.addFilter('prepMeters', function (liveExtra) {
+    const out = {};
+    for (const id of Object.keys(liveExtra.works || {})) {
+      const n = (liveExtra.works[id].requires || []).length;
+      out[id] = n === 0 ? { cls: 'g', label: '🟢 単独OK' } : n <= 2 ? { cls: 'y', label: '🟡 軽い予習' } : { cls: 'r', label: '🔴 本流(要予習)' };
+    }
+    return out;
+  });
+
   // 実写個別ページ: 百科appearancesの逆引き(この作品に登場するキャラ+役どころ)
   eleventyConfig.addFilter('charsInWork', (entries, workId) => {
     const out = [];

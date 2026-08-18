@@ -29,9 +29,14 @@ pageJs: /assets/js/live.js
       <button class="fbtn" data-filter="special" aria-pressed="false">SP</button>
     </div>
 
+    <div class="progress-box" id="watch-progress">
+      <p class="progress-label">視聴済み <b id="watch-count">0</b> / 68(カード右上の✓で記録。この端末に保存されます)</p>
+      <div class="progress-bar"><div class="progress-fill" id="watch-fill"></div></div>
+    </div>
+
     <div class="watch-list" id="watch-list">
       {%- for w in mcu.works | sortJpRelease %}
-      {{ workItem(w, loop.index, amazonLinks[w.id], site.amazonTag, site.affiliateEnabled) }}
+      {{ workItem(w, loop.index, amazonLinks[w.id], site.amazonTag, site.affiliateEnabled, w.id | prepMeter(liveExtra)) }}
       {%- endfor %}
     </div>
 
@@ -97,3 +102,4 @@ pageJs: /assets/js/live.js
 
 <script id="mcu-data" type="application/json">{{ mcu.works | jsonify | safe }}</script>
 <script id="amz-data" type="application/json">{{ { links: amazonLinks, tag: site.amazonTag, enabled: site.affiliateEnabled } | jsonify | safe }}</script>
+<script id="meter-data" type="application/json">{{ liveExtra | prepMeters | jsonify | safe }}</script>

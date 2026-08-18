@@ -5,9 +5,53 @@ description: マーベルコミックの大事件(イベント)を時系列で�
 permalink: /comics/
 pageJs: /assets/js/comics.js
 ---
+{%- set csLabel = { A: '在庫あり', S: '店頭在庫のみ', R: '流通限定', D: '9/30消滅' } %}
 <section data-page="comic">
   <div class="wrap">
     <p class="crumb"><a href="{{ '/' | url }}">ホーム</a> › コミックサイド</p>
+    {% include "partials/countdown.njk" %}
+
+    <div class="navi-box" id="comic-navi">
+      <h3 class="offtime-head">🧭 どこから読む?診断</h3>
+      <div class="navi-step" id="navi-q1">
+        <p class="navi-q">{{ comicNavi.q1.question }}</p>
+        <div class="navi-opts">
+          {%- for o in comicNavi.q1.options %}
+          <button class="navi-opt" data-q1="{{ o.id }}"><b>{{ o.label }}</b><span>{{ o.sub }}</span></button>
+          {%- endfor %}
+        </div>
+      </div>
+      <div class="navi-step" id="navi-q2" hidden>
+        <p class="navi-q">{{ comicNavi.q2.question }}</p>
+        <div class="navi-opts">
+          {%- for o in comicNavi.q2.options %}
+          <button class="navi-opt" data-q2="{{ o.id }}"><b>{{ o.label }}</b><span>{{ o.sub }}</span></button>
+          {%- endfor %}
+        </div>
+        <button class="navi-back" data-navi-restart>← 最初から</button>
+      </div>
+      {%- for key, r in comicNavi.results %}
+      {%- for fmt in ['any', 'paper'] %}
+      <div class="navi-step navi-result" id="navi-r-{{ key }}-{{ fmt }}" hidden>
+        <p class="navi-q">{{ r.title }}</p>
+        <div class="app-list">
+          {%- set picks = r.picks_any if fmt == 'any' else r.picks_paper %}
+          {%- for p in picks %}
+          {%- set book = p.db | comicByNo(comics.items) %}
+          <div class="app-item">
+            <p class="app-head"><a class="db-ref" href="#db-{{ p.db }}"><span class="cs-badge {{ book.status_code }}">{{ csLabel[book.status_code] }}</span>No.{{ p.db }}</a><b>{{ book.title }}</b></p>
+            <p class="navi-why">{{ p.why }}</p>
+            {%- if book.status_code == 'D' %}<p class="navi-warn">⚠ 電子版のみ・2026年9月30日で配信停止。買うなら今です</p>{% endif %}
+          </div>
+          {%- endfor %}
+        </div>
+        <p class="navi-next">{{ r.next }}</p>
+        <p><button class="navi-back" data-navi-restart>🔁 もう一度診断</button> <a class="amz-btn" href="#comic-list-head">コミックDBで全416冊を見る</a></p>
+      </div>
+      {%- endfor %}
+      {%- endfor %}
+    </div>
+
     <div class="sec-head">
       <span class="en">COMICS TIMELINE</span>
       <h2>コミック・イベント時系列</h2>
@@ -46,7 +90,7 @@ pageJs: /assets/js/comics.js
       {%- endfor %}
     </div>
 
-    <div class="sec-head" style="margin-top:56px;">
+    <div class="sec-head" style="margin-top:56px;" id="comic-list-head">
       <span class="en">DATABASE</span>
       <h2>邦訳コミックDB(全416冊)</h2>
       <p>ShoPro公式の刊行作品一覧(在庫状況は2026年2月時点)に基づく全邦訳データ。⚠ <b>全タイトルの電子版が2026年9月30日で配信停止</b>。「9/30消滅」区分は紙の受け皿がなく、市場から完全に消えます。購入前に各ストアで最新の在庫をご確認ください。</p>

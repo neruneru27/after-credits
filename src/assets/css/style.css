@@ -667,3 +667,53 @@
   .map-why:hover::after, .map-why:focus::after { display: block; }
   .map-lanes-desc { margin-top: 20px; font-size: 0.82rem; }
   .map-lanes-desc p { margin: 6px 0; }
+
+  /* ---------- 診断ウィザード ---------- */
+  .navi-box { background: #fff; border: 3px solid var(--ink); box-shadow: 6px 6px 0 var(--ink); padding: 20px; margin-bottom: 40px; }
+  .navi-q { font-weight: 900; font-size: 1rem; margin: 8px 0 14px; }
+  .navi-opts { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 10px; }
+  .navi-opt {
+    text-align: left; background: var(--paper); border: 2px solid var(--ink);
+    box-shadow: 3px 3px 0 var(--ink); padding: 10px 14px; cursor: pointer;
+    font-family: var(--font-body); transition: transform 0.12s;
+  }
+  .navi-opt:hover { transform: translate(-1px,-1px); background: #fff; }
+  .navi-opt b { display: block; font-size: 0.9rem; }
+  .navi-opt span { font-size: 0.72rem; color: #6b5f52; }
+  .navi-back {
+    margin-top: 14px; background: none; border: 2px solid var(--ink); padding: 6px 14px;
+    font-family: var(--font-body); font-weight: 900; font-size: 0.78rem; cursor: pointer;
+  }
+  .navi-why { font-size: 0.8rem; color: #4a4238; margin-top: 4px; }
+  .navi-warn { font-size: 0.78rem; font-weight: 900; color: var(--magenta); margin-top: 4px; }
+  .navi-next { font-size: 0.85rem; font-weight: 700; margin-top: 14px; border-top: 2px dashed var(--paper-dark); padding-top: 12px; }
+
+  /* ---------- 9/30カウントダウン ---------- */
+  .countdown-banner {
+    background: var(--magenta); color: #fff; border: 3px solid var(--ink);
+    box-shadow: 5px 5px 0 var(--ink); padding: 10px 16px; margin-bottom: 24px;
+    font-size: 0.88rem; font-weight: 700;
+  }
+  .countdown-banner.ended { background: var(--ink); color: var(--paper); }
+  .countdown-banner:empty { display: none; }
+
+  /* ---------- 視聴済みチェック+進捗 ---------- */
+  .progress-box { background: #fff; border: 3px solid var(--ink); box-shadow: 4px 4px 0 var(--ink); padding: 12px 16px; margin-bottom: 20px; }
+  .progress-label { font-size: 0.82rem; font-weight: 700; margin-bottom: 8px; }
+  .progress-bar { height: 14px; border: 2px solid var(--ink); background: var(--paper); }
+  .progress-fill { height: 100%; width: 0; background: var(--cyan); transition: width 0.3s; }
+  .watch-check {
+    flex-shrink: 0; width: 30px; height: 30px; border: 2px solid var(--ink); border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    background: #fff; color: var(--paper-dark); font-weight: 900; cursor: pointer;
+    margin-right: 8px; align-self: center; user-select: none;
+  }
+  .watch-check.on { background: var(--cyan); color: #fff; }
+  .map-node.watched { background: #d7f0f7; border-width: 3px; }
+  .map-watched-note { font-size: 0.8rem; font-weight: 900; color: var(--cyan); margin-top: 6px; }
+
+  /* ---------- 予習必要度メーター ---------- */
+  .prep-meter { display: inline-block; font-size: 0.7rem; font-weight: 900; border: 1px solid var(--ink); padding: 0 8px; margin-left: 6px; background: #fff; }
+  .prep-meter.g { border-color: #1a7f37; }
+  .prep-meter.y { background: #fff7dc; }
+  .prep-meter.r { background: #ffe3ef; }

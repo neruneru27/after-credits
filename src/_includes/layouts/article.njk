@@ -16,6 +16,7 @@ ogType: article
 <section data-page="article">
   <div class="wrap">
     <p class="crumb"><a href="{{ '/' | url }}">ホーム</a> › <a href="{{ '/articles/' | url }}">記事</a> › {{ title }}</p>
+    {% include "partials/countdown.njk" %}
     <article class="article-body">
       <div class="sec-head">
         <span class="en">ARTICLE</span>

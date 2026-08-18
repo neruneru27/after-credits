@@ -1,0 +1,14 @@
+<div class="countdown-banner" id="countdown-banner"></div>
+<script>
+(function () {
+  var el = document.getElementById('countdown-banner');
+  var end = new Date('2026-09-30T23:59:59+09:00');
+  var days = Math.ceil((end - Date.now()) / 86400000);
+  if (days > 0) {
+    el.innerHTML = '⏳ 邦訳マーベル電子版の全ストア配信停止まで <b>あと' + days + '日</b>(2026年9月30日 23:59まで)';
+  } else {
+    el.innerHTML = '📕 邦訳マーベル電子版は2026年9月30日で配信終了しました。「9/30消滅」区分(176冊)は絶版アーカイブです';
+    el.classList.add('ended');
+  }
+})();
+</script>

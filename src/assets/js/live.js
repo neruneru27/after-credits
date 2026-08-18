@@ -11,6 +11,44 @@
     return '<p class="w-more"><a href="' + BASE + id + '/">→ 作品ページ(クレジットシーン・登場キャラ)</a></p>';
   }
 
+  // ---------- 視聴済み(localStorage) ----------
+  const METERS = JSON.parse((document.getElementById('meter-data') || { textContent: '{}' }).textContent);
+  const loadWatched = () => new Set(JSON.parse(localStorage.getItem('ac-watched') || '[]'));
+  const saveWatched = (s) => localStorage.setItem('ac-watched', JSON.stringify([...s]));
+  let watched = loadWatched();
+
+  function meterHtml(id) {
+    const m = METERS[id];
+    return m ? ' <span class="prep-meter ' + m.cls + '">' + m.label + '</span>' : '';
+  }
+  function updateProgress() {
+    const count = document.getElementById('watch-count');
+    const fill = document.getElementById('watch-fill');
+    if (!count) return;
+    count.textContent = watched.size;
+    fill.style.width = (watched.size / 68 * 100) + '%';
+  }
+  function bindChecks(root) {
+    (root || document).querySelectorAll('.watch-check').forEach(el => {
+      const id = el.dataset.id;
+      const sync = () => {
+        el.setAttribute('aria-checked', watched.has(id));
+        el.classList.toggle('on', watched.has(id));
+      };
+      sync();
+      const toggle = (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        watched.has(id) ? watched.delete(id) : watched.add(id);
+        saveWatched(watched);
+        sync();
+        updateProgress();
+      };
+      el.addEventListener('click', toggle);
+      el.addEventListener('keydown', (e) => { if (e.key === ' ' || e.key === 'Enter') toggle(e); });
+    });
+  }
+
   function buyRow(id) {
     const a = AMZ.enabled && AMZ.links[id];
     if (!a || id.startsWith('_')) return '';
@@ -38,7 +76,8 @@
         (w.brand ? '<span class="w-badge">単独OK</span>' : '') +
         (w.status === 'upcoming' ? '<span class="w-badge upcoming">公開予定</span>' : '') +
       '</h3>' + (w.desc ? '<p class="w-desc">' + w.desc + '</p>' : '') +
-      '<p class="w-meta">日本: ' + fmtDate(w.date_jp) + (w.chrono_note ? ' / ' + w.chrono_note : '') + '</p></div>' +
+      '<p class="w-meta">日本: ' + fmtDate(w.date_jp) + (w.chrono_note ? ' / ' + w.chrono_note : '') + meterHtml(w.id) + '</p></div>' +
+      '<span class="watch-check" data-id="' + w.id + '" role="checkbox" aria-checked="false" tabindex="0" title="視聴済みにする">✓</span>' +
       '<span class="w-type ' + w.type + '">' + typeLabel[w.type] + '</span>';
     if (!w.syn) {
       const wrap = document.createElement('div');
@@ -76,6 +115,8 @@
       off.forEach(w => offList.appendChild(makeItem(w, '※')));
       offBlock.style.display = off.length ? 'block' : 'none';
     }
+    bindChecks(list);
+    bindChecks(offList);
   }
   const btnRelease = document.getElementById('btn-release');
   const btnChrono = document.getElementById('btn-chrono');
@@ -95,4 +136,8 @@
       renderLive();
     });
   });
+
+  // 初期表示(ビルド時レンダリング分)にもチェック状態を反映
+  bindChecks(document);
+  updateProgress();
 })();

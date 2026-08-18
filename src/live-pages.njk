@@ -31,6 +31,10 @@ eleventyComputed:
       {%- endif %}
       <div><b>フェーズ</b>フェーズ{{ w.phase }}</div>
       <div><b>単独OK</b>{{ '○(予習なしで観られる)' if w.brand else '—' }}</div>
+      {%- set meter = w.id | prepMeter(liveExtra) %}
+      {%- if meter %}
+      <div><b>予習必要度</b><span class="prep-meter {{ meter.cls }}">{{ meter.label }}</span>{% if meter.n %}(前提{{ meter.n }}作品は下の「観る前に」参照){% endif %}</div>
+      {%- endif %}
     </div>
 
     <div class="enc-body article-body">

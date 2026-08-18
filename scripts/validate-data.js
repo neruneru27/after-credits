@@ -208,6 +208,31 @@ let encIds = new Set();
   }
 }
 
+// ---- comicNavi(どこから読む?診断) ----
+{
+  const cn = load('comicNavi.json');
+  const db = Object.fromEntries(load('comics.json').items.map((b) => [b.no, b]));
+  const q1ids = cn.q1.options.map((o) => o.id);
+  const rkeys = Object.keys(cn.results);
+  if (q1ids.length !== rkeys.length || !q1ids.every((i) => rkeys.includes(i))) {
+    err(`comicNavi: q1選択肢とresultsキーが不一致: [${q1ids}] vs [${rkeys}]`);
+  }
+  for (const [key, r] of Object.entries(cn.results)) {
+    for (const p of [...(r.picks_any || []), ...(r.picks_paper || [])]) {
+      if (!db[p.db]) err(`comicNavi: ${key} の db_no が存在しない: ${p.db}`);
+      if (!p.why) err(`comicNavi: ${key} の db ${p.db} に why が無い`);
+    }
+    for (const p of r.picks_paper || []) {
+      if (db[p.db] && db[p.db].status_code === 'D') {
+        err(`comicNavi: ${key} の picks_paper に D区分(9/30消滅)が混入: db ${p.db} "${db[p.db].title}"`);
+      }
+    }
+    if (!(r.picks_any || []).length || !(r.picks_paper || []).length) {
+      err(`comicNavi: ${key} の picks_any / picks_paper が空`);
+    }
+  }
+}
+
 // ---- 異常文字列チェック(全JSON: キリル文字・かな漢字に挟まれた英字の混入検出) ----
 {
   // かな漢字に挟まれた小文字英字はタイポ・機械混入の疑い。スキーマ用語は除外

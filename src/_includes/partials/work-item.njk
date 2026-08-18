@@ -1,8 +1,8 @@
 {#- 実写作品1件のカード。assets/js/live.js の makeItem と同一マークアップを維持すること -#}
-{#- amz: amazonLinks.json の該当エントリ({bd,dvd,pv} or undefined) -#}
-{%- macro workItem(w, num, amz, tag, enabled) -%}
+{#- amz: amazonLinks.json の該当エントリ({bd,dvd,pv} or undefined)、meter: prepMeterフィルタの結果 -#}
+{%- macro workItem(w, num, amz, tag, enabled, meter) -%}
 {%- set head -%}
-<span class="w-num">{{ num }}</span><div><h3>{{ w.title }}{% if w.brand %}<span class="w-badge">単独OK</span>{% endif %}{% if w.status == 'upcoming' %}<span class="w-badge upcoming">公開予定</span>{% endif %}</h3>{% if w.desc %}<p class="w-desc">{{ w.desc }}</p>{% endif %}<p class="w-meta">日本: {{ w.date_jp | fmtDate }}{% if w.chrono_note %} / {{ w.chrono_note }}{% endif %}</p></div><span class="w-type {{ w.type }}">{{ {'movie':'映画','drama':'ドラマ','anime':'アニメ','special':'SP'}[w.type] }}</span>
+<span class="w-num">{{ num }}</span><div><h3>{{ w.title }}{% if w.brand %}<span class="w-badge">単独OK</span>{% endif %}{% if w.status == 'upcoming' %}<span class="w-badge upcoming">公開予定</span>{% endif %}</h3>{% if w.desc %}<p class="w-desc">{{ w.desc }}</p>{% endif %}<p class="w-meta">日本: {{ w.date_jp | fmtDate }}{% if w.chrono_note %} / {{ w.chrono_note }}{% endif %}{% if meter %} <span class="prep-meter {{ meter.cls }}">{{ meter.label }}</span>{% endif %}</p></div><span class="watch-check" data-id="{{ w.id }}" role="checkbox" aria-checked="false" tabindex="0" title="視聴済みにする">✓</span><span class="w-type {{ w.type }}">{{ {'movie':'映画','drama':'ドラマ','anime':'アニメ','special':'SP'}[w.type] }}</span>
 {%- endset -%}
 {%- set moreLink -%}<p class="w-more"><a href="{{ ('/live/' + w.id + '/') | url }}">→ 作品ページ(クレジットシーン・登場キャラ)</a></p>{%- endset -%}
 {%- if not w.syn -%}
