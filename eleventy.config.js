@@ -1,4 +1,18 @@
+const fs = require('fs');
+const crypto = require('crypto');
+
 module.exports = function (eleventyConfig) {
+  // CSS/JS更新時のブラウザキャッシュ対策: アセット内容のハッシュを?v=に付与
+  const assetVersion = crypto
+    .createHash('md5')
+    .update(
+      ['src/assets/css/style.css', ...fs.readdirSync('src/assets/js').map((f) => 'src/assets/js/' + f)]
+        .map((p) => fs.readFileSync(p, 'utf8'))
+        .join('')
+    )
+    .digest('hex')
+    .slice(0, 10);
+  eleventyConfig.addGlobalData('assetVersion', assetVersion);
   eleventyConfig.addPassthroughCopy({ 'src/assets': 'assets' });
   // Google Search Console 所有権確認ファイル(削除しないこと)
   eleventyConfig.addPassthroughCopy({ 'src/google527b257ac0f4a504.html': 'google527b257ac0f4a504.html' });

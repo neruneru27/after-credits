@@ -22,7 +22,7 @@
 <link rel="apple-touch-icon" href="{{ '/apple-touch-icon.png' | url }}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Rampart+One&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="{{ '/assets/css/style.css' | url }}">
+<link rel="stylesheet" href="{{ '/assets/css/style.css' | url }}?v={{ assetVersion }}">
 {%- if structuredData %}
 <script type="application/ld+json">{{ structuredData | safe }}</script>
 {%- endif %}
@@ -65,7 +65,7 @@
 </footer>
 
 {%- if pageJs %}
-<script src="{{ pageJs | url }}" defer></script>
+<script src="{{ pageJs | url }}?v={{ assetVersion }}" defer></script>
 {%- endif %}
 </body>
 </html>
