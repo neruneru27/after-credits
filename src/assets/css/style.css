@@ -408,7 +408,6 @@
   .watch-d .watch { border: none; }
   .watch.has-detail::after { content: '▾ 詳細'; font-size: 0.65rem; font-weight: 900; color: var(--magenta); align-self: center; }
   .watch-d[open] .watch.has-detail::after { content: '▴ 閉じる'; }
-  @media (max-width: 560px) { .watch.has-detail::after { display: none; } }
   .w-detail { padding: 0 16px 14px; border-top: 2px dashed var(--paper-dark); }
   .w-syn { font-size: 0.82rem; margin-top: 10px; }
   .spoiler-box { margin-top: 10px; border: 2px solid var(--magenta); }
@@ -792,3 +791,37 @@
   /* ---------- ディズニープラスボタン(アフィリエイトリンク投入で点灯) ---------- */
   .amz-btn.dplus-btn { background: #0e2a5c; color: #fff; }
   .amz-btn.dplus-btn:hover { background: #113f8f; }
+
+  /* ---------- クリック可能要素のアフォーダンス強化(2026-08-18) ----------
+     方針: 既存デザイン(コミック調)を変えず、開閉チップ・矢印・下線・カーソルのみ追加 */
+  button, summary, [role="checkbox"], .map-why { cursor: pointer; }
+  /* 作品カードの「詳細」をチップ化してタップ対象と分かるように(スマホでも表示) */
+  .watch.has-detail::after {
+    content: '▾ 詳細';
+    border: 2px solid var(--magenta); background: #fff;
+    padding: 2px 8px; border-radius: 2px;
+    flex-shrink: 0; white-space: nowrap;
+  }
+  .watch-d[open] .watch.has-detail::after { content: '▴ 閉じる'; background: var(--magenta); color: #fff; }
+  .watch-d > summary:hover .watch { background: #fffdf5; }
+  /* キャラカードに行き先を明示するフッター行(CSSのみ・全カード共通) */
+  a.chara::after {
+    content: '詳細ページへ →';
+    display: block; margin-top: 8px; padding-top: 8px;
+    border-top: 2px dashed var(--paper-dark);
+    font-size: 0.72rem; font-weight: 900; color: var(--magenta);
+  }
+  /* 文中のテキストリンクは下線で明示 */
+  .article-body a, .term-note a, .navi-next a, .w-more a, .enc-back a,
+  .footer-links a, .map-watched-note a, .series-desc a {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 2px;
+  }
+  /* マップのノードカードに遷移マーク */
+  .map-node::after { content: '›'; margin-left: auto; padding-left: 4px; color: var(--magenta); font-weight: 900; }
+  /* ネタバレボタンのホバー反応 */
+  .spoiler-box > summary:hover { filter: brightness(1.08); }
+  /* フィルタボタンの未選択ホバー */
+  .fbtn:hover:not([aria-pressed="true"]) { background: var(--paper-dark); }
+  .toggle-row button:hover:not([aria-pressed="true"]) { background: var(--paper-dark); }
