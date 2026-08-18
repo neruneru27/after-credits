@@ -1,5 +1,8 @@
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ 'src/assets': 'assets' });
+  // Google Search Console 所有権確認ファイル(削除しないこと)
+  eleventyConfig.addPassthroughCopy({ 'src/google527b257ac0f4a504.html': 'google527b257ac0f4a504.html' });
+  eleventyConfig.ignores.add('src/google527b257ac0f4a504.html');
 
   // Amazonリンク生成(データ一元管理。実IDへの差し替えは site.json の amazonTag のみ)
   eleventyConfig.addShortcode('amazonLink', function (isbnOrAsin, tag) {
