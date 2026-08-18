@@ -4,5 +4,209 @@
     "bd": "B0XXXXXXXX",
     "dvd": "B0XXXXXXXX",
     "pv": "B0XXXXXXXX"
+  },
+  "incredible-hulk": {
+    "bd": "B012VQD1L0",
+    "dvd": "B0049WAO0G",
+    "pv": "B0B8NWHBZ7"
+  },
+  "iron-man": {
+    "bd": "B08HTPNP9S",
+    "dvd": "B00PXKX784",
+    "pv": "B0DXVZW93V"
+  },
+  "iron-man-2": {
+    "bd": "B0G42ZMGGF",
+    "dvd": "B00E5I2M6I",
+    "pv": "B0BZJTLY24"
+  },
+  "thor": {
+    "bd": "B079K2484K",
+    "dvd": "B00E5I2M9K",
+    "pv": "B00FYNC5QU"
+  },
+  "cap-tfa": {
+    "bd": "B07RVK83RG",
+    "dvd": "B006J0YRB8",
+    "pv": "B00G9TNFXU"
+  },
+  "avengers": {
+    "bd": "B0083SBJXS",
+    "dvd": "B0083SBMBM",
+    "pv": "B0CGL4HWKJ"
+  },
+  "iron-man-3": {
+    "bd": "B00ADCVJPK",
+    "dvd": "B0G42Y8B1H",
+    "pv": "B00G52IRQG"
+  },
+  "thor-tdw": {
+    "bd": "B00JIJVJP4",
+    "dvd": "B0FPPM9TGJ",
+    "pv": "B00KRA2D80"
+  },
+  "cap-tws": {
+    "bd": "B07RP9R166",
+    "dvd": "B0090SI3EI",
+    "pv": "B00N3I00QU"
+  },
+  "gotg": {
+    "bd": "B00PFOH29I",
+    "dvd": "B0FPP9NM29",
+    "pv": "B00RGIFVNU"
+  },
+  "aou": {
+    "bd": "B07F87V5DG",
+    "dvd": "B014ULGV1Q",
+    "pv": "B0G8SXT6XW"
+  },
+  "ant-man": {
+    "bd": "B07YQ82VL7",
+    "dvd": "B07SPK6TB5",
+    "pv": "B017X34CQE"
+  },
+  "civil-war": {
+    "bd": "B0FXWVPZHC",
+    "dvd": "B01D9EUN1Y",
+    "pv": "B01IURA4V4"
+  },
+  "doctor-strange": {
+    "bd": "B06XJ112LM",
+    "dvd": "B086VZGDZW",
+    "pv": "B071DR6RXP"
+  },
+  "gotg2": {
+    "bd": "B0FPPC6CGF",
+    "dvd": "B09RGGLMQJ",
+    "pv": "B0GZ69XX3N"
+  },
+  "homecoming": {
+    "bd": "B09QFDHPG1",
+    "dvd": "B0DGXM1HQF",
+    "pv": "B0CMTNKXDP"
+  },
+  "ragnarok": {
+    "bd": "B0FPPH4W78",
+    "dvd": "B0FPPMTNZY",
+    "pv": "B0GZ619ZFV"
+  },
+  "black-panther": {
+    "bd": "B0G42TX2BF",
+    "dvd": "B07PGMLNL5",
+    "pv": "B0H9FNVKNV"
+  },
+  "infinity-war": {
+    "bd": "B0FXWSGLDK",
+    "dvd": "B0FXWVNNY8",
+    "pv": "B07FDKS89P"
+  },
+  "ant-man-wasp": {
+    "bd": "B0G43TN8DP",
+    "dvd": "B07HS8RMBV",
+    "pv": "B07JJGDLL7"
+  },
+  "captain-marvel": {
+    "bd": "B07RDQDJRV",
+    "dvd": "B0G42T8KDR",
+    "pv": "B0H5W7ZJCN"
+  },
+  "endgame": {
+    "bd": "B0FXWR76ZV",
+    "dvd": "B0FXWQ434Z",
+    "pv": "B07WZKZK7T"
+  },
+  "ffh": {
+    "bd": "B09PVGM68X",
+    "dvd": "B0H7HRY54D",
+    "pv": "B0BZML4P5V"
+  },
+  "wandavision": {
+    "bd": "B0CRLD78RD",
+    "dvd": "B099RXZLCV"
+  },
+  "fatws": {
+    "bd": "B0CZP4NMPM"
+  },
+  "loki-s1": {
+    "bd": "B0CJ62NYCP"
+  },
+  "black-widow": {
+    "bd": "B0G43XXZMX",
+    "dvd": "B0G43WHKM8",
+    "pv": "B0GZ3S78B1"
+  },
+  "shang-chi": {
+    "bd": "B0GLP6VPSF",
+    "dvd": "B09JKSTC2Z",
+    "pv": "B0GWY6ZDYK"
+  },
+  "eternals": {
+    "bd": "B0GLP46799",
+    "dvd": "B0GLPBCTSW",
+    "pv": "B0GWDTMC5L"
+  },
+  "hawkeye": {
+    "bd": "B0DL7CWHDW"
+  },
+  "nwh": {
+    "bd": "B09TFVRL5D",
+    "dvd": "B0H7HWQ1VF",
+    "pv": "B0B5NZD7HG"
+  },
+  "moon-knight": {
+    "bd": "B0F99X1ZD2"
+  },
+  "mom": {
+    "bd": "B0G42XB31V",
+    "dvd": "B0G42XXYQB",
+    "pv": "B0GZ9N7C2Q"
+  },
+  "love-thunder": {
+    "bd": "B0FPPWKQ93",
+    "dvd": "B0FPPCD5P6",
+    "pv": "B0GS3716GS"
+  },
+  "wakanda-forever": {
+    "bd": "B0GJSRXBZX",
+    "dvd": "B0GJT24GBC",
+    "pv": "B0GWHTBD1M"
+  },
+  "quantumania": {
+    "bd": "B0G43VB9VQ",
+    "dvd": "B0G43YWDGK",
+    "pv": "B0B8MXS7NH"
+  },
+  "gotg3": {
+    "bd": "B0G43TV9PB",
+    "dvd": "B0G43W6F2H",
+    "pv": "B0B8MV2SMX"
+  },
+  "loki-s2": {
+    "bd": "B0DR2V6BM8"
+  },
+  "the-marvels": {
+    "bd": "B0G42WGTMY",
+    "dvd": "B0CRLFDZKZ",
+    "pv": "B0CP4LZ39V"
+  },
+  "dp-wolverine": {
+    "bd": "B0DGTSNK27",
+    "dvd": "B0DGTS1BVZ",
+    "pv": "B0D626KHDQ"
+  },
+  "cap-bnw": {
+    "bd": "B0F3J6LQXR",
+    "dvd": "B0F3J3LCTW",
+    "pv": "B0DP7VFSXG"
+  },
+  "thunderbolts": {
+    "bd": "B0FF51WCFD",
+    "dvd": "B0FF4ZJ4GM",
+    "pv": "B0F4NPCZCZ"
+  },
+  "ff-first-steps": {
+    "bd": "B0FR9QZTG8",
+    "dvd": "B0FR8XD7L2",
+    "pv": "B0FK4BGX58"
   }
 }
