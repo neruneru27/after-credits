@@ -33,6 +33,24 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addFilter('pluck', (arr, key) => (arr || []).map((x) => x[key]));
 
+  // 百科appearances: 実写出演を公開順にソート(work_id→mcuのdate、title直書きは西暦抽出、不明は元順維持)
+  eleventyConfig.addFilter('sortAppLive', (items, works) => {
+    const byId = Object.fromEntries((works || []).map((w) => [w.id, w]));
+    const key = (x) => {
+      const w = byId[x.work_id];
+      if (w && w.date) return w.date;
+      const m = (x.title || '').match(/(19|20)\d{2}/);
+      return m ? m[0] + '-00-00' : '9999';
+    };
+    return (items || [])
+      .map((x, i) => ({ x, i }))
+      .sort((a, b) => {
+        const ka = key(a.x), kb = key(b.x);
+        return ka < kb ? -1 : ka > kb ? 1 : a.i - b.i;
+      })
+      .map((o) => o.x);
+  });
+
   // 百科appearances: comics-dbのno→書籍情報解決
   eleventyConfig.addFilter('comicByNo', (no, items) => (items || []).find((b) => b.no === no) || null);
 

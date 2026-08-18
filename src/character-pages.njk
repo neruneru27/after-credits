@@ -51,10 +51,11 @@ eleventyComputed:
       {%- endif %}
 
       {%- if ch.appearances %}
+      <h3>登場作品と活躍</h3>
       {%- if ch.appearances.live and ch.appearances.live.length %}
-      <h3>🎬 実写出演作</h3>
+      <h4 class="app-sub">🎬 実写(公開順)</h4>
       <div class="app-list">
-        {%- for x in ch.appearances.live %}
+        {%- for x in ch.appearances.live | sortAppLive(mcu.works) %}
         <div class="app-item">
           <p class="app-head"><b>{{ (x.work_id | workTitle(mcu.works)) if x.work_id else x.title }}</b><span class="app-role">{{ x.role }}</span></p>
           {%- if x.sp %}
@@ -65,12 +66,19 @@ eleventyComputed:
       </div>
       {%- endif %}
       {%- if ch.appearances.comic and ch.appearances.comic.length %}
-      <h3>📖 コミック出演作(邦訳基準)</h3>
+      <h4 class="app-sub">📖 コミック</h4>
       <div class="app-list">
         {%- for x in ch.appearances.comic %}
         {%- set book = (x.db_no | comicByNo(comics.items)) if x.db_no else null %}
         <div class="app-item">
-          <p class="app-head"><b>{{ book.title if book else x.title }}</b><span class="app-role">{{ x.role }}</span>{% if not book and x.jp %}<span class="app-jp">{{ x.jp }}</span>{% endif %}</p>
+          <p class="app-head">
+            {%- if book -%}
+            {%- set csLabel = { A: '在庫あり', S: '店頭在庫のみ', R: '流通限定', D: '9/30消滅' } -%}
+            <span class="cs-badge {{ book.status_code }}">{{ csLabel[book.status_code] }}</span>
+            {%- else -%}
+            <span class="cs-badge none">{{ x.jp or '未邦訳' }}</span>
+            {%- endif -%}
+            <b>{{ book.title if book else x.title }}</b><span class="app-role">{{ x.role }}</span></p>
           {%- if x.sp %}
           <details class="spoiler-box"><summary>⚠ ネタバレあり解説を表示</summary><p>{{ x.sp }}</p></details>
           {%- endif %}

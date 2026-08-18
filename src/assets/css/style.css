@@ -573,3 +573,8 @@
   .series-order li span { font-size: 0.75rem; color: #6b5f52; font-weight: 700; margin-left: 10px; }
   .series-desc { font-size: 0.8rem; color: #4a4238; margin-top: 4px; }
   .other-series { margin-top: 20px; }
+
+  /* ---------- 百科: 登場作品と活躍(在庫区分・未邦訳) ---------- */
+  .app-sub { font-size: 0.95rem; font-weight: 900; margin: 20px 0 8px; }
+  .app-head .cs-badge { margin-right: 10px; }
+  .cs-badge.none { background: #cfc6b3; color: #5a5245; }
