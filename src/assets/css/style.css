@@ -633,8 +633,27 @@
   .legend-line.bar { border-top: 5px solid var(--ink); }
   .legend-line.cross { border-top: 3px dashed var(--magenta); }
   .legend-box.dashed { display: inline-block; width: 22px; height: 14px; border: 2px dashed var(--ink); background: #fff; }
-  .map-scroll { overflow-x: auto; border: 3px solid var(--ink); background: #fff; box-shadow: 6px 6px 0 var(--ink); }
-  .map-canvas { position: relative; min-width: 720px; }
+  .map-scroll { overflow: hidden; border: 3px solid var(--ink); background: #fff; box-shadow: 6px 6px 0 var(--ink);
+    width: calc(100vw - 48px); max-width: 1360px; margin-left: calc(50% - min(50vw - 24px, 680px)); }
+  .map-canvas { position: relative; }
+  .map-mobile { display: none; }
+  @media (max-width: 719px) {
+    .map-scroll { display: none; }
+    .map-mobile { display: block; }
+    .map-m-lane { border: 3px solid var(--gcolor, var(--ink)); background: #fff; margin-bottom: 12px; }
+    .map-m-lane summary { cursor: pointer; padding: 10px 14px; font-size: 0.85rem; border-left: 8px solid var(--gcolor, var(--ink)); }
+    .map-m-lane summary b { display: block; }
+    .map-m-lane summary span { font-size: 0.7rem; color: #6b5f52; font-weight: 700; }
+    .map-m-lane ol, .map-m-lane ul { margin: 0; padding: 4px 14px 12px 2em; }
+    .map-m-lane li { font-size: 0.85rem; padding: 5px 0; border-bottom: 1px dashed var(--paper-dark); }
+    .map-m-lane li.upcoming a { color: #6b5f52; }
+    .map-m-lane li.upcoming a::after { content: "(未公開)"; font-size: 0.7rem; }
+    .map-m-lane a { color: var(--ink); font-weight: 700; text-decoration: none; }
+    .map-m-lane a.watched::after { content: " ✅"; }
+    .map-m-why { display: block; font-size: 0.75rem; color: var(--magenta); font-weight: 700; }
+    .map-m-bars { --gcolor: var(--ink); }
+    .map-m-cross { --gcolor: var(--magenta); }
+  }
   .map-svg { position: absolute; left: 0; top: 0; }
   .map-lanehead { position: sticky; top: 0; z-index: 5; display: flex; background: var(--paper); border-bottom: 3px solid var(--ink); }
   .map-lane-label {

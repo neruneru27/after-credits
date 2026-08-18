@@ -238,7 +238,7 @@ module.exports = function (eleventyConfig) {
     }
     svg += '</svg>';
 
-    let html = `<div class="map-scroll"><div class="map-canvas" style="width:${width}px;height:${height}px">`;
+    let html = `<div class="map-scroll"><div class="map-canvas" data-w="${width}" data-h="${height}" style="width:${width}px;height:${height}px">`;
     html += `<div class="map-lanehead" style="width:${width}px">`;
     for (const l of map.lanes) {
       html += `<div class="map-lane-label" style="width:${COL}px;border-top:6px solid ${l.color}" title="${l.desc}">${l.label}</div>`;
@@ -259,7 +259,32 @@ module.exports = function (eleventyConfig) {
       html += `<span class="map-why" tabindex="0" data-why="${c.why}" style="left:${mx - 11}px;top:${my - 11}px">?</span>`;
     }
     html += '</div></div>';
-    return html;
+
+    // スマホ用の代替表示: レーン別の縦リスト(あみだ描画なし)
+    let mob = '<div class="map-mobile">';
+    for (const l of map.lanes) {
+      const laneNodes = map.nodes.filter((n) => n.lane === l.id).sort((a, b) => a.row - b.row);
+      mob += `<details class="map-m-lane" style="--gcolor:${l.color}"><summary><b>${l.label}</b><span>${laneNodes.length}作品 — ${l.desc}</span></summary><ol>`;
+      for (const n of laneNodes) {
+        const wk = byId[n.work_id];
+        const dashed = wk.status === 'upcoming' ? ' class="upcoming"' : '';
+        mob += `<li${dashed}><a href="${prefix}/live/${n.work_id}/">${wk.title}</a></li>`;
+      }
+      mob += '</ol></details>';
+    }
+    mob += '<details class="map-m-lane map-m-bars"><summary><b>全員集合(全レーン横断)</b><span>' + map.bars.length + '作品</span></summary><ol>';
+    for (const b of map.bars.slice().sort((a, c) => a.row - c.row)) {
+      const wk = byId[b.work_id];
+      mob += `<li${wk.status === 'upcoming' ? ' class="upcoming"' : ''}><a href="${prefix}/live/${b.work_id}/">${wk.title}</a></li>`;
+    }
+    mob += '</ol></details>';
+    mob += '<details class="map-m-lane map-m-cross"><summary><b>レーンをまたぐ物語の接続</b><span>' + map.cross_links.length + '本</span></summary><ul>';
+    for (const c of map.cross_links) {
+      mob += `<li><b>${byId[c.from].title}</b> → <b>${byId[c.to].title}</b><span class="map-m-why">${c.why}</span></li>`;
+    }
+    mob += '</ul></details></div>';
+
+    return html + mob;
   });
 
   // 記事等のルート相対リンク(/live/… /comics/…)にpathPrefixを自動付与
