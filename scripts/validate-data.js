@@ -15,10 +15,10 @@ const err = (msg) => errors.push(msg);
 // ---- glossary ----
 {
   const g = load('glossary.json');
-  const validCats = ['sekai', 'chimei', 'soshiki', 'item', 'power', 'pub', 'mcu'];
+  const validCats = ['sekai', 'chimei', 'soshiki', 'item', 'power', 'pub', 'mcu', 'event'];
   const catKeys = Object.keys(g.cats || {});
-  if (catKeys.length !== 7 || !validCats.every((c) => catKeys.includes(c))) {
-    err(`glossary: cats が正規7種と不一致: ${catKeys.join(',')}`);
+  if (catKeys.length !== 8 || !validCats.every((c) => catKeys.includes(c))) {
+    err(`glossary: cats が正規8種と不一致: ${catKeys.join(',')}`);
   }
   const seen = new Set();
   for (const t of g.terms) {
@@ -29,7 +29,12 @@ const err = (msg) => errors.push(msg);
     if (seen.has(t.term)) err(`glossary: term 重複: "${t.term}"`);
     seen.add(t.term);
   }
-  if (g.terms.length !== 149) err(`glossary: terms 件数が 149 でない: ${g.terms.length}`);
+  for (const t of g.terms) {
+    for (const r of t.rel || []) {
+      if (!seen.has(r)) err(`glossary: "${t.term}" の rel 参照先が存在しない: "${r}"`);
+    }
+  }
+  if (g.terms.length !== 296) err(`glossary: terms 件数が 296 でない: ${g.terms.length}`);
 }
 
 // ---- mcu-works ----
@@ -200,4 +205,4 @@ if (errors.length) {
   for (const e of errors) console.error('  - ' + e);
   process.exit(1);
 }
-console.log("✔ データ検証 OK(glossary 149 / mcu 68 / comics 416 / encyclopedia 124 / cards 124)");
+console.log("✔ データ検証 OK(glossary 296 / mcu 68 / comics 416 / encyclopedia 124 / cards 124)");

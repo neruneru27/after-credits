@@ -94,6 +94,10 @@ eleventyComputed:
       {%- endif %}
 
       {%- set books = comics.items | comicsForWork(w.id) %}
+      {%- if not books.length and chars.length %}
+      <h3>📖 原作で読む</h3>
+      <p class="term-note">この作品に直接対応する邦訳コミックは未登録です。<a href="{{ ('/characters/' + chars[0].id + '/') | url }}">{{ chars[0].name }}のキャラクターページ</a>の「コミック出演作」から原作を辿れます。</p>
+      {%- endif %}
       {%- if books.length %}
       <h3>📖 原作で読む</h3>
       <div class="app-list">

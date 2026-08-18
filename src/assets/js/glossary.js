@@ -27,4 +27,16 @@
       apply();
     });
   });
+
+  // 関連語チップ: フィルタで隠れていても飛べるよう、クリック時に絞り込みを解除してから遷移
+  document.querySelectorAll('.rel-chip').forEach(chip => {
+    chip.addEventListener('click', () => {
+      state.cat = 'all';
+      state.q = '';
+      document.getElementById('dict-input').value = '';
+      document.querySelectorAll('#dict-cat-row .fbtn').forEach(b =>
+        b.setAttribute('aria-pressed', b.dataset.cat === 'all'));
+      apply();
+    });
+  });
 })();

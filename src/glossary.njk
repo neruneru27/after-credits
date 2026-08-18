@@ -28,7 +28,7 @@ pageJs: /assets/js/glossary.js
 
     <div class="dict-list" id="dict-list">
       {%- for t in glossary.terms %}
-      <div class="term" data-cat="{{ t.cat }}" data-key="{{ t.en }} {{ t.keys }}">
+      <div class="term" id="t-{{ t.term }}" data-cat="{{ t.cat }}" data-key="{{ t.en }} {{ t.keys }}">
         <h3>{{ t.term }}{% if t.en %} <span class="en">{{ t.en }}</span>{% endif %}<span class="cat-tag">{{ glossary.cats[t.cat] }}</span></h3>
         {%- if t.def %}
         <p>{{ t.def }}</p>
@@ -37,6 +37,9 @@ pageJs: /assets/js/glossary.js
         <p class="dual mcu"><b>🎬 実写(MCU):</b> {{ t.def_mcu }}</p>
         {%- endif %}
         {%- if t.note %}<p class="term-note">🎬 {{ t.note }}</p>{% endif %}
+        {%- if t.rel %}
+        <p class="term-rel">関連: {% for r in t.rel %}<a class="rel-chip" href="#t-{{ r }}">{{ r }}</a>{% endfor %}</p>
+        {%- endif %}
       </div>
       {%- endfor %}
     </div>

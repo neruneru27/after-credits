@@ -603,3 +603,13 @@
     box-shadow: 3px 3px 0 var(--ink); transition: transform 0.15s;
   }
   .char-link:hover { transform: translate(-1px,-1px); }
+
+  /* ---------- 用語辞典: 関連語チップ ---------- */
+  .term-rel { font-size: 0.78rem; font-weight: 700; margin-top: 8px; color: #6b5f52; }
+  .rel-chip {
+    display: inline-block; background: var(--paper); border: 2px solid var(--ink);
+    padding: 1px 10px; margin: 2px 4px 2px 0; text-decoration: none;
+    color: var(--ink); font-size: 0.75rem; box-shadow: 2px 2px 0 var(--ink);
+  }
+  .rel-chip:hover { background: var(--yellow); }
+  .term:target { outline: 4px solid var(--magenta); outline-offset: 4px; }
