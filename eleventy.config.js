@@ -106,6 +106,64 @@ module.exports = function (eleventyConfig) {
     return w ? w.title : id;
   });
 
+  // あみだくじマップ: timelineMap.json + mcu.works からSVG線+ノードカードのHTMLを生成
+  eleventyConfig.addFilter('timelineMapHtml', function (map, works) {
+    const prefix = (process.env.PATH_PREFIX || '/').replace(/\/$/, '');
+    const COL = 150, ROW = 64, HEAD = 56, PADB = 24;
+    const byId = Object.fromEntries(works.map((w) => [w.id, w]));
+    const laneIdx = Object.fromEntries(map.lanes.map((l, i) => [l.id, i]));
+    const laneColor = Object.fromEntries(map.lanes.map((l) => [l.id, l.color]));
+    const width = COL * map.lanes.length;
+    const height = HEAD + ROW * works.length + PADB;
+    const cx = (lane) => laneIdx[lane] * COL + COL / 2;
+    const cy = (row) => HEAD + row * ROW + ROW / 2;
+    // ノード座標(barは全レーン中央)
+    const pos = {};
+    for (const n of map.nodes) pos[n.work_id] = { x: cx(n.lane), y: cy(n.row), lane: n.lane };
+    for (const b of map.bars) pos[b.work_id] = { x: width / 2, y: cy(b.row), lane: null };
+
+    let svg = `<svg class="map-svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" aria-hidden="true">`;
+    // レーン縦線(同レーンの最初〜最後のノードを結ぶ)
+    for (const l of map.lanes) {
+      const rows = map.nodes.filter((n) => n.lane === l.id).map((n) => n.row);
+      if (!rows.length) continue;
+      svg += `<line x1="${cx(l.id)}" y1="${cy(Math.min(...rows))}" x2="${cx(l.id)}" y2="${cy(Math.max(...rows))}" stroke="${l.color}" stroke-width="4" opacity="0.55"/>`;
+    }
+    // 横棒(全員集合)
+    for (const b of map.bars) {
+      svg += `<line x1="${COL / 4}" y1="${cy(b.row)}" x2="${width - COL / 4}" y2="${cy(b.row)}" stroke="#191410" stroke-width="5"/>`;
+    }
+    // 斜め接続線
+    for (const c of map.cross_links) {
+      const a = pos[c.from], z = pos[c.to];
+      svg += `<line x1="${a.x}" y1="${a.y}" x2="${z.x}" y2="${z.y}" stroke="#DE1673" stroke-width="3" stroke-dasharray="7 5" opacity="0.8"/>`;
+    }
+    svg += '</svg>';
+
+    let html = `<div class="map-scroll"><div class="map-canvas" style="width:${width}px;height:${height}px">`;
+    html += `<div class="map-lanehead" style="width:${width}px">`;
+    for (const l of map.lanes) {
+      html += `<div class="map-lane-label" style="width:${COL}px;border-top:6px solid ${l.color}" title="${l.desc}">${l.label}</div>`;
+    }
+    html += '</div>' + svg;
+    const card = (id, x, y, w2, lane) => {
+      const wk = byId[id];
+      const dashed = wk.status === 'upcoming' ? ' upcoming' : '';
+      const color = lane ? laneColor[lane] : '#191410';
+      return `<a class="map-node${dashed}" href="${prefix}/live/${id}/" style="left:${x - w2 / 2}px;top:${y - 24}px;width:${w2}px;border-left:6px solid ${color}">${wk.title}</a>`;
+    };
+    for (const n of map.nodes) html += card(n.work_id, cx(n.lane), cy(n.row), COL - 18, n.lane);
+    for (const b of map.bars) html += card(b.work_id, width / 2, cy(b.row), COL * 1.6, null);
+    // 接続理由の吹き出し(CSSツールチップ・タップ対応にtabindex)
+    for (const c of map.cross_links) {
+      const a = pos[c.from], z = pos[c.to];
+      const mx = (a.x + z.x) / 2, my = (a.y + z.y) / 2;
+      html += `<span class="map-why" tabindex="0" data-why="${c.why}" style="left:${mx - 11}px;top:${my - 11}px">?</span>`;
+    }
+    html += '</div></div>';
+    return html;
+  });
+
   // 記事等のルート相対リンク(/live/… /comics/…)にpathPrefixを自動付与
   const prefix = (process.env.PATH_PREFIX || '/').replace(/\/$/, '');
   if (prefix) {

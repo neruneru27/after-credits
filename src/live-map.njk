@@ -1,0 +1,31 @@
+---
+layout: layouts/base.njk
+title: MCU相関マップ(公開順×系譜あみだくじ)
+description: MCU実写全68作品を「公開順×9つの系譜レーン」で一望できる相関マップ。全員集合作品の横棒、レーンをまたぐ物語の接続、未公開作まで。各作品から詳細ページへ飛べます。
+permalink: /live/map/
+---
+<section data-page="live-map">
+  <div class="wrap">
+    <p class="crumb"><a href="{{ '/' | url }}">ホーム</a> › <a href="{{ '/live/' | url }}">実写サイド</a> › 相関マップ</p>
+    <div class="sec-head">
+      <span class="en">STORY MAP</span>
+      <h2 class="chara-name-h">MCU相関マップ — 公開順×系譜あみだくじ</h2>
+      <p>縦は日本公開順、横は物語の系譜(9レーン)。太い横棒は「全員集合」作品、ピンクの点線はレーンをまたぐ物語の接続です(「?」を押すと理由が出ます)。作品カードを押すと詳細ページへ。</p>
+    </div>
+
+    <div class="map-legend">
+      <span class="legend-item"><span class="legend-line lane"></span>系譜レーン(色=レーン)</span>
+      <span class="legend-item"><span class="legend-line bar"></span>全員集合(横棒)</span>
+      <span class="legend-item"><span class="legend-line cross"></span>レーン間の接続(?=理由)</span>
+      <span class="legend-item"><span class="legend-box dashed"></span>未公開作品</span>
+    </div>
+
+    {{ timelineMap | timelineMapHtml(mcu.works) | safe }}
+
+    <div class="map-lanes-desc">
+      {%- for l in timelineMap.lanes %}
+      <p><b style="color:{{ l.color }}">■</b> <b>{{ l.label }}</b> — {{ l.desc }}</p>
+      {%- endfor %}
+    </div>
+  </div>
+</section>

@@ -624,3 +624,46 @@
   }
   .db-ref .cs-badge { margin-right: 6px; }
   .crow:target { outline: 4px solid var(--magenta); outline-offset: 2px; }
+
+  /* ---------- MCU相関マップ ---------- */
+  .map-legend { display: flex; flex-wrap: wrap; gap: 10px 20px; margin-bottom: 16px; font-size: 0.78rem; font-weight: 700; }
+  .legend-item { display: flex; align-items: center; gap: 6px; }
+  .legend-line { display: inline-block; width: 28px; height: 0; }
+  .legend-line.lane { border-top: 4px solid var(--cyan); }
+  .legend-line.bar { border-top: 5px solid var(--ink); }
+  .legend-line.cross { border-top: 3px dashed var(--magenta); }
+  .legend-box.dashed { display: inline-block; width: 22px; height: 14px; border: 2px dashed var(--ink); background: #fff; }
+  .map-scroll { overflow-x: auto; border: 3px solid var(--ink); background: #fff; box-shadow: 6px 6px 0 var(--ink); }
+  .map-canvas { position: relative; min-width: 720px; }
+  .map-svg { position: absolute; left: 0; top: 0; }
+  .map-lanehead { position: sticky; top: 0; z-index: 5; display: flex; background: var(--paper); border-bottom: 3px solid var(--ink); }
+  .map-lane-label {
+    font-size: 0.7rem; font-weight: 900; text-align: center;
+    padding: 8px 6px; line-height: 1.4; height: 56px; box-sizing: border-box;
+    border-right: 1px dashed var(--paper-dark);
+  }
+  .map-node {
+    position: absolute; z-index: 2; display: flex; align-items: center;
+    min-height: 48px; padding: 4px 8px; box-sizing: border-box;
+    background: #fff; border: 2px solid var(--ink);
+    font-size: 0.66rem; font-weight: 700; line-height: 1.35;
+    text-decoration: none; color: var(--ink);
+    box-shadow: 2px 2px 0 var(--ink);
+  }
+  .map-node:hover { z-index: 4; transform: translate(-1px,-1px); box-shadow: 4px 4px 0 var(--ink); }
+  .map-node.upcoming { border-style: dashed; background: var(--paper); }
+  .map-why {
+    position: absolute; z-index: 3; width: 22px; height: 22px; border-radius: 50%;
+    background: var(--magenta); color: #fff; border: 2px solid var(--ink);
+    font-size: 0.75rem; font-weight: 900; text-align: center; line-height: 18px;
+    cursor: pointer;
+  }
+  .map-why::after {
+    content: attr(data-why); display: none; position: absolute; z-index: 10;
+    left: 26px; top: -6px; width: max-content; max-width: 230px;
+    background: var(--ink); color: var(--paper); font-size: 0.72rem; font-weight: 700;
+    padding: 6px 10px; line-height: 1.5; text-align: left;
+  }
+  .map-why:hover::after, .map-why:focus::after { display: block; }
+  .map-lanes-desc { margin-top: 20px; font-size: 0.82rem; }
+  .map-lanes-desc p { margin: 6px 0; }

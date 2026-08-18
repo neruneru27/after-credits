@@ -1,0 +1,460 @@
+{
+ "meta": {
+  "name": "実写時系列あみだくじマップ(公開順)",
+  "updated": "2026-08-18",
+  "spec": [
+   "縦軸=公開順(rowはmcu.json配列の添字。ビルド時に再導出可)。横軸=9レーン",
+   "描画: 各レーンは縦線。同レーン内の連続ノードを線で結ぶ。barsは全レーンを貫く横棒(あみだの横線)として描画",
+   "cross_linksはレーンをまたぐ斜め接続線(whyをホバー/タップで表示)",
+   "ノード=作品名の小カード(クリックで/live/<work_id>/へ)。未公開作は破線枠",
+   "モバイル: 横スクロールコンテナ(min-width 720px程度)+レーン見出しは上部固定",
+   "requires/leads_toの全接続はlive-extra.jsonにあり。本マップは可読性のため主要接続のみ描画する設計",
+   "凡例: レーン色+横棒=全員集合作品+破線=未公開"
+  ]
+ },
+ "lanes": [
+  {
+   "id": "ironman",
+   "label": "アイアンマンの系譜",
+   "color": "#e23636",
+   "desc": "トニーの遺産はスパイダーマンとリリへ"
+  },
+  {
+   "id": "cap",
+   "label": "キャップ&ワカンダ",
+   "color": "#3b6fd4",
+   "desc": "盾の継承と、シビル・ウォーで交わった王国"
+  },
+  {
+   "id": "thor",
+   "label": "ソー&ロキ",
+   "color": "#f2a900",
+   "desc": "アスガルドの兄弟、それぞれの玉座へ"
+  },
+  {
+   "id": "science",
+   "label": "サイエンス&ファミリー",
+   "color": "#7bc96f",
+   "desc": "ハルク・アントマン・FF——科学と家族"
+  },
+  {
+   "id": "cosmic",
+   "label": "宇宙",
+   "color": "#9b59b6",
+   "desc": "ガーディアンズとキャプテン・マーベルの銀河"
+  },
+  {
+   "id": "mystic",
+   "label": "魔術&マルチバース",
+   "color": "#e67e22",
+   "desc": "ストレンジ、ワンダ、そして多元宇宙の扉"
+  },
+  {
+   "id": "reunion",
+   "label": "再編勢",
+   "color": "#e84393",
+   "desc": "ウィドウの遺志からニュー・アベンジャーズへ"
+  },
+  {
+   "id": "street",
+   "label": "ストリート",
+   "color": "#c0392b",
+   "desc": "ヘルズ・キッチンの夜(旧ディフェンダーズはotherSeries参照)"
+  },
+  {
+   "id": "anime",
+   "label": "アニメ",
+   "color": "#16a085",
+   "desc": "ホワット・イフからX-Men '97まで"
+  }
+ ],
+ "bars": [
+  {
+   "work_id": "avengers",
+   "row": 5
+  },
+  {
+   "work_id": "aou",
+   "row": 11
+  },
+  {
+   "work_id": "civil-war",
+   "row": 13
+  },
+  {
+   "work_id": "infinity-war",
+   "row": 21
+  },
+  {
+   "work_id": "endgame",
+   "row": 22
+  },
+  {
+   "work_id": "avengers-doomsday",
+   "row": 66
+  },
+  {
+   "work_id": "avengers-secret-wars",
+   "row": 67
+  }
+ ],
+ "nodes": [
+  {
+   "work_id": "iron-man",
+   "lane": "ironman",
+   "row": 0
+  },
+  {
+   "work_id": "iron-man-2",
+   "lane": "ironman",
+   "row": 2
+  },
+  {
+   "work_id": "iron-man-3",
+   "lane": "ironman",
+   "row": 6
+  },
+  {
+   "work_id": "homecoming",
+   "lane": "ironman",
+   "row": 16
+  },
+  {
+   "work_id": "ffh",
+   "lane": "ironman",
+   "row": 24
+  },
+  {
+   "work_id": "nwh",
+   "lane": "ironman",
+   "row": 31
+  },
+  {
+   "work_id": "ironheart",
+   "lane": "ironman",
+   "row": 56
+  },
+  {
+   "work_id": "spiderman-bnd",
+   "lane": "ironman",
+   "row": 64
+  },
+  {
+   "work_id": "cap-tfa",
+   "lane": "cap",
+   "row": 4
+  },
+  {
+   "work_id": "cap-tws",
+   "lane": "cap",
+   "row": 8
+  },
+  {
+   "work_id": "fatws",
+   "lane": "cap",
+   "row": 26
+  },
+  {
+   "work_id": "cap-bnw",
+   "lane": "cap",
+   "row": 53
+  },
+  {
+   "work_id": "black-panther",
+   "lane": "cap",
+   "row": 15
+  },
+  {
+   "work_id": "wakanda-forever",
+   "lane": "cap",
+   "row": 39
+  },
+  {
+   "work_id": "thor",
+   "lane": "thor",
+   "row": 3
+  },
+  {
+   "work_id": "thor-tdw",
+   "lane": "thor",
+   "row": 7
+  },
+  {
+   "work_id": "ragnarok",
+   "lane": "thor",
+   "row": 18
+  },
+  {
+   "work_id": "love-thunder",
+   "lane": "thor",
+   "row": 35
+  },
+  {
+   "work_id": "loki-s1",
+   "lane": "thor",
+   "row": 23
+  },
+  {
+   "work_id": "loki-s2",
+   "lane": "thor",
+   "row": 44
+  },
+  {
+   "work_id": "incredible-hulk",
+   "lane": "science",
+   "row": 1
+  },
+  {
+   "work_id": "ant-man",
+   "lane": "science",
+   "row": 12
+  },
+  {
+   "work_id": "ant-man-wasp",
+   "lane": "science",
+   "row": 19
+  },
+  {
+   "work_id": "quantumania",
+   "lane": "science",
+   "row": 41
+  },
+  {
+   "work_id": "she-hulk",
+   "lane": "science",
+   "row": 37
+  },
+  {
+   "work_id": "ff-first-steps",
+   "lane": "science",
+   "row": 57
+  },
+  {
+   "work_id": "gotg",
+   "lane": "cosmic",
+   "row": 9
+  },
+  {
+   "work_id": "gotg2",
+   "lane": "cosmic",
+   "row": 10
+  },
+  {
+   "work_id": "captain-marvel",
+   "lane": "cosmic",
+   "row": 20
+  },
+  {
+   "work_id": "gotg-holiday",
+   "lane": "cosmic",
+   "row": 40
+  },
+  {
+   "work_id": "gotg3",
+   "lane": "cosmic",
+   "row": 42
+  },
+  {
+   "work_id": "ms-marvel",
+   "lane": "cosmic",
+   "row": 34
+  },
+  {
+   "work_id": "secret-invasion",
+   "lane": "cosmic",
+   "row": 43
+  },
+  {
+   "work_id": "the-marvels",
+   "lane": "cosmic",
+   "row": 45
+  },
+  {
+   "work_id": "doctor-strange",
+   "lane": "mystic",
+   "row": 17
+  },
+  {
+   "work_id": "wandavision",
+   "lane": "mystic",
+   "row": 25
+  },
+  {
+   "work_id": "shang-chi",
+   "lane": "mystic",
+   "row": 27
+  },
+  {
+   "work_id": "eternals",
+   "lane": "mystic",
+   "row": 29
+  },
+  {
+   "work_id": "moon-knight",
+   "lane": "mystic",
+   "row": 32
+  },
+  {
+   "work_id": "mom",
+   "lane": "mystic",
+   "row": 33
+  },
+  {
+   "work_id": "werewolf",
+   "lane": "mystic",
+   "row": 38
+  },
+  {
+   "work_id": "agatha",
+   "lane": "mystic",
+   "row": 50
+  },
+  {
+   "work_id": "dp-wolverine",
+   "lane": "mystic",
+   "row": 49
+  },
+  {
+   "work_id": "wonder-man",
+   "lane": "mystic",
+   "row": 60
+  },
+  {
+   "work_id": "vision-quest",
+   "lane": "mystic",
+   "row": 65
+  },
+  {
+   "work_id": "black-widow",
+   "lane": "reunion",
+   "row": 14
+  },
+  {
+   "work_id": "hawkeye",
+   "lane": "reunion",
+   "row": 30
+  },
+  {
+   "work_id": "thunderbolts",
+   "lane": "reunion",
+   "row": 55
+  },
+  {
+   "work_id": "echo",
+   "lane": "street",
+   "row": 47
+  },
+  {
+   "work_id": "ddba-s1",
+   "lane": "street",
+   "row": 54
+  },
+  {
+   "work_id": "ddba-s2",
+   "lane": "street",
+   "row": 61
+  },
+  {
+   "work_id": "punisher-sp",
+   "lane": "street",
+   "row": 62
+  },
+  {
+   "work_id": "what-if-s1",
+   "lane": "anime",
+   "row": 28
+  },
+  {
+   "work_id": "i-am-groot",
+   "lane": "anime",
+   "row": 36
+  },
+  {
+   "work_id": "what-if-s2",
+   "lane": "anime",
+   "row": 46
+  },
+  {
+   "work_id": "xmen97-s1",
+   "lane": "anime",
+   "row": 48
+  },
+  {
+   "work_id": "what-if-s3",
+   "lane": "anime",
+   "row": 51
+  },
+  {
+   "work_id": "marvel-zombies",
+   "lane": "anime",
+   "row": 59
+  },
+  {
+   "work_id": "yfnsm-s1",
+   "lane": "anime",
+   "row": 52
+  },
+  {
+   "work_id": "eyes-of-wakanda",
+   "lane": "anime",
+   "row": 58
+  },
+  {
+   "work_id": "xmen97-s2",
+   "lane": "anime",
+   "row": 63
+  }
+ ],
+ "cross_links": [
+  {
+   "from": "loki-s1",
+   "to": "quantumania",
+   "why": "カーンの脅威"
+  },
+  {
+   "from": "quantumania",
+   "to": "loki-s2",
+   "why": "ヴィクター・タイムリー"
+  },
+  {
+   "from": "incredible-hulk",
+   "to": "cap-bnw",
+   "why": "ロス/リーダー/セルシー"
+  },
+  {
+   "from": "hawkeye",
+   "to": "echo",
+   "why": "マヤの物語へ"
+  },
+  {
+   "from": "nwh",
+   "to": "mom",
+   "why": "呪文の代償"
+  },
+  {
+   "from": "thunderbolts",
+   "to": "ff-first-steps",
+   "why": "深宇宙からの船"
+  },
+  {
+   "from": "punisher-sp",
+   "to": "spiderman-bnd",
+   "why": "フランク続投"
+  },
+  {
+   "from": "wandavision",
+   "to": "vision-quest",
+   "why": "白いヴィジョン"
+  },
+  {
+   "from": "black-widow",
+   "to": "hawkeye",
+   "why": "イェレーナの誤解"
+  },
+  {
+   "from": "ms-marvel",
+   "to": "the-marvels",
+   "why": "入れ替わり発生"
+  }
+ ]
+}

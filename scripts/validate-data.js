@@ -186,6 +186,28 @@ let encIds = new Set();
   }
 }
 
+// ---- timelineMap(あみだくじマップ・68作品全配置) ----
+{
+  const tm = load('timelineMap.json');
+  const wids = new Set(load('mcu.json').works.map((w) => w.id));
+  const lanes = new Set(tm.lanes.map((l) => l.id));
+  const placed = [...tm.nodes.map((n) => n.work_id), ...tm.bars.map((b) => b.work_id)];
+  if (placed.length !== 68) err(`timelineMap: 配置数が 68 でない: ${placed.length}`);
+  const seen = new Set();
+  for (const id of placed) {
+    if (seen.has(id)) err(`timelineMap: 重複配置: ${id}`);
+    seen.add(id);
+    if (!wids.has(id)) err(`timelineMap: mcu に無い id: ${id}`);
+  }
+  for (const id of wids) if (!seen.has(id)) err(`timelineMap: 未配置の作品: ${id}`);
+  for (const n of tm.nodes) if (!lanes.has(n.lane)) err(`timelineMap: ${n.work_id} の lane 不明: ${n.lane}`);
+  for (const c of tm.cross_links) {
+    if (!seen.has(c.from)) err(`timelineMap: cross_links.from 不整合: ${c.from}`);
+    if (!seen.has(c.to)) err(`timelineMap: cross_links.to 不整合: ${c.to}`);
+    if (!c.why) err(`timelineMap: cross_link ${c.from}→${c.to} に why が無い`);
+  }
+}
+
 // ---- 異常文字列チェック(全JSON: キリル文字・かな漢字に挟まれた英字の混入検出) ----
 {
   // かな漢字に挟まれた小文字英字はタイポ・機械混入の疑い。スキーマ用語は除外
