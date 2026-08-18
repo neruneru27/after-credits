@@ -130,8 +130,17 @@ eleventyComputed:
       {%- endif %}
 
       {%- set amz = amazonLinks[w.id] %}
-      {%- if site.affiliateEnabled and amz %}
+      {%- set strm = streaming.works[w.id] %}
+      {%- if (site.affiliateEnabled and amz) or (site.dplusAffiliateUrl and strm.dplus == true) or strm.dplus == 'theater' %}
       <h3>🛒 この作品を観る・買う</h3>
+      {%- if strm.dplus == 'theater' %}
+      <p><span class="w-badge">🎥 劇場公開中</span></p>
+      {%- endif %}
+      {%- if site.dplusAffiliateUrl and strm.dplus == true %}
+      <p class="w-buy"><a class="amz-btn dplus-btn" href="{{ site.dplusAffiliateUrl }}" rel="sponsored noopener" target="_blank">▶ ディズニープラスで観る</a><span class="pr-label">[PR]</span></p>
+      {%- endif %}
+      {%- endif %}
+      {%- if site.affiliateEnabled and amz %}
       <p class="w-buy">
         {%- if amz.bd %}<a class="amz-btn" href="https://www.amazon.co.jp/dp/{{ amz.bd }}?tag={{ site.amazonTag }}" rel="sponsored noopener" target="_blank">Blu-ray</a>{% endif %}
         {%- if amz.dvd %}<a class="amz-btn" href="https://www.amazon.co.jp/dp/{{ amz.dvd }}?tag={{ site.amazonTag }}" rel="sponsored noopener" target="_blank">DVD</a>{% endif %}

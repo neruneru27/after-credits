@@ -1,0 +1,241 @@
+{
+ "meta": {
+  "name": "配信状況データ(ディズニープラス)",
+  "updated": "2026-08-18",
+  "spec": [
+   "dplus: true=D+配信中 / false=D+になし / theater=劇場公開中 / upcoming=未公開 / check=運営者確認待ち",
+   "表示: dplus=trueの作品ページ🛒枠に『▶ ディズニープラスで観る』ボタン(アフィリエイトリンクはサイト共通定数で一元管理・[PR]表記)",
+   "theaterは『劇場公開中』バッジ、check/upcomingはボタン非表示",
+   "アフィリエイトリンクはアクセストレード承認後に定数へ投入。承認前はボタン自体を出さない(リンク先なしのUIを作らない)",
+   "otherSeriesはseries単位のフラグ(下記other)。配信ローテーションがあるため運営者の定期確認対象",
+   "validate: 全68作品にdplusキー存在、値が5種のいずれか",
+   "運営者確認(2026-08-18): 実写はネトフリ版ドラマ含めほぼ全てD+配信中。例外=旧作アニメ群と日本製作品(ディスク・ウォーズ:アベンジャーズ等)。→将来のアニメセクション構築時は『D+で観られる/観られない』の区分が必須情報になる"
+  ]
+ },
+ "works": {
+  "iron-man": {
+   "dplus": true
+  },
+  "incredible-hulk": {
+   "dplus": true,
+   "note": "運営者確認済み(2026-08-18)"
+  },
+  "iron-man-2": {
+   "dplus": true
+  },
+  "thor": {
+   "dplus": true
+  },
+  "cap-tfa": {
+   "dplus": true
+  },
+  "avengers": {
+   "dplus": true
+  },
+  "iron-man-3": {
+   "dplus": true
+  },
+  "thor-tdw": {
+   "dplus": true
+  },
+  "cap-tws": {
+   "dplus": true
+  },
+  "gotg": {
+   "dplus": true
+  },
+  "gotg2": {
+   "dplus": true
+  },
+  "aou": {
+   "dplus": true
+  },
+  "ant-man": {
+   "dplus": true
+  },
+  "civil-war": {
+   "dplus": true
+  },
+  "black-widow": {
+   "dplus": true
+  },
+  "black-panther": {
+   "dplus": true
+  },
+  "homecoming": {
+   "dplus": true
+  },
+  "doctor-strange": {
+   "dplus": true
+  },
+  "ragnarok": {
+   "dplus": true
+  },
+  "ant-man-wasp": {
+   "dplus": true
+  },
+  "captain-marvel": {
+   "dplus": true
+  },
+  "infinity-war": {
+   "dplus": true
+  },
+  "endgame": {
+   "dplus": true
+  },
+  "loki-s1": {
+   "dplus": true
+  },
+  "ffh": {
+   "dplus": true
+  },
+  "wandavision": {
+   "dplus": true
+  },
+  "fatws": {
+   "dplus": true
+  },
+  "shang-chi": {
+   "dplus": true
+  },
+  "what-if-s1": {
+   "dplus": true
+  },
+  "eternals": {
+   "dplus": true
+  },
+  "hawkeye": {
+   "dplus": true
+  },
+  "nwh": {
+   "dplus": true
+  },
+  "moon-knight": {
+   "dplus": true
+  },
+  "mom": {
+   "dplus": true
+  },
+  "ms-marvel": {
+   "dplus": true
+  },
+  "love-thunder": {
+   "dplus": true
+  },
+  "i-am-groot": {
+   "dplus": true
+  },
+  "she-hulk": {
+   "dplus": true
+  },
+  "werewolf": {
+   "dplus": true
+  },
+  "wakanda-forever": {
+   "dplus": true
+  },
+  "gotg-holiday": {
+   "dplus": true
+  },
+  "quantumania": {
+   "dplus": true
+  },
+  "gotg3": {
+   "dplus": true
+  },
+  "secret-invasion": {
+   "dplus": true
+  },
+  "loki-s2": {
+   "dplus": true
+  },
+  "the-marvels": {
+   "dplus": true
+  },
+  "what-if-s2": {
+   "dplus": true
+  },
+  "echo": {
+   "dplus": true
+  },
+  "xmen97-s1": {
+   "dplus": true
+  },
+  "dp-wolverine": {
+   "dplus": true
+  },
+  "agatha": {
+   "dplus": true
+  },
+  "what-if-s3": {
+   "dplus": true
+  },
+  "yfnsm-s1": {
+   "dplus": true
+  },
+  "cap-bnw": {
+   "dplus": true
+  },
+  "ddba-s1": {
+   "dplus": true
+  },
+  "thunderbolts": {
+   "dplus": true
+  },
+  "ironheart": {
+   "dplus": true
+  },
+  "ff-first-steps": {
+   "dplus": true
+  },
+  "eyes-of-wakanda": {
+   "dplus": true
+  },
+  "marvel-zombies": {
+   "dplus": true
+  },
+  "wonder-man": {
+   "dplus": true
+  },
+  "ddba-s2": {
+   "dplus": true
+  },
+  "punisher-sp": {
+   "dplus": true
+  },
+  "xmen97-s2": {
+   "dplus": true
+  },
+  "spiderman-bnd": {
+   "dplus": "theater",
+   "note": "劇場公開中。配信開始後にdplus判定を更新"
+  },
+  "vision-quest": {
+   "dplus": "upcoming"
+  },
+  "avengers-doomsday": {
+   "dplus": "upcoming"
+  },
+  "avengers-secret-wars": {
+   "dplus": "upcoming"
+  }
+ },
+ "other": {
+  "raimi-webb": {
+   "dplus": true,
+   "note": "運営者確認済み。配信ローテの変動があり得るため四半期に一度の確認推奨"
+  },
+  "ssu": {
+   "dplus": true,
+   "note": "同上"
+  },
+  "fox-xmen": {
+   "dplus": true,
+   "note": "スター枠で配信中(全13作の個別確認は任意)"
+  },
+  "defenders": {
+   "dplus": true,
+   "note": "旧ネトフリ勢は2022年以降D+へ移管済み"
+  }
+ }
+}

@@ -769,3 +769,7 @@
   .splash-skip { position: absolute; right: 18px; bottom: 14px; color: rgba(245,242,234,0.45); font-size: 0.68rem; letter-spacing: 0.1em; }
   .splash-lock { overflow: hidden; }
   @media (prefers-reduced-motion: reduce) { .splash { display: none !important; } }
+
+  /* ---------- ディズニープラスボタン(アフィリエイトリンク投入で点灯) ---------- */
+  .amz-btn.dplus-btn { background: #0e2a5c; color: #fff; }
+  .amz-btn.dplus-btn:hover { background: #113f8f; }

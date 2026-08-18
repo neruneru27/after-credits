@@ -267,6 +267,23 @@ let encIds = new Set();
   }
 }
 
+// ---- streaming(配信状況・68作品網羅) ----
+{
+  const s = load('streaming.json');
+  const wids = new Set(load('mcu.json').works.map((w) => w.id));
+  const valid = [true, false, 'theater', 'upcoming', 'check'];
+  const keys = Object.keys(s.works);
+  if (keys.length !== 68) err(`streaming: 件数が 68 でない: ${keys.length}`);
+  for (const id of wids) if (!(id in s.works)) err(`streaming: 未収録の作品: ${id}`);
+  for (const [id, v] of Object.entries(s.works)) {
+    if (!wids.has(id)) err(`streaming: mcu に無い id: ${id}`);
+    if (!valid.includes(v.dplus)) err(`streaming: ${id} の dplus 値不正: ${JSON.stringify(v.dplus)}`);
+  }
+  for (const [k, v] of Object.entries(s.other || {})) {
+    if (!valid.includes(v.dplus)) err(`streaming: other.${k} の dplus 値不正: ${JSON.stringify(v.dplus)}`);
+  }
+}
+
 // ---- 異常文字列チェック(全JSON: キリル文字・かな漢字に挟まれた英字の混入検出) ----
 {
   // かな漢字に挟まれた小文字英字はタイポ・機械混入の疑い。スキーマ用語は除外
