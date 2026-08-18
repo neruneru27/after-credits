@@ -1,0 +1,43 @@
+---
+layout: layouts/base.njk
+title: MCUクレジットシーン全一覧|全68作品のミッド/ポストクレジット有無と本数
+description: MCU全68作品のクレジットシーン(おまけ映像)の有無と本数を公開順で一覧化。ミッドクレジットとポストクレジットを区別して掲載。内容のネタバレなしで確認でき、詳細は各作品ページの開閉式解説へ。
+permalink: /live/credits/
+---
+<section data-page="live-credits">
+  <div class="wrap">
+    <p class="crumb"><a href="{{ '/' | url }}">ホーム</a> › <a href="{{ '/live/' | url }}">実写サイド</a> › クレジットシーン一覧</p>
+    <div class="sec-head">
+      <span class="en">POST-CREDITS INDEX</span>
+      <h2 class="chara-name-h">MCUクレジットシーン全一覧</h2>
+      <p>MCU全68作品のクレジットシーン(おまけ映像)の有無と本数を一覧化しました。ミッドクレジット(本編直後)とポストクレジット(最後の最後)を区別して掲載。内容のネタバレは各作品ページで、シーンごとに開閉式で読めます。</p>
+    </div>
+
+    <div class="rel-table-wrap">
+      <table class="rel-table credits-table">
+        <thead><tr><th>#</th><th>作品名(公開順)</th><th>ミッド</th><th>ポスト</th><th>合計</th></tr></thead>
+        <tbody>
+          {%- for w in mcu.works | sortJpRelease %}
+          {%- set ex = liveExtra.works[w.id] %}
+          {%- set mid = ex.credits | countPos("mid") %}
+          {%- set post = ex.credits | countPos("post") %}
+          <tr>
+            <td>{{ loop.index }}</td>
+            <td><a href="{{ ('/live/' + w.id + '/') | url }}">{{ w.title }}</a>{% if w.status == 'upcoming' %} <span class="w-badge upcoming">公開予定</span>{% endif %}</td>
+            {%- if w.status == 'upcoming' %}
+            <td colspan="3" class="credits-none">未公開(公開後に追記)</td>
+            {%- elif ex.credits.length %}
+            <td>{{ '🎬' + mid if mid else '—' }}</td>
+            <td>{{ '🎬' + post if post else '—' }}</td>
+            <td><b>{{ ex.credits.length }}本</b></td>
+            {%- else %}
+            <td colspan="3" class="credits-none">なし</td>
+            {%- endif %}
+          </tr>
+          {%- endfor %}
+        </tbody>
+      </table>
+    </div>
+    <p class="term-note">各作品のシーンの内容(ネタバレ)は、作品名のリンク先ページで開閉式(2段防御)で読めます。</p>
+  </div>
+</section>

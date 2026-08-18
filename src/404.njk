@@ -1,0 +1,24 @@
+---
+layout: layouts/base.njk
+title: ページが見つかりません
+description: お探しのページは見つかりませんでした。マーベル・アフタークレジットのホーム、視聴順ガイド、キャラ検索、用語辞典からお探しください。
+permalink: /404.html
+eleventyExcludeFromCollections: true
+---
+<section data-page="notfound">
+  <div class="wrap">
+    <div class="hero-mini">
+      <p class="en">404 — SNAPPED AWAY</p>
+      <h1>このページは、指パッチンで消えたようです。</h1>
+      <p>お探しのページは移動したか、存在しません。以下からお戻りください。</p>
+    </div>
+    <div class="tool-row">
+      <a class="tool" href="{{ '/' | url }}"><span class="icon c">H</span><div><h3>ホームへ戻る</h3><p>3つの入口からやり直す</p></div></a>
+      <a class="tool" href="{{ '/live/' | url }}"><span class="icon m">M</span><div><h3>MCUを見る順番ガイド</h3><p>全68作品・視聴コース</p></div></a>
+    </div>
+    <div class="tool-row" style="margin-top:16px;">
+      <a class="tool" href="{{ '/characters/' | url }}"><span class="icon y">?</span><div><h3>キャラ検索</h3><p>124人の名鑑から探す</p></div></a>
+      <a class="tool" href="{{ '/glossary/' | url }}"><span class="icon c">A</span><div><h3>用語辞典</h3><p>296語からキーワード検索</p></div></a>
+    </div>
+  </div>
+</section>

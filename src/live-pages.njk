@@ -7,10 +7,20 @@ pagination:
   addAllPagesToCollections: true
 permalink: "/live/{{ w.id }}/"
 eleventyComputed:
-  title: "{{ w.title }}|あらすじ・クレジットシーン・登場キャラ解説"
+  title: "{{ w.title }}({{ (w.date_jp or w.date) | truncate(4, true, '') }})|クレジットシーンは何個?あらすじ・登場キャラ・次に観る作品"
   description: "{{ w.title }}({{ w.date_jp | fmtDate }})の基本情報・あらすじ(ネタバレなし)・ネタバレあり要約・クレジットシーンの有無と内容・登場キャラクター・原作コミックを解説。"
 ---
 {%- set ex = liveExtra.works[w.id] %}
+<script type="application/ld+json">{{ {
+  "@context": "https://schema.org",
+  "@type": "Movie" if w.type == "movie" else "TVSeries",
+  "name": w.title,
+  "datePublished": w.date_jp if w.date_jp and (w.date_jp | length) == 10 else none,
+  "director": { "@type": "Person", "name": ex.director },
+  "description": (w.syn | truncate(110, true, '…')) if w.syn else w.desc,
+  "url": site.url + page.url,
+  "inLanguage": "ja"
+} | ldJson | safe }}</script>
 <section data-page="live-detail">
   <div class="wrap">
     <p class="crumb"><a href="{{ '/' | url }}">ホーム</a> › <a href="{{ '/live/' | url }}">実写サイド</a> › {{ w.title }}</p>

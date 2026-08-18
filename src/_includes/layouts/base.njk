@@ -26,6 +26,11 @@
 {%- if structuredData %}
 <script type="application/ld+json">{{ structuredData | safe }}</script>
 {%- endif %}
+{%- if page.url != '/' %}
+<script type="application/ld+json">{{ page.url | breadcrumbLd(title, site.url, site.name) | safe }}</script>
+{%- else %}
+<script type="application/ld+json">{{ { "@context": "https://schema.org", "@type": "WebSite", "name": site.name, "url": site.url + "/" } | jsonify | safe }}</script>
+{%- endif %}
 </head>
 <body>
 

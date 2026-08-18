@@ -5,7 +5,7 @@
   "description": "マーベル・アフタークレジット — 映画・ドラマ・コミック総合ガイド(静的サイト)",
   "scripts": {
     "validate": "node scripts/validate-data.js",
-    "build": "npm run validate && eleventy",
+    "build": "npm run validate && eleventy && node scripts/check-output.js",
     "serve": "npm run validate && eleventy --serve",
     "clean": "node -e \"fs.rmSync('_site',{recursive:true,force:true})\""
   },

@@ -36,6 +36,8 @@ module.exports = function (eleventyConfig) {
   });
 
   eleventyConfig.addFilter('jsonify', (v) => JSON.stringify(v));
+  // JSON-LD用: null/undefined値のキーを除外して出力
+  eleventyConfig.addFilter('ldJson', (v) => JSON.stringify(v, (k, val) => (val == null ? undefined : val)));
 
   // 日本公開順ソート(SPA jpSortKey と同一ロジック)
   eleventyConfig.addFilter('sortJpRelease', (works) => {
@@ -108,6 +110,45 @@ module.exports = function (eleventyConfig) {
     if (n <= 2) return { cls: 'y', label: '🟡 軽い予習', n };
     return { cls: 'r', label: '🔴 本流(要予習)', n };
   });
+
+  // BreadcrumbList JSON-LD(URLパスから生成、既存パンくずと同内容)
+  eleventyConfig.addFilter('breadcrumbLd', (pageUrl, pageTitle, siteUrl, siteName) => {
+    const labels = {
+      live: '実写サイド', comics: 'コミックサイド', characters: 'キャラ検索',
+      glossary: '用語辞典', anime: 'アニメサイド', articles: '記事',
+      privacy: 'プライバシーポリシー', map: '相関マップ', credits: 'クレジットシーン一覧',
+      doomsday: 'ドゥームズデイ特集',
+    };
+    const parts = (pageUrl || '/').split('/').filter(Boolean);
+    const items = [{ '@type': 'ListItem', position: 1, name: siteName, item: siteUrl + '/' }];
+    let acc = '';
+    parts.forEach((p, i) => {
+      acc += '/' + p;
+      const last = i === parts.length - 1;
+      items.push({
+        '@type': 'ListItem',
+        position: i + 2,
+        name: last ? (pageTitle || labels[p] || p) : (labels[p] || p),
+        item: siteUrl + acc + '/',
+      });
+    });
+    return JSON.stringify({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: items });
+  });
+
+  // /live/ のItemList JSON-LD(公開順68作品)
+  eleventyConfig.addFilter('mcuItemListLd', (works, siteUrl, prefix) => {
+    const key = (w) => {
+      const d = w.date_jp || w.date || '';
+      return d.length === 10 ? d : '9999-' + String(w.release_order).padStart(3, '0');
+    };
+    return works.slice().sort((a, b) => (key(a) < key(b) ? -1 : 1)).map((w, i) => ({
+      '@type': 'ListItem', position: i + 1, name: w.title, url: siteUrl + '/live/' + w.id + '/',
+    }));
+  });
+
+  // クレジットシーン一覧: pos別の本数
+  eleventyConfig.addFilter('countPos', (credits, pos) =>
+    (credits || []).filter((c) => c.pos === pos).length);
 
   // キャラid→表示名解決(見つからなければidを返す)
   eleventyConfig.addFilter('encName', (id, entries) => {

@@ -1,6 +1,6 @@
 ---
 layout: layouts/base.njk
-title: MCU視聴順ガイド(全68作品・公開順/時系列順)
+title: MCUを見る順番ガイド|公開順・時系列・目的別コース(全68作品)
 description: MCU実写全68作品を日本公開順・物語時系列順で切り替え表示。あらすじ(ネタバレなし)とネタバレあり要約の2段構え。目的別視聴コース・ディフェンダーズ・サーガも収録。
 permalink: /live/
 pageJs: /assets/js/live.js
@@ -11,11 +11,19 @@ pageJs: /assets/js/live.js
     <p class="crumb"><a href="{{ '/' | url }}">ホーム</a> › 実写サイド</p>
     <div class="sec-head">
       <span class="en">LIVE ACTION</span>
-      <h2>MCU 全作品・視聴順ガイド</h2>
+      <h2>MCUを見る順番ガイド(全68作品)</h2>
       <p>『アイアンマン』(2008)から2027年予定作まで全68作品を収録。「日本公開順」と「物語の時系列順」をワンタップで切り替え、種別での絞り込みもできます。<b>「単独OK」</b>は予習なしで観られる公式ブランド作品の印です。各作品をタップすると<b>あらすじ(ネタバレなし)</b>が開き、さらにその中の赤いボタンから<b>ネタバレあり要約</b>(結末まで記載)を読めます。時間がなくて観られない人向けの2段構えです。</p>
     </div>
 
     <a class="doom-banner" href="{{ '/live/map/' | url }}">🗺 MCU相関マップ — 全68作品を「公開順×系譜」で一望 →</a>
+    <a class="doom-banner" href="{{ '/live/credits/' | url }}">🎬 クレジットシーン全一覧 — 全68作品の有無と本数(ネタバレなし) →</a>
+
+<script type="application/ld+json">{{ {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "MCUを見る順番(日本公開順・全68作品)",
+  "itemListElement": mcu.works | mcuItemListLd(site.url)
+} | jsonify | safe }}</script>
 
     <div class="toggle-row" role="group" aria-label="並び順の切り替え">
       <button id="btn-release" aria-pressed="true">公開順(日本)</button>
