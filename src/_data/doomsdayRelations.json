@@ -1,0 +1,419 @@
+{
+ "meta": {
+  "name": "ドゥームズデイ相関図(参戦35体)",
+  "updated": "2026-08-18",
+  "spec": [
+   "陣営ごとの\"島\"(枠+色+一言desc)を並べ、島内にキャラチップを配置。チップはencyclopediaのname/enを解決し/characters/<id>/へリンク",
+   "エッジは4色+線種で描き分け: family=実線ピンク / love=実線赤ハート / ally=実線緑 / rival=点線オレンジ / mystery=破線グレー+『考察』バッジ",
+   "エッジのlabelはホバー/タップで吹き出し表示。mystery系は必ず(考察)を含む文言のまま表示",
+   "配置目安: 中央上にドゥーム陣営、左にFF/宇宙の脅威、右にX-MEN、下にアベンジャーズ/ニュー・アベンジャーズ/ワカンダ、隅にワイルドカード",
+   "モバイル: 島を縦積みにし、島間エッジは主要8本(type=rival/mystery優先)のみ描画+『全関係を見る』で一覧テーブル表示に切替",
+   "設置場所: /characters/doomsday/ の冒頭(35体カード一覧の上)",
+   "validate: 全nodeがencyclopediaに実在しdoomsday=true、edge両端がnodesに存在、mysteryラベルに『考察』含有"
+  ]
+ },
+ "groups": [
+  {
+   "id": "doom",
+   "label": "ドゥーム陣営",
+   "color": "#2ecc71",
+   "desc": "緑のフードの帝国。何体いるのかも含めて謎"
+  },
+  {
+   "id": "ff",
+   "label": "ファンタスティック・フォー",
+   "color": "#3498db",
+   "desc": "別世界アース828から来る\"最初の家族\""
+  },
+  {
+   "id": "avengers",
+   "label": "アベンジャーズ再建側",
+   "color": "#e74c3c",
+   "desc": "サムを中心に集う正規軍"
+  },
+  {
+   "id": "newavengers",
+   "label": "ニュー・アベンジャーズ",
+   "color": "#e84393",
+   "desc": "ヴァルが看板を付けた元サンダーボルツ*"
+  },
+  {
+   "id": "xmen",
+   "label": "旧X-MEN",
+   "color": "#f1c40f",
+   "desc": "別世界アース10005の老練ミュータントたち"
+  },
+  {
+   "id": "wakanda",
+   "label": "ワカンダ&タロカン",
+   "color": "#8e44ad",
+   "desc": "地上と海、二つの隠れた超大国"
+  },
+  {
+   "id": "wildcard",
+   "label": "ワイルドカード",
+   "color": "#95a5a6",
+   "desc": "どの陣営にも属さない規格外たち"
+  },
+  {
+   "id": "cosmic-myth",
+   "label": "宇宙の脅威(考察枠)",
+   "color": "#34495e",
+   "desc": "シークレット・ウォーズの神話的プレイヤー候補"
+  }
+ ],
+ "nodes": [
+  {
+   "id": "doctor-doom",
+   "group": "doom"
+  },
+  {
+   "id": "doombot",
+   "group": "doom"
+  },
+  {
+   "id": "mr-fantastic",
+   "group": "ff"
+  },
+  {
+   "id": "invisible-woman",
+   "group": "ff"
+  },
+  {
+   "id": "human-torch",
+   "group": "ff"
+  },
+  {
+   "id": "the-thing",
+   "group": "ff"
+  },
+  {
+   "id": "franklin-richards",
+   "group": "ff"
+  },
+  {
+   "id": "captain-america-sam",
+   "group": "avengers"
+  },
+  {
+   "id": "joaquin",
+   "group": "avengers"
+  },
+  {
+   "id": "captain-america-steve",
+   "group": "avengers"
+  },
+  {
+   "id": "peggy",
+   "group": "avengers"
+  },
+  {
+   "id": "thor",
+   "group": "avengers"
+  },
+  {
+   "id": "ant-man-scott",
+   "group": "avengers"
+  },
+  {
+   "id": "shang-chi",
+   "group": "avengers"
+  },
+  {
+   "id": "yelena",
+   "group": "newavengers"
+  },
+  {
+   "id": "bucky",
+   "group": "newavengers"
+  },
+  {
+   "id": "us-agent",
+   "group": "newavengers"
+  },
+  {
+   "id": "red-guardian",
+   "group": "newavengers"
+  },
+  {
+   "id": "ghost",
+   "group": "newavengers"
+  },
+  {
+   "id": "sentry",
+   "group": "newavengers"
+  },
+  {
+   "id": "professor-x",
+   "group": "xmen"
+  },
+  {
+   "id": "magneto",
+   "group": "xmen"
+  },
+  {
+   "id": "cyclops",
+   "group": "xmen"
+  },
+  {
+   "id": "beast",
+   "group": "xmen"
+  },
+  {
+   "id": "nightcrawler",
+   "group": "xmen"
+  },
+  {
+   "id": "mystique",
+   "group": "xmen"
+  },
+  {
+   "id": "gambit",
+   "group": "xmen"
+  },
+  {
+   "id": "shuri",
+   "group": "wakanda"
+  },
+  {
+   "id": "mbaku",
+   "group": "wakanda"
+  },
+  {
+   "id": "namor",
+   "group": "wakanda"
+  },
+  {
+   "id": "loki",
+   "group": "wildcard"
+  },
+  {
+   "id": "silver-surfer",
+   "group": "wildcard"
+  },
+  {
+   "id": "galactus",
+   "group": "cosmic-myth"
+  },
+  {
+   "id": "beyonder",
+   "group": "cosmic-myth"
+  },
+  {
+   "id": "molecule-man",
+   "group": "cosmic-myth"
+  }
+ ],
+ "edges": [
+  {
+   "from": "doctor-doom",
+   "to": "doombot",
+   "type": "family",
+   "label": "本体と複製"
+  },
+  {
+   "from": "doctor-doom",
+   "to": "mr-fantastic",
+   "type": "rival",
+   "label": "60年来の宿敵"
+  },
+  {
+   "from": "doctor-doom",
+   "to": "franklin-richards",
+   "type": "mystery",
+   "label": "\"あの子\"に跪いた(考察)"
+  },
+  {
+   "from": "doctor-doom",
+   "to": "molecule-man",
+   "type": "mystery",
+   "label": "原作では神権の\"電源\"(考察)"
+  },
+  {
+   "from": "doctor-doom",
+   "to": "beyonder",
+   "type": "rival",
+   "label": "原作84年版で力を簒奪した因縁"
+  },
+  {
+   "from": "mr-fantastic",
+   "to": "invisible-woman",
+   "type": "love",
+   "label": "夫婦"
+  },
+  {
+   "from": "invisible-woman",
+   "to": "human-torch",
+   "type": "family",
+   "label": "姉弟"
+  },
+  {
+   "from": "mr-fantastic",
+   "to": "the-thing",
+   "type": "ally",
+   "label": "親友(事故の負い目込み)"
+  },
+  {
+   "from": "mr-fantastic",
+   "to": "franklin-richards",
+   "type": "family",
+   "label": "息子"
+  },
+  {
+   "from": "galactus",
+   "to": "franklin-richards",
+   "type": "rival",
+   "label": "\"飢えの後継者\"として狙う"
+  },
+  {
+   "from": "galactus",
+   "to": "silver-surfer",
+   "type": "rival",
+   "label": "離反した元・先触れ"
+  },
+  {
+   "from": "captain-america-sam",
+   "to": "joaquin",
+   "type": "ally",
+   "label": "ファルコンの師弟"
+  },
+  {
+   "from": "captain-america-sam",
+   "to": "captain-america-steve",
+   "type": "family",
+   "label": "盾の継承者と先代"
+  },
+  {
+   "from": "captain-america-steve",
+   "to": "bucky",
+   "type": "ally",
+   "label": "100年来の親友"
+  },
+  {
+   "from": "captain-america-steve",
+   "to": "peggy",
+   "type": "love",
+   "label": "時を超えた恋人"
+  },
+  {
+   "from": "captain-america-sam",
+   "to": "us-agent",
+   "type": "rival",
+   "label": "\"キャップの名\"を巡る因縁"
+  },
+  {
+   "from": "thor",
+   "to": "loki",
+   "type": "family",
+   "label": "義兄弟"
+  },
+  {
+   "from": "ant-man-scott",
+   "to": "doctor-doom",
+   "type": "mystery",
+   "label": "征服者と戦った経験者(考察)"
+  },
+  {
+   "from": "shang-chi",
+   "to": "doctor-doom",
+   "type": "mystery",
+   "label": "リングの信号の先は?(考察)"
+  },
+  {
+   "from": "yelena",
+   "to": "red-guardian",
+   "type": "family",
+   "label": "偽装家族の父娘"
+  },
+  {
+   "from": "yelena",
+   "to": "sentry",
+   "type": "ally",
+   "label": "ヴォイドから引き戻した恩人"
+  },
+  {
+   "from": "yelena",
+   "to": "bucky",
+   "type": "ally",
+   "label": "チームの実質リーダーと相談役"
+  },
+  {
+   "from": "us-agent",
+   "to": "sentry",
+   "type": "ally",
+   "label": "同僚(危うさも共有)"
+  },
+  {
+   "from": "ghost",
+   "to": "yelena",
+   "type": "ally",
+   "label": "死地からの生還仲間"
+  },
+  {
+   "from": "professor-x",
+   "to": "magneto",
+   "type": "rival",
+   "label": "盟友にして宿敵"
+  },
+  {
+   "from": "professor-x",
+   "to": "cyclops",
+   "type": "ally",
+   "label": "師弟(最初の教え子)"
+  },
+  {
+   "from": "professor-x",
+   "to": "beast",
+   "type": "ally",
+   "label": "創設メンバー"
+  },
+  {
+   "from": "mystique",
+   "to": "nightcrawler",
+   "type": "family",
+   "label": "実の母子"
+  },
+  {
+   "from": "gambit",
+   "to": "nightcrawler",
+   "type": "ally",
+   "label": "新参組の軽口仲間"
+  },
+  {
+   "from": "magneto",
+   "to": "namor",
+   "type": "ally",
+   "label": "\"最初のミュータント\"への敬意(考察)"
+  },
+  {
+   "from": "shuri",
+   "to": "mbaku",
+   "type": "ally",
+   "label": "王位を託した同胞"
+  },
+  {
+   "from": "shuri",
+   "to": "namor",
+   "type": "rival",
+   "label": "戦火を交えた末の休戦"
+  },
+  {
+   "from": "shuri",
+   "to": "doctor-doom",
+   "type": "mystery",
+   "label": "ヴィブラニウムを狙う?(考察)"
+  },
+  {
+   "from": "beyonder",
+   "to": "molecule-man",
+   "type": "mystery",
+   "label": "全能者と特異点(考察)"
+  },
+  {
+   "from": "loki",
+   "to": "doctor-doom",
+   "type": "mystery",
+   "label": "全時間軸の管理者は動くのか(考察)"
+  }
+ ]
+}

@@ -233,10 +233,44 @@ let encIds = new Set();
   }
 }
 
+// ---- doomsdayRelations(相関図・35体) ----
+{
+  const r = load('doomsdayRelations.json');
+  const enc = Object.fromEntries(load('encyclopedia.json').entries.map((x) => [x.id, x]));
+  const gids = new Set(r.groups.map((g) => g.id));
+  const nids = new Set(r.nodes.map((n) => n.id));
+  if (r.nodes.length !== 35) err(`relations: node数が 35 でない: ${r.nodes.length}`);
+  for (const n of r.nodes) {
+    if (!enc[n.id]) err(`relations: encyclopedia に無い node: ${n.id}`);
+    else if (!enc[n.id].tags.doomsday) err(`relations: ${n.id} は doomsday=true でない`);
+    if (!gids.has(n.group)) err(`relations: ${n.id} の group 不明: ${n.group}`);
+  }
+  for (const x of r.edges) {
+    if (!nids.has(x.from) || !nids.has(x.to)) err(`relations: edge端点不整合: ${x.from}→${x.to}`);
+    if (!['family', 'love', 'ally', 'rival', 'mystery'].includes(x.type)) err(`relations: edge type 不正: ${x.type}`);
+    if (x.type === 'mystery' && !x.label.includes('考察')) err(`relations: mysteryラベルに「考察」が無い: ${x.label}`);
+  }
+}
+
+// ---- charaGoods(キャラ別グッズ・124キャラ網羅) ----
+{
+  const g = load('charaGoods.json');
+  const encIds2 = new Set(load('encyclopedia.json').entries.map((x) => x.id));
+  const keys = Object.keys(g.chars);
+  if (keys.length !== 124) err(`goods: 件数が 124 でない: ${keys.length}`);
+  for (const id of encIds2) if (!g.chars[id]) err(`goods: 未網羅のキャラ: ${id}`);
+  for (const [id, v] of Object.entries(g.chars)) {
+    if (!v.query) err(`goods: ${id} に query が無い`);
+    for (const a of v.asins || []) {
+      if (!/^B0[A-Z0-9]{8}$/.test(a)) err(`goods: ${id} の ASIN 形式不正: ${a}`);
+    }
+  }
+}
+
 // ---- 異常文字列チェック(全JSON: キリル文字・かな漢字に挟まれた英字の混入検出) ----
 {
   // かな漢字に挟まれた小文字英字はタイポ・機械混入の疑い。スキーマ用語は除外
-  const allowTokens = new Set(['sp', 'syn', 'desc', 'jp', 'id', 'no', 'db', 'ver', 'url', 'meta', 'tags', 'live', 'key', 'keys', 'note', 'eps', 'pos', 'mid', 'post']);
+  const allowTokens = new Set(['sp', 'syn', 'desc', 'jp', 'id', 'no', 'db', 'ver', 'url', 'meta', 'tags', 'live', 'key', 'keys', 'note', 'eps', 'pos', 'mid', 'post', 'node', 'edge', 'label', 'type', 'query', 'until', 'en', 'row', 'lane', 'from', 'to', 'why']);
   for (const f of fs.readdirSync(DATA).filter((x) => x.endsWith('.json'))) {
     const raw = fs.readFileSync(path.join(DATA, f), 'utf8');
     const cyr = raw.match(/[а-яА-Я]+/);

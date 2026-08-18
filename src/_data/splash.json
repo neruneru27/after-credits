@@ -1,0 +1,17 @@
+{
+  "_readme": "ホーム開幕演出の文言設定。untilを過ぎると次のフェーズへ自動切替(クライアントJSで判定)。シークレット・ウォーズ日程確定時はphasesに追記",
+  "phases": [
+    {
+      "until": "2026-12-18T00:00:00+09:00",
+      "en": "You Will Return In Avengers: Doomsday",
+      "jp": "あなたは『アベンジャーズ/ドゥームズデイ』で、帰ってくる",
+      "gold": "2026.12.18"
+    },
+    {
+      "until": null,
+      "en": "You Returned.",
+      "jp": "おかえりなさい。",
+      "gold": "AVENGERS: DOOMSDAY — NOW SHOWING"
+    }
+  ]
+}

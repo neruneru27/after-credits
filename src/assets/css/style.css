@@ -717,3 +717,54 @@
   .prep-meter.g { border-color: #1a7f37; }
   .prep-meter.y { background: #fff7dc; }
   .prep-meter.r { background: #ffe3ef; }
+
+  /* ---------- ドゥームズデイ相関図 ---------- */
+  .rel-box { background: #fff; border: 3px solid var(--ink); box-shadow: 6px 6px 0 var(--ink); padding: 20px; margin-bottom: 40px; }
+  .rel-legend { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: 0.75rem; font-weight: 700; margin: 10px 0 16px; }
+  .rel-legend span, .rel-table .rl { display: inline-flex; align-items: center; gap: 6px; }
+  .rl { display: inline-block; width: 24px; height: 0; margin-right: 4px; vertical-align: middle; }
+  .rl.family { border-top: 3px solid #DE1673; }
+  .rl.love { border-top: 3px solid #e74c3c; }
+  .rl.ally { border-top: 3px solid #1a7f37; }
+  .rl.rival { border-top: 3px dashed #e67e22; }
+  .rl.mystery { border-top: 3px dashed #7f8c8d; }
+  .rel-seen-hint { color: var(--cyan); }
+  .rel-canvas { position: relative; display: grid; gap: 14px; grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "ff doom xmen" "cosmic-myth doom xmen" "avengers newavengers wakanda" "avengers newavengers wildcard"; }
+  .rel-svg { position: absolute; inset: 0; pointer-events: none; z-index: 1; }
+  .rel-island { position: relative; z-index: 0; border: 3px solid var(--gcolor); background: var(--paper); padding: 10px 12px; }
+  .rel-doom { grid-area: doom; } .rel-ff { grid-area: ff; } .rel-xmen { grid-area: xmen; }
+  .rel-avengers { grid-area: avengers; } .rel-newavengers { grid-area: newavengers; }
+  .rel-wakanda { grid-area: wakanda; } .rel-wildcard { grid-area: wildcard; } .rel-cosmic-myth { grid-area: cosmic-myth; }
+  @media (max-width: 760px) { .rel-canvas { grid-template-columns: 1fr; grid-template-areas: "doom" "ff" "cosmic-myth" "xmen" "avengers" "newavengers" "wakanda" "wildcard"; } }
+  .rel-island-head { font-size: 0.78rem; border-bottom: 2px solid var(--gcolor); padding-bottom: 4px; margin-bottom: 8px; }
+  .rel-island-head b { display: block; }
+  .rel-island-head span { color: #6b5f52; font-size: 0.7rem; }
+  .rel-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+  .rel-chip { position: relative; z-index: 2; display: inline-block; background: #fff; border: 2px solid var(--ink);
+    padding: 2px 8px; font-size: 0.72rem; font-weight: 700; text-decoration: none; color: var(--ink); }
+  .rel-chip:hover { background: var(--yellow); }
+  .rel-chip.seen { box-shadow: 0 0 0 3px rgba(0,153,199,0.45); }
+  .rel-chip.seen::after { content: "✨"; font-size: 0.65rem; margin-left: 2px; }
+  .rel-why { z-index: 3; background: #fff; color: var(--ink); }
+  .rel-why.mystery { background: #7f8c8d; color: #fff; }
+  .rel-table-wrap { overflow-x: auto; margin-top: 12px; }
+  .rel-table { border-collapse: collapse; width: 100%; font-size: 0.78rem; }
+  .rel-table th, .rel-table td { border: 2px solid var(--ink); padding: 5px 10px; text-align: left; }
+  .rel-table th { background: var(--paper-dark); }
+
+  /* ---------- 開幕演出 You Will Return ---------- */
+  .splash { position: fixed; inset: 0; z-index: 200; background: #0a0a0a; display: flex;
+    align-items: center; justify-content: center; cursor: pointer; opacity: 1; transition: opacity 0.6s; }
+  .splash.out { opacity: 0; pointer-events: none; }
+  .splash-inner { text-align: center; padding: 0 24px; }
+  .splash-en { color: #f5f2ea; font-family: var(--font-body); font-weight: 500; text-transform: uppercase;
+    font-size: clamp(1rem, 3.4vw, 1.7rem); letter-spacing: 0.35em; opacity: 0; transition: opacity 1s; }
+  .splash-jp { color: rgba(245,242,234,0.66); font-size: clamp(0.72rem, 2vw, 0.9rem); letter-spacing: 0.12em;
+    margin-top: 18px; opacity: 0; transition: opacity 1s 0.8s; }
+  .splash-gold { color: #d4af37; font-family: var(--font-en); font-size: clamp(0.9rem, 2.4vw, 1.2rem);
+    letter-spacing: 0.3em; margin-top: 26px; opacity: 0; transition: opacity 1s 1.4s; }
+  .splash.run .splash-en, .splash.run .splash-jp, .splash.run .splash-gold { opacity: 1; }
+  .splash-skip { position: absolute; right: 18px; bottom: 14px; color: rgba(245,242,234,0.45); font-size: 0.68rem; letter-spacing: 0.1em; }
+  .splash-lock { overflow: hidden; }
+  @media (prefers-reduced-motion: reduce) { .splash { display: none !important; } }

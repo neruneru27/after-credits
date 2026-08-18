@@ -3,6 +3,7 @@ layout: layouts/base.njk
 title: 『アベンジャーズ/ドゥームズデイ』登場キャラまとめ|参戦35キャラの原作解説
 description: 2026年12月18日公開『アベンジャーズ/ドゥームズデイ』の参戦キャラクター35体を一覧で解説。各キャラの詳細ページでコミックと実写の違い・演者情報まで。予習に役立つ関連記事つき。
 permalink: /characters/doomsday/
+pageJs: /assets/js/relations.js
 ---
 {% from "partials/chara-card.njk" import charaCard %}
 <section data-page="chara">
@@ -13,6 +14,46 @@ permalink: /characters/doomsday/
       <h2 class="chara-name-h">🔥『アベンジャーズ/ドゥームズデイ』登場キャラまとめ</h2>
       <p>2026年12月18日公開『アベンジャーズ/ドゥームズデイ』の参戦・関連キャラクターを一覧化。カードを押すと、コミックと実写の違い・演者別解説つきの詳細ページが開きます。</p>
     </div>
+
+    <div class="rel-box">
+      <h3 class="offtime-head">参戦35キャラ相関図</h3>
+      <div class="rel-legend">
+        <span><i class="rl family"></i>家族・血縁</span>
+        <span><i class="rl love"></i>恋愛 ❤</span>
+        <span><i class="rl ally"></i>共闘・盟友</span>
+        <span><i class="rl rival"></i>因縁・対立</span>
+        <span><i class="rl mystery"></i>考察(未確定)</span>
+        <span class="rel-seen-hint">✨=視聴済み作品の登場キャラ(実写ガイドのチェックと連動)</span>
+      </div>
+      <div class="rel-canvas" id="rel-canvas">
+        <svg class="rel-svg" id="rel-svg" aria-hidden="true"></svg>
+        {%- for g in doomsdayRelations.groups %}
+        <div class="rel-island rel-{{ g.id }}" style="--gcolor: {{ g.color }}">
+          <p class="rel-island-head"><b>{{ g.label }}</b><span>{{ g.desc }}</span></p>
+          <div class="rel-chips">
+            {%- for n in doomsdayRelations.nodes %}
+            {%- if n.group == g.id %}
+            <a class="rel-chip" data-id="{{ n.id }}" href="{{ ('/characters/' + n.id + '/') | url }}">{{ n.id | encName(encyclopedia.entries) }}</a>
+            {%- endif %}
+            {%- endfor %}
+          </div>
+        </div>
+        {%- endfor %}
+      </div>
+      <p><button class="navi-back" id="rel-table-toggle">📋 全関係を一覧で見る</button></p>
+      <div class="rel-table-wrap" id="rel-table" hidden>
+        <table class="rel-table">
+          <thead><tr><th>キャラ</th><th>関係</th><th>キャラ</th><th>内容</th></tr></thead>
+          <tbody>
+            {%- set typeLabel = { family: '家族', love: '恋愛', ally: '共闘', rival: '因縁', mystery: '考察' } %}
+            {%- for e in doomsdayRelations.edges %}
+            <tr><td>{{ e.from | encName(encyclopedia.entries) }}</td><td><i class="rl {{ e.type }}"></i>{{ typeLabel[e.type] }}</td><td>{{ e.to | encName(encyclopedia.entries) }}</td><td>{{ e.label }}</td></tr>
+            {%- endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <script id="rel-data" type="application/json">{{ { edges: doomsdayRelations.edges, works: encyclopedia.entries | charWorksMap(doomsdayRelations.nodes | pluck("id")) } | jsonify | safe }}</script>
 
     <div class="sec-head" style="margin-top:8px;">
       <span class="en">READ MORE</span>

@@ -4,6 +4,12 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ 'src/google527b257ac0f4a504.html': 'google527b257ac0f4a504.html' });
   eleventyConfig.ignores.add('src/google527b257ac0f4a504.html');
 
+  // ブランド素材(OGP画像・favicon群)はサイトルート直下に出力
+  eleventyConfig.addPassthroughCopy({ 'src/brand': '.' });
+
+  // Amazon検索クエリ用
+  eleventyConfig.addFilter('urlencode', (s) => encodeURIComponent(s || ''));
+
   // Amazonリンク生成(データ一元管理。実IDへの差し替えは site.json の amazonTag のみ)
   eleventyConfig.addShortcode('amazonLink', function (isbnOrAsin, tag) {
     const id = String(isbnOrAsin || '').replace(/-/g, '');
@@ -87,6 +93,23 @@ module.exports = function (eleventyConfig) {
     if (n === 0) return { cls: 'g', label: '🟢 単独OK', n };
     if (n <= 2) return { cls: 'y', label: '🟡 軽い予習', n };
     return { cls: 'r', label: '🔴 本流(要予習)', n };
+  });
+
+  // キャラid→表示名解決(見つからなければidを返す)
+  eleventyConfig.addFilter('encName', (id, entries) => {
+    const ch = (entries || []).find((x) => x.id === id);
+    return ch ? ch.name : id;
+  });
+
+  // 相関図: キャラid→実写出演work_idの対応(視聴済み連動用)
+  eleventyConfig.addFilter('charWorksMap', function (entries, nodeIds) {
+    const want = new Set(nodeIds);
+    const out = {};
+    for (const ch of entries || []) {
+      if (!want.has(ch.id)) continue;
+      out[ch.id] = ((ch.appearances || {}).live || []).map((x) => x.work_id).filter(Boolean);
+    }
+    return out;
   });
 
   // 全作品分のメーターmap(クライアントJSの再描画用)

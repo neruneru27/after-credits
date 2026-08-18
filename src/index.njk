@@ -1,7 +1,18 @@
 ---
 layout: layouts/base.njk
 permalink: /
+pageJs: /assets/js/splash.js
 ---
+{#- 開幕演出: 本編DOMは通常どおり描画し、オーバーレイを被せる方式(SEO/CWV非影響)。表示判定はsplash.js -#}
+<div class="splash" id="splash" hidden aria-hidden="true">
+  <div class="splash-inner">
+    <p class="splash-en" id="splash-en"></p>
+    <p class="splash-jp" id="splash-jp"></p>
+    <p class="splash-gold" id="splash-gold"></p>
+  </div>
+  <p class="splash-skip">タップでスキップ</p>
+</div>
+<script id="splash-data" type="application/json">{{ splash.phases | jsonify | safe }}</script>
 <section data-page="home">
   <div class="wrap">
     <div class="hero-mini">

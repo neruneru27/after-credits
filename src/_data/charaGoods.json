@@ -1,0 +1,512 @@
+{
+ "meta": {
+  "name": "キャラクター別グッズ検索データ",
+  "updated": "2026-08-18",
+  "spec": [
+   "各キャラページのappearancesの後に『🧸 グッズを探す』セクションを設置",
+   "ボタンは3種: 『フィギュア』『Tシャツ・アパレル』『グッズ全般』。URLは https://www.amazon.co.jp/s?k={query}+{カテゴリ語} にサイト共通のアソシエイトタグを付与(タグはビルド側で一元管理)",
+   "カテゴリ語: フィギュア=『フィギュア』/ Tシャツ・アパレル=『Tシャツ』/ グッズ全般=『グッズ』",
+   "asins配列(任意)にASIN登録があれば検索ボタンの上に直リンクカードを表示(timeline5と同じ昇格方式)。ASINリストでの差分反映に対応",
+   "[PR]表記・rel=sponsored はサイト共通実装に準拠",
+   "validate: 全124キャラにqueryが存在、asinsは形式チェック(B0で始まる10桁)"
+  ]
+ },
+ "chars": {
+  "spider-man": {
+   "query": "スパイダーマン",
+   "asins": []
+  },
+  "hulk": {
+   "query": "ハルク マーベル",
+   "asins": []
+  },
+  "punisher": {
+   "query": "パニッシャー",
+   "asins": []
+  },
+  "daredevil": {
+   "query": "デアデビル",
+   "asins": []
+  },
+  "kingpin": {
+   "query": "キングピン",
+   "asins": []
+  },
+  "elektra": {
+   "query": "エレクトラ",
+   "asins": []
+  },
+  "blade": {
+   "query": "ブレイド",
+   "asins": []
+  },
+  "professor-x": {
+   "query": "プロフェッサーX",
+   "asins": []
+  },
+  "magneto": {
+   "query": "マグニートー",
+   "asins": []
+  },
+  "mystique": {
+   "query": "ミスティーク",
+   "asins": []
+  },
+  "venom": {
+   "query": "ヴェノム",
+   "asins": []
+  },
+  "green-goblin": {
+   "query": "グリーン・ゴブリン",
+   "asins": []
+  },
+  "mr-fantastic": {
+   "query": "ミスター・ファンタスティック",
+   "asins": []
+  },
+  "invisible-woman": {
+   "query": "インビジブル・ウーマン",
+   "asins": []
+  },
+  "human-torch": {
+   "query": "ヒューマン・トーチ",
+   "asins": []
+  },
+  "the-thing": {
+   "query": "ザ・シング ファンタスティック・フォー",
+   "asins": []
+  },
+  "galactus": {
+   "query": "ギャラクタス",
+   "asins": []
+  },
+  "silver-surfer": {
+   "query": "シルバーサーファー",
+   "asins": []
+  },
+  "iron-man": {
+   "query": "アイアンマン",
+   "asins": []
+  },
+  "captain-america-steve": {
+   "query": "キャプテン・アメリカ",
+   "asins": []
+  },
+  "thor": {
+   "query": "ソー",
+   "asins": []
+  },
+  "black-widow": {
+   "query": "ブラック・ウィドウ",
+   "asins": []
+  },
+  "hawkeye": {
+   "query": "ホークアイ",
+   "asins": []
+  },
+  "loki": {
+   "query": "ロキ",
+   "asins": []
+  },
+  "scarlet-witch": {
+   "query": "スカーレット・ウィッチ",
+   "asins": []
+  },
+  "vision": {
+   "query": "ヴィジョン マーベル",
+   "asins": []
+  },
+  "thanos": {
+   "query": "サノス",
+   "asins": []
+  },
+  "ultron": {
+   "query": "ウルトロン",
+   "asins": []
+  },
+  "nick-fury": {
+   "query": "ニック・フューリー",
+   "asins": []
+  },
+  "bucky": {
+   "query": "バッキー・バーンズ",
+   "asins": []
+  },
+  "captain-america-sam": {
+   "query": "キャプテン・アメリカ サム・ウィルソン",
+   "asins": []
+  },
+  "wolverine": {
+   "query": "ウルヴァリン",
+   "asins": []
+  },
+  "deadpool": {
+   "query": "デッドプール",
+   "asins": []
+  },
+  "captain-marvel": {
+   "query": "キャプテン・マーベル",
+   "asins": []
+  },
+  "doctor-strange": {
+   "query": "ドクター・ストレンジ",
+   "asins": []
+  },
+  "sentry": {
+   "query": "セントリー マーベル",
+   "asins": []
+  },
+  "star-lord": {
+   "query": "スター・ロード",
+   "asins": []
+  },
+  "gamora": {
+   "query": "ガモーラ",
+   "asins": []
+  },
+  "nebula": {
+   "query": "ネビュラ",
+   "asins": []
+  },
+  "drax": {
+   "query": "ドラックス",
+   "asins": []
+  },
+  "mantis": {
+   "query": "マンティス マーベル",
+   "asins": []
+  },
+  "yondu": {
+   "query": "ヨンドゥ",
+   "asins": []
+  },
+  "rocket": {
+   "query": "ロケット・ラクーン",
+   "asins": []
+  },
+  "groot": {
+   "query": "グルート",
+   "asins": []
+  },
+  "ronan": {
+   "query": "ロナン",
+   "asins": []
+  },
+  "ego": {
+   "query": "エゴ マーベル",
+   "asins": []
+  },
+  "high-evolutionary": {
+   "query": "ハイ・エボリューショナリー",
+   "asins": []
+  },
+  "kang": {
+   "query": "征服者カーン",
+   "asins": []
+  },
+  "monica-rambeau": {
+   "query": "モニカ・ランボー",
+   "asins": []
+  },
+  "ms-marvel": {
+   "query": "ミズ・マーベル",
+   "asins": []
+  },
+  "hela": {
+   "query": "ヘラ マイティ・ソー",
+   "asins": []
+  },
+  "valkyrie": {
+   "query": "ヴァルキリー",
+   "asins": []
+  },
+  "odin": {
+   "query": "オーディン マーベル",
+   "asins": []
+  },
+  "heimdall": {
+   "query": "ヘイムダル",
+   "asins": []
+  },
+  "jane-foster": {
+   "query": "マイティ・ソー ジェーン",
+   "asins": []
+  },
+  "jessica-jones": {
+   "query": "ジェシカ・ジョーンズ",
+   "asins": []
+  },
+  "luke-cage": {
+   "query": "ルーク・ケイジ",
+   "asins": []
+  },
+  "iron-fist": {
+   "query": "アイアン・フィスト",
+   "asins": []
+  },
+  "karen-page": {
+   "query": "カレン・ペイジ",
+   "asins": []
+  },
+  "foggy-nelson": {
+   "query": "フォギー・ネルソン",
+   "asins": []
+  },
+  "bullseye": {
+   "query": "ブルズアイ",
+   "asins": []
+  },
+  "kilgrave": {
+   "query": "キルグレイブ",
+   "asins": []
+  },
+  "echo": {
+   "query": "エコー マーベル",
+   "asins": []
+  },
+  "moon-knight": {
+   "query": "ムーンナイト",
+   "asins": []
+  },
+  "she-hulk": {
+   "query": "シー・ハルク",
+   "asins": []
+  },
+  "shang-chi": {
+   "query": "シャン・チー",
+   "asins": []
+  },
+  "wenwu": {
+   "query": "ウェンウー",
+   "asins": []
+  },
+  "kate-bishop": {
+   "query": "ケイト・ビショップ",
+   "asins": []
+  },
+  "us-agent": {
+   "query": "USエージェント",
+   "asins": []
+  },
+  "vulture": {
+   "query": "ヴァルチャー",
+   "asins": []
+  },
+  "mysterio": {
+   "query": "ミステリオ",
+   "asins": []
+  },
+  "electro": {
+   "query": "エレクトロ",
+   "asins": []
+  },
+  "abomination": {
+   "query": "アボミネーション",
+   "asins": []
+  },
+  "doctor-doom": {
+   "query": "ドクター・ドゥーム",
+   "asins": []
+  },
+  "storm": {
+   "query": "ストーム X-MEN",
+   "asins": []
+  },
+  "jean-grey": {
+   "query": "ジーン・グレイ",
+   "asins": []
+  },
+  "cyclops": {
+   "query": "サイクロップス X-MEN",
+   "asins": []
+  },
+  "rogue": {
+   "query": "ローグ X-MEN",
+   "asins": []
+  },
+  "gambit": {
+   "query": "ガンビット X-MEN",
+   "asins": []
+  },
+  "beast": {
+   "query": "ビースト X-MEN",
+   "asins": []
+  },
+  "nightcrawler": {
+   "query": "ナイトクローラー",
+   "asins": []
+  },
+  "cassandra-nova": {
+   "query": "カサンドラ・ノヴァ",
+   "asins": []
+  },
+  "killmonger": {
+   "query": "キルモンガー",
+   "asins": []
+  },
+  "mbaku": {
+   "query": "エムバク",
+   "asins": []
+  },
+  "okoye": {
+   "query": "オコエ",
+   "asins": []
+  },
+  "shuri": {
+   "query": "シュリ",
+   "asins": []
+  },
+  "namor": {
+   "query": "ネイモア",
+   "asins": []
+  },
+  "red-skull": {
+   "query": "レッドスカル",
+   "asins": []
+  },
+  "red-hulk": {
+   "query": "レッドハルク",
+   "asins": []
+  },
+  "dormammu": {
+   "query": "ドルマムゥ",
+   "asins": []
+  },
+  "baron-mordo": {
+   "query": "バロン・モルド",
+   "asins": []
+  },
+  "ancient-one": {
+   "query": "エンシェント・ワン",
+   "asins": []
+  },
+  "wong": {
+   "query": "ウォン マーベル",
+   "asins": []
+  },
+  "mephisto": {
+   "query": "メフィスト",
+   "asins": []
+  },
+  "franklin-richards": {
+   "query": "フランクリン・リチャーズ",
+   "asins": []
+  },
+  "yelena": {
+   "query": "イェレーナ・ベロワ",
+   "asins": []
+  },
+  "pepper": {
+   "query": "ペッパー・ポッツ",
+   "asins": []
+  },
+  "war-machine": {
+   "query": "ウォーマシン",
+   "asins": []
+  },
+  "happy": {
+   "query": "ハッピー・ホーガン",
+   "asins": []
+  },
+  "peggy": {
+   "query": "ペギー・カーター",
+   "asins": []
+  },
+  "sharon": {
+   "query": "シャロン・カーター",
+   "asins": []
+  },
+  "zemo": {
+   "query": "バロン・ジモ",
+   "asins": []
+  },
+  "korg": {
+   "query": "コーグ",
+   "asins": []
+  },
+  "wasp-hope": {
+   "query": "ワスプ マーベル",
+   "asins": []
+  },
+  "hank-pym": {
+   "query": "ハンク・ピム",
+   "asins": []
+  },
+  "janet": {
+   "query": "ワスプ ジャネット",
+   "asins": []
+  },
+  "cassie": {
+   "query": "キャシー・ラング",
+   "asins": []
+  },
+  "red-guardian": {
+   "query": "レッド・ガーディアン",
+   "asins": []
+  },
+  "ghost": {
+   "query": "ゴースト マーベル アントマン",
+   "asins": []
+  },
+  "taskmaster": {
+   "query": "タスクマスター",
+   "asins": []
+  },
+  "valentina": {
+   "query": "ヴァレンティーナ",
+   "asins": []
+  },
+  "joaquin": {
+   "query": "ホアキン・トレス",
+   "asins": []
+  },
+  "isaiah": {
+   "query": "イザイア・ブラッドリー",
+   "asins": []
+  },
+  "ironheart": {
+   "query": "アイアンハート",
+   "asins": []
+  },
+  "the-hood": {
+   "query": "フード",
+   "asins": []
+  },
+  "agatha": {
+   "query": "アガサ・ハークネス",
+   "asins": []
+  },
+  "wiccan": {
+   "query": "ウィッカン",
+   "asins": []
+  },
+  "nova": {
+   "query": "ノヴァ マーベル",
+   "asins": []
+  },
+  "beyonder": {
+   "query": "ビヨンダー マーベル",
+   "asins": []
+  },
+  "molecule-man": {
+   "query": "モレキュールマン",
+   "asins": []
+  },
+  "doombot": {
+   "query": "ドクター・ドゥーム ロボット",
+   "asins": []
+  },
+  "ant-man-scott": {
+   "query": "アントマン",
+   "asins": []
+  },
+  "doctor-octopus": {
+   "query": "ドクター・オクトパス",
+   "asins": []
+  },
+  "black-panther-tchalla": {
+   "query": "ブラックパンサー",
+   "asins": []
+  }
+ }
+}
