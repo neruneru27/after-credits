@@ -33,6 +33,12 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addFilter('pluck', (arr, key) => (arr || []).map((x) => x[key]));
 
+  // 視聴コース: 作品id→タイトル解決(見つからなければidをそのまま返す)
+  eleventyConfig.addFilter('workTitle', (id, works) => {
+    const w = (works || []).find((x) => x.id === id);
+    return w ? w.title : id;
+  });
+
   return {
     dir: {
       input: 'src',

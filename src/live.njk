@@ -61,8 +61,7 @@ pageJs: /assets/js/live.js
         {%- if c.target %}<p class="course-target">{{ c.target }}</p>{% endif %}
         <ol>
           {%- for it in c.items %}
-          {%- set found = mcu.works | selectattr("id", "equalto", it) | first %}
-          <li>{{ found.title if found else it }}</li>
+          <li>{{ it | workTitle(mcu.works) }}</li>
           {%- endfor %}
         </ol>
       </div>
