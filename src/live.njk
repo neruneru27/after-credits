@@ -61,13 +61,13 @@ pageJs: /assets/js/live.js
       <p>MCU本編ではないものの、クロスオーバーやキャラクターの再登場で繋がりのある実写シリーズです。並びは公開順(=推奨視聴順)。</p>
     </div>
     {%- for s in otherSeries.series %}
-    <div class="defenders other-series">
-      <h3>{{ s.title }}</h3>
-      <ol class="series-order">
+    <div class="other-series">
+      <h3 class="offtime-head">{{ s.title }}</h3>
+      <div class="watch-list">
         {%- for w in s.items %}
-        <li><b>{{ w.title }}</b><span>{{ w.year }}</span>{% if w.desc %}<p class="series-desc">{{ w.desc }}</p>{% endif %}</li>
+        <details class="watch-d"><summary class="watch has-detail"><span class="w-num">{{ loop.index }}</span><div><h3>{{ w.title }}</h3>{% if w.desc %}<p class="w-desc">{{ w.desc }}</p>{% endif %}<p class="w-meta">{{ w.year }}年</p></div></summary><div class="w-detail"><p class="w-syn"><b>あらすじ(ネタバレなし):</b> {{ w.syn }}</p><details class="spoiler-box"><summary>⚠ ネタバレあり要約を表示(結末まで書いています)</summary><p>{{ w.sp }}</p></details></div></details>
         {%- endfor %}
-      </ol>
+      </div>
     </div>
     {%- endfor %}
 

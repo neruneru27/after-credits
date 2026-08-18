@@ -144,12 +144,32 @@ let encIds = new Set();
   }
 }
 
-// ---- 異常文字列チェック(全JSON: キリル文字等の混入検出) ----
+// ---- otherSeries(MCU外シリーズ・24作+ディフェンダーズ視聴順) ----
 {
+  const o = load('otherSeries.json');
+  if (o.defenders_order.items.length !== 13) {
+    err(`otherSeries: defenders_order が 13 でない: ${o.defenders_order.items.length}`);
+  }
+  for (const s of o.series) {
+    for (const w of s.items) {
+      for (const k of ['title', 'year', 'desc', 'syn', 'sp']) {
+        if (!w[k]) err(`otherSeries: ${s.id} "${w.title || '?'}" に ${k} が無い`);
+      }
+    }
+  }
+}
+
+// ---- 異常文字列チェック(全JSON: キリル文字・かな漢字に挟まれた英字の混入検出) ----
+{
+  // かな漢字に挟まれた小文字英字はタイポ・機械混入の疑い。スキーマ用語は除外
+  const allowTokens = new Set(['sp', 'syn', 'desc', 'jp', 'id', 'no', 'db', 'ver', 'url', 'meta', 'tags', 'live', 'key', 'keys']);
   for (const f of fs.readdirSync(DATA).filter((x) => x.endsWith('.json'))) {
     const raw = fs.readFileSync(path.join(DATA, f), 'utf8');
-    const m = raw.match(/[а-яА-Я]+/);
-    if (m) err(`${f}: キリル文字の混入疑い: "${m[0]}"`);
+    const cyr = raw.match(/[а-яА-Я]+/);
+    if (cyr) err(`${f}: キリル文字の混入疑い: "${cyr[0]}"`);
+    for (const m of raw.matchAll(/[ぁ-んァ-ヶ一-龥]([a-z]{1,4})[ぁ-んァ-ヶ一-龥]/g)) {
+      if (!allowTokens.has(m[1])) err(`${f}: かな漢字に挟まれた英字の混入疑い: "${m[0]}"`);
+    }
   }
 }
 
