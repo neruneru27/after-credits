@@ -284,6 +284,19 @@ let encIds = new Set();
   }
 }
 
+// ---- futureSlate(その先のロードマップ) ----
+{
+  const fsl = load('futureSlate.json');
+  const wids = new Set(load('mcu.json').works.map((w) => w.id));
+  if (!fsl.pre_text) err('futureSlate: pre_text が無い');
+  for (const it of fsl.items) {
+    for (const k of ['id', 'title', 'us_date', 'note']) {
+      if (!it[k]) err(`futureSlate: ${it.id || '?'} に ${k} が無い`);
+    }
+    if (wids.has(it.id)) err(`futureSlate: ${it.id} は mcu.json に昇格済み(このリストから削除すること)`);
+  }
+}
+
 // ---- 異常文字列チェック(全JSON: キリル文字・かな漢字に挟まれた英字の混入検出) ----
 {
   // かな漢字に挟まれた小文字英字はタイポ・機械混入の疑い。スキーマ用語は除外

@@ -53,6 +53,20 @@ pageJs: /assets/js/live.js
       <div class="watch-list" id="offtime-list"></div>
     </div>
 
+    <div class="future-slate">
+      <h3 class="offtime-head">🔭 その先のロードマップ(2028〜)</h3>
+      <p class="future-pre">{{ futureSlate.pre_text }}</p>
+      <div class="future-grid">
+        {%- for f in futureSlate.items %}
+        <div class="future-card">
+          <h4>{{ f.title }}</h4>
+          <p class="future-date">米国公開: {{ f.us_date | fmtDate }} / 日本公開未定</p>
+          <p class="future-note">{{ f.note }}</p>
+        </div>
+        {%- endfor %}
+      </div>
+    </div>
+
     <div class="defenders">
       <h3>ザ・ディフェンダーズ・サーガ(旧Netflix作品群)</h3>
       <p>{{ mcu.defenders_saga.note }}</p>

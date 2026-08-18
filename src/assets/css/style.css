@@ -825,3 +825,13 @@
   /* フィルタボタンの未選択ホバー */
   .fbtn:hover:not([aria-pressed="true"]) { background: var(--paper-dark); }
   .toggle-row button:hover:not([aria-pressed="true"]) { background: var(--paper-dark); }
+
+  /* ---------- その先のロードマップ(2028〜) ---------- */
+  .future-slate { margin-top: 40px; }
+  .future-pre { font-size: 0.85rem; margin: 8px 0 14px; max-width: 44em; }
+  .future-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  @media (max-width: 760px) { .future-grid { grid-template-columns: 1fr; } }
+  .future-card { border: 3px dashed var(--ink); background: var(--paper); padding: 14px 16px; }
+  .future-card h4 { font-size: 0.95rem; font-weight: 900; }
+  .future-date { font-size: 0.75rem; font-weight: 700; color: var(--magenta); margin: 6px 0; }
+  .future-note { font-size: 0.78rem; color: #4a4238; }
