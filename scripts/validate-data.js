@@ -99,6 +99,13 @@ let encIds = new Set();
     if (!ch.comic) err(`encyclopedia: ${ch.id} に comic が無い`);
     if (!Array.isArray(ch.live_versions) || ch.live_versions.length < 1) {
       err(`encyclopedia: ${ch.id} の live_versions が空`);
+    } else {
+      // 形式統一(2026-08-18裁定): ver/actor/years/text 必須。label/desc形式の混在を機械で防ぐ
+      for (const v of ch.live_versions) {
+        for (const k of ['ver', 'actor', 'years', 'text']) {
+          if (!v[k]) err(`encyclopedia: ${ch.id} の live_versions に ${k} が無い(label/desc形式は不可)`);
+        }
+      }
     }
     const t = ch.tags || {};
     if (!Array.isArray(t.faction) || t.faction.length < 1) err(`encyclopedia: ${ch.id} の tags.faction が空`);

@@ -32,17 +32,15 @@ eleventyComputed:
 
       <h3>🎬 実写では</h3>
       {%- for v in ch.live_versions %}
-      {%- set vname = v.ver or v.label %}
-      {%- set vbody = v.text or v.desc %}
-      {%- if vname and ('未登場' in vname) %}
+      {%- if '未登場' in v.ver %}
       <div class="enc-ver enc-ver-none">
-        <p class="enc-ver-head"><b>{{ vname }}</b>{% if v.years %} <span>{{ v.years }}</span>{% endif %}</p>
-        <p>{{ vbody }}</p>
+        <p class="enc-ver-head"><b>{{ v.ver }}</b>{% if v.years %} <span>{{ v.years }}</span>{% endif %}</p>
+        <p>{{ v.text }}</p>
       </div>
       {%- else %}
       <div class="enc-ver">
-        <p class="enc-ver-head"><b>{{ vname }}</b>{% if v.actor %} <span>演: {{ v.actor }}</span>{% endif %}{% if v.years %} <span>{{ v.years }}</span>{% endif %}</p>
-        <p>{{ vbody }}</p>
+        <p class="enc-ver-head"><b>{{ v.ver }}</b>{% if v.actor %} <span>演: {{ v.actor }}</span>{% endif %}{% if v.years %} <span>{{ v.years }}</span>{% endif %}</p>
+        <p>{{ v.text }}</p>
       </div>
       {%- endif %}
       {%- endfor %}
