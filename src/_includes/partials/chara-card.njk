@@ -1,0 +1,14 @@
+{#- キャラ検索カード1枚。cはcharaCards.cards、fはencyclopedia.meta.filters -#}
+{%- macro charaCard(c, f) -%}
+<a class="chara" href="{{ ('/characters/' + c.enc_id + '/') | url }}"
+   data-key="{{ c.keys }} {{ c.live }}"
+   data-faction="{{ c.tags.faction | join(' ') }}"
+   data-origin="{{ c.tags.origin }}"
+   data-series="{{ c.tags.series | join(' ') }}"
+   data-doom="{{ '1' if c.tags.doomsday else '' }}">
+  <div class="chara-top"><span class="badge {{ c.color }}">{{ c.ini }}</span><h3>{{ c.name }}<small>{{ c.en }}</small></h3></div>
+  <p>{{ c.desc }}</p>
+  <p class="chara-live">🎬 {{ c.live }}</p>
+  <div class="chips"><span class="chip faction-{{ c.tags.faction[0] }}">{{ f.faction[c.tags.faction[0]] }}</span>{% if c.tags.doomsday %}<span class="chip doom">🔥ドゥームズデイ</span>{% endif %}</div>
+</a>
+{%- endmacro -%}

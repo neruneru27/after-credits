@@ -508,3 +508,36 @@
 
   /* ---------- 作品詳細の購入ボタン行 ---------- */
   .w-buy { margin-top: 10px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+
+  /* ---------- キャラ百科・新カード ---------- */
+  a.chara { text-decoration: none; color: inherit; display: block; transition: transform 0.15s, box-shadow 0.15s; }
+  a.chara:hover { transform: translate(-2px,-2px); box-shadow: 7px 7px 0 var(--ink); }
+  .chara-live { font-size: 0.75rem; font-weight: 700; color: #4a4238; margin: 8px 0; border-top: 2px dashed var(--paper-dark); padding-top: 8px; }
+  .chip.doom { background: var(--magenta); color: #fff; }
+  .chip.faction-villain { background: var(--ink); color: #fff; }
+  .chip.faction-hero { background: var(--cyan); color: #fff; }
+  .chip.faction-antihero { background: var(--magenta); color: #fff; }
+  .chip.faction-support { background: var(--yellow); color: var(--ink); }
+  .filter-label { font-size: 0.72rem; font-weight: 900; align-self: center; margin-right: 4px; min-width: 3.2em; }
+  .chara-filter { margin-bottom: 10px; }
+  .doom-banner {
+    display: block; margin: 20px 0 28px; padding: 14px 20px;
+    background: var(--ink); color: var(--yellow); text-decoration: none;
+    border: 3px solid var(--ink); box-shadow: 5px 5px 0 rgba(25,20,16,0.25);
+    font-weight: 900; font-size: 0.95rem; transition: transform 0.15s;
+  }
+  .doom-banner:hover { transform: translate(-2px,-2px); }
+  .chara-name-h { font-family: var(--font-body); font-weight: 900; letter-spacing: 0.02em; }
+  .enc-facts {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 8px 20px;
+    background: #fff; border: 3px solid var(--ink); box-shadow: 5px 5px 0 var(--ink);
+    padding: 16px 20px; margin-bottom: 28px; font-size: 0.85rem;
+  }
+  @media (max-width: 640px) { .enc-facts { grid-template-columns: 1fr; } }
+  .enc-facts b { display: inline-block; min-width: 4em; color: var(--magenta); margin-right: 8px; }
+  .enc-ver { background: #fff; border: 2px solid var(--ink); padding: 12px 16px; margin: 12px 0; }
+  .enc-ver-head { font-size: 0.85rem; }
+  .enc-ver-head span { font-size: 0.75rem; color: #6b5f52; margin-left: 10px; font-weight: 700; }
+  .enc-ver-none { background: transparent; border: 2px dashed var(--paper-dark); }
+  .enc-back { margin-top: 36px; font-weight: 900; }
+  .enc-back a { color: var(--magenta); }

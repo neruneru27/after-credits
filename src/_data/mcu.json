@@ -10,7 +10,8 @@
    "status: released / upcoming",
    "検証メモ: 2025〜2026年作品の日付は複数ソースで照合済み。2027年以降は要再確認",
    "date_jp: 映画は日本劇場公開日、配信作品はDisney+世界同時配信日(=米国日付)。日本先行公開: IM3, FFH, デッドプール&ウルヴァリン",
-   "brand: 2026-08-17運営者裁定により「単独OK(予習不要)」判定に変更。公式ブランド該当はその名称、それ以外の単独視聴可作品は standalone。アガサはWandaVision前提のため除外"
+   "brand: 2026-08-17運営者裁定により「単独OK(予習不要)」判定に変更。公式ブランド該当はその名称、それ以外の単独視聴可作品は standalone。アガサはWandaVision前提のため除外",
+   "brand: 2026-08-17運営者裁定(追記): xmen97-s2はS1直結のため単独OK対象外。パニッシャーSPは内容独立のため維持"
   ]
  },
  "phases": {
@@ -1066,7 +1067,6 @@
    "date": "2026-07-01",
    "release_order": 64,
    "chrono_order": null,
-   "brand": "animation",
    "status": "released",
    "date_jp": "2026-07-01",
    "date_jp_note": "世界同時配信",

@@ -80,25 +80,55 @@ const err = (msg) => errors.push(msg);
   }
 }
 
-// ---- characters(詳細17体) ----
+// ---- キャラ百科(124体) ----
+let encIds = new Set();
 {
-  const c = load('characters.json');
-  if (c.characters.length !== 17) err(`characters: 件数が 17 でない: ${c.characters.length}`);
-  const seen = new Set();
-  for (const ch of c.characters) {
-    if (seen.has(ch.id)) err(`characters: id 重複: ${ch.id}`);
-    seen.add(ch.id);
+  const e = load('encyclopedia.json');
+  if (e.entries.length !== 124) err(`encyclopedia: 件数が 124 でない: ${e.entries.length}`);
+  const factions = Object.keys(e.meta.filters.faction);
+  const origins = Object.keys(e.meta.filters.origin);
+  const seriesKeys = Object.keys(e.meta.filters.series);
+  for (const ch of e.entries) {
+    if (encIds.has(ch.id)) err(`encyclopedia: id 重複: ${ch.id}`);
+    encIds.add(ch.id);
+    if (!ch.comic) err(`encyclopedia: ${ch.id} に comic が無い`);
+    if (!Array.isArray(ch.live_versions) || ch.live_versions.length < 1) {
+      err(`encyclopedia: ${ch.id} の live_versions が空`);
+    }
+    const t = ch.tags || {};
+    if (!Array.isArray(t.faction) || t.faction.length < 1) err(`encyclopedia: ${ch.id} の tags.faction が空`);
+    else for (const f of t.faction) if (!factions.includes(f)) err(`encyclopedia: ${ch.id} の faction 不正: ${f}`);
+    if (!t.origin) err(`encyclopedia: ${ch.id} に tags.origin が無い`);
+    else if (!origins.includes(t.origin)) err(`encyclopedia: ${ch.id} の origin 不正: ${t.origin}`);
+    if (!Array.isArray(t.series) || t.series.length < 1) err(`encyclopedia: ${ch.id} の tags.series が空`);
+    else for (const s of t.series) if (!seriesKeys.includes(s)) err(`encyclopedia: ${ch.id} の series 不正: ${s}`);
   }
 }
 
-// ---- charaCards(検索カード56枚) ----
+// ---- charaCards(検索カード120体) ----
 {
   const c = load('charaCards.json');
-  if (c.cards.length !== 56) err(`charaCards: 件数が 56 でない: ${c.cards.length}`);
+  if (c.cards.length !== 120) err(`charaCards: 件数が 120 でない: ${c.cards.length}`);
+  const seen = new Set();
   for (const card of c.cards) {
-    if (!['c', 'm', 'y', 'k'].includes(card.badge)) {
-      err(`charaCards: "${card.name}" の badge 不正: ${card.badge}`);
+    if (!['c', 'm', 'y', 'k'].includes(card.color)) {
+      err(`charaCards: "${card.name}" の color 不正: ${card.color}`);
     }
+    if (!card.live) err(`charaCards: "${card.name}" に live が無い`);
+    if (!card.tags) err(`charaCards: "${card.name}" に tags が無い`);
+    if (!card.enc_id) err(`charaCards: "${card.name}" に enc_id が無い`);
+    else if (!encIds.has(card.enc_id)) err(`charaCards: "${card.name}" の enc_id が百科に存在しない: ${card.enc_id}`);
+    if (seen.has(card.enc_id)) err(`charaCards: enc_id 重複: ${card.enc_id}`);
+    seen.add(card.enc_id);
+  }
+}
+
+// ---- 異常文字列チェック(全JSON: キリル文字等の混入検出) ----
+{
+  for (const f of fs.readdirSync(DATA).filter((x) => x.endsWith('.json'))) {
+    const raw = fs.readFileSync(path.join(DATA, f), 'utf8');
+    const m = raw.match(/[а-яА-Я]+/);
+    if (m) err(`${f}: キリル文字の混入疑い: "${m[0]}"`);
   }
 }
 
@@ -107,4 +137,4 @@ if (errors.length) {
   for (const e of errors) console.error('  - ' + e);
   process.exit(1);
 }
-console.log('✔ データ検証 OK(glossary 149 / mcu 68 / comics 416 / characters 17 / cards 56)');
+console.log("✔ データ検証 OK(glossary 149 / mcu 68 / comics 416 / encyclopedia 124 / cards 120)");

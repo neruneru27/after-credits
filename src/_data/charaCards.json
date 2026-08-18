@@ -1,716 +1,2696 @@
 {
-  "meta": {
-    "name": "キャラ検索カード(SPA v11から機械抽出)",
-    "source": "after-credits-v11.html chara-grid",
-    "extracted": "2026-08-17"
+ "meta": {
+  "name": "アフタークレジット キャラ検索カード v2",
+  "updated": "2026-08-17",
+  "schema": "name/en/ini(2字)/color(c,m,y,k)/desc(1-2文)/live(実写ガイド1行)/keys(検索用)/tags(comic,live,anime)",
+  "note": "liveフィールドは新設。カード内でdescの下にメタ行として表示する想定。SPOTLIGHT詳細(characters-doomsday-data.json)とは別レイヤー / tagsとenc_id(百科への連結キー)を付与済み"
+ },
+ "cards": [
+  {
+   "name": "ドクター・ドゥーム",
+   "en": "DOCTOR DOOM",
+   "ini": "DD",
+   "color": "k",
+   "desc": "ラトヴェリアの君主にして天才科学者・魔術師。2026年『ドゥームズデイ』で実写本格登場。",
+   "keys": "ドクター・ドゥーム どくたーどぅーむ doom victor ヴィクター ラトヴェリア ヴィラン",
+   "tags": {
+    "faction": [
+     "villain"
+    ],
+    "origin": "tech",
+    "series": [
+     "mcu",
+     "old-ff"
+    ],
+    "doomsday": true
+   },
+   "live": "実写:『ファースト・ステップ』で気配のみ→『ドゥームズデイ』(12/18)で本格降臨",
+   "enc_id": "doctor-doom"
   },
-  "cards": [
-    {
-      "name": "ドクター・ドゥーム",
-      "en": "DOCTOR DOOM",
-      "badge": "k",
-      "badge_code": "DD",
-      "key": "ドクター・ドゥーム どくたーどぅーむ doom victor ヴィクター ラトヴェリア ヴィラン",
-      "desc": "ラトヴェリアの君主にして天才科学者・魔術師。2026年『ドゥームズデイ』で実写本格登場。",
-      "media": [
-        "comic",
-        "live"
-      ]
-    },
-    {
-      "name": "スカーレット・ウィッチ",
-      "en": "WANDA MAXIMOFF",
-      "badge": "m",
-      "badge_code": "SW",
-      "key": "ワンダ・マキシモフ スカーレット・ウィッチ wanda scarlet witch 魔女 ハウスオブM",
-      "desc": "現実改変の魔女。『ワンダヴィジョン』の悲劇の源流は原作『ハウス・オブ・M』にあり。",
-      "media": [
-        "comic",
-        "live",
-        "anime"
-      ]
-    },
-    {
-      "name": "デアデビル",
-      "en": "MATT MURDOCK",
-      "badge": "c",
-      "badge_code": "DD",
-      "key": "デアデビル マット・マードック daredevil matt murdock 弁護士 ヘルズキッチン",
-      "desc": "盲目の弁護士にして地獄の厨房の守護者。『ボーン・アゲイン』の元ネタは80年代の傑作コミック。",
-      "media": [
-        "comic",
-        "live"
-      ]
-    },
-    {
-      "name": "ムーンナイト",
-      "en": "MOON KNIGHT",
-      "badge": "k",
-      "badge_code": "MK",
-      "key": "ムーンナイト マーク・スペクター moon knight marc spector コンス 月",
-      "desc": "月神コンスに仕える多重人格のヒーロー。原作はダークで実験的な名作揃い。",
-      "media": [
-        "comic",
-        "live"
-      ]
-    },
-    {
-      "name": "キャプテン・アメリカ(サム)",
-      "en": "SAM WILSON",
-      "badge": "y",
-      "badge_code": "CA",
-      "key": "サム・ウィルソン キャプテン・アメリカ ファルコン sam wilson captain america falcon 盾",
-      "desc": "スティーブから盾を継いだ男。原作でも「サム・キャップ」時代の物語がある。",
-      "media": [
-        "comic",
-        "live"
-      ]
-    },
-    {
-      "name": "ロキ",
-      "en": "LOKI",
-      "badge": "c",
-      "badge_code": "LK",
-      "key": "ロキ loki 神 アスガルド TVA トリックスター",
-      "desc": "いたずらの神からマルチバースの要へ。ドラマ『ロキ』はマルチバース理解の必修科目。",
-      "media": [
-        "comic",
-        "live",
-        "anime"
-      ]
-    },
-    {
-      "name": "ミスター・ファンタスティック",
-      "en": "REED RICHARDS",
-      "badge": "c",
-      "badge_code": "FF",
-      "key": "リード・リチャーズ ミスター・ファンタスティック reed richards mr fantastic ファンタスティック・フォー FF",
-      "desc": "マーベル一の頭脳でドゥームの因縁の相手。FFはマーベル・ユニバースの「始まりの家族」。",
-      "media": [
-        "comic",
-        "live"
-      ]
-    },
-    {
-      "name": "ウルヴァリン",
-      "en": "WOLVERINE",
-      "badge": "y",
-      "badge_code": "WV",
-      "key": "ウルヴァリン ローガン wolverine logan X-MEN ミュータント 爪",
-      "desc": "不死身のミュータント。『X-MEN '97』から原作X-MENへ入るのが今の最短ルート。",
-      "media": [
-        "comic",
-        "live",
-        "anime"
-      ]
-    },
-    {
-      "name": "ソー",
-      "en": "THOR",
-      "badge": "c",
-      "badge_code": "TH",
-      "key": "ソー 雷神 アスガルド thor オーディン",
-      "desc": "雷神にしてアスガルドの王族。ハンマーと斧を渡り歩く神様。",
-      "media": [
-        "comic",
-        "live",
-        "anime"
-      ]
-    },
-    {
-      "name": "ハルク",
-      "en": "HULK",
-      "badge": "y",
-      "badge_code": "HK",
-      "key": "ハルク hulk バナー ガンマ 緑",
-      "desc": "ガンマ線が生んだ緑の巨人。バナー博士との共存が永遠のテーマ。",
-      "media": [
-        "comic",
-        "live",
-        "anime"
-      ]
-    },
-    {
-      "name": "スパイダーマン",
-      "en": "SPIDER-MAN",
-      "badge": "m",
-      "badge_code": "SP",
-      "key": "スパイダーマン ピーター・パーカー spider peter 蜘蛛",
-      "desc": "親愛なる隣人。大いなる力には大いなる責任が伴う。",
-      "media": [
-        "comic",
-        "live",
-        "anime"
-      ]
-    },
-    {
-      "name": "ドクター・ストレンジ",
-      "en": "DOCTOR STRANGE",
-      "badge": "c",
-      "badge_code": "DS",
-      "key": "ストレンジ strange 魔術師 魔法",
-      "desc": "元天才外科医のソーサラー・スプリーム。マルチバースの門番役。",
-      "media": [
-        "comic",
-        "live",
-        "anime"
-      ]
-    },
-    {
-      "name": "キングピン",
-      "en": "KINGPIN",
-      "badge": "k",
-      "badge_code": "KP",
-      "key": "キングピン フィスク kingpin fisk ヴィラン 市長",
-      "desc": "NY裏社会の帝王ウィルソン・フィスク。市長にまで上り詰めた。",
-      "media": [
-        "comic",
-        "live"
-      ]
-    },
-    {
-      "name": "パニッシャー",
-      "en": "PUNISHER",
-      "badge": "k",
-      "badge_code": "PN",
-      "key": "パニッシャー フランク・キャッスル punisher frank 髑髏",
-      "desc": "家族を奪われ処刑人と化したフランク・キャッスル。髑髏の男。",
-      "media": [
-        "comic",
-        "live"
-      ]
-    },
-    {
-      "name": "イェレーナ・ベロワ",
-      "en": "YELENA BELOVA",
-      "badge": "m",
-      "badge_code": "YB",
-      "key": "イェレーナ yelena ウィドウ サンダーボルツ",
-      "desc": "ナターシャの妹分にして2代目ブラック・ウィドウ。ニュー・アベンジャーズの一員に。",
-      "media": [
-        "comic",
-        "live"
-      ]
-    },
-    {
-      "name": "シャン・チー",
-      "en": "SHANG-CHI",
-      "badge": "y",
-      "badge_code": "SC",
-      "key": "シャンチー shang-chi カンフー 武術 リング",
-      "desc": "マーベル最高峰の武術家。テン・リングスを受け継いだ男。",
-      "media": [
-        "comic",
-        "live"
-      ]
-    },
-    {
-      "name": "プロフェッサーX",
-      "en": "PROFESSOR X",
-      "badge": "c",
-      "badge_code": "PX",
-      "key": "プロフェッサー エグゼビア xavier テレパス 車椅子",
-      "desc": "世界最強のテレパスにしてX-MEN創設者。共存の夢を説く教師。",
-      "media": [
-        "comic",
-        "live",
-        "anime"
-      ]
-    },
-    {
-      "name": "マグニートー",
-      "en": "MAGNETO",
-      "badge": "m",
-      "badge_code": "MG",
-      "key": "マグニートー magneto 磁力 エリック",
-      "desc": "磁力を操るミュータントの過激派指導者。チャールズの親友にして宿敵。",
-      "media": [
-        "comic",
-        "live",
-        "anime"
-      ]
-    },
-    {
-      "name": "ギャラクタス",
-      "en": "GALACTUS",
-      "badge": "k",
-      "badge_code": "GL",
-      "key": "ギャラクタス galactus 惑星 捕食",
-      "desc": "惑星を喰らう宇宙的存在。『ファースト・ステップ』で本格映像化。",
-      "media": [
-        "comic",
-        "live",
-        "anime"
-      ]
-    },
-    {
-      "name": "シルバーサーファー",
-      "en": "SILVER SURFER",
-      "badge": "c",
-      "badge_code": "SS",
-      "key": "サーファー surfer ノリン シャラ・バル 銀",
-      "desc": "ギャラクタスの先触れ。銀色の放浪者。映画版は原作と設定が異なる。",
-      "media": [
-        "comic",
-        "live",
-        "anime"
-      ]
-    },
-    {
-      "name": "サノス",
-      "en": "THANOS",
-      "badge": "k",
-      "badge_code": "TN",
-      "key": "サノス thanos タイタン 指パッチン",
-      "desc": "狂気のタイタン。原作は死の女神への愛、映画は均衡思想——動機が別物。",
-      "media": [
-        "comic",
-        "live",
-        "anime"
-      ]
-    },
-    {
-      "name": "ウルトロン",
-      "en": "ULTRON",
-      "badge": "k",
-      "badge_code": "UL",
-      "key": "ウルトロン ultron AI ロボット",
-      "desc": "殺戮AI。原作の生みの親はハンク・ピム、映画ではトニー。",
-      "media": [
-        "comic",
-        "live",
-        "anime"
-      ]
-    },
-    {
-      "name": "ヴィジョン",
-      "en": "VISION",
-      "badge": "m",
-      "badge_code": "VI",
-      "key": "ヴィジョン vision 人造人間 アンドロイド ワンダ",
-      "desc": "ウルトロンが生んだ人造ヒーロー。2026年『ヴィジョン・クエスト』主役。",
-      "media": [
-        "comic",
-        "live",
-        "anime"
-      ]
-    },
-    {
-      "name": "セントリー",
-      "en": "SENTRY",
-      "badge": "y",
-      "badge_code": "SE",
-      "key": "セントリー sentry ボブ ヴォイド 最強",
-      "desc": "太陽100万個分の力と、内なるヴォイド。サンダーボルツ*で鮮烈登場。",
-      "media": [
-        "comic",
-        "live"
-      ]
-    },
-    {
-      "name": "キャプテン・マーベル",
-      "en": "CAPTAIN MARVEL",
-      "badge": "y",
-      "badge_code": "CM",
-      "key": "キャプテン・マーベル キャロル carol marvel",
-      "desc": "クリーの力を宿した最強のパイロット、キャロル・ダンヴァース。",
-      "media": [
-        "comic",
-        "live",
-        "anime"
-      ]
-    },
-    {
-      "name": "ニック・フューリー",
-      "en": "NICK FURY",
-      "badge": "k",
-      "badge_code": "NF",
-      "key": "フューリー fury シールド 眼帯",
-      "desc": "アベンジャーズ計画の仕掛け人。すべてを知る隻眼のスパイ。",
-      "media": [
-        "comic",
-        "live"
-      ]
-    },
-    {
-      "name": "バッキー・バーンズ",
-      "en": "BUCKY BARNES",
-      "badge": "c",
-      "badge_code": "BB",
-      "key": "バッキー bucky ウィンター・ソルジャー 腕",
-      "desc": "スティーブの親友にして元ウィンター・ソルジャー。贖罪の道を歩む。",
-      "media": [
-        "comic",
-        "live"
-      ]
-    },
-    {
-      "name": "ホークアイ",
-      "en": "HAWKEYE",
-      "badge": "m",
-      "badge_code": "HE",
-      "key": "ホークアイ クリント hawkeye 弓 ケイト",
-      "desc": "弓ひとつでアベンジャーズを張る男、クリント・バートン。",
-      "media": [
-        "comic",
-        "live",
-        "anime"
-      ]
-    },
-    {
-      "name": "スター・ロード",
-      "en": "STAR-LORD",
-      "badge": "c",
-      "badge_code": "SL",
-      "key": "スターロード クイル quill ガーディアンズ",
-      "desc": "ガーディアンズのリーダーを自称する地球生まれの宇宙海賊。",
-      "media": [
-        "comic",
-        "live",
-        "anime"
-      ]
-    },
-    {
-      "name": "ロケット・ラクーン",
-      "en": "ROCKET RACCOON",
-      "badge": "y",
-      "badge_code": "RR",
-      "key": "ロケット rocket アライグマ ハーフワールド",
-      "desc": "銃器マニアのアライグマ(と呼ぶと怒る)。GotG3の主役。",
-      "media": [
-        "comic",
-        "live",
-        "anime"
-      ]
-    },
-    {
-      "name": "アントマン",
-      "en": "ANT-MAN",
-      "badge": "c",
-      "badge_code": "AM",
-      "key": "アントマン スコット ant-man 量子",
-      "desc": "ピム粒子で縮む泥棒ヒーロー、スコット・ラング。",
-      "media": [
-        "comic",
-        "live",
-        "anime"
-      ]
-    },
-    {
-      "name": "ジェシカ・ジョーンズ",
-      "en": "JESSICA JONES",
-      "badge": "m",
-      "badge_code": "JJ",
-      "key": "ジェシカ jessica 探偵 ディフェンダーズ",
-      "desc": "怪力の私立探偵。ヒーローを辞めたヒーロー。",
-      "media": [
-        "comic",
-        "live"
-      ]
-    },
-    {
-      "name": "ルーク・ケイジ",
-      "en": "LUKE CAGE",
-      "badge": "y",
-      "badge_code": "LC",
-      "key": "ルーク・ケイジ luke cage ハーレム 鋼",
-      "desc": "鋼の皮膚を持つハーレムの守護者。",
-      "media": [
-        "comic",
-        "live"
-      ]
-    },
-    {
-      "name": "アイアン・フィスト",
-      "en": "IRON FIST",
-      "badge": "c",
-      "badge_code": "IF",
-      "key": "アイアンフィスト ダニー iron fist クンルン 拳",
-      "desc": "クン・ルンで修行した拳の伝承者ダニー・ランド。",
-      "media": [
-        "comic",
-        "live"
-      ]
-    },
-    {
-      "name": "エレクトラ",
-      "en": "ELEKTRA",
-      "badge": "m",
-      "badge_code": "EL",
-      "key": "エレクトラ elektra 暗殺者 ハンド サイ",
-      "desc": "サイで舞う暗殺者。デアデビルの永遠の宿命の女。",
-      "media": [
-        "comic",
-        "live"
-      ]
-    },
-    {
-      "name": "ストーム",
-      "en": "STORM",
-      "badge": "k",
-      "badge_code": "ST",
-      "key": "ストーム storm オロロ 天候 X-MEN",
-      "desc": "天候を操るオメガレベル・ミュータント。X-MENの女王格。",
-      "media": [
-        "comic",
-        "live",
-        "anime"
-      ]
-    },
-    {
-      "name": "ガモーラ",
-      "en": "GAMORA",
-      "badge": "m",
-      "badge_code": "GM",
-      "key": "ガモーラ gamora サノス 暗殺者",
-      "desc": "宇宙最強の女戦士。サノスの養女という宿命を背負う。",
-      "media": [
-        "comic",
-        "live",
-        "anime"
-      ]
-    },
-    {
-      "name": "ネビュラ",
-      "en": "NEBULA",
-      "badge": "c",
-      "badge_code": "NB",
-      "key": "ネビュラ nebula サイボーグ",
-      "desc": "ガモーラの妹。父への憎しみから贖罪への長い道を歩んだ。",
-      "media": [
-        "comic",
-        "live",
-        "anime"
-      ]
-    },
-    {
-      "name": "グルート",
-      "en": "GROOT",
-      "badge": "y",
-      "badge_code": "GR",
-      "key": "グルート groot 木",
-      "desc": "「私はグルート」しか喋らない樹木型生命体。",
-      "media": [
-        "comic",
-        "live",
-        "anime"
-      ]
-    },
-    {
-      "name": "オコエ",
-      "en": "OKOYE",
-      "badge": "k",
-      "badge_code": "OK",
-      "key": "オコエ okoye ドーラミラージュ 槍",
-      "desc": "ドーラ・ミラージュの将軍。ワカンダ最強の槍。",
-      "media": [
-        "comic",
-        "live",
-        "anime"
-      ]
-    },
-    {
-      "name": "シュリ",
-      "en": "SHURI",
-      "badge": "m",
-      "badge_code": "SH",
-      "key": "シュリ shuri ブラックパンサー 天才",
-      "desc": "ワカンダの天才王女にして2代目ブラックパンサー。",
-      "media": [
-        "comic",
-        "live",
-        "anime"
-      ]
-    },
-    {
-      "name": "ネイモア",
-      "en": "NAMOR",
-      "badge": "c",
-      "badge_code": "NM",
-      "key": "ネイモア namor アトランティス タロカニム 海",
-      "desc": "海底王国の翼足王。1939年生まれのアンチヒーローの元祖。",
-      "media": [
-        "comic",
-        "live"
-      ]
-    },
-    {
-      "name": "ウォン",
-      "en": "WONG",
-      "badge": "y",
-      "badge_code": "WG",
-      "key": "ウォン wong 魔術師 カマータージ",
-      "desc": "MCUのソーサラー・スプリーム。原作の従者から大出世。",
-      "media": [
-        "comic",
-        "live"
-      ]
-    },
-    {
-      "name": "ミズ・マーベル",
-      "en": "MS. MARVEL",
-      "badge": "m",
-      "badge_code": "MM",
-      "key": "カマラ kamala ミズマーベル ジャージーシティ",
-      "desc": "キャロルに憧れる高校生カマラ・カーン。ミュータント示唆で話題に。",
-      "media": [
-        "comic",
-        "live",
-        "anime"
-      ]
-    },
-    {
-      "name": "ケイト・ビショップ",
-      "en": "KATE BISHOP",
-      "badge": "c",
-      "badge_code": "KB",
-      "key": "ケイト kate ホークアイ 弓",
-      "desc": "クリントの弟子にして2代目ホークアイ。",
-      "media": [
-        "comic",
-        "live"
-      ]
-    },
-    {
-      "name": "USエージェント",
-      "en": "U.S. AGENT",
-      "badge": "k",
-      "badge_code": "UA",
-      "key": "ウォーカー walker usエージェント 盾",
-      "desc": "政府製の\"もう一人のキャップ\"ジョン・ウォーカー。",
-      "media": [
-        "comic",
-        "live"
-      ]
-    },
-    {
-      "name": "グリーン・ゴブリン",
-      "en": "GREEN GOBLIN",
-      "badge": "y",
-      "badge_code": "GG",
-      "key": "ゴブリン goblin ノーマン オズボーン カボチャ",
-      "desc": "スパイダーマン最大の宿敵ノーマン・オズボーン。",
-      "media": [
-        "comic",
-        "live",
-        "anime"
-      ]
-    },
-    {
-      "name": "ドクター・オクトパス",
-      "en": "DOCTOR OCTOPUS",
-      "badge": "c",
-      "badge_code": "DO",
-      "key": "オクトパス octopus オットー タコ 腕",
-      "desc": "4本の機械腕を持つ天才科学者オットー・オクタビアス。",
-      "media": [
-        "comic",
-        "live",
-        "anime"
-      ]
-    },
-    {
-      "name": "ヴェノム",
-      "en": "VENOM",
-      "badge": "k",
-      "badge_code": "VN",
-      "key": "ヴェノム venom シンビオート エディ",
-      "desc": "シンビオートと宿主が生む黒い暴力。スパイダーマンの闇写し。",
-      "media": [
-        "comic",
-        "live",
-        "anime"
-      ]
-    },
-    {
-      "name": "ヘラ",
-      "en": "HELA",
-      "badge": "k",
-      "badge_code": "HL",
-      "key": "ヘラ hela 死の女神 姉",
-      "desc": "死の女神にしてソーの姉。アスガルドの隠された長子。",
-      "media": [
-        "comic",
-        "live"
-      ]
-    },
-    {
-      "name": "レッドスカル",
-      "en": "RED SKULL",
-      "badge": "m",
-      "badge_code": "RS",
-      "key": "レッドスカル red skull ヒドラ ナチス",
-      "desc": "ヒドラを率いたキャップの宿敵。ヴォーミアの案内人に堕ちた。",
-      "media": [
-        "comic",
-        "live",
-        "anime"
-      ]
-    },
-    {
-      "name": "ジーン・グレイ",
-      "en": "JEAN GREY",
-      "badge": "m",
-      "badge_code": "JG",
-      "key": "ジーン jean フェニックス テレパス",
-      "desc": "強大なテレパスにしてフェニックスの器。X-MENの心臓。",
-      "media": [
-        "comic",
-        "live",
-        "anime"
-      ]
-    },
-    {
-      "name": "サイクロップス",
-      "en": "CYCLOPS",
-      "badge": "c",
-      "badge_code": "CY",
-      "key": "サイクロップス cyclops スコット ビーム",
-      "desc": "目からオプティック・ブラストを放つX-MENのリーダー。",
-      "media": [
-        "comic",
-        "live",
-        "anime"
-      ]
-    },
-    {
-      "name": "ローグ",
-      "en": "ROGUE",
-      "badge": "y",
-      "badge_code": "RG",
-      "key": "ローグ rogue 吸収 白メッシュ",
-      "desc": "触れた相手の力と記憶を奪うミュータント。ミスティークの養女。",
-      "media": [
-        "comic",
-        "live",
-        "anime"
-      ]
-    },
-    {
-      "name": "ガンビット",
-      "en": "GAMBIT",
-      "badge": "m",
-      "badge_code": "GB",
-      "key": "ガンビット gambit カード レミー",
-      "desc": "カードに運動エネルギーを込めて投げる伊達男。",
-      "media": [
-        "comic",
-        "live",
-        "anime"
-      ]
-    },
-    {
-      "name": "ブレイド",
-      "en": "BLADE",
-      "badge": "k",
-      "badge_code": "BL",
-      "key": "ブレイド blade 吸血鬼 デイウォーカー",
-      "desc": "ヴァンパイアハンターの半吸血鬼。MCU版は再始動待ち。",
-      "media": [
-        "comic",
-        "live",
-        "anime"
-      ]
-    }
-  ]
+  {
+   "name": "スカーレット・ウィッチ",
+   "en": "WANDA MAXIMOFF",
+   "ini": "SW",
+   "color": "m",
+   "desc": "現実改変の魔女。『ワンダヴィジョン』の悲劇の源流は原作『ハウス・オブ・M』にあり。",
+   "keys": "ワンダ・マキシモフ スカーレット・ウィッチ wanda scarlet witch 魔女 ハウスオブM",
+   "tags": {
+    "faction": [
+     "antihero",
+     "hero"
+    ],
+    "origin": "magic",
+    "series": [
+     "mcu"
+    ],
+    "doomsday": false
+   },
+   "live": "初実写:『AoU』(2015)。主演作は『ワンダヴィジョン』『MoM』",
+   "enc_id": "scarlet-witch"
+  },
+  {
+   "name": "デアデビル",
+   "en": "MATT MURDOCK",
+   "ini": "DD",
+   "color": "c",
+   "desc": "盲目の弁護士にして地獄の厨房の守護者。『ボーン・アゲイン』の元ネタは80年代の傑作コミック。",
+   "keys": "デアデビル マット・マードック daredevil matt murdock 弁護士 ヘルズキッチン",
+   "tags": {
+    "faction": [
+     "hero"
+    ],
+    "origin": "enhanced",
+    "series": [
+     "mcu",
+     "defenders",
+     "legacy"
+    ],
+    "doomsday": false
+   },
+   "live": "実写:ディフェンダーズ・サーガ→『ボーン・アゲイン』S1-S2",
+   "enc_id": "daredevil"
+  },
+  {
+   "name": "ムーンナイト",
+   "en": "MOON KNIGHT",
+   "ini": "MK",
+   "color": "k",
+   "desc": "月神コンスに仕える多重人格のヒーロー。原作はダークで実験的な名作揃い。",
+   "keys": "ムーンナイト マーク・スペクター moon knight marc spector コンス 月",
+   "tags": {
+    "faction": [
+     "antihero",
+     "hero"
+    ],
+    "origin": "magic",
+    "series": [
+     "mcu"
+    ],
+    "doomsday": false
+   },
+   "live": "実写:『ムーンナイト』(2022・単独OK)",
+   "enc_id": "moon-knight"
+  },
+  {
+   "name": "キャプテン・アメリカ(サム)",
+   "en": "SAM WILSON",
+   "ini": "CA",
+   "color": "y",
+   "desc": "スティーブから盾を継いだ男。原作でも「サム・キャップ」時代の物語がある。",
+   "keys": "サム・ウィルソン キャプテン・アメリカ ファルコン sam wilson captain america falcon 盾",
+   "tags": {
+    "faction": [
+     "hero"
+    ],
+    "origin": "tech",
+    "series": [
+     "mcu"
+    ],
+    "doomsday": true
+   },
+   "live": "初実写:『TWS』(2014)。襲名は『FATWS』→主演『BNW』",
+   "enc_id": "captain-america-sam"
+  },
+  {
+   "name": "ロキ",
+   "en": "LOKI",
+   "ini": "LK",
+   "color": "c",
+   "desc": "いたずらの神からマルチバースの要へ。ドラマ『ロキ』はマルチバース理解の必修科目。",
+   "keys": "ロキ loki 神 アスガルド TVA トリックスター",
+   "tags": {
+    "faction": [
+     "hero",
+     "villain"
+    ],
+    "origin": "cosmic",
+    "series": [
+     "mcu"
+    ],
+    "doomsday": true
+   },
+   "live": "初実写:『マイティ・ソー』(2011)。ドラマ『ロキ』S1-S2が主戦場",
+   "enc_id": "loki"
+  },
+  {
+   "name": "ミスター・ファンタスティック",
+   "en": "REED RICHARDS",
+   "ini": "FF",
+   "color": "c",
+   "desc": "マーベル一の頭脳でドゥームの因縁の相手。FFはマーベル・ユニバースの「始まりの家族」。",
+   "keys": "リード・リチャーズ ミスター・ファンタスティック reed richards mr fantastic ファンタスティック・フォー FF",
+   "tags": {
+    "faction": [
+     "hero"
+    ],
+    "origin": "enhanced",
+    "series": [
+     "mcu",
+     "old-ff"
+    ],
+    "doomsday": true
+   },
+   "live": "実写:『ファースト・ステップ』(2025)→『ドゥームズデイ』",
+   "enc_id": "mr-fantastic"
+  },
+  {
+   "name": "ウルヴァリン",
+   "en": "WOLVERINE",
+   "ini": "WV",
+   "color": "y",
+   "desc": "不死身のミュータント。『X-MEN '97』から原作X-MENへ入るのが今の最短ルート。",
+   "keys": "ウルヴァリン ローガン wolverine logan X-MEN ミュータント 爪",
+   "tags": {
+    "faction": [
+     "antihero",
+     "hero"
+    ],
+    "origin": "mutant",
+    "series": [
+     "fox-xmen",
+     "mcu"
+    ],
+    "doomsday": false
+   },
+   "live": "実写:旧フォックス版全般→『デッドプール&ウルヴァリン』(2024)",
+   "enc_id": "wolverine"
+  },
+  {
+   "name": "ソー",
+   "en": "THOR",
+   "ini": "TH",
+   "color": "c",
+   "desc": "雷神にしてアスガルドの王族。ハンマーと斧を渡り歩く神様。",
+   "keys": "ソー 雷神 アスガルド thor オーディン",
+   "tags": {
+    "faction": [
+     "hero"
+    ],
+    "origin": "cosmic",
+    "series": [
+     "mcu"
+    ],
+    "doomsday": true
+   },
+   "live": "初実写:『マイティ・ソー』(2011)。単独4作+アベンジャーズ皆勤",
+   "enc_id": "thor"
+  },
+  {
+   "name": "ハルク",
+   "en": "HULK",
+   "ini": "HK",
+   "color": "y",
+   "desc": "ガンマ線が生んだ緑の巨人。バナー博士との共存が永遠のテーマ。",
+   "keys": "ハルク hulk バナー ガンマ 緑",
+   "tags": {
+    "faction": [
+     "hero"
+    ],
+    "origin": "enhanced",
+    "series": [
+     "mcu",
+     "legacy"
+    ],
+    "doomsday": false
+   },
+   "live": "初実写:『インクレディブル・ハルク』(2008)。近年は『シー・ハルク』『BND』",
+   "enc_id": "hulk"
+  },
+  {
+   "name": "スパイダーマン",
+   "en": "SPIDER-MAN",
+   "ini": "SP",
+   "color": "m",
+   "desc": "親愛なる隣人。大いなる力には大いなる責任が伴う。",
+   "keys": "スパイダーマン ピーター・パーカー spider peter 蜘蛛",
+   "tags": {
+    "faction": [
+     "hero"
+    ],
+    "origin": "enhanced",
+    "series": [
+     "mcu",
+     "raimi-webb"
+    ],
+    "doomsday": false
+   },
+   "live": "初実写(MCU):『シビル・ウォー』(2016)。最新作『BND』公開中",
+   "enc_id": "spider-man"
+  },
+  {
+   "name": "ドクター・ストレンジ",
+   "en": "DOCTOR STRANGE",
+   "ini": "DS",
+   "color": "c",
+   "desc": "元天才外科医のソーサラー・スプリーム。マルチバースの門番役。",
+   "keys": "ストレンジ strange 魔術師 魔法",
+   "tags": {
+    "faction": [
+     "hero"
+    ],
+    "origin": "magic",
+    "series": [
+     "mcu"
+    ],
+    "doomsday": false
+   },
+   "live": "初実写:『ドクター・ストレンジ』(2016)→『MoM』",
+   "enc_id": "doctor-strange"
+  },
+  {
+   "name": "キングピン",
+   "en": "KINGPIN",
+   "ini": "KP",
+   "color": "k",
+   "desc": "NY裏社会の帝王ウィルソン・フィスク。市長にまで上り詰めた。",
+   "keys": "キングピン フィスク kingpin fisk ヴィラン 市長",
+   "tags": {
+    "faction": [
+     "villain"
+    ],
+    "origin": "human",
+    "series": [
+     "mcu",
+     "defenders",
+     "legacy"
+    ],
+    "doomsday": false
+   },
+   "live": "実写:『デアデビル』→『ホークアイ』→『エコー』→市長として『ボーン・アゲイン』",
+   "enc_id": "kingpin"
+  },
+  {
+   "name": "パニッシャー",
+   "en": "PUNISHER",
+   "ini": "PN",
+   "color": "k",
+   "desc": "家族を奪われ処刑人と化したフランク・キャッスル。髑髏の男。",
+   "keys": "パニッシャー フランク・キャッスル punisher frank 髑髏",
+   "tags": {
+    "faction": [
+     "antihero"
+    ],
+    "origin": "human",
+    "series": [
+     "mcu",
+     "defenders",
+     "legacy"
+    ],
+    "doomsday": false
+   },
+   "live": "実写:『デアデビル』S2→『パニッシャー』→SP『ワン・ラスト・キル』→『BND』",
+   "enc_id": "punisher"
+  },
+  {
+   "name": "イェレーナ・ベロワ",
+   "en": "YELENA BELOVA",
+   "ini": "YB",
+   "color": "m",
+   "desc": "ナターシャの妹分にして2代目ブラック・ウィドウ。ニュー・アベンジャーズの一員に。",
+   "keys": "イェレーナ yelena ウィドウ サンダーボルツ",
+   "tags": {
+    "faction": [
+     "hero",
+     "antihero"
+    ],
+    "origin": "human",
+    "series": [
+     "mcu"
+    ],
+    "doomsday": true
+   },
+   "live": "初実写:『ブラック・ウィドウ』(2021)→『ホークアイ』→『サンダーボルツ*』",
+   "enc_id": "yelena"
+  },
+  {
+   "name": "シャン・チー",
+   "en": "SHANG-CHI",
+   "ini": "SC",
+   "color": "y",
+   "desc": "マーベル最高峰の武術家。テン・リングスを受け継いだ男。",
+   "keys": "シャンチー shang-chi カンフー 武術 リング",
+   "tags": {
+    "faction": [
+     "hero"
+    ],
+    "origin": "human",
+    "series": [
+     "mcu"
+    ],
+    "doomsday": true
+   },
+   "live": "実写:『シャン・チー』(2021)→『ドゥームズデイ』出演発表済み",
+   "enc_id": "shang-chi"
+  },
+  {
+   "name": "プロフェッサーX",
+   "en": "PROFESSOR X",
+   "ini": "PX",
+   "color": "c",
+   "desc": "世界最強のテレパスにしてX-MEN創設者。共存の夢を説く教師。",
+   "keys": "プロフェッサー エグゼビア xavier テレパス 車椅子",
+   "tags": {
+    "faction": [
+     "hero"
+    ],
+    "origin": "mutant",
+    "series": [
+     "fox-xmen",
+     "mcu"
+    ],
+    "doomsday": true
+   },
+   "live": "実写:旧フォックス版→『MoM』別世界版→『ドゥームズデイ』復帰",
+   "enc_id": "professor-x"
+  },
+  {
+   "name": "マグニートー",
+   "en": "MAGNETO",
+   "ini": "MG",
+   "color": "m",
+   "desc": "磁力を操るミュータントの過激派指導者。チャールズの親友にして宿敵。",
+   "keys": "マグニートー magneto 磁力 エリック",
+   "tags": {
+    "faction": [
+     "antihero",
+     "villain"
+    ],
+    "origin": "mutant",
+    "series": [
+     "fox-xmen"
+    ],
+    "doomsday": true
+   },
+   "live": "実写:旧フォックス版→『ドゥームズデイ』でマッケラン版復帰",
+   "enc_id": "magneto"
+  },
+  {
+   "name": "ギャラクタス",
+   "en": "GALACTUS",
+   "ini": "GL",
+   "color": "k",
+   "desc": "惑星を喰らう宇宙的存在。『ファースト・ステップ』で本格映像化。",
+   "keys": "ギャラクタス galactus 惑星 捕食",
+   "tags": {
+    "faction": [
+     "villain"
+    ],
+    "origin": "cosmic",
+    "series": [
+     "mcu",
+     "old-ff"
+    ],
+    "doomsday": true
+   },
+   "live": "実写:『ファースト・ステップ』(2025)で本格映像化",
+   "enc_id": "galactus"
+  },
+  {
+   "name": "シルバーサーファー",
+   "en": "SILVER SURFER",
+   "ini": "SS",
+   "color": "c",
+   "desc": "ギャラクタスの先触れ。銀色の放浪者。映画版は原作と設定が異なる。",
+   "keys": "サーファー surfer ノリン シャラ・バル 銀",
+   "tags": {
+    "faction": [
+     "antihero"
+    ],
+    "origin": "cosmic",
+    "series": [
+     "mcu",
+     "old-ff"
+    ],
+    "doomsday": true
+   },
+   "live": "実写:『ファースト・ステップ』(2025・シャラ・バル版)",
+   "enc_id": "silver-surfer"
+  },
+  {
+   "name": "サノス",
+   "en": "THANOS",
+   "ini": "TN",
+   "color": "k",
+   "desc": "狂気のタイタン。原作は死の女神への愛、映画は均衡思想——動機が別物。",
+   "keys": "サノス thanos タイタン 指パッチン",
+   "tags": {
+    "faction": [
+     "villain"
+    ],
+    "origin": "cosmic",
+    "series": [
+     "mcu"
+    ],
+    "doomsday": false
+   },
+   "live": "初実写:『アベンジャーズ』(2012)ラスト→『IW』『EG』",
+   "enc_id": "thanos"
+  },
+  {
+   "name": "ウルトロン",
+   "en": "ULTRON",
+   "ini": "UL",
+   "color": "k",
+   "desc": "殺戮AI。原作の生みの親はハンク・ピム、映画ではトニー。",
+   "keys": "ウルトロン ultron AI ロボット",
+   "tags": {
+    "faction": [
+     "villain"
+    ],
+    "origin": "tech",
+    "series": [
+     "mcu"
+    ],
+    "doomsday": false
+   },
+   "live": "実写:『エイジ・オブ・ウルトロン』(2015)。『ホワット・イフ』にも別世界版",
+   "enc_id": "ultron"
+  },
+  {
+   "name": "ヴィジョン",
+   "en": "VISION",
+   "ini": "VI",
+   "color": "m",
+   "desc": "ウルトロンが生んだ人造ヒーロー。2026年『ヴィジョン・クエスト』主役。",
+   "keys": "ヴィジョン vision 人造人間 アンドロイド ワンダ",
+   "tags": {
+    "faction": [
+     "hero"
+    ],
+    "origin": "tech",
+    "series": [
+     "mcu"
+    ],
+    "doomsday": false
+   },
+   "live": "初実写:『AoU』(2015)→『ワンダヴィジョン』→『ヴィジョン・クエスト』(2026)",
+   "enc_id": "vision"
+  },
+  {
+   "name": "セントリー",
+   "en": "SENTRY",
+   "ini": "SE",
+   "color": "y",
+   "desc": "太陽100万個分の力と、内なるヴォイド。サンダーボルツ*で鮮烈登場。",
+   "keys": "セントリー sentry ボブ ヴォイド 最強",
+   "tags": {
+    "faction": [
+     "antihero",
+     "hero"
+    ],
+    "origin": "enhanced",
+    "series": [
+     "mcu"
+    ],
+    "doomsday": true
+   },
+   "live": "初実写:『サンダーボルツ*』(2025)→『ドゥームズデイ』",
+   "enc_id": "sentry"
+  },
+  {
+   "name": "キャプテン・マーベル",
+   "en": "CAPTAIN MARVEL",
+   "ini": "CM",
+   "color": "y",
+   "desc": "クリーの力を宿した最強のパイロット、キャロル・ダンヴァース。",
+   "keys": "キャプテン・マーベル キャロル carol marvel",
+   "tags": {
+    "faction": [
+     "hero"
+    ],
+    "origin": "cosmic",
+    "series": [
+     "mcu"
+    ],
+    "doomsday": false
+   },
+   "live": "初実写:『キャプテン・マーベル』(2019)→『ザ・マーベルズ』",
+   "enc_id": "captain-marvel"
+  },
+  {
+   "name": "ニック・フューリー",
+   "en": "NICK FURY",
+   "ini": "NF",
+   "color": "k",
+   "desc": "アベンジャーズ計画の仕掛け人。すべてを知る隻眼のスパイ。",
+   "keys": "フューリー fury シールド 眼帯",
+   "tags": {
+    "faction": [
+     "support"
+    ],
+    "origin": "human",
+    "series": [
+     "mcu"
+    ],
+    "doomsday": false
+   },
+   "live": "初実写:『アイアンマン』(2008)PC。『シークレット・インベージョン』主演",
+   "enc_id": "nick-fury"
+  },
+  {
+   "name": "バッキー・バーンズ",
+   "en": "BUCKY BARNES",
+   "ini": "BB",
+   "color": "c",
+   "desc": "スティーブの親友にして元ウィンター・ソルジャー。贖罪の道を歩む。",
+   "keys": "バッキー bucky ウィンター・ソルジャー 腕",
+   "tags": {
+    "faction": [
+     "hero",
+     "villain"
+    ],
+    "origin": "enhanced",
+    "series": [
+     "mcu"
+    ],
+    "doomsday": true
+   },
+   "live": "初実写:『TFA』(2011)→『TWS』→『サンダーボルツ*』",
+   "enc_id": "bucky"
+  },
+  {
+   "name": "ホークアイ",
+   "en": "HAWKEYE",
+   "ini": "HE",
+   "color": "m",
+   "desc": "弓ひとつでアベンジャーズを張る男、クリント・バートン。",
+   "keys": "ホークアイ クリント hawkeye 弓 ケイト",
+   "tags": {
+    "faction": [
+     "hero"
+    ],
+    "origin": "human",
+    "series": [
+     "mcu"
+    ],
+    "doomsday": false
+   },
+   "live": "初実写:『マイティ・ソー』(2011)→『ホークアイ』(2021)",
+   "enc_id": "hawkeye"
+  },
+  {
+   "name": "スター・ロード",
+   "en": "STAR-LORD",
+   "ini": "SL",
+   "color": "c",
+   "desc": "ガーディアンズのリーダーを自称する地球生まれの宇宙海賊。",
+   "keys": "スターロード クイル quill ガーディアンズ",
+   "tags": {
+    "faction": [
+     "hero"
+    ],
+    "origin": "cosmic",
+    "series": [
+     "mcu"
+    ],
+    "doomsday": false
+   },
+   "live": "実写:GotG3部作+『IW』『EG』",
+   "enc_id": "star-lord"
+  },
+  {
+   "name": "ロケット・ラクーン",
+   "en": "ROCKET RACCOON",
+   "ini": "RR",
+   "color": "y",
+   "desc": "銃器マニアのアライグマ(と呼ぶと怒る)。GotG3の主役。",
+   "keys": "ロケット rocket アライグマ ハーフワールド",
+   "tags": {
+    "faction": [
+     "hero"
+    ],
+    "origin": "cosmic",
+    "series": [
+     "mcu"
+    ],
+    "doomsday": false
+   },
+   "live": "実写:GotG3部作。Vol.3は実質主演",
+   "enc_id": "rocket"
+  },
+  {
+   "name": "アントマン",
+   "en": "ANT-MAN",
+   "ini": "AM",
+   "color": "c",
+   "desc": "ピム粒子で縮む泥棒ヒーロー、スコット・ラング。",
+   "keys": "アントマン スコット ant-man 量子",
+   "tags": {
+    "faction": [
+     "hero"
+    ],
+    "origin": "tech",
+    "series": [
+     "mcu"
+    ],
+    "doomsday": true
+   },
+   "live": "実写:『アントマン』3部作+『シビル・ウォー』『EG』",
+   "enc_id": "ant-man-scott"
+  },
+  {
+   "name": "ジェシカ・ジョーンズ",
+   "en": "JESSICA JONES",
+   "ini": "JJ",
+   "color": "m",
+   "desc": "怪力の私立探偵。ヒーローを辞めたヒーロー。",
+   "keys": "ジェシカ jessica 探偵 ディフェンダーズ",
+   "tags": {
+    "faction": [
+     "antihero",
+     "hero"
+    ],
+    "origin": "enhanced",
+    "series": [
+     "defenders",
+     "mcu"
+    ],
+    "doomsday": false
+   },
+   "live": "実写:『ジェシカ・ジョーンズ』S1-S3→『ボーン・アゲイン』S2復帰",
+   "enc_id": "jessica-jones"
+  },
+  {
+   "name": "ルーク・ケイジ",
+   "en": "LUKE CAGE",
+   "ini": "LC",
+   "color": "y",
+   "desc": "鋼の皮膚を持つハーレムの守護者。",
+   "keys": "ルーク・ケイジ luke cage ハーレム 鋼",
+   "tags": {
+    "faction": [
+     "hero"
+    ],
+    "origin": "enhanced",
+    "series": [
+     "defenders",
+     "mcu"
+    ],
+    "doomsday": false
+   },
+   "live": "実写:『ルーク・ケイジ』S1-S2→『ボーン・アゲイン』S2ラスト登場",
+   "enc_id": "luke-cage"
+  },
+  {
+   "name": "アイアン・フィスト",
+   "en": "IRON FIST",
+   "ini": "IF",
+   "color": "c",
+   "desc": "クン・ルンで修行した拳の伝承者ダニー・ランド。",
+   "keys": "アイアンフィスト ダニー iron fist クンルン 拳",
+   "tags": {
+    "faction": [
+     "hero"
+    ],
+    "origin": "magic",
+    "series": [
+     "defenders"
+    ],
+    "doomsday": false
+   },
+   "live": "実写:『アイアン・フィスト』S1-S2、『ディフェンダーズ』",
+   "enc_id": "iron-fist"
+  },
+  {
+   "name": "エレクトラ",
+   "en": "ELEKTRA",
+   "ini": "EL",
+   "color": "m",
+   "desc": "サイで舞う暗殺者。デアデビルの永遠の宿命の女。",
+   "keys": "エレクトラ elektra 暗殺者 ハンド サイ",
+   "tags": {
+    "faction": [
+     "antihero"
+    ],
+    "origin": "human",
+    "series": [
+     "defenders",
+     "legacy",
+     "mcu"
+    ],
+    "doomsday": false
+   },
+   "live": "実写:『デアデビル』S2、『ディフェンダーズ』、『D&W』",
+   "enc_id": "elektra"
+  },
+  {
+   "name": "ストーム",
+   "en": "STORM",
+   "ini": "ST",
+   "color": "k",
+   "desc": "天候を操るオメガレベル・ミュータント。X-MENの女王格。",
+   "keys": "ストーム storm オロロ 天候 X-MEN",
+   "tags": {
+    "faction": [
+     "hero"
+    ],
+    "origin": "mutant",
+    "series": [
+     "fox-xmen"
+    ],
+    "doomsday": false
+   },
+   "live": "実写:旧フォックス版。アニメ『X-Men '97』でも中心",
+   "enc_id": "storm"
+  },
+  {
+   "name": "ガモーラ",
+   "en": "GAMORA",
+   "ini": "GM",
+   "color": "m",
+   "desc": "宇宙最強の女戦士。サノスの養女という宿命を背負う。",
+   "keys": "ガモーラ gamora サノス 暗殺者",
+   "tags": {
+    "faction": [
+     "hero",
+     "villain"
+    ],
+    "origin": "cosmic",
+    "series": [
+     "mcu"
+    ],
+    "doomsday": false
+   },
+   "live": "実写:GotG3部作+『IW』『EG』",
+   "enc_id": "gamora"
+  },
+  {
+   "name": "ネビュラ",
+   "en": "NEBULA",
+   "ini": "NB",
+   "color": "c",
+   "desc": "ガモーラの妹。父への憎しみから贖罪への長い道を歩んだ。",
+   "keys": "ネビュラ nebula サイボーグ",
+   "tags": {
+    "faction": [
+     "hero",
+     "villain"
+    ],
+    "origin": "cosmic",
+    "series": [
+     "mcu"
+    ],
+    "doomsday": false
+   },
+   "live": "実写:GotG3部作+『IW』『EG』",
+   "enc_id": "nebula"
+  },
+  {
+   "name": "グルート",
+   "en": "GROOT",
+   "ini": "GR",
+   "color": "y",
+   "desc": "「私はグルート」しか喋らない樹木型生命体。",
+   "keys": "グルート groot 木",
+   "tags": {
+    "faction": [
+     "hero"
+    ],
+    "origin": "cosmic",
+    "series": [
+     "mcu"
+    ],
+    "doomsday": false
+   },
+   "live": "実写:GotG3部作+短編『アイ・アム・グルート』",
+   "enc_id": "groot"
+  },
+  {
+   "name": "オコエ",
+   "en": "OKOYE",
+   "ini": "OK",
+   "color": "k",
+   "desc": "ドーラ・ミラージュの将軍。ワカンダ最強の槍。",
+   "keys": "オコエ okoye ドーラミラージュ 槍",
+   "tags": {
+    "faction": [
+     "hero"
+    ],
+    "origin": "human",
+    "series": [
+     "mcu"
+    ],
+    "doomsday": false
+   },
+   "live": "実写:『ブラックパンサー』2部作+『IW』『EG』",
+   "enc_id": "okoye"
+  },
+  {
+   "name": "シュリ",
+   "en": "SHURI",
+   "ini": "SH",
+   "color": "m",
+   "desc": "ワカンダの天才王女にして2代目ブラックパンサー。",
+   "keys": "シュリ shuri ブラックパンサー 天才",
+   "tags": {
+    "faction": [
+     "hero"
+    ],
+    "origin": "enhanced",
+    "series": [
+     "mcu"
+    ],
+    "doomsday": true
+   },
+   "live": "実写:『ブラックパンサー』→継承は『ワカンダ・フォーエバー』→『ドゥームズデイ』",
+   "enc_id": "shuri"
+  },
+  {
+   "name": "ネイモア",
+   "en": "NAMOR",
+   "ini": "NM",
+   "color": "c",
+   "desc": "海底王国の翼足王。1939年生まれのアンチヒーローの元祖。",
+   "keys": "ネイモア namor アトランティス タロカニム 海",
+   "tags": {
+    "faction": [
+     "antihero"
+    ],
+    "origin": "mutant",
+    "series": [
+     "mcu"
+    ],
+    "doomsday": true
+   },
+   "live": "実写:『ワカンダ・フォーエバー』(2022)→『ドゥームズデイ』",
+   "enc_id": "namor"
+  },
+  {
+   "name": "ウォン",
+   "en": "WONG",
+   "ini": "WG",
+   "color": "y",
+   "desc": "MCUのソーサラー・スプリーム。原作の従者から大出世。",
+   "keys": "ウォン wong 魔術師 カマータージ",
+   "tags": {
+    "faction": [
+     "hero"
+    ],
+    "origin": "magic",
+    "series": [
+     "mcu"
+    ],
+    "doomsday": false
+   },
+   "live": "初実写:『ドクター・ストレンジ』(2016)。以後の客演多数",
+   "enc_id": "wong"
+  },
+  {
+   "name": "ミズ・マーベル",
+   "en": "MS. MARVEL",
+   "ini": "MM",
+   "color": "m",
+   "desc": "キャロルに憧れる高校生カマラ・カーン。ミュータント示唆で話題に。",
+   "keys": "カマラ kamala ミズマーベル ジャージーシティ",
+   "tags": {
+    "faction": [
+     "hero"
+    ],
+    "origin": "mutant",
+    "series": [
+     "mcu"
+    ],
+    "doomsday": false
+   },
+   "live": "実写:『ミズ・マーベル』(2022)→『ザ・マーベルズ』",
+   "enc_id": "ms-marvel"
+  },
+  {
+   "name": "ケイト・ビショップ",
+   "en": "KATE BISHOP",
+   "ini": "KB",
+   "color": "c",
+   "desc": "クリントの弟子にして2代目ホークアイ。",
+   "keys": "ケイト kate ホークアイ 弓",
+   "tags": {
+    "faction": [
+     "hero"
+    ],
+    "origin": "human",
+    "series": [
+     "mcu"
+    ],
+    "doomsday": false
+   },
+   "live": "実写:『ホークアイ』(2021)",
+   "enc_id": "kate-bishop"
+  },
+  {
+   "name": "USエージェント",
+   "en": "U.S. AGENT",
+   "ini": "UA",
+   "color": "k",
+   "desc": "政府製の\"もう一人のキャップ\"ジョン・ウォーカー。",
+   "keys": "ウォーカー walker usエージェント 盾",
+   "tags": {
+    "faction": [
+     "antihero"
+    ],
+    "origin": "enhanced",
+    "series": [
+     "mcu"
+    ],
+    "doomsday": true
+   },
+   "live": "初実写:『FATWS』(2021)→『サンダーボルツ*』",
+   "enc_id": "us-agent"
+  },
+  {
+   "name": "グリーン・ゴブリン",
+   "en": "GREEN GOBLIN",
+   "ini": "GG",
+   "color": "y",
+   "desc": "スパイダーマン最大の宿敵ノーマン・オズボーン。",
+   "keys": "ゴブリン goblin ノーマン オズボーン カボチャ",
+   "tags": {
+    "faction": [
+     "villain"
+    ],
+    "origin": "enhanced",
+    "series": [
+     "raimi-webb",
+     "mcu"
+    ],
+    "doomsday": false
+   },
+   "live": "実写:ライミ版→『NWH』(2021)でMCU参戦",
+   "enc_id": "green-goblin"
+  },
+  {
+   "name": "ドクター・オクトパス",
+   "en": "DOCTOR OCTOPUS",
+   "ini": "DO",
+   "color": "c",
+   "desc": "4本の機械腕を持つ天才科学者オットー・オクタビアス。",
+   "keys": "オクトパス octopus オットー タコ 腕",
+   "tags": {
+    "faction": [
+     "villain"
+    ],
+    "origin": "tech",
+    "series": [
+     "raimi-webb",
+     "mcu"
+    ],
+    "doomsday": false
+   },
+   "live": "実写:ライミ版2作目→『NWH』。アニメ『フレンドリー・ネイバーフッド』でも暗躍",
+   "enc_id": "doctor-octopus"
+  },
+  {
+   "name": "ヴェノム",
+   "en": "VENOM",
+   "ini": "VN",
+   "color": "k",
+   "desc": "シンビオートと宿主が生む黒い暴力。スパイダーマンの闇写し。",
+   "keys": "ヴェノム venom シンビオート エディ",
+   "tags": {
+    "faction": [
+     "antihero",
+     "villain"
+    ],
+    "origin": "cosmic",
+    "series": [
+     "sony",
+     "raimi-webb"
+    ],
+    "doomsday": false
+   },
+   "live": "実写:ソニー版3部作。『NWH』クレジットにも痕跡",
+   "enc_id": "venom"
+  },
+  {
+   "name": "ヘラ",
+   "en": "HELA",
+   "ini": "HL",
+   "color": "k",
+   "desc": "死の女神にしてソーの姉。アスガルドの隠された長子。",
+   "keys": "ヘラ hela 死の女神 姉",
+   "tags": {
+    "faction": [
+     "villain"
+    ],
+    "origin": "cosmic",
+    "series": [
+     "mcu"
+    ],
+    "doomsday": false
+   },
+   "live": "実写:『ラグナロク』(2017)",
+   "enc_id": "hela"
+  },
+  {
+   "name": "レッドスカル",
+   "en": "RED SKULL",
+   "ini": "RS",
+   "color": "m",
+   "desc": "ヒドラを率いたキャップの宿敵。ヴォーミアの案内人に堕ちた。",
+   "keys": "レッドスカル red skull ヒドラ ナチス",
+   "tags": {
+    "faction": [
+     "villain"
+    ],
+    "origin": "enhanced",
+    "series": [
+     "mcu"
+    ],
+    "doomsday": false
+   },
+   "live": "実写:『TFA』(2011)→ヴォーミアの案内人として『IW』『EG』",
+   "enc_id": "red-skull"
+  },
+  {
+   "name": "ジーン・グレイ",
+   "en": "JEAN GREY",
+   "ini": "JG",
+   "color": "m",
+   "desc": "強大なテレパスにしてフェニックスの器。X-MENの心臓。",
+   "keys": "ジーン jean フェニックス テレパス",
+   "tags": {
+    "faction": [
+     "hero"
+    ],
+    "origin": "mutant",
+    "series": [
+     "fox-xmen"
+    ],
+    "doomsday": false
+   },
+   "live": "実写:旧フォックス版。アニメ『X-Men '97』が現行の主舞台",
+   "enc_id": "jean-grey"
+  },
+  {
+   "name": "サイクロップス",
+   "en": "CYCLOPS",
+   "ini": "CY",
+   "color": "c",
+   "desc": "目からオプティック・ブラストを放つX-MENのリーダー。",
+   "keys": "サイクロップス cyclops スコット ビーム",
+   "tags": {
+    "faction": [
+     "hero"
+    ],
+    "origin": "mutant",
+    "series": [
+     "fox-xmen"
+    ],
+    "doomsday": true
+   },
+   "live": "実写:旧フォックス版→『ドゥームズデイ』でマースデン版復帰",
+   "enc_id": "cyclops"
+  },
+  {
+   "name": "ローグ",
+   "en": "ROGUE",
+   "ini": "RG",
+   "color": "y",
+   "desc": "触れた相手の力と記憶を奪うミュータント。ミスティークの養女。",
+   "keys": "ローグ rogue 吸収 白メッシュ",
+   "tags": {
+    "faction": [
+     "hero",
+     "villain"
+    ],
+    "origin": "mutant",
+    "series": [
+     "fox-xmen"
+    ],
+    "doomsday": false
+   },
+   "live": "実写:旧フォックス版。『X-Men '97』では物語の中心",
+   "enc_id": "rogue"
+  },
+  {
+   "name": "ガンビット",
+   "en": "GAMBIT",
+   "ini": "GB",
+   "color": "m",
+   "desc": "カードに運動エネルギーを込めて投げる伊達男。",
+   "keys": "ガンビット gambit カード レミー",
+   "tags": {
+    "faction": [
+     "antihero",
+     "hero"
+    ],
+    "origin": "mutant",
+    "series": [
+     "fox-xmen",
+     "mcu"
+    ],
+    "doomsday": true
+   },
+   "live": "実写:『D&W』(2024)テイタム版→『ドゥームズデイ』続投",
+   "enc_id": "gambit"
+  },
+  {
+   "name": "ブレイド",
+   "en": "BLADE",
+   "ini": "BL",
+   "color": "k",
+   "desc": "ヴァンパイアハンターの半吸血鬼。MCU版は再始動待ち。",
+   "keys": "ブレイド blade 吸血鬼 デイウォーカー",
+   "tags": {
+    "faction": [
+     "antihero"
+    ],
+    "origin": "enhanced",
+    "series": [
+     "legacy"
+    ],
+    "doomsday": false
+   },
+   "live": "実写:旧3部作(1998-2004)。MCU版は再始動待ち",
+   "enc_id": "blade"
+  },
+  {
+   "name": "アイアンマン",
+   "en": "IRON MAN",
+   "ini": "IM",
+   "color": "m",
+   "desc": "天才・億万長者・プレイボーイ・慈善家、トニー・スターク。MCUのすべてを始めた男であり、その死はいまも世界の重心になっている。",
+   "live": "初実写(MCU):『アイアンマン』(2008)→『EG』で退場。RDJは『ドゥームズデイ』でドゥーム役として帰還",
+   "keys": [
+    "comic",
+    "live",
+    "anime"
+   ],
+   "tags": {
+    "faction": [
+     "hero"
+    ],
+    "origin": "tech",
+    "series": [
+     "mcu"
+    ],
+    "doomsday": false
+   },
+   "enc_id": "iron-man"
+  },
+  {
+   "name": "キャプテン・アメリカ(スティーブ)",
+   "en": "STEVE ROGERS",
+   "ini": "CA",
+   "color": "c",
+   "desc": "超人血清が選んだ「善き人」スティーブ・ロジャース。時代錯誤の正義を貫き通し、それが結果的にいつも正しかった男。",
+   "live": "実写:『TFA』(2011)〜『EG』で引退→『ドゥームズデイ』で衝撃の復帰決定",
+   "keys": [
+    "comic",
+    "live",
+    "anime"
+   ],
+   "tags": {
+    "faction": [
+     "hero"
+    ],
+    "origin": "enhanced",
+    "series": [
+     "mcu"
+    ],
+    "doomsday": true
+   },
+   "enc_id": "captain-america-steve"
+  },
+  {
+   "name": "ブラック・ウィドウ",
+   "en": "BLACK WIDOW",
+   "ini": "BW",
+   "color": "k",
+   "desc": "レッドルーム出身の元暗殺者ナターシャ・ロマノフ。帳簿の赤字を清算するために戦い、最後は魂の代償に自らを差し出した。",
+   "live": "実写:『アイアンマン2』(2010)〜『EG』。単独作『ブラック・ウィドウ』(2021)",
+   "keys": [
+    "comic",
+    "live",
+    "anime"
+   ],
+   "tags": {
+    "faction": [
+     "hero"
+    ],
+    "origin": "human",
+    "series": [
+     "mcu"
+    ],
+    "doomsday": false
+   },
+   "enc_id": "black-widow"
+  },
+  {
+   "name": "ブラックパンサー(ティチャラ)",
+   "en": "T'CHALLA",
+   "ini": "BP",
+   "color": "k",
+   "desc": "ワカンダ国王にして黒豹の戦士ティチャラ。「賢い者は橋を架ける」の演説はMCU屈指の名場面。演者チャドウィック・ボーズマンの逝去により物語も王の死を描いた。",
+   "live": "実写:『シビル・ウォー』(2016)→『ブラックパンサー』→追悼の『ワカンダ・フォーエバー』",
+   "keys": [
+    "comic",
+    "live",
+    "anime"
+   ],
+   "tags": {
+    "faction": [
+     "hero"
+    ],
+    "origin": "enhanced",
+    "series": [
+     "mcu"
+    ],
+    "doomsday": false
+   },
+   "enc_id": "black-panther-tchalla"
+  },
+  {
+   "name": "デッドプール",
+   "en": "DEADPOOL",
+   "ini": "DP",
+   "color": "m",
+   "desc": "不死身の傭兵ウェイド・ウィルソン。第4の壁を破って読者・観客に話しかける\"俺ちゃん\"。下品で軽薄で、たまに泣かせる。",
+   "live": "実写:『デッドプール』2部作→『D&W』(2024)でMCU合流",
+   "keys": [
+    "comic",
+    "live",
+    "anime"
+   ],
+   "tags": {
+    "faction": [
+     "antihero"
+    ],
+    "origin": "enhanced",
+    "series": [
+     "fox-xmen",
+     "mcu"
+    ],
+    "doomsday": false
+   },
+   "enc_id": "deadpool"
+  },
+  {
+   "name": "ペッパー・ポッツ",
+   "en": "PEPPER POTTS",
+   "ini": "PP",
+   "color": "y",
+   "desc": "トニーの秘書からスターク社CEO、そして伴侶へ。レスキュー・アーマーで最終決戦にも参戦した、MCUを裏で支え続けた人。",
+   "live": "実写:『アイアンマン』(2008)〜『EG』",
+   "keys": [
+    "comic",
+    "live"
+   ],
+   "tags": {
+    "faction": [
+     "support",
+     "hero"
+    ],
+    "origin": "tech",
+    "series": [
+     "mcu"
+    ],
+    "doomsday": false
+   },
+   "enc_id": "pepper"
+  },
+  {
+   "name": "ウォーマシン",
+   "en": "WAR MACHINE",
+   "ini": "WM",
+   "color": "k",
+   "desc": "トニーの親友ローディ中佐。軍人としての規律とヒーローとしての友情の間に立ち続けた。",
+   "live": "実写:『アイアンマン』(2008)〜。『シークレット・インベージョン』で衝撃の真実も",
+   "keys": [
+    "comic",
+    "live",
+    "anime"
+   ],
+   "tags": {
+    "faction": [
+     "hero"
+    ],
+    "origin": "tech",
+    "series": [
+     "mcu"
+    ],
+    "doomsday": false
+   },
+   "enc_id": "war-machine"
+  },
+  {
+   "name": "ハッピー・ホーガン",
+   "en": "HAPPY HOGAN",
+   "ini": "HH",
+   "color": "c",
+   "desc": "スターク家の運転手兼ボディガード兼、みんなのお目付け役。ピーターの保護者代理としての活躍が愛される。",
+   "live": "実写:『アイアンマン』(2008)〜スパイダーマン3部作",
+   "keys": [
+    "comic",
+    "live"
+   ],
+   "tags": {
+    "faction": [
+     "support"
+    ],
+    "origin": "human",
+    "series": [
+     "mcu"
+    ],
+    "doomsday": false
+   },
+   "enc_id": "happy"
+  },
+  {
+   "name": "ペギー・カーター",
+   "en": "PEGGY CARTER",
+   "ini": "PC",
+   "color": "m",
+   "desc": "戦略科学予備軍の創設者にしてスティーブの想い人。S.H.I.E.L.D.を作った鉄の女。",
+   "live": "実写:『TFA』(2011)→『エージェント・カーター』→『ドゥームズデイ』出演発表済み",
+   "keys": [
+    "comic",
+    "live"
+   ],
+   "tags": {
+    "faction": [
+     "hero"
+    ],
+    "origin": "human",
+    "series": [
+     "mcu"
+    ],
+    "doomsday": true
+   },
+   "enc_id": "peggy"
+  },
+  {
+   "name": "シャロン・カーター",
+   "en": "SHARON CARTER",
+   "ini": "SC",
+   "color": "y",
+   "desc": "ペギーの姪でCIAエージェント。国に尽くして切り捨てられ、闇の顔\"パワーブローカー\"となった。",
+   "live": "実写:『TWS』(2014)→『FATWS』で正体判明",
+   "keys": [
+    "comic",
+    "live"
+   ],
+   "tags": {
+    "faction": [
+     "villain",
+     "support"
+    ],
+    "origin": "human",
+    "series": [
+     "mcu"
+    ],
+    "doomsday": false
+   },
+   "enc_id": "sharon"
+  },
+  {
+   "name": "バロン・ジモ",
+   "en": "BARON ZEMO",
+   "ini": "BZ",
+   "color": "k",
+   "desc": "ソコヴィアの元特殊部隊大佐。超人を憎み、アベンジャーズを「内側から」壊した知性派ヴィラン。",
+   "live": "実写:『シビル・ウォー』(2016)→『FATWS』。ダンスが謎の人気に",
+   "keys": [
+    "comic",
+    "live"
+   ],
+   "tags": {
+    "faction": [
+     "villain"
+    ],
+    "origin": "human",
+    "series": [
+     "mcu"
+    ],
+    "doomsday": false
+   },
+   "enc_id": "zemo"
+  },
+  {
+   "name": "ヴァルキリー",
+   "en": "VALKYRIE",
+   "ini": "VK",
+   "color": "c",
+   "desc": "アスガルドの伝説の戦乙女部隊の生き残り。酒浸りの傭兵から、ニュー・アスガルドの王へ。",
+   "live": "実写:『ラグナロク』(2017)〜『ラブ&サンダー』",
+   "keys": [
+    "comic",
+    "live",
+    "anime"
+   ],
+   "tags": {
+    "faction": [
+     "hero"
+    ],
+    "origin": "cosmic",
+    "series": [
+     "mcu"
+    ],
+    "doomsday": false
+   },
+   "enc_id": "valkyrie"
+  },
+  {
+   "name": "コーグ",
+   "en": "KORG",
+   "ini": "KG",
+   "color": "y",
+   "desc": "岩の種族クロナンの心優しき革命家(失敗)。ソーの相棒枠として和み担当。",
+   "live": "実写:『ラグナロク』(2017)〜",
+   "keys": [
+    "comic",
+    "live"
+   ],
+   "tags": {
+    "faction": [
+     "support",
+     "hero"
+    ],
+    "origin": "cosmic",
+    "series": [
+     "mcu"
+    ],
+    "doomsday": false
+   },
+   "enc_id": "korg"
+  },
+  {
+   "name": "オーディン",
+   "en": "ODIN",
+   "ini": "OD",
+   "color": "k",
+   "desc": "アスガルドの王にして全父。その威光の裏に、征服の歴史とヘラという秘密を隠していた。",
+   "live": "実写:『マイティ・ソー』(2011)〜『ラグナロク』",
+   "keys": [
+    "comic",
+    "live",
+    "anime"
+   ],
+   "tags": {
+    "faction": [
+     "support"
+    ],
+    "origin": "cosmic",
+    "series": [
+     "mcu"
+    ],
+    "doomsday": false
+   },
+   "enc_id": "odin"
+  },
+  {
+   "name": "ヘイムダル",
+   "en": "HEIMDALL",
+   "ini": "HD",
+   "color": "c",
+   "desc": "ビフレストの門番。九つの世界すべてを見通す目を持つ忠義の士。",
+   "live": "実写:『マイティ・ソー』(2011)〜『IW』",
+   "keys": [
+    "comic",
+    "live",
+    "anime"
+   ],
+   "tags": {
+    "faction": [
+     "support"
+    ],
+    "origin": "cosmic",
+    "series": [
+     "mcu"
+    ],
+    "doomsday": false
+   },
+   "enc_id": "heimdall"
+  },
+  {
+   "name": "ジェーン・フォスター",
+   "en": "JANE FOSTER",
+   "ini": "JF",
+   "color": "m",
+   "desc": "天体物理学者にしてソーの元恋人。原作・映画とも、後にムジョルニアに選ばれ\"マイティ・ソー\"となる。",
+   "live": "実写:『マイティ・ソー』(2011)→『ラブ&サンダー』で変身と結末",
+   "keys": [
+    "comic",
+    "live",
+    "anime"
+   ],
+   "tags": {
+    "faction": [
+     "hero"
+    ],
+    "origin": "cosmic",
+    "series": [
+     "mcu"
+    ],
+    "doomsday": false
+   },
+   "enc_id": "jane-foster"
+  },
+  {
+   "name": "ドラックス",
+   "en": "DRAX",
+   "ini": "DX",
+   "color": "y",
+   "desc": "家族をロナンに奪われた\"破壊者\"。比喩が通じない直球すぎる男として、いつしかチームの笑いの中心に。",
+   "live": "実写:GotG3部作",
+   "keys": [
+    "comic",
+    "live",
+    "anime"
+   ],
+   "tags": {
+    "faction": [
+     "hero"
+    ],
+    "origin": "cosmic",
+    "series": [
+     "mcu"
+    ],
+    "doomsday": false
+   },
+   "enc_id": "drax"
+  },
+  {
+   "name": "マンティス",
+   "en": "MANTIS",
+   "ini": "MT",
+   "color": "c",
+   "desc": "触れた相手の感情を読み、眠らせる共感能力者。純真さの塊で、クイルの異父妹と判明。",
+   "live": "実写:『GotG2』(2017)〜",
+   "keys": [
+    "comic",
+    "live",
+    "anime"
+   ],
+   "tags": {
+    "faction": [
+     "hero"
+    ],
+    "origin": "cosmic",
+    "series": [
+     "mcu"
+    ],
+    "doomsday": false
+   },
+   "enc_id": "mantis"
+  },
+  {
+   "name": "ヨンドゥ",
+   "en": "YONDU",
+   "ini": "YD",
+   "color": "m",
+   "desc": "ラヴェジャーズの頭目にしてクイルの育ての親。口笛の矢ヤカのアローで無双する。「あいつは父親かもしれんが、パパは俺だ」。",
+   "live": "実写:『GotG』(2014)→Vol.2の最期は屈指の名場面",
+   "keys": [
+    "comic",
+    "live",
+    "anime"
+   ],
+   "tags": {
+    "faction": [
+     "antihero"
+    ],
+    "origin": "cosmic",
+    "series": [
+     "mcu"
+    ],
+    "doomsday": false
+   },
+   "enc_id": "yondu"
+  },
+  {
+   "name": "ロナン",
+   "en": "RONAN",
+   "ini": "RN",
+   "color": "k",
+   "desc": "クリーの過激派\"アキューザー(告発者)\"。サノスとの契約でオーブを狙った狂信者。",
+   "live": "実写:『GotG』(2014)、『キャプテン・マーベル』",
+   "keys": [
+    "comic",
+    "live",
+    "anime"
+   ],
+   "tags": {
+    "faction": [
+     "villain"
+    ],
+    "origin": "cosmic",
+    "series": [
+     "mcu"
+    ],
+    "doomsday": false
+   },
+   "enc_id": "ronan"
+  },
+  {
+   "name": "エゴ",
+   "en": "EGO",
+   "ini": "EG",
+   "color": "y",
+   "desc": "惑星そのものであるセレスティアル。クイルの実父にして、宇宙を自分で塗り潰そうとした究極の自己中。",
+   "live": "実写:『GotG2』(2017)",
+   "keys": [
+    "comic",
+    "live"
+   ],
+   "tags": {
+    "faction": [
+     "villain"
+    ],
+    "origin": "cosmic",
+    "series": [
+     "mcu"
+    ],
+    "doomsday": false
+   },
+   "enc_id": "ego"
+  },
+  {
+   "name": "ハイ・エボリューショナリー",
+   "en": "HIGH EVOLUTIONARY",
+   "ini": "HE",
+   "color": "m",
+   "desc": "完璧な生命を求めて改造実験を繰り返す狂科学者。ロケットの\"創造主\"にして、GotG屈指の憎まれヴィラン。",
+   "live": "実写:『GotG3』(2023)",
+   "keys": [
+    "comic",
+    "live"
+   ],
+   "tags": {
+    "faction": [
+     "villain"
+    ],
+    "origin": "tech",
+    "series": [
+     "mcu"
+    ],
+    "doomsday": false
+   },
+   "enc_id": "high-evolutionary"
+  },
+  {
+   "name": "エンシェント・ワン",
+   "en": "ANCIENT ONE",
+   "ini": "AO",
+   "color": "c",
+   "desc": "カマー・タージの最高導師。長寿の秘密に闇を抱えながら、ストレンジに道を示した。",
+   "live": "実写:『ドクター・ストレンジ』(2016)、『EG』",
+   "keys": [
+    "comic",
+    "live"
+   ],
+   "tags": {
+    "faction": [
+     "support"
+    ],
+    "origin": "magic",
+    "series": [
+     "mcu"
+    ],
+    "doomsday": false
+   },
+   "enc_id": "ancient-one"
+  },
+  {
+   "name": "モルド",
+   "en": "MORDO",
+   "ini": "MD",
+   "color": "k",
+   "desc": "ストレンジの兄弟子。掟を破る魔術師たちに絶望し、「魔術師が多すぎる」と敵に回った。",
+   "live": "実写:『ドクター・ストレンジ』(2016)。『MoM』は別世界版",
+   "keys": [
+    "comic",
+    "live"
+   ],
+   "tags": {
+    "faction": [
+     "villain",
+     "hero"
+    ],
+    "origin": "magic",
+    "series": [
+     "mcu"
+    ],
+    "doomsday": false
+   },
+   "enc_id": "baron-mordo"
+  },
+  {
+   "name": "ドルマムゥ",
+   "en": "DORMAMMU",
+   "ini": "DM",
+   "color": "k",
+   "desc": "ダーク・ディメンションの支配者。時間の外に生きる貪食者で、「取引に来た」の相手役。",
+   "live": "実写:『ドクター・ストレンジ』(2016)",
+   "keys": [
+    "comic",
+    "live"
+   ],
+   "tags": {
+    "faction": [
+     "villain"
+    ],
+    "origin": "magic",
+    "series": [
+     "mcu"
+    ],
+    "doomsday": false
+   },
+   "enc_id": "dormammu"
+  },
+  {
+   "name": "ヴァルチャー",
+   "en": "VULTURE",
+   "ini": "VU",
+   "color": "y",
+   "desc": "飛行スーツで武器を密売する\"働く父親\"エイドリアン・トゥームス。等身大の悪の造形が絶賛された。",
+   "live": "実写:『ホームカミング』(2017)",
+   "keys": [
+    "comic",
+    "live",
+    "anime"
+   ],
+   "tags": {
+    "faction": [
+     "villain"
+    ],
+    "origin": "tech",
+    "series": [
+     "mcu"
+    ],
+    "doomsday": false
+   },
+   "enc_id": "vulture"
+  },
+  {
+   "name": "ミステリオ",
+   "en": "MYSTERIO",
+   "ini": "MY",
+   "color": "c",
+   "desc": "幻術とドローンで\"ヒーロー\"を演じた稀代のペテン師クエンティン・ベック。死してなおピーターを追い詰めた。",
+   "live": "実写:『FFH』(2019)",
+   "keys": [
+    "comic",
+    "live",
+    "anime"
+   ],
+   "tags": {
+    "faction": [
+     "villain"
+    ],
+    "origin": "tech",
+    "series": [
+     "mcu"
+    ],
+    "doomsday": false
+   },
+   "enc_id": "mysterio"
+  },
+  {
+   "name": "エレクトロ",
+   "en": "ELECTRO",
+   "ini": "EL",
+   "color": "y",
+   "desc": "電気を操るヴィラン、マックス・ディロン。アメイジング版から『NWH』でMCUへ渡ってきた。",
+   "live": "実写:『アメイジング2』→『NWH』(2021)",
+   "keys": [
+    "comic",
+    "live",
+    "anime"
+   ],
+   "tags": {
+    "faction": [
+     "villain"
+    ],
+    "origin": "enhanced",
+    "series": [
+     "raimi-webb",
+     "mcu"
+    ],
+    "doomsday": false
+   },
+   "enc_id": "electro"
+  },
+  {
+   "name": "アボミネーション",
+   "en": "ABOMINATION",
+   "ini": "AB",
+   "color": "k",
+   "desc": "ハルクに対抗して怪物化した軍人ブロンスキー。近年は更生(?)して意外な再登場を重ねる。",
+   "live": "実写:『インクレディブル・ハルク』(2008)→『シャン・チー』→『シー・ハルク』",
+   "keys": [
+    "comic",
+    "live"
+   ],
+   "tags": {
+    "faction": [
+     "villain",
+     "antihero"
+    ],
+    "origin": "enhanced",
+    "series": [
+     "mcu",
+     "legacy"
+    ],
+    "doomsday": false
+   },
+   "enc_id": "abomination"
+  },
+  {
+   "name": "レッドハルク",
+   "en": "RED HULK",
+   "ini": "RH",
+   "color": "m",
+   "desc": "サディアス・ロス。ハルクを追った将軍が国防長官、大統領へ——そして自身が赤い怪物と化した。",
+   "live": "実写:ロスは『インクレディブル・ハルク』(2008)から登場。変貌は『BNW』(2025)",
+   "keys": [
+    "comic",
+    "live"
+   ],
+   "tags": {
+    "faction": [
+     "villain",
+     "antihero"
+    ],
+    "origin": "enhanced",
+    "series": [
+     "mcu",
+     "legacy"
+    ],
+    "doomsday": false
+   },
+   "enc_id": "red-hulk"
+  },
+  {
+   "name": "キルモンガー",
+   "en": "KILLMONGER",
+   "ini": "KM",
+   "color": "k",
+   "desc": "ワカンダに見捨てられた従兄エリック。その怒りは正しく、手段は誤っていた——ティチャラの思想を変えた男。",
+   "live": "実写:『ブラックパンサー』(2018)",
+   "keys": [
+    "comic",
+    "live",
+    "anime"
+   ],
+   "tags": {
+    "faction": [
+     "villain"
+    ],
+    "origin": "enhanced",
+    "series": [
+     "mcu"
+    ],
+    "doomsday": false
+   },
+   "enc_id": "killmonger"
+  },
+  {
+   "name": "エムバク",
+   "en": "M'BAKU",
+   "ini": "MB",
+   "color": "y",
+   "desc": "ジャバリ族の長。ワカンダ本流への皮肉屋にして、危機には必ず駆けつける漢気の人。",
+   "live": "実写:『ブラックパンサー』(2018)〜→『ドゥームズデイ』",
+   "keys": [
+    "comic",
+    "live"
+   ],
+   "tags": {
+    "faction": [
+     "hero"
+    ],
+    "origin": "human",
+    "series": [
+     "mcu"
+    ],
+    "doomsday": true
+   },
+   "enc_id": "mbaku"
+  },
+  {
+   "name": "ワスプ",
+   "en": "WASP",
+   "ini": "WA",
+   "color": "m",
+   "desc": "ホープ・ヴァン・ダイン。翅とブラスターを備えた2代目ワスプで、戦闘力はスコットより上との呼び声。",
+   "live": "実写:『アントマン』(2015)→『&ワスプ』で襲名",
+   "keys": [
+    "comic",
+    "live",
+    "anime"
+   ],
+   "tags": {
+    "faction": [
+     "hero"
+    ],
+    "origin": "tech",
+    "series": [
+     "mcu"
+    ],
+    "doomsday": false
+   },
+   "enc_id": "wasp-hope"
+  },
+  {
+   "name": "ハンク・ピム",
+   "en": "HANK PYM",
+   "ini": "HP",
+   "color": "c",
+   "desc": "ピム粒子の発明者にして初代アントマン。皮肉屋の天才で、スタークとは犬猿の仲。原作ではウルトロンの生みの親。",
+   "live": "実写:『アントマン』(2015)〜",
+   "keys": [
+    "comic",
+    "live",
+    "anime"
+   ],
+   "tags": {
+    "faction": [
+     "hero"
+    ],
+    "origin": "tech",
+    "series": [
+     "mcu"
+    ],
+    "doomsday": false
+   },
+   "enc_id": "hank-pym"
+  },
+  {
+   "name": "ジャネット・ヴァン・ダイン",
+   "en": "JANET VAN DYNE",
+   "ini": "JV",
+   "color": "y",
+   "desc": "初代ワスプ。量子世界に30年囚われ、カーンの秘密を抱えて生還した。",
+   "live": "実写:『アントマン&ワスプ』(2018)→『クアントマニア』",
+   "keys": [
+    "comic",
+    "live"
+   ],
+   "tags": {
+    "faction": [
+     "hero"
+    ],
+    "origin": "tech",
+    "series": [
+     "mcu"
+    ],
+    "doomsday": false
+   },
+   "enc_id": "janet"
+  },
+  {
+   "name": "キャシー・ラング",
+   "en": "CASSIE LANG",
+   "ini": "CL",
+   "color": "c",
+   "desc": "スコットの愛娘。父譲りの正義感で自作スーツを開発し、量子世界の戦いに参加した。",
+   "live": "実写:『アントマン』(2015)〜『クアントマニア』で本格参戦",
+   "keys": [
+    "comic",
+    "live"
+   ],
+   "tags": {
+    "faction": [
+     "hero"
+    ],
+    "origin": "tech",
+    "series": [
+     "mcu"
+    ],
+    "doomsday": false
+   },
+   "enc_id": "cassie"
+  },
+  {
+   "name": "征服者カーン",
+   "en": "KANG",
+   "ini": "KN",
+   "color": "k",
+   "desc": "全時間軸に無数に存在する征服者。あらゆる時代を支配する男は、MCUの\"次の脅威\"のはずだった——現在その扱いは宙に浮いている。",
+   "live": "実写:『ロキ』S1(在り続ける者)→『クアントマニア』",
+   "keys": [
+    "comic",
+    "live",
+    "anime"
+   ],
+   "tags": {
+    "faction": [
+     "villain"
+    ],
+    "origin": "tech",
+    "series": [
+     "mcu"
+    ],
+    "doomsday": false
+   },
+   "enc_id": "kang"
+  },
+  {
+   "name": "レッド・ガーディアン",
+   "en": "RED GUARDIAN",
+   "ini": "RG",
+   "color": "m",
+   "desc": "ソ連版キャプテン・アメリカを名乗る豪傑アレクセイ。イェレーナとナターシャの\"父\"。",
+   "live": "実写:『ブラック・ウィドウ』(2021)→『サンダーボルツ*』→『ドゥームズデイ』",
+   "keys": [
+    "comic",
+    "live"
+   ],
+   "tags": {
+    "faction": [
+     "hero"
+    ],
+    "origin": "enhanced",
+    "series": [
+     "mcu"
+    ],
+    "doomsday": true
+   },
+   "enc_id": "red-guardian"
+  },
+  {
+   "name": "ゴースト",
+   "en": "GHOST",
+   "ini": "GH",
+   "color": "c",
+   "desc": "実体が安定しない量子事故の犠牲者エイヴァ。ヴィランからニュー・アベンジャーズへ。",
+   "live": "実写:『アントマン&ワスプ』(2018)→『サンダーボルツ*』",
+   "keys": [
+    "comic",
+    "live"
+   ],
+   "tags": {
+    "faction": [
+     "antihero",
+     "villain"
+    ],
+    "origin": "enhanced",
+    "series": [
+     "mcu"
+    ],
+    "doomsday": true
+   },
+   "enc_id": "ghost"
+  },
+  {
+   "name": "タスクマスター",
+   "en": "TASKMASTER",
+   "ini": "TM",
+   "color": "k",
+   "desc": "見た動きを完全に模倣する戦闘技術の怪物。レッドルームの犠牲者アントニアとして再解釈された。",
+   "live": "実写:『ブラック・ウィドウ』(2021)→『サンダーボルツ*』",
+   "keys": [
+    "comic",
+    "live",
+    "anime"
+   ],
+   "tags": {
+    "faction": [
+     "villain",
+     "antihero"
+    ],
+    "origin": "enhanced",
+    "series": [
+     "mcu"
+    ],
+    "doomsday": false
+   },
+   "enc_id": "taskmaster"
+  },
+  {
+   "name": "ヴァレンティーナ",
+   "en": "VALENTINA",
+   "ini": "VA",
+   "color": "m",
+   "desc": "CIA長官にして寝業師、ヴァル。はぐれ者を飼い集め、サンダーボルツを\"ニュー・アベンジャーズ\"に仕立てた張本人。",
+   "live": "実写:『FATWS』(2021)〜『サンダーボルツ*』",
+   "keys": [
+    "comic",
+    "live"
+   ],
+   "tags": {
+    "faction": [
+     "villain"
+    ],
+    "origin": "human",
+    "series": [
+     "mcu"
+    ],
+    "doomsday": false
+   },
+   "enc_id": "valentina"
+  },
+  {
+   "name": "ホアキン・トレス",
+   "en": "JOAQUIN TORRES",
+   "ini": "JT",
+   "color": "y",
+   "desc": "サムから翼を継いだ2代目ファルコン。空軍上がりの明るい若手。",
+   "live": "実写:『FATWS』(2021)→『BNW』で襲名→『ドゥームズデイ』",
+   "keys": [
+    "comic",
+    "live"
+   ],
+   "tags": {
+    "faction": [
+     "hero"
+    ],
+    "origin": "tech",
+    "series": [
+     "mcu"
+    ],
+    "doomsday": true
+   },
+   "enc_id": "joaquin"
+  },
+  {
+   "name": "イザイア・ブラッドリー",
+   "en": "ISAIAH BRADLEY",
+   "ini": "IB",
+   "color": "k",
+   "desc": "国家に血清実験の犠牲にされ、歴史から消された黒人のスーパーソルジャー。サムがキャップを継ぐ意味を定めた人。",
+   "live": "実写:『FATWS』(2021)→『BNW』",
+   "keys": [
+    "comic",
+    "live"
+   ],
+   "tags": {
+    "faction": [
+     "hero"
+    ],
+    "origin": "enhanced",
+    "series": [
+     "mcu"
+    ],
+    "doomsday": false
+   },
+   "enc_id": "isaiah"
+  },
+  {
+   "name": "アイアンハート",
+   "en": "IRONHEART",
+   "ini": "IH",
+   "color": "m",
+   "desc": "シカゴの天才少女リリ・ウィリアムズ。自作アーマーはトニーの遺産に並ぶ可能性を秘めるが、メフィストとの取引という影を背負った。",
+   "live": "実写:『ワカンダ・フォーエバー』(2022)→『アイアンハート』(2025)",
+   "keys": [
+    "comic",
+    "live",
+    "anime"
+   ],
+   "tags": {
+    "faction": [
+     "hero"
+    ],
+    "origin": "tech",
+    "series": [
+     "mcu"
+    ],
+    "doomsday": false
+   },
+   "enc_id": "ironheart"
+  },
+  {
+   "name": "フード",
+   "en": "THE HOOD",
+   "ini": "HO",
+   "color": "k",
+   "desc": "悪魔の力を宿すフードを纏う犯罪者パーカー・ロビンス。原作では犯罪界の顔役にまで上り詰めた。",
+   "live": "実写:『アイアンハート』(2025)",
+   "keys": [
+    "comic",
+    "live"
+   ],
+   "tags": {
+    "faction": [
+     "villain"
+    ],
+    "origin": "magic",
+    "series": [
+     "mcu"
+    ],
+    "doomsday": false
+   },
+   "enc_id": "the-hood"
+  },
+  {
+   "name": "メフィスト",
+   "en": "MEPHISTO",
+   "ini": "MP",
+   "color": "k",
+   "desc": "魂の取引を持ちかける地獄次元の支配者。長年の登場予想がついに実現した、MCUの新たな火種。",
+   "live": "実写:『アイアンハート』(2025)で正式登場",
+   "keys": [
+    "comic",
+    "live"
+   ],
+   "tags": {
+    "faction": [
+     "villain"
+    ],
+    "origin": "magic",
+    "series": [
+     "mcu"
+    ],
+    "doomsday": false
+   },
+   "enc_id": "mephisto"
+  },
+  {
+   "name": "スー・ストーム",
+   "en": "SUE STORM",
+   "ini": "SU",
+   "color": "c",
+   "desc": "インビジブル・ウーマン。FFの精神的支柱にして、原作ではチーム最強との呼び声も高い。",
+   "live": "実写:『ファースト・ステップ』(2025)→『ドゥームズデイ』",
+   "keys": [
+    "comic",
+    "live",
+    "anime"
+   ],
+   "tags": {
+    "faction": [
+     "hero"
+    ],
+    "origin": "enhanced",
+    "series": [
+     "mcu",
+     "old-ff"
+    ],
+    "doomsday": true
+   },
+   "enc_id": "invisible-woman"
+  },
+  {
+   "name": "ヒューマン・トーチ",
+   "en": "HUMAN TORCH",
+   "ini": "HT",
+   "color": "y",
+   "desc": "「フレイム・オン!」で燃え上がるジョニー・ストーム。軽薄に見えて、土壇場で一番熱い男。",
+   "live": "実写:『ファースト・ステップ』(2025)→『ドゥームズデイ』",
+   "keys": [
+    "comic",
+    "live",
+    "anime"
+   ],
+   "tags": {
+    "faction": [
+     "hero"
+    ],
+    "origin": "enhanced",
+    "series": [
+     "mcu",
+     "old-ff"
+    ],
+    "doomsday": true
+   },
+   "enc_id": "human-torch"
+  },
+  {
+   "name": "ザ・シング",
+   "en": "THE THING",
+   "ini": "TG",
+   "color": "m",
+   "desc": "岩の巨躯に変わってしまった操縦士ベン・グリム。「クロバリン・タイム!」の雄叫びと、誰より優しい心。",
+   "live": "実写:『ファースト・ステップ』(2025)→『ドゥームズデイ』",
+   "keys": [
+    "comic",
+    "live",
+    "anime"
+   ],
+   "tags": {
+    "faction": [
+     "hero"
+    ],
+    "origin": "enhanced",
+    "series": [
+     "mcu",
+     "old-ff"
+    ],
+    "doomsday": true
+   },
+   "enc_id": "the-thing"
+  },
+  {
+   "name": "フランクリン・リチャーズ",
+   "en": "FRANKLIN RICHARDS",
+   "ini": "FR",
+   "color": "y",
+   "desc": "リードとスーの息子。原作では宇宙を創れる最上位の現実改変者で、赤ん坊の彼を巡って『ドゥームズデイ』が動くと目される。",
+   "live": "実写:『ファースト・ステップ』(2025)で誕生",
+   "keys": [
+    "comic",
+    "live",
+    "anime"
+   ],
+   "tags": {
+    "faction": [
+     "hero"
+    ],
+    "origin": "cosmic",
+    "series": [
+     "mcu"
+    ],
+    "doomsday": true
+   },
+   "enc_id": "franklin-richards"
+  },
+  {
+   "name": "モニカ・ランボー",
+   "en": "MONICA RAMBEAU",
+   "ini": "MR",
+   "color": "c",
+   "desc": "マリアの娘で、エネルギーを操る能力者に。キャロルへの複雑な想いを抱えた大人の物語を担う。",
+   "live": "実写:『キャプテン・マーベル』(子供時代)→『ワンダヴィジョン』→『ザ・マーベルズ』",
+   "keys": [
+    "comic",
+    "live",
+    "anime"
+   ],
+   "tags": {
+    "faction": [
+     "hero"
+    ],
+    "origin": "enhanced",
+    "series": [
+     "mcu"
+    ],
+    "doomsday": false
+   },
+   "enc_id": "monica-rambeau"
+  },
+  {
+   "name": "アガサ・ハークネス",
+   "en": "AGATHA HARKNESS",
+   "ini": "AH",
+   "color": "m",
+   "desc": "数百年を生きる魔女。「ずっとアガサだった」の歌で一世を風靡し、主演作で愛すべき詐欺師の顔を見せた。",
+   "live": "実写:『ワンダヴィジョン』(2021)→『アガサ』(2024)",
+   "keys": [
+    "comic",
+    "live",
+    "anime"
+   ],
+   "tags": {
+    "faction": [
+     "antihero",
+     "villain"
+    ],
+    "origin": "magic",
+    "series": [
+     "mcu"
+    ],
+    "doomsday": false
+   },
+   "enc_id": "agatha"
+  },
+  {
+   "name": "ウィッカン",
+   "en": "WICCAN",
+   "ini": "WC",
+   "color": "y",
+   "desc": "ワンダの息子ビリー。魔術の才を受け継ぎ、『アガサ』で覚醒した。ヤング・アベンジャーズの中核候補。",
+   "live": "実写:『ワンダヴィジョン』→『アガサ』(2024)で正体判明",
+   "keys": [
+    "comic",
+    "live",
+    "anime"
+   ],
+   "tags": {
+    "faction": [
+     "hero"
+    ],
+    "origin": "magic",
+    "series": [
+     "mcu"
+    ],
+    "doomsday": false
+   },
+   "enc_id": "wiccan"
+  },
+  {
+   "name": "エコー",
+   "en": "ECHO",
+   "ini": "EC",
+   "color": "k",
+   "desc": "音の聞こえない世界で相手の動きを完全に写し取る戦士マヤ・ロペス。キングピンの\"姪\"として育てられた。",
+   "live": "実写:『ホークアイ』(2021)→『エコー』(2024・単独OK)",
+   "keys": [
+    "comic",
+    "live"
+   ],
+   "tags": {
+    "faction": [
+     "antihero",
+     "hero"
+    ],
+    "origin": "human",
+    "series": [
+     "mcu"
+    ],
+    "doomsday": false
+   },
+   "enc_id": "echo"
+  },
+  {
+   "name": "カレン・ペイジ",
+   "en": "KAREN PAGE",
+   "ini": "KP2",
+   "color": "y",
+   "desc": "ネルソン&マードック事務所の秘書から記者へ。マットの秘密と最も深く共に生きた人。",
+   "live": "実写:『デアデビル』S1〜→『ボーン・アゲイン』",
+   "keys": [
+    "comic",
+    "live"
+   ],
+   "tags": {
+    "faction": [
+     "support"
+    ],
+    "origin": "human",
+    "series": [
+     "defenders",
+     "mcu"
+    ],
+    "doomsday": false
+   },
+   "enc_id": "karen-page"
+  },
+  {
+   "name": "フォギー・ネルソン",
+   "en": "FOGGY NELSON",
+   "ini": "FN",
+   "color": "c",
+   "desc": "マットの親友にして相棒弁護士。庶民派の良心。『ボーン・アゲイン』冒頭の悲劇はファンを震撼させた。",
+   "live": "実写:『デアデビル』S1〜→『ボーン・アゲイン』S1冒頭",
+   "keys": [
+    "comic",
+    "live"
+   ],
+   "tags": {
+    "faction": [
+     "support"
+    ],
+    "origin": "human",
+    "series": [
+     "defenders",
+     "mcu"
+    ],
+    "doomsday": false
+   },
+   "enc_id": "foggy-nelson"
+  },
+  {
+   "name": "ブルズアイ",
+   "en": "BULLSEYE",
+   "ini": "BE",
+   "color": "k",
+   "desc": "投げた物を百発百中で急所に当てる暗殺者ディンズデール。デアデビル最凶の宿敵のひとり。",
+   "live": "実写:『デアデビル』S3→『ボーン・アゲイン』",
+   "keys": [
+    "comic",
+    "live"
+   ],
+   "tags": {
+    "faction": [
+     "villain"
+    ],
+    "origin": "human",
+    "series": [
+     "defenders",
+     "legacy",
+     "mcu"
+    ],
+    "doomsday": false
+   },
+   "enc_id": "bullseye"
+  },
+  {
+   "name": "キルグレイブ",
+   "en": "KILGRAVE",
+   "ini": "KV",
+   "color": "m",
+   "desc": "声だけで人を意のままに操る男。ジェシカのトラウマの根源で、\"最も恐ろしいMCUヴィラン\"の常連。",
+   "live": "実写:『ジェシカ・ジョーンズ』S1(2015)",
+   "keys": [
+    "comic",
+    "live"
+   ],
+   "tags": {
+    "faction": [
+     "villain"
+    ],
+    "origin": "enhanced",
+    "series": [
+     "defenders"
+    ],
+    "doomsday": false
+   },
+   "enc_id": "kilgrave"
+  },
+  {
+   "name": "シー・ハルク",
+   "en": "SHE-HULK",
+   "ini": "SH2",
+   "color": "y",
+   "desc": "弁護士ジェニファー・ウォルターズ。ハルクの従妹で、第4の壁を破る自由さが持ち味。",
+   "live": "実写:『シー・ハルク』(2022)",
+   "keys": [
+    "comic",
+    "live",
+    "anime"
+   ],
+   "tags": {
+    "faction": [
+     "hero"
+    ],
+    "origin": "enhanced",
+    "series": [
+     "mcu"
+    ],
+    "doomsday": false
+   },
+   "enc_id": "she-hulk"
+  },
+  {
+   "name": "ウェンウー",
+   "en": "WENWU",
+   "ini": "WU",
+   "color": "k",
+   "desc": "テン・リングスを千年率いた男にしてシャン・チーの父。愛と支配が分かちがたく絡んだ、MCU屈指の複雑なヴィラン。",
+   "live": "実写:『シャン・チー』(2021)",
+   "keys": [
+    "comic",
+    "live"
+   ],
+   "tags": {
+    "faction": [
+     "villain"
+    ],
+    "origin": "enhanced",
+    "series": [
+     "mcu"
+    ],
+    "doomsday": false
+   },
+   "enc_id": "wenwu"
+  },
+  {
+   "name": "カサンドラ・ノヴァ",
+   "en": "CASSANDRA NOVA",
+   "ini": "CN",
+   "color": "m",
+   "desc": "プロフェッサーXの双子の悪性存在。原作ではジェノーシャ虐殺の首謀者という最重量級ヴィラン。",
+   "live": "実写:『D&W』(2024)でヴォイドの女王として登場",
+   "keys": [
+    "comic",
+    "live",
+    "anime"
+   ],
+   "tags": {
+    "faction": [
+     "villain"
+    ],
+    "origin": "mutant",
+    "series": [
+     "mcu"
+    ],
+    "doomsday": false
+   },
+   "enc_id": "cassandra-nova"
+  },
+  {
+   "name": "ビースト",
+   "en": "BEAST",
+   "ini": "BS",
+   "color": "c",
+   "desc": "青い獣の姿を持つ天才科学者ハンク・マッコイ。知性と獣性の同居がテーマの古参X-MAN。",
+   "live": "実写:旧フォックス版→『ドゥームズデイ』でグラマー版復帰",
+   "keys": [
+    "comic",
+    "live",
+    "anime"
+   ],
+   "tags": {
+    "faction": [
+     "hero"
+    ],
+    "origin": "mutant",
+    "series": [
+     "fox-xmen",
+     "mcu"
+    ],
+    "doomsday": true
+   },
+   "enc_id": "beast"
+  },
+  {
+   "name": "ナイトクローラー",
+   "en": "NIGHTCRAWLER",
+   "ini": "NC",
+   "color": "m",
+   "desc": "バンフ!の音とともに瞬間移動する青い悪魔——にして誰より敬虔で陽気な心の持ち主カート・ワグナー。",
+   "live": "実写:『X-MEN2』(2003)→23年ぶりに『ドゥームズデイ』で復帰",
+   "keys": [
+    "comic",
+    "live",
+    "anime"
+   ],
+   "tags": {
+    "faction": [
+     "hero"
+    ],
+    "origin": "mutant",
+    "series": [
+     "fox-xmen"
+    ],
+    "doomsday": true
+   },
+   "enc_id": "nightcrawler"
+  },
+  {
+   "name": "ミスティーク",
+   "en": "MYSTIQUE",
+   "ini": "MQ",
+   "color": "k",
+   "desc": "誰にでも変身する青い肌のミュータント、レイヴン。敵とも味方とも言い切れない掴めなさが本体。",
+   "live": "実写:旧フォックス版→『ドゥームズデイ』でローミン版復帰",
+   "keys": [
+    "comic",
+    "live",
+    "anime"
+   ],
+   "tags": {
+    "faction": [
+     "antihero",
+     "villain"
+    ],
+    "origin": "mutant",
+    "series": [
+     "fox-xmen"
+    ],
+    "doomsday": true
+   },
+   "enc_id": "mystique"
+  }
+ ]
 }

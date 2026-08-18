@@ -1,0 +1,60 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: encyclopedia.entries
+  size: 1
+  alias: ch
+  addAllPagesToCollections: true
+permalink: "/characters/{{ ch.id }}/"
+eleventyComputed:
+  title: "{{ ch.name }}とは|コミックと実写の違い・演者別解説"
+  description: "{{ ch.name }}({{ ch.en }})を解説。{{ ch.comic | truncate(80, true, '…') }}"
+---
+<section data-page="chara-detail">
+  <div class="wrap">
+    <p class="crumb"><a href="{{ '/' | url }}">ホーム</a> › <a href="{{ '/characters/' | url }}">キャラ検索</a> › {{ ch.name }}</p>
+
+    <div class="sec-head">
+      <span class="en">{{ ch.en }}</span>
+      <h2 class="chara-name-h">{{ ch.name }}</h2>
+    </div>
+
+    <div class="enc-facts">
+      <div><b>本名</b>{{ ch.real_name }}</div>
+      <div><b>初登場</b>{{ ch.first_appearance }}</div>
+      <div><b>原作者</b>{{ ch.creators }}</div>
+      <div><b>能力</b>{{ ch.power }}</div>
+    </div>
+
+    <div class="enc-body article-body">
+      <h3>📖 コミックでは</h3>
+      <p>{{ ch.comic }}</p>
+
+      <h3>🎬 実写では</h3>
+      {%- for v in ch.live_versions %}
+      {%- if v.ver == '実写未登場' or '未登場' in v.ver %}
+      <div class="enc-ver enc-ver-none">
+        <p class="enc-ver-head"><b>{{ v.ver }}</b>{% if v.years %} <span>{{ v.years }}</span>{% endif %}</p>
+        <p>{{ v.text }}</p>
+      </div>
+      {%- else %}
+      <div class="enc-ver">
+        <p class="enc-ver-head"><b>{{ v.ver }}</b>{% if v.actor %} <span>演: {{ v.actor }}</span>{% endif %}{% if v.years %} <span>{{ v.years }}</span>{% endif %}</p>
+        <p>{{ v.text }}</p>
+      </div>
+      {%- endif %}
+      {%- endfor %}
+
+      {%- if ch.anime %}
+      <h3>アニメでは</h3>
+      <p>{{ ch.anime }}</p>
+      {%- endif %}
+
+      {%- if ch.note %}
+      <p class="term-note">{{ ch.note }}</p>
+      {%- endif %}
+    </div>
+
+    <p class="enc-back"><a href="{{ '/characters/' | url }}">← キャラ検索に戻る</a></p>
+  </div>
+</section>

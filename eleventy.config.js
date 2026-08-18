@@ -31,6 +31,8 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addFilter('yen', (n) => (n == null ? '' : Number(n).toLocaleString('ja-JP')));
 
+  eleventyConfig.addFilter('pluck', (arr, key) => (arr || []).map((x) => x[key]));
+
   return {
     dir: {
       input: 'src',

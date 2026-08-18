@@ -1,0 +1,56 @@
+---
+layout: layouts/base.njk
+title: 『アベンジャーズ/ドゥームズデイ』登場キャラまとめ|参戦35キャラの原作解説
+description: 2026年12月18日公開『アベンジャーズ/ドゥームズデイ』の参戦キャラクター35体を一覧で解説。各キャラの詳細ページでコミックと実写の違い・演者情報まで。予習に役立つ関連記事つき。
+permalink: /characters/doomsday/
+---
+{% from "partials/chara-card.njk" import charaCard %}
+<section data-page="chara">
+  <div class="wrap">
+    <p class="crumb"><a href="{{ '/' | url }}">ホーム</a> › <a href="{{ '/characters/' | url }}">キャラ検索</a> › ドゥームズデイ特集</p>
+    <div class="sec-head">
+      <span class="en">DOOMSDAY SPECIAL</span>
+      <h2 class="chara-name-h">🔥『アベンジャーズ/ドゥームズデイ』登場キャラまとめ</h2>
+      <p>2026年12月18日公開『アベンジャーズ/ドゥームズデイ』の参戦・関連キャラクターを一覧化。カードを押すと、コミックと実写の違い・演者別解説つきの詳細ページが開きます。</p>
+    </div>
+
+    <div class="sec-head" style="margin-top:8px;">
+      <span class="en">READ MORE</span>
+      <h3 class="offtime-head">あわせて読みたい予習記事</h3>
+    </div>
+    <div class="article-list" style="margin-bottom:40px;">
+      <a class="tool" href="{{ '/articles/doomsday-cast/' | url }}">
+        <span class="icon m">✎</span>
+        <div><h3>登場キャラ&キャスト総まとめ</h3><p>発表済みキャストと演じるキャラを一覧で整理</p></div>
+      </a>
+      <a class="tool" href="{{ '/articles/doomsday-official-15/' | url }}">
+        <span class="icon c">✎</span>
+        <div><h3>【公式】予習15作品を徹底解説</h3><p>なぜこの作品が選ばれたのかを1本ずつ解説</p></div>
+      </a>
+      <a class="tool" href="{{ '/articles/fox-xmen-guide/' | url }}">
+        <span class="icon y">✎</span>
+        <div><h3>旧フォックス版X-MEN全13作の歩き方</h3><p>ドゥームズデイ予習で何を観ればいいのか</p></div>
+      </a>
+    </div>
+
+    {%- set f = encyclopedia.meta.filters %}
+    {%- set doomCardIds = charaCards.cards | pluck("enc_id") %}
+    <div class="chara-grid">
+      {%- for c in charaCards.cards %}
+      {%- if c.tags.doomsday %}
+      {{ charaCard(c, f) }}
+      {%- endif %}
+      {%- endfor %}
+      {#- カード未作成だが百科でdoomsday対象のキャラは簡易カードで補完 -#}
+      {%- for ch in encyclopedia.entries %}
+      {%- if ch.tags.doomsday and (ch.id not in doomCardIds) %}
+      <a class="chara chara-mini" href="{{ ('/characters/' + ch.id + '/') | url }}">
+        <div class="chara-top"><span class="badge k">{{ ch.en | truncate(2, true, '') }}</span><h3>{{ ch.name }}<small>{{ ch.en }}</small></h3></div>
+        <p class="chara-live">百科で詳細を読む →</p>
+        <div class="chips"><span class="chip doom">🔥ドゥームズデイ</span></div>
+      </a>
+      {%- endif %}
+      {%- endfor %}
+    </div>
+  </div>
+</section>
