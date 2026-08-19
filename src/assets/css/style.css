@@ -835,3 +835,8 @@
   .future-card h4 { font-size: 0.95rem; font-weight: 900; }
   .future-date { font-size: 0.75rem; font-weight: 700; color: var(--magenta); margin: 6px 0; }
   .future-note { font-size: 0.78rem; color: #4a4238; }
+
+  /* ---------- アンカー広告(画面下端固定)用の余白 ----------
+     広告がフッター末尾の行に重ならないよう、フッター下部に確保 */
+  footer { padding-bottom: 130px; }
+  @media (max-width: 640px) { footer { padding-bottom: 110px; } }
