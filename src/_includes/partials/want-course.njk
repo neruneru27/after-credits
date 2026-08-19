@@ -1,0 +1,28 @@
+{#- 逆算視聴ガイドの1コース分。works=mcu.works -#}
+{%- macro courseBlock(cid, c, works, guideId) -%}
+<div class="course-pane" id="cp-{{ guideId }}-{{ cid }}"{% if cid != 'take' %} hidden{% endif %}>
+  <p class="course-meta"><span class="course-time">{{ c.time }}</span>{{ c.desc }}</p>
+  {%- if c.items.length %}
+  <ol class="want-list">
+    {%- for it in c.items %}
+    <li class="want-item{% if it.verdict %} v-{{ it.verdict }}{% endif %}"{% if it.work_id %} data-id="{{ it.work_id }}"{% endif %}>
+      <p class="want-title">
+        {%- if it.work_id -%}
+        <a href="{{ ('/live/' + it.work_id + '/') | url }}">{{ it.work_id | workTitle(works) }}</a>
+        {%- elif it.nolink -%}
+        <span class="want-nolink">{{ it.title }}</span>
+        {%- else -%}
+        <a href="{{ '/live/#other-series' | url }}">{{ it.title }}</a>
+        {%- endif -%}
+        {%- if it.verdict %}<span class="verdict {{ it.verdict }}">{{ {'recommend':'特に推奨','optional':'好みで','skip':'外してOK'}[it.verdict] }}</span>{% endif %}
+      </p>
+      <p class="want-why">{{ it.why }}</p>
+    </li>
+    {%- endfor %}
+  </ol>
+  <p class="want-remain" data-course="{{ cid }}" data-total="{{ c.items.length }}"></p>
+  {%- else %}
+  <p class="want-none">🎉 予習不要!<span>この作品はいきなり観ても大丈夫です。</span></p>
+  {%- endif %}
+</div>
+{%- endmacro -%}

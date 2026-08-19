@@ -840,3 +840,52 @@
      広告がフッター末尾の行に重ならないよう、フッター下部に確保 */
   footer { padding-bottom: 130px; }
   @media (max-width: 640px) { footer { padding-bottom: 110px; } }
+
+  /* ---------- 逆算視聴ガイド ---------- */
+  .want-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px; }
+  .want-card {
+    background: #fff; border: 3px solid var(--ink); box-shadow: 4px 4px 0 var(--ink);
+    padding: 14px 16px; text-decoration: none; color: var(--ink);
+    display: flex; flex-direction: column; gap: 6px; transition: transform 0.15s, box-shadow 0.15s;
+  }
+  .want-card:hover { transform: translate(-2px,-2px); box-shadow: 7px 7px 0 var(--ink); }
+  .want-card.hide { display: none; }
+  .want-card h3 { font-size: 0.95rem; font-weight: 900; line-height: 1.5; }
+  .want-card-catch { font-size: 0.78rem; color: #4a4238; flex: 1; }
+  .want-card-times { font-size: 0.72rem; font-weight: 900; color: var(--magenta); border-top: 2px dashed var(--paper-dark); padding-top: 6px; }
+  .want-catch { font-size: 0.88rem; font-weight: 900; color: var(--magenta); margin-top: 10px; }
+  .course-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
+  .course-tab { display: flex; flex-direction: column; align-items: flex-start; line-height: 1.4; }
+  .course-tab span { font-size: 0.68rem; font-weight: 700; opacity: 0.8; }
+  .course-pane { background: #fff; border: 3px solid var(--ink); box-shadow: 5px 5px 0 var(--ink); padding: 18px 20px; }
+  .course-meta { font-size: 0.85rem; margin-bottom: 14px; }
+  .course-time {
+    display: inline-block; background: var(--ink); color: var(--yellow);
+    font-weight: 900; font-size: 0.75rem; padding: 2px 10px; margin-right: 10px;
+  }
+  .want-list { list-style: none; counter-reset: wl; margin: 0; }
+  .want-item {
+    counter-increment: wl; position: relative; padding: 10px 0 10px 42px;
+    border-bottom: 2px dashed var(--paper-dark);
+  }
+  .want-item::before {
+    content: counter(wl); position: absolute; left: 0; top: 10px;
+    width: 28px; height: 28px; border-radius: 50%; border: 2px solid var(--ink);
+    background: var(--paper); font-family: var(--font-en); font-size: 0.9rem;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .want-item.done::before { content: '✓'; background: var(--cyan); color: #fff; font-family: var(--font-body); font-weight: 900; }
+  .want-item.done .want-title a, .want-item.done .want-nolink { text-decoration: line-through; opacity: 0.55; }
+  .want-item.v-skip { opacity: 0.55; }
+  .want-title { font-size: 0.9rem; font-weight: 700; }
+  .want-title a { color: var(--ink); }
+  .want-why { font-size: 0.78rem; color: #4a4238; margin-top: 2px; }
+  .want-nolink { color: #6b5f52; }
+  .verdict { display: inline-block; font-size: 0.68rem; font-weight: 900; border: 1px solid var(--ink); padding: 0 8px; margin-left: 8px; }
+  .verdict.recommend { background: var(--yellow); }
+  .verdict.optional { background: #fff; color: #6b5f52; }
+  .verdict.skip { background: var(--paper-dark); color: #5a5245; }
+  .want-remain { display: none; margin-top: 14px; font-size: 0.82rem; font-weight: 900; color: var(--cyan); }
+  .want-remain.show { display: block; }
+  .want-none { font-size: 1.05rem; font-weight: 900; color: var(--magenta); padding: 10px 0; }
+  .want-none span { display: block; font-size: 0.82rem; font-weight: 700; color: #4a4238; margin-top: 4px; }

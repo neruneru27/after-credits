@@ -307,6 +307,48 @@ let encIds = new Set();
   }
 }
 
+// ---- wantGuides(「〇〇が観たい!」逆算視聴ガイド・75本) ----
+{
+  const wg = load('wantGuides.json');
+  const wids = new Set(load('mcu.json').works.map((w) => w.id));
+  const o = load('otherSeries.json');
+  const extTitles = new Set([
+    ...o.series.flatMap((s) => s.items.map((i) => i.title)),
+    ...o.defenders_order.items.map((i) => i.title),
+  ]);
+  if (wg.guides.length !== 75) err(`wantGuides: 件数が 75 でない: ${wg.guides.length}`);
+  const seen = new Set();
+  for (const g of wg.guides) {
+    if (seen.has(g.id)) err(`wantGuides: id 重複: ${g.id}`);
+    seen.add(g.id);
+    for (const k of ['label', 'lead', 'catch', 'courses']) {
+      if (!g[k]) err(`wantGuides: ${g.id} に ${k} が無い`);
+    }
+    if (g.target && !wids.has(g.target)) err(`wantGuides: ${g.id} の target が mcu に無い: ${g.target}`);
+    if (!g.target && !g.target_ext) err(`wantGuides: ${g.id} に target も target_ext も無い`);
+    for (const cid of ['ume', 'take', 'matsu']) {
+      const c = g.courses[cid];
+      if (!c) { err(`wantGuides: ${g.id} に ${cid} コースが無い`); continue; }
+      if (!c.time || !c.desc) err(`wantGuides: ${g.id}.${cid} に time/desc が無い`);
+      for (const it of c.items) {
+        if (!it.why) err(`wantGuides: ${g.id}.${cid} の項目に why が無い`);
+        if (it.work_id) {
+          if (!wids.has(it.work_id)) err(`wantGuides: ${g.id}.${cid} の work_id 不整合: ${it.work_id}`);
+        } else if (it.title) {
+          if (!it.nolink && !extTitles.has(it.title)) {
+            err(`wantGuides: ${g.id}.${cid} の外部title が otherSeries に無い: "${it.title}"(nolink指定が必要)`);
+          }
+        } else {
+          err(`wantGuides: ${g.id}.${cid} の項目に work_id も title も無い`);
+        }
+        if (it.verdict && !['recommend', 'optional', 'skip'].includes(it.verdict)) {
+          err(`wantGuides: ${g.id}.${cid} の verdict 不正: ${it.verdict}`);
+        }
+      }
+    }
+  }
+}
+
 // ---- 異常文字列チェック(全JSON: キリル文字・かな漢字に挟まれた英字の混入検出) ----
 {
   // かな漢字に挟まれた小文字英字はタイポ・機械混入の疑い。スキーマ用語は除外

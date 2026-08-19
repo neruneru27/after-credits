@@ -1,0 +1,46 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: wantGuides.guides
+  size: 1
+  alias: g
+  addAllPagesToCollections: true
+permalink: "/live/want/{{ g.id }}/"
+pageJs: /assets/js/want.js
+eleventyComputed:
+  title: "{{ g.label | replace('が観たい!', '') }}を観る前に|見る順番と予習を3コースで({{ '予習不要' if not g.courses.ume.items.length else '最短' + g.courses.ume.time }})"
+  description: "{{ g.label }} {{ g.lead }} 最短・推奨・完全版の3コースで、なぜその作品が必要かの理由つきで案内します。"
+---
+{% from "partials/want-course.njk" import courseBlock %}
+<section data-page="want-guide">
+  <div class="wrap">
+    <p class="crumb"><a href="{{ '/' | url }}">ホーム</a> › <a href="{{ '/live/' | url }}">実写サイド</a> › <a href="{{ '/live/want/' | url }}">逆算視聴ガイド</a> › {{ g.id }}</p>
+
+    <div class="sec-head">
+      <span class="en">WATCH GUIDE</span>
+      <h2 class="chara-name-h">{{ g.label }}</h2>
+      <p class="want-catch">{{ g.catch }}</p>
+      <p>{{ g.lead }}</p>
+    </div>
+
+    <div class="course-tabs" role="group" aria-label="コースの切り替え">
+      {%- set labels = { ume: '梅(最短)', take: '竹(推奨)', matsu: '松(完全版)' } %}
+      {%- for cid in ['ume', 'take', 'matsu'] %}
+      <button class="fbtn course-tab" data-course="{{ cid }}" data-guide="{{ g.id }}" aria-pressed="{{ 'true' if cid == 'take' else 'false' }}">{{ labels[cid] }}<span>{{ g.courses[cid].time }}</span></button>
+      {%- endfor %}
+    </div>
+
+    {%- for cid in ['ume', 'take', 'matsu'] %}
+    {{ courseBlock(cid, g.courses[cid], mcu.works, g.id) }}
+    {%- endfor %}
+
+    {%- if g.note %}
+    <p class="term-note">📌 {{ g.note }}</p>
+    {%- endif %}
+
+    {%- if g.target %}
+    <p class="enc-back"><a href="{{ ('/live/' + g.target + '/') | url }}">→ {{ g.target | workTitle(mcu.works) }} の作品ページへ</a></p>
+    {%- endif %}
+    <p class="enc-back"><a href="{{ '/live/want/' | url }}">← 逆算視聴ガイド一覧に戻る</a></p>
+  </div>
+</section>

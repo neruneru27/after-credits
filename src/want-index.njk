@@ -1,0 +1,33 @@
+---
+layout: layouts/base.njk
+title: 「〇〇が観たい!」逆算視聴ガイド(全75本)|作品別の見る順番・予習コース
+description: 観たい作品から逆算する予習ガイド75本。MCU全68作品+旧X-MEN・ソニー系など7シリーズを、最短(梅)・推奨(竹)・完全版(松)の3コースで案内。なぜその作品が必要かの理由つき。
+permalink: /live/want/
+pageJs: /assets/js/want-index.js
+---
+<section data-page="want-index">
+  <div class="wrap">
+    <p class="crumb"><a href="{{ '/' | url }}">ホーム</a> › <a href="{{ '/live/' | url }}">実写サイド</a> › 逆算視聴ガイド</p>
+    <div class="sec-head">
+      <span class="en">REVERSE WATCH GUIDE</span>
+      <h2 class="chara-name-h">「〇〇が観たい!」逆算視聴ガイド</h2>
+      <p>観たい作品が決まっているなら、そこから逆算するのが最短です。全{{ wantGuides.guides.length }}本のガイドを用意しました。それぞれ<b>最短(梅)・推奨(竹)・完全版(松)</b>の3コースがあり、「なぜその作品が必要か」の理由つきで案内します。</p>
+    </div>
+
+    <div class="searchbox">
+      <input type="search" id="want-input" placeholder="例:ドゥームズデイ / デアデビル / X-MEN" aria-label="作品を検索">
+      <span class="sicon">検索</span>
+    </div>
+
+    <div class="want-grid" id="want-grid">
+      {%- for g in wantGuides.guides %}
+      <a class="want-card" href="{{ ('/live/want/' + g.id + '/') | url }}" data-key="{{ g.label }} {{ g.catch }} {{ g.id }}">
+        <h3>{{ g.label | replace('『', '') | replace('』が観たい!', '') | replace('が観たい!', '') }}</h3>
+        <p class="want-card-catch">{{ g.catch }}</p>
+        <p class="want-card-times">最短 {{ g.courses.ume.time }} / 推奨 {{ g.courses.take.time }}</p>
+      </a>
+      {%- endfor %}
+    </div>
+    <p class="no-hit" id="want-nohit">該当する作品が見つかりませんでした。別のキーワードでお試しください。</p>
+  </div>
+</section>

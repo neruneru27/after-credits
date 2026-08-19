@@ -146,6 +146,13 @@ module.exports = function (eleventyConfig) {
     }));
   });
 
+  // wantGuides: targetのwork_id→ガイドid の逆引き(作品ページからの相互リンク用)
+  eleventyConfig.addFilter('guideForWork', (guides, workId) =>
+    (guides || []).find((g) => g.target === workId) || null);
+
+  // wantGuides: コース項目の総数(残り本数計算用)
+  eleventyConfig.addFilter('courseIds', () => ['ume', 'take', 'matsu']);
+
   // クレジットシーン一覧: pos別の本数
   eleventyConfig.addFilter('countPos', (credits, pos) =>
     (credits || []).filter((c) => c.pos === pos).length);

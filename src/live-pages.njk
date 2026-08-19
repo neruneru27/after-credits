@@ -107,6 +107,11 @@ eleventyComputed:
       </div>
       {%- endif %}
 
+      {%- set guide = wantGuides.guides | guideForWork(w.id) %}
+      {%- if guide %}
+      <p class="term-note">🎯 <a href="{{ ('/live/want/' + guide.id + '/') | url }}">この作品の予習コースを見る</a> — {{ guide.catch }}</p>
+      {%- endif %}
+
       {%- set rel = relatedArticles[w.id] %}
       {%- if rel %}
       <p class="term-note">📚 関連記事: <a href="{{ rel.url | url }}">{{ rel.title }}</a></p>
