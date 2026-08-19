@@ -27,7 +27,7 @@ jobs:
       # データ検証に失敗するとここでビルドが止まる(HANDOFF.md 運用ルール1)
       - run: npm run build
         env:
-          PATH_PREFIX: /after-credits/
+          PATH_PREFIX: /
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site
