@@ -79,9 +79,9 @@ pageJs: /assets/js/comics.js
               <span class="amz-pending">購入リンク準備中</span>
               {%- elif ev.jp.asin == 'XXXXXXXXXX' %}
               {%- set searchKw = 'マーベル ' + ev.jp.title %}
-              <a class="amz-btn" href="{% amazonSearch searchKw, site.amazonTag %}" rel="sponsored noopener" target="_blank">Amazonで探す</a><span class="pr-label">[PR]</span>
+              <a class="amz-btn" href="{% amazonSearch searchKw, site.amazonTag %}" rel="sponsored noopener">Amazonで探す</a><span class="pr-label">[PR]</span>
               {%- else %}
-              <a class="amz-btn" href="{% amazonLink ev.jp.asin, site.amazonTag %}" rel="sponsored noopener" target="_blank">Amazonで見る</a><span class="pr-label">[PR]</span>
+              <a class="amz-btn" href="{% amazonLink ev.jp.asin, site.amazonTag %}" rel="sponsored noopener">Amazonで見る</a><span class="pr-label">[PR]</span>
               {%- endif %}
             </div>
           </div>

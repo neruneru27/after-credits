@@ -53,7 +53,7 @@
     const a = AMZ.enabled && AMZ.links[id];
     if (!a || id.startsWith('_')) return '';
     const btn = (asin, label) => asin
-      ? '<a class="amz-btn" href="https://www.amazon.co.jp/dp/' + asin + '?tag=' + AMZ.tag + '" rel="sponsored noopener" target="_blank">' + label + '</a>'
+      ? '<a class="amz-btn" href="https://www.amazon.co.jp/dp/' + asin + '?tag=' + AMZ.tag + '" rel="sponsored noopener">' + label + '</a>'
       : '';
     const btns = btn(a.bd, 'Blu-ray') + btn(a.dvd, 'DVD') + btn(a.pv, 'プライムビデオ');
     return btns ? '<p class="w-buy">' + btns + '<span class="pr-label">[PR]</span></p>' : '';

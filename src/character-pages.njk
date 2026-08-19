@@ -98,14 +98,14 @@ eleventyComputed:
       {%- if goods.asins and goods.asins.length %}
       <div class="app-list">
         {%- for a in goods.asins %}
-        <div class="app-item"><p class="app-head"><a class="amz-btn" href="https://www.amazon.co.jp/dp/{{ a }}?tag={{ site.amazonTag }}" rel="sponsored noopener" target="_blank">Amazonで見る</a><span class="pr-label">[PR]</span></p></div>
+        <div class="app-item"><p class="app-head"><a class="amz-btn" href="https://www.amazon.co.jp/dp/{{ a }}?tag={{ site.amazonTag }}" rel="sponsored noopener">Amazonで見る</a><span class="pr-label">[PR]</span></p></div>
         {%- endfor %}
       </div>
       {%- endif %}
       <p class="w-buy">
-        <a class="amz-btn" href="https://www.amazon.co.jp/s?k={{ (goods.query + ' フィギュア') | urlencode }}&tag={{ site.amazonTag }}" rel="sponsored noopener" target="_blank">フィギュア</a>
-        <a class="amz-btn" href="https://www.amazon.co.jp/s?k={{ (goods.query + ' Tシャツ') | urlencode }}&tag={{ site.amazonTag }}" rel="sponsored noopener" target="_blank">Tシャツ・アパレル</a>
-        <a class="amz-btn" href="https://www.amazon.co.jp/s?k={{ (goods.query + ' グッズ') | urlencode }}&tag={{ site.amazonTag }}" rel="sponsored noopener" target="_blank">グッズ全般</a>
+        <a class="amz-btn" href="https://www.amazon.co.jp/s?k={{ (goods.query + ' フィギュア') | urlencode }}&tag={{ site.amazonTag }}" rel="sponsored noopener">フィギュア</a>
+        <a class="amz-btn" href="https://www.amazon.co.jp/s?k={{ (goods.query + ' Tシャツ') | urlencode }}&tag={{ site.amazonTag }}" rel="sponsored noopener">Tシャツ・アパレル</a>
+        <a class="amz-btn" href="https://www.amazon.co.jp/s?k={{ (goods.query + ' グッズ') | urlencode }}&tag={{ site.amazonTag }}" rel="sponsored noopener">グッズ全般</a>
         <span class="pr-label">[PR]</span></p>
       <p class="term-note">Amazonの検索結果を開きます。公式・非公式が混在するため、販売元をご確認のうえお買い求めください。</p>
       {%- endif %}

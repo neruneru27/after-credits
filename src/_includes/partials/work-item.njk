@@ -12,9 +12,9 @@
 <details class="watch-d"><summary class="watch has-detail">{{ head | safe }}</summary><div class="w-detail"><p class="w-syn"><b>あらすじ(ネタバレなし):</b> {{ w.syn }}</p>
 {%- if enabled and amz -%}
 <p class="w-buy">
-{%- if amz.bd %}<a class="amz-btn" href="https://www.amazon.co.jp/dp/{{ amz.bd }}?tag={{ tag }}" rel="sponsored noopener" target="_blank">Blu-ray</a>{% endif -%}
-{%- if amz.dvd %}<a class="amz-btn" href="https://www.amazon.co.jp/dp/{{ amz.dvd }}?tag={{ tag }}" rel="sponsored noopener" target="_blank">DVD</a>{% endif -%}
-{%- if amz.pv %}<a class="amz-btn" href="https://www.amazon.co.jp/dp/{{ amz.pv }}?tag={{ tag }}" rel="sponsored noopener" target="_blank">プライムビデオ</a>{% endif -%}
+{%- if amz.bd %}<a class="amz-btn" href="https://www.amazon.co.jp/dp/{{ amz.bd }}?tag={{ tag }}" rel="sponsored noopener">Blu-ray</a>{% endif -%}
+{%- if amz.dvd %}<a class="amz-btn" href="https://www.amazon.co.jp/dp/{{ amz.dvd }}?tag={{ tag }}" rel="sponsored noopener">DVD</a>{% endif -%}
+{%- if amz.pv %}<a class="amz-btn" href="https://www.amazon.co.jp/dp/{{ amz.pv }}?tag={{ tag }}" rel="sponsored noopener">プライムビデオ</a>{% endif -%}
 <span class="pr-label">[PR]</span></p>
 {%- endif -%}
 {%- if w.sp -%}
