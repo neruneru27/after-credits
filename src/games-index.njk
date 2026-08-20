@@ -1,0 +1,30 @@
+---
+layout: layouts/base.njk
+title: マーベルゲーム図鑑|参戦キャラクター一覧・実写未登場キャラの正体
+description: マーベル関連ゲーム9タイトルのカタログと、参戦キャラクターの一覧。マーベル・ライバルズ53体をはじめ、ゲームで知ったキャラが原作でどんな存在か・実写に出ているかが分かります。
+permalink: /games/
+---
+<section data-page="games">
+  <div class="wrap">
+    <p class="crumb"><a href="{{ '/' | url }}">ホーム</a> › ゲーム</p>
+    <div class="sec-head">
+      <span class="en">GAMES</span>
+      <h2 class="chara-name-h">マーベルゲーム図鑑</h2>
+      <p>{{ games.catalog.note }} ゲームで初めて知ったキャラクターが「原作でどんな存在か」「実写にも出ているか」を、各タイトルのキャラ一覧で確認できます。</p>
+    </div>
+
+    <div class="game-grid">
+      {%- for c in games.catalog.items %}
+      <div class="game-card">
+        <h3>{{ c.title }}<small>{{ c.en }}</small></h3>
+        <p class="game-meta">{{ c.year }}年 / {{ c.genre }}{% if c.price %} / {{ c.price }}{% endif %}</p>
+        <p class="game-platform">{{ c.platform }}</p>
+        <p class="game-desc">{{ c.desc }}</p>
+        {%- if c.detail %}
+        <a class="game-link" href="{{ ('/games/' + c.detail + '/') | url }}">キャラ一覧を見る →</a>
+        {%- endif %}
+      </div>
+      {%- endfor %}
+    </div>
+  </div>
+</section>

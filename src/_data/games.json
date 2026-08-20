@@ -1,0 +1,1276 @@
+{
+ "meta": {
+  "name": "マーベルゲーム図鑑(タイトル一覧+キャラクター一覧)",
+  "updated": "2026-08-18",
+  "spec": [
+   "設置: /games/ にゲーム一覧(catalog)、/games/<game_id>/ に各タイトルのキャラ一覧",
+   "ゲーム一覧: カード形式(題名/年/ジャンル/対応機種/一言)。detailがあるタイトルは『キャラ一覧を見る』ボタンで個別ページへ",
+   "キャラ一覧: 日本語名/英語名/ロールまたはチーム/実写登場の有無/百科リンク(enc_idがあれば/characters/<enc_id>/へ)",
+   "enc_idが無いキャラは『実写未登場・当サイト未収録』としてnoteを表示。これが本ページ最大の価値=ゲームで知ったキャラの正体が分かる",
+   "フィルタ: 『実写にも出ている』『ゲームだけのキャラ』の2択トグル",
+   "ロスターは更新が頻繁なため、各ゲームのas_ofを必ず表示し、公式サイトへのリンクを併記",
+   "Amazonアフィリエイト: パッケージ版のあるタイトルはamazonLinks方式でASIN登録すれば購入ボタンを出せる(運営者のASIN登録待ち)",
+   "validate: enc_idは百科に実在、ライバルズのroleはvanguard/fighter/strategist/allのいずれか、catalogのdetailはgames[].idに実在するかnull",
+   "tier: playable(操作可能)/main(主要人物)/sub(サブ・カメオ)。3段階で重要度を示し、全登場人物を網羅しつつ見通しを確保する"
+  ],
+  "caution": "『マーベル・ライバルズ』のロスターはシーズンごとに更新される。本データは2026年8月6日(ザ・フッド実装)時点。新キャラ追加時は運営者から差分をもらって更新すること",
+  "review_note": "運営者検品(2026-08-18)を反映済み: ミスター・ネガティブの出自、スコーピオン/タスクマスター/ブラックキャット/トゥームストーン/セイバートゥース/プラウラーの実写出演を修正",
+  "todo": "キャラクター百科にマイルズ・モラレス等のアニメ・ゲーム主要キャラが未収録。アニメ枠(スパイダーバース系)の追加時にenc_id連結を張り直すこと"
+ },
+ "games": [
+  {
+   "id": "marvel-rivals",
+   "title": "マーベル・ライバルズ",
+   "en": "Marvel Rivals",
+   "desc": "NetEase GamesとMarvel Gamesによる基本無料の6vs6チームシューター。2024年12月6日配信開始。シーズンごとに新キャラが追加され続けている。",
+   "roles": {
+    "vanguard": "ヴァンガード(前衛)",
+    "fighter": "ファイター(攻撃)",
+    "strategist": "ストラテジスト(支援)",
+    "all": "全ロール"
+   },
+   "as_of": "2026年8月6日(ザ・フッド実装)時点・53体",
+   "official": "https://www.marvelrivals.com/m/jp/heroes_data/",
+   "chars": [
+    {
+     "jp": "アダム・ウォーロック",
+     "en": "Adam Warlock",
+     "role": "strategist",
+     "note": "実写では『ガーディアンズ・オブ・ギャラクシー VOLUME 3』に登場(繭の状態は『リミックス』のクレジットシーンで予告済み)",
+     "since": "ローンチ"
+    },
+    {
+     "jp": "アンジェラ",
+     "en": "Angela",
+     "role": "vanguard",
+     "note": "ソーの妹という設定を持つ天使の戦士。実写未登場",
+     "since": "シーズン4"
+    },
+    {
+     "jp": "ブラックパンサー",
+     "en": "Black Panther",
+     "role": "fighter",
+     "enc_id": "black-panther-tchalla",
+     "since": "ローンチ"
+    },
+    {
+     "jp": "ブラック・ウィドウ",
+     "en": "Black Widow",
+     "role": "fighter",
+     "enc_id": "black-widow",
+     "since": "ローンチ"
+    },
+    {
+     "jp": "ブレイド",
+     "en": "Blade",
+     "role": "fighter",
+     "enc_id": "blade",
+     "since": "シーズン3.5"
+    },
+    {
+     "jp": "キャプテン・アメリカ",
+     "en": "Captain America",
+     "role": "vanguard",
+     "enc_id": "captain-america-steve",
+     "since": "ローンチ"
+    },
+    {
+     "jp": "クローク&ダガー",
+     "en": "Cloak & Dagger",
+     "role": "strategist",
+     "note": "2人1組の相棒ヒーロー。実写では単独ドラマ(2018・MCU外)がある",
+     "since": "ローンチ"
+    },
+    {
+     "jp": "デアデビル",
+     "en": "Daredevil",
+     "role": "fighter",
+     "enc_id": "daredevil",
+     "since": "シーズン4.5"
+    },
+    {
+     "jp": "デッドプール",
+     "en": "Deadpool",
+     "role": "all",
+     "since": "シーズン6",
+     "enc_id": "deadpool",
+     "note": "3ロール全てで使える唯一のキャラ"
+    },
+    {
+     "jp": "ドクター・ストレンジ",
+     "en": "Doctor Strange",
+     "role": "vanguard",
+     "enc_id": "doctor-strange",
+     "since": "ローンチ"
+    },
+    {
+     "jp": "エルサ・ブラッドストーン",
+     "en": "Elsa Bloodstone",
+     "role": "fighter",
+     "note": "実写では『ウェアウルフ・バイ・ナイト』に登場(演:ローラ・ドネリー)。ブラッドストーンは用語辞典にも収録",
+     "since": "シーズン6.5"
+    },
+    {
+     "jp": "エマ・フロスト",
+     "en": "Emma Frost",
+     "role": "vanguard",
+     "note": "ダイヤモンド化するミュータント。実写未登場(『X-MEN:ファースト・ジェネレーション』に別解釈版あり)",
+     "since": "シーズン2"
+    },
+    {
+     "jp": "ガンビット",
+     "en": "Gambit",
+     "role": "strategist",
+     "enc_id": "gambit",
+     "since": "シーズン5"
+    },
+    {
+     "jp": "グルート",
+     "en": "Groot",
+     "role": "vanguard",
+     "enc_id": "groot",
+     "since": "ローンチ"
+    },
+    {
+     "jp": "ホークアイ",
+     "en": "Hawkeye",
+     "role": "fighter",
+     "enc_id": "hawkeye",
+     "since": "ローンチ"
+    },
+    {
+     "jp": "ヘラ",
+     "en": "Hela",
+     "role": "fighter",
+     "enc_id": "hela",
+     "since": "ローンチ"
+    },
+    {
+     "jp": "ハルク",
+     "en": "Hulk",
+     "role": "vanguard",
+     "enc_id": "hulk",
+     "since": "ローンチ"
+    },
+    {
+     "jp": "ヒューマン・トーチ",
+     "en": "Human Torch",
+     "role": "fighter",
+     "enc_id": "human-torch",
+     "since": "シーズン1.5"
+    },
+    {
+     "jp": "インビジブル・ウーマン",
+     "en": "Invisible Woman",
+     "role": "strategist",
+     "enc_id": "invisible-woman",
+     "since": "シーズン1"
+    },
+    {
+     "jp": "アイアン・フィスト",
+     "en": "Iron Fist",
+     "role": "fighter",
+     "enc_id": "iron-fist",
+     "since": "ローンチ"
+    },
+    {
+     "jp": "アイアンマン",
+     "en": "Iron Man",
+     "role": "fighter",
+     "enc_id": "iron-man",
+     "since": "ローンチ"
+    },
+    {
+     "jp": "ジェフ・ザ・ランド・シャーク",
+     "en": "Jeff the Land Shark",
+     "role": "strategist",
+     "note": "本作最大の人気者のひとり。原作は2019年生まれの新参キャラで、実写未登場",
+     "since": "ローンチ"
+    },
+    {
+     "jp": "ロキ",
+     "en": "Loki",
+     "role": "strategist",
+     "enc_id": "loki",
+     "since": "ローンチ"
+    },
+    {
+     "jp": "ルナ・スノー",
+     "en": "Luna Snow",
+     "role": "strategist",
+     "note": "韓国出身のK-POPアイドル兼ヒーロー。原作でもゲーム発の人気キャラ。実写未登場",
+     "since": "ローンチ"
+    },
+    {
+     "jp": "マジック",
+     "en": "Magik",
+     "role": "fighter",
+     "note": "コロッサスの妹イリアナ。地獄リンボの支配者で、実写未登場",
+     "since": "ローンチ"
+    },
+    {
+     "jp": "マグニートー",
+     "en": "Magneto",
+     "role": "vanguard",
+     "enc_id": "magneto",
+     "since": "ローンチ"
+    },
+    {
+     "jp": "マンティス",
+     "en": "Mantis",
+     "role": "strategist",
+     "enc_id": "mantis",
+     "since": "ローンチ"
+    },
+    {
+     "jp": "ミスター・ファンタスティック",
+     "en": "Mister Fantastic",
+     "role": "fighter",
+     "enc_id": "mr-fantastic",
+     "since": "シーズン1"
+    },
+    {
+     "jp": "ムーンナイト",
+     "en": "Moon Knight",
+     "role": "fighter",
+     "enc_id": "moon-knight",
+     "since": "ローンチ"
+    },
+    {
+     "jp": "ネイモア",
+     "en": "Namor",
+     "role": "fighter",
+     "enc_id": "namor",
+     "since": "ローンチ"
+    },
+    {
+     "jp": "ペニー・パーカー",
+     "en": "Peni Parker",
+     "role": "vanguard",
+     "note": "日本発の設定を持つスパイダー系ヒーロー(SP//dr搭乗)。アニメ『スパイダーバース』にも登場",
+     "since": "ローンチ"
+    },
+    {
+     "jp": "フェニックス",
+     "en": "Phoenix",
+     "role": "fighter",
+     "enc_id": "jean-grey",
+     "note": "ジーン・グレイのフェニックス形態",
+     "since": "シーズン3"
+    },
+    {
+     "jp": "サイロック",
+     "en": "Psylocke",
+     "role": "fighter",
+     "note": "テレパシーと精神の刃を操るミュータント。実写では『X-MEN:アポカリプス』に登場",
+     "since": "ローンチ"
+    },
+    {
+     "jp": "ロケット・ラクーン",
+     "en": "Rocket Raccoon",
+     "role": "strategist",
+     "enc_id": "rocket",
+     "since": "ローンチ"
+    },
+    {
+     "jp": "ローグ",
+     "en": "Rogue",
+     "role": "vanguard",
+     "enc_id": "rogue",
+     "since": "シーズン5.5"
+    },
+    {
+     "jp": "スカーレット・ウィッチ",
+     "en": "Scarlet Witch",
+     "role": "fighter",
+     "enc_id": "scarlet-witch",
+     "since": "ローンチ"
+    },
+    {
+     "jp": "スパイダーマン",
+     "en": "Spider-Man",
+     "role": "fighter",
+     "enc_id": "spider-man",
+     "since": "ローンチ"
+    },
+    {
+     "jp": "スクイレル・ガール",
+     "en": "Squirrel Girl",
+     "role": "fighter",
+     "note": "リスを操る最強(ネタではなく本当にサノスに勝った)ヒーロー。実写未登場",
+     "since": "ローンチ"
+    },
+    {
+     "jp": "スター・ロード",
+     "en": "Star-Lord",
+     "role": "fighter",
+     "enc_id": "star-lord",
+     "since": "ローンチ"
+    },
+    {
+     "jp": "ストーム",
+     "en": "Storm",
+     "role": "fighter",
+     "enc_id": "storm",
+     "since": "ローンチ"
+    },
+    {
+     "jp": "パニッシャー",
+     "en": "The Punisher",
+     "role": "fighter",
+     "enc_id": "punisher",
+     "since": "ローンチ"
+    },
+    {
+     "jp": "ザ・シング",
+     "en": "The Thing",
+     "role": "vanguard",
+     "enc_id": "the-thing",
+     "since": "シーズン1.5"
+    },
+    {
+     "jp": "ソー",
+     "en": "Thor",
+     "role": "vanguard",
+     "enc_id": "thor",
+     "since": "ローンチ"
+    },
+    {
+     "jp": "ウルトロン",
+     "en": "Ultron",
+     "role": "strategist",
+     "enc_id": "ultron",
+     "since": "シーズン2.5"
+    },
+    {
+     "jp": "ヴェノム",
+     "en": "Venom",
+     "role": "vanguard",
+     "enc_id": "venom",
+     "since": "ローンチ"
+    },
+    {
+     "jp": "ウィンター・ソルジャー",
+     "en": "Winter Soldier",
+     "role": "fighter",
+     "enc_id": "bucky",
+     "since": "ローンチ"
+    },
+    {
+     "jp": "ウルヴァリン",
+     "en": "Wolverine",
+     "role": "fighter",
+     "enc_id": "wolverine",
+     "since": "ローンチ"
+    },
+    {
+     "jp": "ジュビリー",
+     "en": "Jubilee",
+     "role": "strategist",
+     "enc_id": null,
+     "note": "花火のような閃光を放つミュータント。90年代アニメでは主人公格の一人で、実写では『X-MEN:アポカリプス』に登場。現在の使用率トップ",
+     "since": "シーズン7以降"
+    },
+    {
+     "jp": "デビルダイナソー",
+     "en": "Devil Dinosaur",
+     "role": "vanguard",
+     "enc_id": null,
+     "note": "赤い恐竜。相棒のムーン・ボーイと共に戦う原作屈指の異色キャラで、実写未登場",
+     "since": "シーズン7以降"
+    },
+    {
+     "jp": "ホワイト・フォックス",
+     "en": "White Fox",
+     "role": "strategist",
+     "enc_id": null,
+     "note": "韓国の九尾狐(クミホ)がモチーフのヒーロー。ルナ・スノーと同じくゲーム発の人気枠で、実写未登場",
+     "since": "シーズン7"
+    },
+    {
+     "jp": "サイクロップス",
+     "en": "Cyclops",
+     "role": "fighter",
+     "enc_id": "cyclops",
+     "since": "シーズン7以降"
+    },
+    {
+     "jp": "ブラックキャット",
+     "en": "Black Cat",
+     "role": "fighter",
+     "enc_id": null,
+     "note": "スパイダーマンの因縁の相手で幸運を操る泥棒。実写は『アメイジング・スパイダーマン2』にわずかに登場したが、3作目が実現せず活躍の場はなかった",
+     "since": "シーズン7"
+    },
+    {
+     "jp": "ザ・フッド",
+     "en": "The Hood",
+     "role": "fighter",
+     "enc_id": "the-hood",
+     "note": "2026年8月6日実装の最新キャラ。実写では『アイアンハート』のメインヴィランとして登場済み",
+     "since": "シーズン9.5(2026年8月6日)"
+    }
+   ],
+   "note": "デッドプールは3ロール全てで運用可能なため、公式の使用率一覧ではロール別に3行掲載される"
+  },
+  {
+   "id": "marvel-tokon",
+   "title": "マーベル・トゥーコン:ファイティング・ソウルズ",
+   "en": "MARVEL Tokon: Fighting Souls",
+   "desc": "アークシステムワークス開発の4対4タッグ格闘ゲーム。2026年8月6日発売。20体が5チームに分かれ、宇宙の強豪チャンピオンの主催する闘技会に挑む。",
+   "teams": {
+    "unbreakable-xmen": {
+     "jp": "アンブレイカブルX-MEN",
+     "en": "Unbreakable X-Men"
+    },
+    "amazing-guardians": {
+     "jp": "アメイジング・ガーディアンズ",
+     "en": "Amazing Guardians"
+    },
+    "fighting-avengers": {
+     "jp": "ファイティング・アベンジャーズ",
+     "en": "Fighting Avengers"
+    },
+    "knights-of-doom": {
+     "jp": "ナイツ・オブ・ドゥーム",
+     "en": "Knights of Doom"
+    },
+    "samurai-outriders": {
+     "jp": "サムライ・アウトライダーズ",
+     "en": "Samurai Outriders"
+    }
+   },
+   "as_of": "2026年8月6日発売時点・20体(+DLC第1弾フェニックス・サイクロップス)",
+   "chars": [
+    {
+     "jp": "ストーム",
+     "en": "Storm",
+     "enc_id": "storm",
+     "team": "unbreakable-xmen"
+    },
+    {
+     "jp": "マジック",
+     "en": "Magik",
+     "team": "unbreakable-xmen",
+     "note": "実写未登場。『マーベル・ライバルズ』にも参戦"
+    },
+    {
+     "jp": "ウルヴァリン",
+     "en": "Wolverine",
+     "enc_id": "wolverine",
+     "team": "unbreakable-xmen"
+    },
+    {
+     "jp": "デンジャー",
+     "en": "Danger",
+     "team": "unbreakable-xmen",
+     "note": "X-MENの訓練施設デンジャー・ルームが自我を持った存在。実写未登場の変化球枠"
+    },
+    {
+     "jp": "スパイダーマン",
+     "en": "Spider-Man",
+     "enc_id": "spider-man",
+     "team": "amazing-guardians"
+    },
+    {
+     "jp": "ミズ・マーベル",
+     "en": "Ms. Marvel",
+     "enc_id": "ms-marvel",
+     "team": "amazing-guardians"
+    },
+    {
+     "jp": "スター・ロード",
+     "en": "Star-Lord",
+     "enc_id": "star-lord",
+     "team": "amazing-guardians"
+    },
+    {
+     "jp": "ペニー・パーカー",
+     "en": "Peni Parker",
+     "team": "amazing-guardians",
+     "note": "SP//dr搭乗のスパイダー系。アニメ『スパイダーバース』に登場"
+    },
+    {
+     "jp": "キャプテン・アメリカ",
+     "en": "Captain America",
+     "enc_id": "captain-america-steve",
+     "team": "fighting-avengers"
+    },
+    {
+     "jp": "アイアンマン",
+     "en": "Iron Man",
+     "enc_id": "iron-man",
+     "team": "fighting-avengers"
+    },
+    {
+     "jp": "ハルク",
+     "en": "Hulk",
+     "enc_id": "hulk",
+     "team": "fighting-avengers"
+    },
+    {
+     "jp": "ブラックパンサー",
+     "en": "Black Panther",
+     "enc_id": "shuri",
+     "team": "fighting-avengers",
+     "note": "本作のブラックパンサーはシュリ版"
+    },
+    {
+     "jp": "ドクター・ドゥーム",
+     "en": "Doctor Doom",
+     "enc_id": "doctor-doom",
+     "team": "knights-of-doom"
+    },
+    {
+     "jp": "マグニートー",
+     "en": "Magneto",
+     "enc_id": "magneto",
+     "team": "knights-of-doom"
+    },
+    {
+     "jp": "グリーン・ゴブリン",
+     "en": "Green Goblin",
+     "enc_id": "green-goblin",
+     "team": "knights-of-doom"
+    },
+    {
+     "jp": "カーネイジ",
+     "en": "Carnage",
+     "team": "knights-of-doom",
+     "note": "ヴェノムの狂った息子。実写ではソニー版『ヴェノム:レット・ゼア・ビー・カーネイジ』に登場"
+    },
+    {
+     "jp": "ゴーストライダー",
+     "en": "Ghost Rider",
+     "enc_id": "ghost-rider",
+     "team": "samurai-outriders"
+    },
+    {
+     "jp": "ブレイド",
+     "en": "Blade",
+     "enc_id": "blade",
+     "team": "samurai-outriders"
+    },
+    {
+     "jp": "ロキ",
+     "en": "Loki",
+     "enc_id": "loki",
+     "team": "samurai-outriders"
+    },
+    {
+     "jp": "デッドプール",
+     "en": "Deadpool",
+     "enc_id": "deadpool",
+     "team": "samurai-outriders"
+    }
+   ],
+   "dlc": [
+    {
+     "jp": "フェニックス・サイクロップス",
+     "en": "Phoenix Cyclops",
+     "enc_id": "cyclops",
+     "note": "原作『アベンジャーズVS.X-MEN』のフェニックス・ファイブ形態。DLC第1弾"
+    },
+    {
+     "jp": "ザ・チャンピオン",
+     "en": "The Champion",
+     "enc_id": null,
+     "note": "本作のラスボス。宇宙の長老の一人で、実写未登場"
+    }
+   ]
+  },
+  {
+   "id": "marvel-cosmic-invasion",
+   "title": "MARVEL Cosmic Invasion",
+   "en": "MARVEL Cosmic Invasion",
+   "desc": "『ベア・ナックル4』のDotemuと『TMNT:シュレッダーズ・リベンジ』のTribute Gamesが手掛けたドット絵ベルトスクロールアクション。2025年12月配信、日本語パッケージ版は2026年3月26日発売。2人同時操作のタッグ制と最大4人協力プレイが特徴で、原作の宇宙イベント『アナイアレーション』が下敷き。",
+   "as_of": "2026年6月時点・15体(+DLC第1弾2体=17体)",
+   "chars": [
+    {
+     "jp": "キャプテン・アメリカ",
+     "en": "Captain America",
+     "enc_id": "captain-america-steve",
+     "unlock": "最初から"
+    },
+    {
+     "jp": "スパイダーマン",
+     "en": "Spider-Man",
+     "enc_id": "spider-man",
+     "unlock": "最初から"
+    },
+    {
+     "jp": "ウルヴァリン",
+     "en": "Wolverine",
+     "enc_id": "wolverine",
+     "unlock": "最初から"
+    },
+    {
+     "jp": "アイアンマン",
+     "en": "Iron Man",
+     "enc_id": "iron-man",
+     "unlock": "最初から"
+    },
+    {
+     "jp": "ストーム",
+     "en": "Storm",
+     "enc_id": "storm",
+     "unlock": "最初から"
+    },
+    {
+     "jp": "ブラックパンサー",
+     "en": "Black Panther",
+     "enc_id": "black-panther-tchalla",
+     "unlock": "最初から"
+    },
+    {
+     "jp": "シー・ハルク",
+     "en": "She-Hulk",
+     "enc_id": "she-hulk",
+     "unlock": "最初から"
+    },
+    {
+     "jp": "ロケット・ラクーン",
+     "en": "Rocket Raccoon",
+     "enc_id": "rocket",
+     "unlock": "最初から"
+    },
+    {
+     "jp": "ノヴァ",
+     "en": "Nova",
+     "enc_id": "nova",
+     "note": "本作の主役格。当サイトのキャラクター百科にも収録",
+     "unlock": "最初から"
+    },
+    {
+     "jp": "ベータ・レイ・ビル",
+     "en": "Beta Ray Bill",
+     "note": "ソーの資格を認められた馬面の宇宙人。ストームブレイカーの持ち主で、実写未登場",
+     "unlock": "最初から"
+    },
+    {
+     "jp": "コズミック・ゴーストライダー",
+     "en": "Cosmic Ghost Rider",
+     "note": "サノスに仕えた未来のゴーストライダー。正体は原作『サノス:ウィンズ』で明かされる衝撃の人物(邦訳あり)",
+     "unlock": "最初から"
+    },
+    {
+     "jp": "フェニックス",
+     "en": "Phoenix",
+     "enc_id": "jean-grey",
+     "unlock": "ボス撃破で解放"
+    },
+    {
+     "jp": "ヴェノム",
+     "en": "Venom",
+     "enc_id": "venom",
+     "unlock": "ボス撃破で解放"
+    },
+    {
+     "jp": "フィラ・ヴェル",
+     "en": "Phyla-Vell",
+     "note": "キャプテン・マーベル(マー・ヴェル)の娘。宇宙勢の女性ヒーローで、実写未登場",
+     "unlock": "ボス撃破で解放"
+    },
+    {
+     "jp": "シルバーサーファー",
+     "en": "Silver Surfer",
+     "enc_id": "silver-surfer",
+     "unlock": "ボス撃破で解放"
+    }
+   ],
+   "dlc": [
+    {
+     "jp": "サイクロップス",
+     "en": "Cyclops",
+     "enc_id": "cyclops",
+     "note": "DLC第1弾で追加"
+    },
+    {
+     "jp": "ザ・シング",
+     "en": "The Thing",
+     "enc_id": "the-thing",
+     "note": "DLC第1弾で追加"
+    }
+   ],
+   "story": "歩く死の権化アニヒラスがネガティブ・ゾーンから全宇宙へ侵攻を開始。ニューヨークからネガティブ・ゾーンの奥地までを舞台に、地球と宇宙のヒーローが総力戦を挑む。"
+  },
+  {
+   "id": "marvels-spider-man",
+   "title": "Marvel's Spider-Man",
+   "en": "Marvel's Spider-Man (2018)",
+   "desc": "インソムニアック開発、PS4/PS5/PC。実写MCUとは別の独自ユニバース(アース1048)で、活動8年目のベテラン・ピーターを描く。ゲーム版マーベルの代表作。",
+   "as_of": "本編+DLC3部作『摩天楼の街』時点",
+   "chars": [
+    {
+     "jp": "ピーター・パーカー/スパイダーマン",
+     "en": "Peter Parker",
+     "tier": "playable",
+     "enc_id": "spider-man",
+     "note": "本作は活動8年目のベテラン。MCU版より大人で、生活苦も抱える"
+    },
+    {
+     "jp": "マイルズ・モラレス",
+     "en": "Miles Morales",
+     "tier": "playable",
+     "note": "本作では一般人として登場し、終盤に力を得る。当サイト百科は未収録(実写はアニメ『スパイダーバース』が有名)"
+    },
+    {
+     "jp": "メリー・ジェーン・ワトソン",
+     "en": "Mary Jane Watson",
+     "tier": "playable",
+     "note": "デイリー・ビューグルの記者として潜入パートを担当。ゲーム版MJは取材者として自ら動く"
+    },
+    {
+     "jp": "オットー・オクタビアス",
+     "en": "Otto Octavius",
+     "tier": "main",
+     "note": "前半は尊敬される善人の博士として登場する異例の描写。原作・実写ではドクター・オクトパス"
+    },
+    {
+     "jp": "マーティン・リー/ミスター・ネガティブ",
+     "en": "Martin Li / Mister Negative",
+     "tier": "main",
+     "note": "原作コミック出身のヴィランで、ゲーム版の活躍で知名度が大きく上がった。実写は未登場"
+    },
+    {
+     "jp": "ウィルソン・フィスク/キングピン",
+     "en": "Wilson Fisk",
+     "tier": "main",
+     "enc_id": "kingpin",
+     "note": "冒頭のボス。実写では『デアデビル』のドノフリオ版が有名"
+    },
+    {
+     "jp": "ノーマン・オズボーン",
+     "en": "Norman Osborn",
+     "tier": "main",
+     "note": "本作ではニューヨーク市長。グリーン・ゴブリン化は続編以降の含み"
+    },
+    {
+     "jp": "ハリー・オズボーン",
+     "en": "Harry Osborn",
+     "tier": "main",
+     "note": "本編ではカプセルの中で眠る姿のみ。続編の核心に関わる"
+    },
+    {
+     "jp": "メイ・パーカー",
+     "en": "May Parker",
+     "tier": "main",
+     "note": "F.E.A.S.T.で働くゲーム版メイ"
+    },
+    {
+     "jp": "ユリ・ワタナベ",
+     "en": "Yuri Watanabe",
+     "tier": "main",
+     "note": "ニューヨーク市警の警部。ゲーム版オリジナル要素の強い相棒役"
+    },
+    {
+     "jp": "シルバー・セーブル",
+     "en": "Silver Sable",
+     "tier": "main",
+     "note": "傭兵会社シルバー・セーブル・インターナショナルの長。実写未登場"
+    },
+    {
+     "jp": "ヴァルチャー",
+     "en": "Vulture",
+     "tier": "main",
+     "note": "シニスター・シックスの一員。実写は『スパイダーマン:ホームカミング』"
+    },
+    {
+     "jp": "エレクトロ",
+     "en": "Electro",
+     "tier": "main",
+     "note": "実写は『アメイジング・スパイダーマン2』『ノー・ウェイ・ホーム』"
+    },
+    {
+     "jp": "ライノ",
+     "en": "Rhino",
+     "tier": "main",
+     "note": "犀の怪人。実写は『アメイジング・スパイダーマン2』にわずかに登場"
+    },
+    {
+     "jp": "スコーピオン",
+     "en": "Scorpion",
+     "tier": "main",
+     "note": "実写は『スパイダーマン:ホームカミング』の獄中シーンで顔見せし、『スパイダーマン:ブランド・ニュー・デイ』にも登場済み"
+    },
+    {
+     "jp": "タスクマスター",
+     "en": "Taskmaster",
+     "tier": "sub",
+     "enc_id": "taskmaster",
+     "note": "サイドミッションの挑戦者。実写は『ブラック・ウィドウ』と『サンダーボルツ*』に登場"
+    },
+    {
+     "jp": "スクリューボール",
+     "en": "Screwball",
+     "tier": "sub",
+     "note": "配信者気取りの犯罪者。ゲーム独自の名物枠"
+    },
+    {
+     "jp": "ブラックキャット",
+     "en": "Black Cat",
+     "tier": "sub",
+     "note": "サイドミッションと追加DLCの主役級。実写は『アメイジング・スパイダーマン2』にわずかに登場したが、3作目が実現せず活躍の場がなかった"
+    },
+    {
+     "jp": "ハンマーヘッド",
+     "en": "Hammerhead",
+     "tier": "sub",
+     "note": "DLC『摩天楼の街』3部作のメインヴィラン"
+    },
+    {
+     "jp": "トゥームストーン",
+     "en": "Tombstone",
+     "tier": "sub",
+     "note": "サイドミッションのボス。実写は『スパイダーマン:ブランド・ニュー・デイ』に登場"
+    }
+   ],
+   "story": "キングピン逮捕で生まれた権力の空白に、仮面の犯罪組織インナー・デーモンズが台頭。師であるオクタビアス博士の変貌と、シニスター・シックス結成へ向かう。"
+  },
+  {
+   "id": "marvels-spider-man-miles",
+   "title": "Marvel's Spider-Man: マイルズ・モラレス",
+   "en": "Marvel's Spider-Man: Miles Morales (2020)",
+   "desc": "2代目スパイダーマン=マイルズの単独作。ハーレムを舞台にした中編で、前作の1年後を描く。",
+   "as_of": "本編時点",
+   "chars": [
+    {
+     "jp": "マイルズ・モラレス/スパイダーマン",
+     "en": "Miles Morales",
+     "tier": "playable",
+     "note": "2代目としての初単独作。ベノム・ブラストと透明化が固有能力"
+    },
+    {
+     "jp": "フィン・メイソン/ティンカラー",
+     "en": "Phin Mason / Tinkerer",
+     "tier": "main",
+     "note": "マイルズの幼馴染にして本作のメインヴィラン。ゲーム版オリジナル解釈"
+    },
+    {
+     "jp": "サイモン・クリーガー",
+     "en": "Simon Krieger",
+     "tier": "main",
+     "note": "ロクソン社の重役。企業の悪という現代的な敵"
+    },
+    {
+     "jp": "アーロン・デイビス/プラウラー",
+     "en": "Aaron Davis",
+     "tier": "main",
+     "note": "マイルズの叔父。実写では『スパイダーマン:ホームカミング』に別解釈で登場し、アニメ『スパイダーマン:スパイダーバース』では物語の核を担う重要キャラ"
+    },
+    {
+     "jp": "リオ・モラレス",
+     "en": "Rio Morales",
+     "tier": "main",
+     "note": "マイルズの母。地区長選に立候補する"
+    },
+    {
+     "jp": "ガンケ・リー",
+     "en": "Ganke Lee",
+     "tier": "main",
+     "note": "マイルズの親友でオペレーター役"
+    },
+    {
+     "jp": "ピーター・パーカー",
+     "en": "Peter Parker",
+     "tier": "sub",
+     "enc_id": "spider-man",
+     "note": "先輩として序盤と終盤に登場"
+    },
+    {
+     "jp": "ライノ",
+     "en": "Rhino",
+     "tier": "sub",
+     "note": "冒頭の護送戦のボス"
+    },
+    {
+     "jp": "プラウラー(2代目)",
+     "en": "Prowler",
+     "tier": "sub",
+     "note": "終盤の展開に関わる。アニメ『スパイダーマン:スパイダーバース』でも重要な役どころ"
+    }
+   ],
+   "story": "ロクソン社と地下組織アンダーグラウンドの抗争に、新米スパイダーマンのマイルズが単身で立ち向かう。幼馴染との関係が物語の核。"
+  },
+  {
+   "id": "marvels-spider-man-2",
+   "title": "Marvel's Spider-Man 2",
+   "en": "Marvel's Spider-Man 2 (2023)",
+   "desc": "2人のスパイダーマンを切り替えて操作する続編。クレイヴンとヴェノムという2大脅威に、シンビオートの誘惑が重なる。",
+   "as_of": "本編時点",
+   "chars": [
+    {
+     "jp": "ピーター・パーカー/スパイダーマン",
+     "en": "Peter Parker",
+     "tier": "playable",
+     "enc_id": "spider-man",
+     "note": "シンビオート・スーツを得て変質していく"
+    },
+    {
+     "jp": "マイルズ・モラレス/スパイダーマン",
+     "en": "Miles Morales",
+     "tier": "playable",
+     "note": "2人同時主人公の一角"
+    },
+    {
+     "jp": "クレイヴン・ザ・ハンター",
+     "en": "Kraven the Hunter",
+     "tier": "main",
+     "note": "前半のメインヴィラン。実写はソニー版『クレイヴン・ザ・ハンター』(2024)"
+    },
+    {
+     "jp": "ヴェノム",
+     "en": "Venom",
+     "tier": "main",
+     "enc_id": "venom",
+     "note": "本作のヴェノムは宿主がハリー・オズボーンという独自解釈"
+    },
+    {
+     "jp": "ハリー・オズボーン",
+     "en": "Harry Osborn",
+     "tier": "main",
+     "note": "ピーターの親友にして本作の中心人物"
+    },
+    {
+     "jp": "リザード/カート・コナーズ",
+     "en": "Lizard / Curt Connors",
+     "tier": "main",
+     "note": "実写は『アメイジング・スパイダーマン』"
+    },
+    {
+     "jp": "マーティン・リー/ミスター・ネガティブ",
+     "en": "Martin Li",
+     "tier": "main",
+     "note": "原作出身のヴィラン。ゲームでの活躍で知名度が上がった。マイルズ側の物語で決着がつく"
+    },
+    {
+     "jp": "メリー・ジェーン・ワトソン",
+     "en": "Mary Jane Watson",
+     "tier": "main",
+     "note": "潜入パートに加え、終盤は\"スクリーム\"化する見せ場も"
+    },
+    {
+     "jp": "ノーマン・オズボーン",
+     "en": "Norman Osborn",
+     "tier": "main",
+     "note": "市長として登場。グリーン・ゴブリン化の布石が濃厚に"
+    },
+    {
+     "jp": "サンドマン",
+     "en": "Sandman",
+     "tier": "sub",
+     "note": "冒頭のボス。実写は『スパイダーマン3』『ノー・ウェイ・ホーム』"
+    },
+    {
+     "jp": "ユリ・ワタナベ/レイス",
+     "en": "Yuri Watanabe / Wraith",
+     "tier": "sub",
+     "note": "警察を辞め自警活動に。原作のレイス名義"
+    },
+    {
+     "jp": "トゥームストーン",
+     "en": "Tombstone",
+     "tier": "sub",
+     "note": "サイドミッションで再登場。実写は『スパイダーマン:ブランド・ニュー・デイ』に登場"
+    },
+    {
+     "jp": "ミステリオ",
+     "en": "Mysterio",
+     "tier": "sub",
+     "note": "アトラクション化した施設のサイド枠で登場"
+    },
+    {
+     "jp": "シンディ・ムーン",
+     "en": "Cindy Moon",
+     "tier": "sub",
+     "note": "終盤〜クレジット後に登場。原作ではシルクになる人物"
+    },
+    {
+     "jp": "ガンケ・リー",
+     "en": "Ganke Lee",
+     "tier": "sub",
+     "note": "マイルズの相棒"
+    },
+    {
+     "jp": "リオ・モラレス",
+     "en": "Rio Morales",
+     "tier": "sub",
+     "note": "マイルズの母"
+    }
+   ],
+   "story": "狩りを求めるクレイヴンがニューヨークに襲来。並行してピーターはシンビオート・スーツに侵食され、ヴェノムの正体が2人の最も近い場所から現れる。"
+  },
+  {
+   "id": "marvels-midnight-suns",
+   "title": "マーベル ミッドナイト・サンズ",
+   "en": "Marvel's Midnight Suns (2022)",
+   "desc": "『XCOM』のFiraxis開発の戦術カードRPG。魔術・怪奇系ヒーローが集う異色作で、原作の『ライズ・オブ・ザ・ミッドナイト・サンズ』『インフェルノ』が下敷き。",
+   "as_of": "本編+DLC4体時点(全17体プレイアブル)",
+   "chars": [
+    {
+     "jp": "ハンター",
+     "en": "The Hunter",
+     "tier": "playable",
+     "note": "本作のオリジナル主人公。リリスの子で、プレイヤーが性別・外見を作成する"
+    },
+    {
+     "jp": "ブレイド",
+     "en": "Blade",
+     "tier": "playable",
+     "enc_id": "blade"
+    },
+    {
+     "jp": "キャプテン・アメリカ",
+     "en": "Captain America",
+     "tier": "playable",
+     "enc_id": "captain-america-steve"
+    },
+    {
+     "jp": "キャプテン・マーベル",
+     "en": "Captain Marvel",
+     "tier": "playable",
+     "enc_id": "captain-marvel"
+    },
+    {
+     "jp": "ドクター・ストレンジ",
+     "en": "Doctor Strange",
+     "tier": "playable",
+     "enc_id": "doctor-strange"
+    },
+    {
+     "jp": "ゴーストライダー(ロビー・レイエス)",
+     "en": "Ghost Rider",
+     "tier": "playable",
+     "enc_id": "ghost-rider",
+     "note": "3代目ロビー版。実写は『エージェント・オブ・シールド』S4"
+    },
+    {
+     "jp": "ハルク",
+     "en": "Hulk",
+     "tier": "playable",
+     "enc_id": "hulk"
+    },
+    {
+     "jp": "アイアンマン",
+     "en": "Iron Man",
+     "tier": "playable",
+     "enc_id": "iron-man"
+    },
+    {
+     "jp": "マジック",
+     "en": "Magik",
+     "tier": "playable",
+     "note": "ミッドナイト・サンズ創設メンバー。実写は『ニュー・ミュータンツ』"
+    },
+    {
+     "jp": "ニコ・ミノル",
+     "en": "Nico Minoru",
+     "tier": "playable",
+     "note": "日系アメリカ人の魔女。実写はドラマ『ランナウェイズ』のみで映画未登場"
+    },
+    {
+     "jp": "スカーレット・ウィッチ",
+     "en": "Scarlet Witch",
+     "tier": "playable",
+     "enc_id": "scarlet-witch"
+    },
+    {
+     "jp": "スパイダーマン",
+     "en": "Spider-Man",
+     "tier": "playable",
+     "enc_id": "spider-man"
+    },
+    {
+     "jp": "ウルヴァリン",
+     "en": "Wolverine",
+     "tier": "playable",
+     "enc_id": "wolverine"
+    },
+    {
+     "jp": "デッドプール",
+     "en": "Deadpool",
+     "tier": "playable",
+     "enc_id": "deadpool",
+     "note": "DLC"
+    },
+    {
+     "jp": "モービウス",
+     "en": "Morbius",
+     "tier": "playable",
+     "note": "DLC。実写はソニー版『モービウス』"
+    },
+    {
+     "jp": "ヴェノム",
+     "en": "Venom",
+     "tier": "playable",
+     "enc_id": "venom",
+     "note": "DLC"
+    },
+    {
+     "jp": "ストーム",
+     "en": "Storm",
+     "tier": "playable",
+     "enc_id": "storm",
+     "note": "DLC"
+    },
+    {
+     "jp": "リリス",
+     "en": "Lilith",
+     "tier": "main",
+     "note": "本作のラスボス\"魔物の母\"。ハンターの母親でもある"
+    },
+    {
+     "jp": "クトゥーン",
+     "en": "Chthon",
+     "tier": "main",
+     "note": "ダークホールドを記した太古の邪神。用語辞典の『ダークホールド』と直結"
+    },
+    {
+     "jp": "ケアテイカー",
+     "en": "Caretaker",
+     "tier": "main",
+     "note": "修道院を束ねる導き手でリリスの姉"
+    },
+    {
+     "jp": "アガサ・ハークネス",
+     "en": "Agatha Harkness",
+     "tier": "main",
+     "enc_id": "agatha",
+     "note": "魔女の先達として登場。実写は『ワンダヴィジョン』『アガサ・オール・アロング』"
+    },
+    {
+     "jp": "ジョニー・ブレイズ",
+     "en": "Johnny Blaze",
+     "tier": "main",
+     "enc_id": "ghost-rider",
+     "note": "初代ゴーストライダー。ロビーとは別枠で登場"
+    },
+    {
+     "jp": "メフィスト",
+     "en": "Mephisto",
+     "tier": "main",
+     "enc_id": "mephisto",
+     "note": "悪魔。実写は『アイアンハート』"
+    },
+    {
+     "jp": "セイバートゥース",
+     "en": "Sabretooth",
+     "tier": "sub",
+     "note": "堕ちた者として敵対。実写はフォックス版『X-MEN』シリーズに登場"
+    },
+    {
+     "jp": "クロスボーンズ",
+     "en": "Crossbones",
+     "tier": "sub",
+     "note": "ヒドラ側の敵。実写は『シビル・ウォー』"
+    },
+    {
+     "jp": "ドラキュラ",
+     "en": "Dracula",
+     "tier": "sub",
+     "note": "DLC『ブレイドの狩り』のボス"
+    },
+    {
+     "jp": "シン",
+     "en": "Sin",
+     "tier": "sub",
+     "note": "DLC。レッドスカルの娘"
+    },
+    {
+     "jp": "ドクター・ファウスタス",
+     "en": "Doctor Faustus",
+     "tier": "sub",
+     "note": "心理操作のヴィラン"
+    }
+   ],
+   "story": "魔物の母リリスが復活し、世界に破滅の預言をもたらす。アベンジャーズは修道院に集うミッドナイト・サンズと、唯一リリスを倒した者=ハンターを蘇らせて対抗する。"
+  }
+ ],
+ "catalog": {
+  "note": "マーベル関連ゲームのカタログ。当サイトでキャラ一覧を持つタイトルはdetail=trueで個別ページへリンク",
+  "items": [
+   {
+    "title": "マーベル・ライバルズ",
+    "en": "Marvel Rivals",
+    "year": "2024",
+    "genre": "チームシューター(6vs6)",
+    "platform": "PC/PS5/Xbox",
+    "price": "基本無料",
+    "detail": "marvel-rivals",
+    "desc": "53体が参戦する基本無料シューター。シーズンごとに新キャラが追加され、実写未登場の原作キャラが多数プレイアブル化している点が最大の魅力。"
+   },
+   {
+    "title": "MARVEL Tokon:ファイティング・ソウルズ",
+    "en": "MARVEL Tokon: Fighting Souls",
+    "year": "2026",
+    "genre": "対戦格闘(4vs4)",
+    "platform": "PS5/PC",
+    "detail": "marvel-tokon",
+    "desc": "アークシステムワークス開発のタッグ格闘。20体が5チームに分かれ、アニメ調のビジュアルで戦う。2026年8月6日発売。"
+   },
+   {
+    "title": "MARVEL Cosmic Invasion",
+    "en": "MARVEL Cosmic Invasion",
+    "year": "2025",
+    "genre": "ベルトスクロールアクション",
+    "platform": "PS4/PS5/Switch/Switch2/Xbox/PC",
+    "detail": "marvel-cosmic-invasion",
+    "desc": "ドット絵の協力プレイアクション。原作『アナイアレーション』が題材で、コズミック・ゴーストライダーやフィラ・ヴェルなど宇宙勢のマニアックな人選も見どころ。"
+   },
+   {
+    "title": "Marvel's Wolverine",
+    "en": "Marvel's Wolverine",
+    "year": "2026",
+    "genre": "アクションアドベンチャー",
+    "platform": "PS5",
+    "detail": null,
+    "desc": "『Marvel's Spider-Man』のInsomniac Games開発。2026年9月15日発売予定の完全新作で、ローガンの物語を単独で描く。"
+   },
+   {
+    "title": "MARVEL vs. CAPCOM ファイティングコレクション",
+    "en": "Marvel vs. Capcom Fighting Collection",
+    "year": "2024",
+    "genre": "対戦格闘(復刻)",
+    "platform": "PS4/Switch/PC",
+    "detail": null,
+    "desc": "90年代アーケードの金字塔7作を収録。日本の格闘ゲーム文化とマーベルの結節点で、歴史を辿るなら外せない。"
+   },
+   {
+    "title": "Marvel's Spider-Man",
+    "en": "Marvel's Spider-Man",
+    "year": "2018",
+    "genre": "オープンワールドアクション",
+    "platform": "PS4/PS5/PC",
+    "detail": "marvels-spider-man",
+    "desc": "独自ユニバースのベテラン・ピーターを描く代表作。シニスター・シックス結成までを追う。"
+   },
+   {
+    "title": "Marvel's Spider-Man: マイルズ・モラレス",
+    "en": "Marvel's Spider-Man: Miles Morales",
+    "year": "2020",
+    "genre": "オープンワールドアクション",
+    "platform": "PS4/PS5/PC",
+    "detail": "marvels-spider-man-miles",
+    "desc": "2代目マイルズの単独作。ハーレムを舞台にした中編。"
+   },
+   {
+    "title": "Marvel's Spider-Man 2",
+    "en": "Marvel's Spider-Man 2",
+    "year": "2023",
+    "genre": "オープンワールドアクション",
+    "platform": "PS5/PC",
+    "detail": "marvels-spider-man-2",
+    "desc": "2人同時主人公。クレイヴンとヴェノム、そしてシンビオートの誘惑。"
+   },
+   {
+    "title": "マーベル ミッドナイト・サンズ",
+    "en": "Marvel's Midnight Suns",
+    "year": "2022",
+    "genre": "戦術カードRPG",
+    "platform": "PS/Xbox/Switch/PC",
+    "detail": "marvels-midnight-suns",
+    "desc": "魔術・怪奇系ヒーローが集う異色作。ニコ・ミノルやマジックなど実写未登場勢が主役級。"
+   }
+  ]
+ }
+}

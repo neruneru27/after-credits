@@ -1,0 +1,80 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: games.games
+  size: 1
+  alias: g
+  addAllPagesToCollections: true
+permalink: "/games/{{ g.id }}/"
+pageJs: /assets/js/games.js
+eleventyComputed:
+  title: "{{ g.title }} 参戦キャラクター一覧|実写登場の有無と原作解説"
+  description: "{{ g.title }}({{ g.en }})の参戦キャラクター一覧。{{ g.as_of }}。各キャラが実写作品に登場しているか、原作でどんな存在かを解説つきで確認できます。"
+---
+{%- set amz = amazonLinks[g.id] %}
+<section data-page="game-detail">
+  <div class="wrap">
+    <p class="crumb"><a href="{{ '/' | url }}">ホーム</a> › <a href="{{ '/games/' | url }}">ゲーム</a> › {{ g.title }}</p>
+
+    <div class="sec-head">
+      <span class="en">{{ g.en }}</span>
+      <h2 class="chara-name-h">{{ g.title }} 参戦キャラクター</h2>
+      <p>{{ g.desc }}</p>
+    </div>
+
+    <p class="game-asof">📅 <b>{{ g.as_of }}</b>{% if g.official %} — 最新のロスターは<a href="{{ g.official }}" target="_blank" rel="noopener">公式サイト</a>でご確認ください{% endif %}</p>
+    {%- if g.note %}<p class="term-note">{{ g.note }}</p>{% endif %}
+    {%- if g.story %}<p class="term-note">📖 {{ g.story }}</p>{% endif %}
+
+    {%- if site.affiliateEnabled and amz %}
+    <p class="w-buy">
+      {%- if amz.bd %}<a class="amz-btn" href="https://www.amazon.co.jp/dp/{{ amz.bd }}?tag={{ site.amazonTag }}" rel="sponsored noopener">パッケージ版をAmazonで見る</a>{% endif %}
+      <span class="pr-label">[PR]</span></p>
+    {%- endif %}
+
+    <div class="filter-row" id="game-filter" role="group" aria-label="実写登場で絞り込み">
+      <span class="filter-label">絞り込み</span>
+      <button class="fbtn" data-live="all" aria-pressed="true">すべて({{ g.chars.length }})</button>
+      <button class="fbtn" data-live="1" aria-pressed="false">🎬 実写にも出ている</button>
+      <button class="fbtn" data-live="0" aria-pressed="false">🎮 ゲームだけのキャラ</button>
+    </div>
+
+    {%- if g.roles %}
+    <div class="filter-row" id="game-role" role="group" aria-label="ロールで絞り込み">
+      <span class="filter-label">ロール</span>
+      <button class="fbtn" data-role="all" aria-pressed="true">すべて</button>
+      {%- for key, label in g.roles %}
+      {%- if key != 'all' %}
+      <button class="fbtn" data-role="{{ key }}" aria-pressed="false">{{ label }}</button>
+      {%- endif %}
+      {%- endfor %}
+    </div>
+    {%- endif %}
+
+    <div class="game-chars" id="game-chars">
+      {%- for c in g.chars %}
+      <div class="gchar" data-live="{{ '1' if c.enc_id else '0' }}"{% if c.role %} data-role="{{ c.role }}"{% endif %}>
+        <div class="gchar-head">
+          <h3>{{ c.jp }}<small>{{ c.en }}</small></h3>
+          {%- if c.tier %}<span class="gtier {{ c.tier }}">{{ {'playable':'操作可能','main':'主要','sub':'サブ'}[c.tier] }}</span>{% endif %}
+          {%- if c.role and g.roles %}<span class="grole {{ c.role }}">{{ g.roles[c.role] }}</span>{% endif %}
+          {%- if c.team %}<span class="gteam">{{ c.team }}</span>{% endif %}
+        </div>
+        {%- if c.note %}<p class="gchar-note">{{ c.note }}</p>{% endif %}
+        <p class="gchar-meta">
+          {%- if c.since %}<span class="gsince">{{ c.since }}</span>{% endif %}
+          {%- if c.unlock %}<span class="gsince">{{ c.unlock }}</span>{% endif %}
+          {%- if c.enc_id %}
+          <a class="gchar-link" href="{{ ('/characters/' + c.enc_id + '/') | url }}">📖 キャラクター百科で読む →</a>
+          {%- else %}
+          <span class="gchar-none">実写未登場・当サイト百科は未収録</span>
+          {%- endif %}
+        </p>
+      </div>
+      {%- endfor %}
+    </div>
+    <p class="no-hit" id="game-nohit">該当するキャラクターが見つかりませんでした。</p>
+
+    <p class="enc-back"><a href="{{ '/games/' | url }}">← ゲーム図鑑に戻る</a></p>
+  </div>
+</section>

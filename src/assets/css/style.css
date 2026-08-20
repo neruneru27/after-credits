@@ -889,3 +889,35 @@
   .want-remain.show { display: block; }
   .want-none { font-size: 1.05rem; font-weight: 900; color: var(--magenta); padding: 10px 0; }
   .want-none span { display: block; font-size: 0.82rem; font-weight: 700; color: #4a4238; margin-top: 4px; }
+
+  /* ---------- ゲーム図鑑 ---------- */
+  .game-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
+  .game-card { background: #fff; border: 3px solid var(--ink); box-shadow: 5px 5px 0 var(--ink); padding: 16px 18px; display: flex; flex-direction: column; gap: 6px; }
+  .game-card h3 { font-size: 1rem; font-weight: 900; line-height: 1.5; }
+  .game-card h3 small { display: block; font-family: var(--font-en); font-size: 0.75rem; letter-spacing: 1px; color: var(--cyan); font-weight: 400; }
+  .game-meta { font-size: 0.75rem; font-weight: 900; color: var(--magenta); }
+  .game-platform { font-size: 0.72rem; color: #6b5f52; font-weight: 700; }
+  .game-desc { font-size: 0.8rem; color: #4a4238; flex: 1; }
+  .game-link { display: block; margin-top: 6px; padding-top: 8px; border-top: 2px dashed var(--paper-dark); font-weight: 900; font-size: 0.8rem; color: var(--magenta); }
+  .game-asof { font-size: 0.8rem; font-weight: 700; background: #fff; border: 2px dashed var(--ink); padding: 8px 14px; margin-bottom: 14px; }
+  .game-asof a { color: var(--magenta); text-decoration: underline; }
+  .game-chars { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 12px; }
+  .gchar { background: #fff; border: 3px solid var(--ink); box-shadow: 3px 3px 0 var(--ink); padding: 12px 14px; }
+  .gchar.hide { display: none; }
+  .gchar-head { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin-bottom: 6px; }
+  .gchar-head h3 { font-size: 0.92rem; font-weight: 900; flex: 1; min-width: 60%; }
+  .gchar-head h3 small { display: block; font-size: 0.68rem; color: #6b5f52; font-weight: 700; }
+  .gtier, .grole, .gteam { font-size: 0.66rem; font-weight: 900; border: 1px solid var(--ink); padding: 1px 7px; }
+  .gtier.playable { background: var(--yellow); }
+  .gtier.main { background: #fff; }
+  .gtier.sub { background: var(--paper-dark); color: #5a5245; }
+  .grole.vanguard { background: var(--cyan); color: #fff; }
+  .grole.fighter { background: var(--magenta); color: #fff; }
+  .grole.strategist { background: #1a7f37; color: #fff; }
+  .grole.all { background: var(--ink); color: var(--yellow); }
+  .gteam { background: var(--paper); }
+  .gchar-note { font-size: 0.78rem; color: #4a4238; margin-bottom: 6px; }
+  .gchar-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; border-top: 2px dashed var(--paper-dark); padding-top: 6px; }
+  .gsince { font-size: 0.68rem; font-weight: 900; background: var(--paper); border: 1px solid var(--paper-dark); padding: 1px 7px; }
+  .gchar-link { font-size: 0.75rem; font-weight: 900; color: var(--magenta); text-decoration: underline; }
+  .gchar-none { font-size: 0.72rem; color: #6b5f52; font-weight: 700; }

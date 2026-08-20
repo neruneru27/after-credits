@@ -208,5 +208,6 @@
     "bd": "B0FR9QZTG8",
     "dvd": "B0FR8XD7L2",
     "pv": "B0FK4BGX58"
-  }
+  },
+  "_games_readme": "ゲームのパッケージ版ASINもここに登録可(キーはgames.jsonのgame id、bdキーに入れる)"
 }

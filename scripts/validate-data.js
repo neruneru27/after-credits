@@ -349,10 +349,36 @@ let encIds = new Set();
   }
 }
 
+// ---- games(マーベルゲーム図鑑) ----
+{
+  const gm = load('games.json');
+  const encSet = new Set(load('encyclopedia.json').entries.map((x) => x.id));
+  const gameIds = new Set(gm.games.map((g) => g.id));
+  for (const c of gm.catalog.items) {
+    for (const k of ['title', 'en', 'year', 'genre', 'platform', 'desc']) {
+      if (!c[k]) err(`games: catalog "${c.title || '?'}" に ${k} が無い`);
+    }
+    if (c.detail && !gameIds.has(c.detail)) err(`games: catalog の detail が games に無い: ${c.detail}`);
+  }
+  for (const g of gm.games) {
+    for (const k of ['title', 'en', 'desc', 'as_of', 'chars']) {
+      if (!g[k]) err(`games: ${g.id} に ${k} が無い`);
+    }
+    for (const c of g.chars) {
+      if (!c.jp || !c.en) err(`games: ${g.id} のキャラに jp/en が無い`);
+      if (c.enc_id && !encSet.has(c.enc_id)) err(`games: ${g.id} の enc_id が百科に無い: ${c.enc_id}`);
+      if (c.tier && !['playable', 'main', 'sub'].includes(c.tier)) err(`games: ${g.id} の tier 不正: ${c.tier}`);
+      if (g.id === 'marvel-rivals' && !['vanguard', 'fighter', 'strategist', 'all'].includes(c.role)) {
+        err(`games: ライバルズ "${c.jp}" の role が不正: ${c.role}`);
+      }
+    }
+  }
+}
+
 // ---- 異常文字列チェック(全JSON: キリル文字・かな漢字に挟まれた英字の混入検出) ----
 {
   // かな漢字に挟まれた小文字英字はタイポ・機械混入の疑い。スキーマ用語は除外
-  const allowTokens = new Set(['sp', 'syn', 'desc', 'jp', 'id', 'no', 'db', 'ver', 'url', 'meta', 'tags', 'live', 'key', 'keys', 'note', 'eps', 'pos', 'mid', 'post', 'node', 'edge', 'label', 'type', 'query', 'until', 'en', 'row', 'lane', 'from', 'to', 'why']);
+  const allowTokens = new Set(['sp', 'syn', 'desc', 'jp', 'id', 'no', 'db', 'ver', 'url', 'meta', 'tags', 'live', 'key', 'keys', 'note', 'eps', 'pos', 'mid', 'post', 'role', 'tier', 'node', 'edge', 'label', 'type', 'query', 'until', 'en', 'row', 'lane', 'from', 'to', 'why']);
   for (const f of fs.readdirSync(DATA).filter((x) => x.endsWith('.json'))) {
     const raw = fs.readFileSync(path.join(DATA, f), 'utf8');
     const cyr = raw.match(/[а-яА-Я]+/);
