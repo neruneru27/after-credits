@@ -61,8 +61,19 @@ pageJs: /assets/js/live.js
         {%- for f in futureSlate.items %}
         <div class="future-card">
           <h4>{{ f.title }}</h4>
-          <p class="future-date">米国公開: {{ f.us_date | fmtDate }} / 日本公開未定</p>
+          <p class="future-date">米国公開: {{ f.us_date | fmtDate }} / {{ f.jp_date | fmtDate if f.jp_date else '日本公開未定' }}</p>
           <p class="future-note">{{ f.note }}</p>
+          {%- if f.cast and f.cast.length %}
+          <div class="future-cast">
+            <p class="future-cast-head">発表済みキャスト({{ f.cast.length }}名)</p>
+            <ul>
+              {%- for c in f.cast %}
+              <li>{% if c.enc_id %}<a href="{{ ('/characters/' + c.enc_id + '/') | url }}">{{ c.role }}</a>{% else %}<span>{{ c.role }}</span>{% endif %} — {{ c.actor }}</li>
+              {%- endfor %}
+            </ul>
+            {%- if f.cast_note %}<p class="future-cast-note">{{ f.cast_note }}</p>{% endif %}
+          </div>
+          {%- endif %}
         </div>
         {%- endfor %}
       </div>

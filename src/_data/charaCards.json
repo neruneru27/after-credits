@@ -2792,6 +2792,430 @@
     "doomsday": false
    },
    "enc_id": "ghost-rider"
+  },
+  {
+   "name": "マイルズ・モラレス",
+   "en": "MILES MORALES",
+   "ini": "MM",
+   "color": "k",
+   "desc": "ピーターの後を継いだ2代目スパイダーマン。電撃と透明化が武器で、アニメ『スパイダーバース』3部作の主人公。",
+   "live": "アニメ『スパイダーバース』3部作+ゲーム『Marvel's Spider-Man』シリーズが主戦場。実写未登場",
+   "keys": "マイルズ・モラレス miles morales スパイダーマン 2代目 ベノムブラスト",
+   "tags": {
+    "faction": [
+     "hero"
+    ],
+    "origin": "enhanced",
+    "series": [
+     "none"
+    ],
+    "doomsday": false
+   },
+   "enc_id": "miles-morales"
+  },
+  {
+   "name": "スパイダー・グウェン",
+   "en": "SPIDER-GWEN",
+   "ini": "SG",
+   "color": "c",
+   "desc": "クモに噛まれたのがグウェンだった並行世界のヒーロー。バンドのドラマーでもある。",
+   "live": "アニメ『スパイダーバース』3部作のヒロイン格。実写のグウェン(エマ・ストーン版)とは別設定",
+   "keys": "スパイダーグウェン spider gwen グウェン・ステイシー アース65",
+   "tags": {
+    "faction": [
+     "hero"
+    ],
+    "origin": "enhanced",
+    "series": [
+     "none"
+    ],
+    "doomsday": false
+   },
+   "enc_id": "spider-gwen"
+  },
+  {
+   "name": "ミゲル・オハラ",
+   "en": "MIGUEL O'HARA",
+   "ini": "MO",
+   "color": "m",
+   "desc": "2099年のスパイダーマン。スパイダー・ソサエティを率い、多元宇宙の秩序を守ろうとする。",
+   "live": "アニメ『アクロス・ザ・スパイダーバース』の主要人物(声:オスカー・アイザック)。実写未登場",
+   "keys": "ミゲル・オハラ miguel ohara スパイダーマン2099 ソサエティ",
+   "tags": {
+    "faction": [
+     "antihero"
+    ],
+    "origin": "enhanced",
+    "series": [
+     "none"
+    ],
+    "doomsday": false
+   },
+   "enc_id": "miguel-ohara"
+  },
+  {
+   "name": "ザ・スポット",
+   "en": "THE SPOT",
+   "ini": "SP",
+   "color": "k",
+   "desc": "体の斑点をポータルにする能力者。三流ヴィランからアニメで一級の敵へ生まれ変わった。",
+   "live": "アニメ『アクロス・ザ・スパイダーバース』のメインヴィラン。実写未登場",
+   "keys": "ザ・スポット the spot 斑点 ポータル ヴィラン",
+   "tags": {
+    "faction": [
+     "villain"
+    ],
+    "origin": "enhanced",
+    "series": [
+     "none"
+    ],
+    "doomsday": false
+   },
+   "enc_id": "the-spot"
+  },
+  {
+   "name": "モーフ",
+   "en": "MORPH",
+   "ini": "MP",
+   "color": "y",
+   "desc": "あらゆる姿に変身するムードメーカー。92年版アニメでの戦死は当時の子供たちのトラウマ。",
+   "live": "『X-Men '97』の主要メンバー。実写映画には未登場",
+   "keys": "モーフ morph 変身 X-MEN ケヴィン・シドニー",
+   "tags": {
+    "faction": [
+     "hero"
+    ],
+    "origin": "mutant",
+    "series": [
+     "none"
+    ],
+    "doomsday": false
+   },
+   "enc_id": "morph"
+  },
+  {
+   "name": "ビショップ",
+   "en": "BISHOP",
+   "ini": "BS",
+   "color": "m",
+   "desc": "ミュータント強制収容所の未来から来た治安官。エネルギーを吸収して撃ち返す。",
+   "live": "92年版アニメと『X-Men '97』に登場。実写は『X-MEN:フューチャー&パスト』に脇役として",
+   "keys": "ビショップ bishop 未来 X-MEN ルーカス",
+   "tags": {
+    "faction": [
+     "hero"
+    ],
+    "origin": "mutant",
+    "series": [
+     "fox-xmen"
+    ],
+    "doomsday": false
+   },
+   "enc_id": "bishop"
+  },
+  {
+   "name": "ジュビリー",
+   "en": "JUBILEE",
+   "ini": "JB",
+   "color": "y",
+   "desc": "花火のような閃光を放つ若手ミュータント。92年版アニメでは実質の主人公格だった。",
+   "live": "『X-MEN:アポカリプス』に登場+アニメ2作。ゲーム『マーベル・ライバルズ』でも人気",
+   "keys": "ジュビリー jubilee 花火 X-MEN ジュビレーション",
+   "tags": {
+    "faction": [
+     "hero"
+    ],
+    "origin": "mutant",
+    "series": [
+     "fox-xmen"
+    ],
+    "doomsday": false
+   },
+   "enc_id": "jubilee"
+  },
+  {
+   "name": "ピーター・B・パーカー",
+   "en": "PETER B. PARKER",
+   "ini": "PB",
+   "color": "c",
+   "desc": "離婚し腰痛を抱えた中年ピーター。マイルズの師匠となり、教えることで自分を立て直す。",
+   "live": "アニメ『スパイダーバース』シリーズ(声:ジェイク・ジョンソン/宮野真守)。実写未登場",
+   "keys": "ピーターBパーカー peter b parker 中年 師匠 スパイダーバース",
+   "tags": {
+    "faction": [
+     "hero"
+    ],
+    "origin": "enhanced",
+    "series": [
+     "spider-verse"
+    ],
+    "doomsday": false
+   },
+   "enc_id": "peter-b-parker"
+  },
+  {
+   "name": "スパイダー・パンク",
+   "en": "SPIDER-PUNK",
+   "ini": "SK",
+   "color": "m",
+   "desc": "ギターで戦うアース138の反逆者。大統領オズボーンを撲殺した過去を持つ。",
+   "live": "アニメ『アクロス・ザ・スパイダーバース』(声:ダニエル・カルーヤ/木村昴)。実写未登場",
+   "keys": "スパイダーパンク spider punk ホービー・ブラウン ギター アース138",
+   "tags": {
+    "faction": [
+     "hero"
+    ],
+    "origin": "enhanced",
+    "series": [
+     "spider-verse"
+    ],
+    "doomsday": false
+   },
+   "enc_id": "spider-punk"
+  },
+  {
+   "name": "ジェシカ・ドリュー",
+   "en": "SPIDER-WOMAN",
+   "ini": "JD",
+   "color": "m",
+   "desc": "1977年生まれのスパイダーウーマン。アニメでは妊娠中でもバイクを駆る先輩役。",
+   "live": "アニメ『アクロス・ザ・スパイダーバース』(声:イッサ・レイ/田村睦心)。実写未登場",
+   "keys": "ジェシカ・ドリュー spider woman スパイダーウーマン バイク",
+   "tags": {
+    "faction": [
+     "hero"
+    ],
+    "origin": "enhanced",
+    "series": [
+     "spider-verse"
+    ],
+    "doomsday": false
+   },
+   "enc_id": "jessica-drew-sv"
+  },
+  {
+   "name": "パヴィトラ・プラバカール",
+   "en": "SPIDER-MAN INDIA",
+   "ini": "PP",
+   "color": "y",
+   "desc": "ムンバッタンのスパイダーマン。2004年のインド版翻案から生まれた。",
+   "live": "アニメ『アクロス・ザ・スパイダーバース』(声:カラン・ソーニ/佐藤せつじ)。実写未登場",
+   "keys": "パヴィトラ spider man india インド ムンバッタン",
+   "tags": {
+    "faction": [
+     "hero"
+    ],
+    "origin": "enhanced",
+    "series": [
+     "spider-verse"
+    ],
+    "doomsday": false
+   },
+   "enc_id": "pavitr-prabhakar"
+  },
+  {
+   "name": "ベン・ライリー",
+   "en": "BEN REILLY",
+   "ini": "BR",
+   "color": "m",
+   "desc": "ピーターのクローンにしてスカーレット・スパイダー。ドラマではケイジ版の主人公に。",
+   "live": "ドラマ『スパイダーノワール』主演(ニコラス・ケイジ)+アニメ『アクロス・ザ・スパイダーバース』",
+   "keys": "ベン・ライリー ben reilly スカーレットスパイダー クローン ノワール",
+   "tags": {
+    "faction": [
+     "hero"
+    ],
+    "origin": "enhanced",
+    "series": [
+     "spider-verse",
+     "sony"
+    ],
+    "doomsday": false
+   },
+   "enc_id": "ben-reilly"
+  },
+  {
+   "name": "スパイダー・キャット",
+   "en": "SPIDER-CAT",
+   "ini": "SC",
+   "color": "y",
+   "desc": "アース999の猫。口からウェブを出す。スパイダー・ソサエティの一員。",
+   "live": "アニメ『アクロス・ザ・スパイダーバース』に登場。実写未登場",
+   "keys": "スパイダーキャット spider cat 猫 アース999",
+   "tags": {
+    "faction": [
+     "hero"
+    ],
+    "origin": "enhanced",
+    "series": [
+     "spider-verse"
+    ],
+    "doomsday": false
+   },
+   "enc_id": "spider-cat"
+  },
+  {
+   "name": "キャット・ハーディ",
+   "en": "CAT HARDY",
+   "ini": "CH",
+   "color": "m",
+   "desc": "ドラマ版のフェリシア。超能力を持たない歌姫として物語の鍵を握る。",
+   "live": "ドラマ『スパイダーノワール』に登場。原作のブラックキャットとは別解釈",
+   "keys": "キャット・ハーディ フェリシア ブラックキャット 歌姫 ノワール",
+   "tags": {
+    "faction": [
+     "antihero"
+    ],
+    "origin": "human",
+    "series": [
+     "sony"
+    ],
+    "doomsday": false
+   },
+   "enc_id": "cat-hardy"
+  },
+  {
+   "name": "シルバーメイン",
+   "en": "SILVERMANE",
+   "ini": "SM",
+   "color": "k",
+   "desc": "原作は若返りとサイボーグ化を繰り返すマフィアのボス。ドラマ版は生身の冷酷な首領。",
+   "live": "ドラマ『スパイダーノワール』のメインヴィラン",
+   "keys": "シルバーメイン silvermane マフィア マンフレディ ノワール",
+   "tags": {
+    "faction": [
+     "villain"
+    ],
+    "origin": "human",
+    "series": [
+     "sony"
+    ],
+    "doomsday": false
+   },
+   "enc_id": "silvermane"
+  },
+  {
+   "name": "ロビー・ロバートソン",
+   "en": "ROBBIE ROBERTSON",
+   "ini": "RR",
+   "color": "c",
+   "desc": "デイリー・ビューグルの良心。マーベル最初期の黒人レギュラーの一人。",
+   "live": "ライミ版3部作(ビル・ナン)+ドラマ『スパイダーノワール』",
+   "keys": "ロビー・ロバートソン robbie ビューグル 副編集長",
+   "tags": {
+    "faction": [
+     "support"
+    ],
+    "origin": "human",
+    "series": [
+     "sony",
+     "raimi-webb"
+    ],
+    "doomsday": false
+   },
+   "enc_id": "robbie-robertson"
+  },
+  {
+   "name": "トゥームストーン",
+   "en": "TOMBSTONE",
+   "ini": "TS",
+   "color": "k",
+   "desc": "アルビノの巨漢ギャング。ロビー・ロバートソンとは高校の同級生という因縁を持つ。",
+   "live": "『ブランド・ニュー・デイ』+ドラマ『スパイダーノワール』+ゲーム版に登場",
+   "keys": "トゥームストーン tombstone ロニー・リンカーン ギャング",
+   "tags": {
+    "faction": [
+     "villain"
+    ],
+    "origin": "enhanced",
+    "series": [
+     "mcu",
+     "sony"
+    ],
+    "doomsday": false
+   },
+   "enc_id": "tombstone"
+  },
+  {
+   "name": "ルビー・J・ウィリアムズ",
+   "en": "RUBY J. WILLIAMS",
+   "ini": "RW",
+   "color": "c",
+   "desc": "ドラマ版オリジナル。ベンの婚約者で、その死が引退の理由となった。",
+   "live": "ドラマ『スパイダーノワール』に登場(演:アマンダ・シュル)",
+   "keys": "ルビー ウィリアムズ 婚約者 ノワール",
+   "tags": {
+    "faction": [
+     "support"
+    ],
+    "origin": "human",
+    "series": [
+     "sony"
+    ],
+    "doomsday": false
+   },
+   "enc_id": "ruby-williams"
+  },
+  {
+   "name": "メガワット",
+   "en": "MEGAWATT",
+   "ini": "MW",
+   "color": "y",
+   "desc": "1930年代版エレクトロとして再構築された電撃使い。",
+   "live": "ドラマ『スパイダーノワール』のヴィラン",
+   "keys": "メガワット megawatt 電撃 エレクトロ ノワール",
+   "tags": {
+    "faction": [
+     "villain"
+    ],
+    "origin": "enhanced",
+    "series": [
+     "sony"
+    ],
+    "doomsday": false
+   },
+   "enc_id": "megawatt"
+  },
+  {
+   "name": "エマ・フロスト",
+   "en": "EMMA FROST",
+   "ini": "EF",
+   "color": "c",
+   "desc": "ダイヤモンド化するテレパス。敵役からX-MENの中核へ移った稀有な経歴。",
+   "live": "2028年MCU版『X-MEN』でサマラ・ウィービングが演じる予定+『ファースト・ジェネレーション』",
+   "keys": "エマ・フロスト emma frost ホワイトクイーン ダイヤモンド テレパス",
+   "tags": {
+    "faction": [
+     "antihero"
+    ],
+    "origin": "mutant",
+    "series": [
+     "fox-xmen",
+     "mcu"
+    ],
+    "doomsday": false
+   },
+   "enc_id": "emma-frost"
+  },
+  {
+   "name": "ミスター・シニスター",
+   "en": "MISTER SINISTER",
+   "ini": "MS",
+   "color": "k",
+   "desc": "遺伝子操作に取り憑かれた不老の科学者。スコットとジーンの血統に執着する。",
+   "live": "2028年MCU版『X-MEN』でアダム・ドライバーが演じる予定",
+   "keys": "ミスター・シニスター sinister エセックス 遺伝子 クローン",
+   "tags": {
+    "faction": [
+     "villain"
+    ],
+    "origin": "mutant",
+    "series": [
+     "mcu"
+    ],
+    "doomsday": false
+   },
+   "enc_id": "mister-sinister"
   }
  ]
 }

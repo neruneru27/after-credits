@@ -89,7 +89,7 @@ const err = (msg) => errors.push(msg);
 let encIds = new Set();
 {
   const e = load('encyclopedia.json');
-  if (e.entries.length !== 125) err(`encyclopedia: 件数が 125 でない: ${e.entries.length}`);
+  if (e.entries.length !== 146) err(`encyclopedia: 件数が 146 でない: ${e.entries.length}`);
   const factions = Object.keys(e.meta.filters.faction);
   const origins = Object.keys(e.meta.filters.origin);
   const seriesKeys = Object.keys(e.meta.filters.series);
@@ -120,7 +120,7 @@ let encIds = new Set();
 // ---- charaCards(検索カード120体) ----
 {
   const c = load('charaCards.json');
-  if (c.cards.length !== 125) err(`charaCards: 件数が 125 でない: ${c.cards.length}`);
+  if (c.cards.length !== 146) err(`charaCards: 件数が 146 でない: ${c.cards.length}`);
   const seen = new Set();
   for (const card of c.cards) {
     if (!['c', 'm', 'y', 'k'].includes(card.color)) {
@@ -162,7 +162,7 @@ let encIds = new Set();
   if (o.defenders_order.items.length !== 13) {
     err(`otherSeries: defenders_order が 13 でない: ${o.defenders_order.items.length}`);
   }
-  if (o.series.length !== 6) err(`otherSeries: ブロック数が 6 でない: ${o.series.length}`);
+  if (o.series.length !== 7) err(`otherSeries: ブロック数が 7 でない: ${o.series.length}`);
   for (const s of o.series) {
     for (const w of s.items) {
       const upcoming = /予定/.test(w.year || '');
@@ -267,7 +267,7 @@ let encIds = new Set();
   const g = load('charaGoods.json');
   const encIds2 = new Set(load('encyclopedia.json').entries.map((x) => x.id));
   const keys = Object.keys(g.chars);
-  if (keys.length !== 125) err(`goods: 件数が 125 でない: ${keys.length}`);
+  if (keys.length !== 146) err(`goods: 件数が 146 でない: ${keys.length}`);
   for (const id of encIds2) if (!g.chars[id]) err(`goods: 未網羅のキャラ: ${id}`);
   for (const [id, v] of Object.entries(g.chars)) {
     if (!v.query) err(`goods: ${id} に query が無い`);
@@ -394,4 +394,4 @@ if (errors.length) {
   for (const e of errors) console.error('  - ' + e);
   process.exit(1);
 }
-console.log("✔ データ検証 OK(glossary 298 / mcu 68 / comics 416 / encyclopedia 125 / cards 125)");
+console.log("✔ データ検証 OK(glossary 298 / mcu 68 / comics 416 / encyclopedia 146 / cards 146)");

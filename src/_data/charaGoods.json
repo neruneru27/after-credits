@@ -511,6 +511,90 @@
   "ghost-rider": {
    "query": "ゴーストライダー マーベル",
    "asins": []
+  },
+  "miles-morales": {
+   "query": "マイルズ・モラレス",
+   "asins": []
+  },
+  "spider-gwen": {
+   "query": "スパイダーグウェン",
+   "asins": []
+  },
+  "miguel-ohara": {
+   "query": "スパイダーマン2099",
+   "asins": []
+  },
+  "the-spot": {
+   "query": "ザ・スポット マーベル",
+   "asins": []
+  },
+  "morph": {
+   "query": "モーフ X-MEN",
+   "asins": []
+  },
+  "bishop": {
+   "query": "ビショップ X-MEN",
+   "asins": []
+  },
+  "jubilee": {
+   "query": "ジュビリー X-MEN",
+   "asins": []
+  },
+  "peter-b-parker": {
+   "query": "ピーター・B・パーカー",
+   "asins": []
+  },
+  "spider-punk": {
+   "query": "スパイダーパンク",
+   "asins": []
+  },
+  "jessica-drew-sv": {
+   "query": "スパイダーウーマン マーベル",
+   "asins": []
+  },
+  "pavitr-prabhakar": {
+   "query": "スパイダーマン インディア",
+   "asins": []
+  },
+  "ben-reilly": {
+   "query": "ベン・ライリー マーベル",
+   "asins": []
+  },
+  "spider-cat": {
+   "query": "スパイダーキャット",
+   "asins": []
+  },
+  "cat-hardy": {
+   "query": "ブラックキャット マーベル",
+   "asins": []
+  },
+  "silvermane": {
+   "query": "シルバーメイン マーベル",
+   "asins": []
+  },
+  "robbie-robertson": {
+   "query": "ロビー・ロバートソン",
+   "asins": []
+  },
+  "tombstone": {
+   "query": "トゥームストーン マーベル",
+   "asins": []
+  },
+  "ruby-williams": {
+   "query": "スパイダーノワール",
+   "asins": []
+  },
+  "megawatt": {
+   "query": "スパイダーノワール",
+   "asins": []
+  },
+  "emma-frost": {
+   "query": "エマ・フロスト",
+   "asins": []
+  },
+  "mister-sinister": {
+   "query": "ミスター・シニスター",
+   "asins": []
   }
  }
 }
