@@ -1,0 +1,31 @@
+{#- 劇場イベントカード(/live/用)。終了後は「上映終了」表記で過去ログとして残す -#}
+{%- for ev in theatricalEvents.events %}
+<div class="event-card" id="event-{{ ev.id }}" data-start="{{ ev.start_date }}" data-end="{{ ev.end_date }}">
+  <p class="event-card-head"><span class="event-tag">{{ ev.type }}</span><span class="event-status" data-role="status"></span></p>
+  <h3>{{ ev.title }}</h3>
+  <p class="event-dates">{{ ev.start_date | fmtDate }} 〜 {{ ev.end_date | fmtDate }}</p>
+  <p class="event-summary">{{ ev.summary }}</p>
+  {%- if ev.versions %}
+  <div class="event-versions">
+    {%- for v in ev.versions %}
+    <div class="event-ver"><b>{{ v.name }}</b><span>{{ v.runtime }}</span><p>{{ v.note }}</p></div>
+    {%- endfor %}
+  </div>
+  {%- endif %}
+  {%- if ev.infinity_vision %}
+  <details class="event-detail">
+    <summary>INFINITY VISIONとは?</summary>
+    <p>{{ ev.infinity_vision.what }}</p>
+    <ul>{% for c in ev.infinity_vision.criteria %}<li>{{ c }}</li>{% endfor %}</ul>
+    {%- if ev.infinity_vision.note %}<p class="term-note">{{ ev.infinity_vision.note }}</p>{% endif %}
+  </details>
+  {%- endif %}
+  {%- if ev.bonus %}<p class="event-bonus">🎁 {{ ev.bonus }}</p>{% endif %}
+  <p class="event-links">
+    <a class="amz-btn" href="{{ ev.official_url }}" target="_blank" rel="noopener">公式サイト(劇場情報)</a>
+    {%- if theatricalArticles[ev.id] %}<a class="amz-btn" href="{{ theatricalArticles[ev.id] | url }}">解説記事を読む</a>{% endif %}
+    {%- if ev.base_work_id %}<a class="amz-btn" href="{{ ('/live/' + ev.base_work_id + '/') | url }}">作品ページ</a>{% endif %}
+  </p>
+  <p class="term-note">{{ ev.theater_list_note }}</p>
+</div>
+{%- endfor %}

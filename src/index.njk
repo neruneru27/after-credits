@@ -2,6 +2,7 @@
 layout: layouts/base.njk
 permalink: /
 pageJs: /assets/js/splash.js
+pageJs2: /assets/js/events.js
 ---
 {#- 開幕演出: 本編DOMは通常どおり描画し、オーバーレイを被せる方式(SEO/CWV非影響)。表示判定はsplash.js -#}
 <div class="splash" id="splash" hidden aria-hidden="true">
@@ -20,6 +21,8 @@ pageJs: /assets/js/splash.js
       <h1>コミックか、アニメか、実写か。<br><span class="marker">どこから入っても、迷わせない。</span></h1>
       <p>マーベルは広大です。だからこのサイトは入口を3つに絞りました。時系列・見る順番・各巻のあらすじまで、あなたの「次の1本/1冊」をここで決められます。</p>
     </div>
+
+    {% include "partials/event-banner.njk" %}
 
     <div class="type-band">
       <h2 class="type-band-head">あなたはどのタイプ?</h2>

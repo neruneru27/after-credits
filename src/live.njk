@@ -4,6 +4,7 @@ title: MCUを見る順番ガイド|公開順・時系列・目的別コース(�
 description: MCU実写全68作品を日本公開順・物語時系列順で切り替え表示。あらすじ(ネタバレなし)とネタバレあり要約の2段構え。目的別視聴コース・ディフェンダーズ・サーガも収録。
 permalink: /live/
 pageJs: /assets/js/live.js
+pageJs2: /assets/js/events.js
 ---
 {% from "partials/work-item.njk" import workItem %}
 <section data-page="live">
@@ -14,6 +15,8 @@ pageJs: /assets/js/live.js
       <h2>MCUを見る順番ガイド(全68作品)</h2>
       <p>『アイアンマン』(2008)から2027年予定作まで全68作品を収録。「日本公開順」と「物語の時系列順」をワンタップで切り替え、種別での絞り込みもできます。<b>「単独OK」</b>は予習なしで観られる公式ブランド作品の印です。各作品をタップすると<b>あらすじ(ネタバレなし)</b>が開き、さらにその中の赤いボタンから<b>ネタバレあり要約</b>(結末まで記載)を読めます。時間がなくて観られない人向けの2段構えです。</p>
     </div>
+
+    {% include "partials/event-card.njk" %}
 
     <a class="doom-banner" href="{{ '/live/map/' | url }}">🗺 MCU相関マップ — 全68作品を「公開順×系譜」で一望 →</a>
     <a class="doom-banner" href="{{ '/live/credits/' | url }}">🎬 クレジットシーン全一覧 — 全68作品の有無と本数(ネタバレなし) →</a>

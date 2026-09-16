@@ -375,6 +375,23 @@ let encIds = new Set();
   }
 }
 
+// ---- theatricalEvents(劇場イベント) ----
+{
+  const te = load('theatricalEvents.json');
+  const wids = new Set(load('mcu.json').works.map((w) => w.id));
+  const iso = /^\d{4}-\d{2}-\d{2}$/;
+  for (const ev of te.events) {
+    for (const k of ['id', 'title', 'type', 'start_date', 'end_date', 'summary', 'official_url']) {
+      if (!ev[k]) err(`theatricalEvents: ${ev.id || '?'} に ${k} が無い`);
+    }
+    if (ev.start_date && !iso.test(ev.start_date)) err(`theatricalEvents: ${ev.id} の start_date がISO形式でない: ${ev.start_date}`);
+    if (ev.end_date && !iso.test(ev.end_date)) err(`theatricalEvents: ${ev.id} の end_date がISO形式でない: ${ev.end_date}`);
+    if (ev.start_date && ev.end_date && ev.start_date > ev.end_date) err(`theatricalEvents: ${ev.id} の開始日が終了日より後`);
+    if (ev.official_url && !/^https?:\/\//.test(ev.official_url)) err(`theatricalEvents: ${ev.id} の official_url が不正`);
+    if (ev.base_work_id && !wids.has(ev.base_work_id)) err(`theatricalEvents: ${ev.id} の base_work_id が mcu に無い: ${ev.base_work_id}`);
+  }
+}
+
 // ---- 異常文字列チェック(全JSON: キリル文字・かな漢字に挟まれた英字の混入検出) ----
 {
   // かな漢字に挟まれた小文字英字はタイポ・機械混入の疑い。スキーマ用語は除外

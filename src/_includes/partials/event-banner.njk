@@ -1,0 +1,9 @@
+{#- 劇場イベント告知バナー(トップ用)。表示/文言はJSで日付判定(開始前=◯日後/期間中=あと◯日/終了後=非表示) -#}
+{%- for ev in theatricalEvents.events %}
+<a class="event-banner" id="event-banner-{{ ev.id }}" href="{{ ('/live/#event-' + ev.id) | url }}"
+   data-start="{{ ev.start_date }}" data-end="{{ ev.end_date }}" hidden>
+  <span class="event-tag">{{ ev.type }}</span>
+  <b>{{ ev.title }}</b>
+  <span class="event-status" data-role="status"></span>
+</a>
+{%- endfor %}

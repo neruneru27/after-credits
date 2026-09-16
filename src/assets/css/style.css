@@ -929,3 +929,39 @@
   .future-cast li { font-size: 0.75rem; padding: 2px 0; }
   .future-cast a { color: var(--magenta); font-weight: 700; text-decoration: underline; }
   .future-cast-note { font-size: 0.68rem; color: #6b5f52; margin-top: 6px; }
+
+  /* ---------- 劇場イベント ---------- */
+  .event-banner {
+    display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px;
+    background: var(--ink); color: var(--paper); text-decoration: none;
+    border: 3px solid var(--ink); box-shadow: 5px 5px 0 var(--magenta);
+    padding: 12px 18px; margin: 0 0 28px; font-size: 0.9rem; transition: transform 0.15s;
+  }
+  .event-banner:hover { transform: translate(-2px,-2px); }
+  .event-banner[hidden] { display: none !important; }
+  .event-tag { font-size: 0.68rem; font-weight: 900; background: var(--magenta); color: #fff; padding: 2px 8px; border: 1px solid var(--ink); }
+  .event-status { font-size: 0.75rem; font-weight: 900; padding: 2px 10px; border: 2px solid currentColor; margin-left: auto; }
+  .ev-soon .event-status { color: var(--yellow); }
+  .ev-live .event-status { color: #6ee7a0; }
+  .ev-ended .event-status { color: #9a9a9a; }
+  .event-card { background: #fff; border: 3px solid var(--ink); box-shadow: 6px 6px 0 var(--magenta); padding: 18px 20px; margin-bottom: 28px; }
+  .event-card.ev-ended { box-shadow: 6px 6px 0 var(--paper-dark); opacity: 0.8; }
+  .event-card.ev-ended .event-status { color: #6b5f52; }
+  .event-card.ev-live .event-status { color: #1a7f37; }
+  .event-card.ev-soon .event-status { color: var(--magenta); }
+  .event-card-head { display: flex; align-items: center; gap: 10px; margin-bottom: 6px; }
+  .event-card-head .event-status { margin-left: 0; }
+  .event-card h3 { font-size: 1.15rem; font-weight: 900; }
+  .event-dates { font-size: 0.8rem; font-weight: 900; color: var(--magenta); margin: 4px 0 10px; }
+  .event-summary { font-size: 0.88rem; margin-bottom: 12px; }
+  .event-versions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 12px; }
+  @media (max-width: 640px) { .event-versions { grid-template-columns: 1fr; } }
+  .event-ver { border: 2px solid var(--ink); padding: 8px 12px; background: var(--paper); }
+  .event-ver b { display: block; font-size: 0.85rem; }
+  .event-ver span { font-size: 0.72rem; font-weight: 900; color: var(--cyan); }
+  .event-ver p { font-size: 0.75rem; color: #4a4238; margin-top: 4px; }
+  .event-detail { border: 2px dashed var(--ink); padding: 8px 12px; margin-bottom: 12px; font-size: 0.82rem; }
+  .event-detail summary { cursor: pointer; font-weight: 900; }
+  .event-detail ul { margin: 6px 0 6px 1.4em; }
+  .event-bonus { font-size: 0.82rem; font-weight: 700; background: #fff7dc; border-left: 4px solid var(--yellow); padding: 6px 10px; margin-bottom: 12px; }
+  .event-links { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 8px; }

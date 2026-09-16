@@ -85,5 +85,8 @@
 {%- if pageJs %}
 <script src="{{ pageJs | url }}?v={{ assetVersion }}" defer></script>
 {%- endif %}
+{%- if pageJs2 %}
+<script src="{{ pageJs2 | url }}?v={{ assetVersion }}" defer></script>
+{%- endif %}
 </body>
 </html>
