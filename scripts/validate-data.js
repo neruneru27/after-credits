@@ -46,8 +46,9 @@ const err = (msg) => errors.push(msg);
     if (seen.has(w.id)) err(`mcu: id 重複: ${w.id}`);
     seen.add(w.id);
     if (!['released', 'upcoming'].includes(w.status)) err(`mcu: ${w.id} の status 不正: ${w.status}`);
-    if (w.status === 'upcoming' && (w.syn || w.sp)) {
-      err(`mcu: upcoming の ${w.id} に syn/sp が存在する(執筆はチャット側担当。混入疑い)`);
+    // upcoming: syn(予告編ベースのあらすじ)は可、sp(ネタバレ要約)は不可(2026-09-17裁定)
+    if (w.status === 'upcoming' && w.sp) {
+      err(`mcu: upcoming の ${w.id} に sp が存在する(未公開作にネタバレ要約は書けない。混入疑い)`);
     }
     if (w.sp && w.sp_pending) err(`mcu: ${w.id} が sp と sp_pending を両方持つ`);
     if (w.status === 'released' && !w.sp && !w.sp_pending) {
