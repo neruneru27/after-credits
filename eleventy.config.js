@@ -153,6 +153,12 @@ module.exports = function (eleventyConfig) {
   // wantGuides: コース項目の総数(残り本数計算用)
   eleventyConfig.addFilter('courseIds', () => ['ume', 'take', 'matsu']);
 
+  // 作品id→任意フィールド取得(desc/syn/conn等。無ければ空文字)
+  eleventyConfig.addFilter('workField', (id, works, field) => {
+    const w = (works || []).find((x) => x.id === id);
+    return w && w[field] ? w[field] : '';
+  });
+
   // クレジットシーン一覧: pos別の本数
   eleventyConfig.addFilter('countPos', (credits, pos) =>
     (credits || []).filter((c) => c.pos === pos).length);

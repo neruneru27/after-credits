@@ -965,3 +965,16 @@
   .event-detail ul { margin: 6px 0 6px 1.4em; }
   .event-bonus { font-size: 0.82rem; font-weight: 700; background: #fff7dc; border-left: 4px solid var(--yellow); padding: 6px 10px; margin-bottom: 12px; }
   .event-links { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 8px; }
+
+  /* ---------- 本文増強(逆算ガイド・作品ページ) ---------- */
+  .want-target { background: #fff; border: 3px solid var(--ink); box-shadow: 4px 4px 0 var(--ink); padding: 14px 18px; margin-bottom: 16px; font-size: 0.88rem; }
+  .want-target-head { font-size: 0.72rem; font-weight: 900; color: var(--cyan); letter-spacing: 1px; margin-bottom: 6px; }
+  .want-target-desc { font-weight: 900; margin-bottom: 4px; }
+  .want-target-conn { margin-top: 8px; font-size: 0.82rem; }
+  .want-target-meta { margin-top: 6px; font-size: 0.75rem; color: #6b5f52; font-weight: 700; }
+  .course-guide-note { font-size: 0.82rem; color: #4a4238; border-left: 4px solid var(--yellow); padding: 6px 12px; margin-bottom: 16px; }
+  .want-desc { font-size: 0.78rem; color: #4a4238; margin-top: 2px; }
+  .enc-facts-wide { grid-column: 1 / -1; }
+  .nav-desc { display: block; font-size: 0.72rem; color: #6b5f52; font-weight: 400; }
+  .guide-lead { font-size: 0.85rem; margin: 6px 0; }
+  .guide-times { font-size: 0.78rem; font-weight: 700; color: #4a4238; margin-bottom: 10px; }

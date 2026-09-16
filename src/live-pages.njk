@@ -7,6 +7,7 @@ pagination:
   addAllPagesToCollections: true
 permalink: "/live/{{ w.id }}/"
 eleventyComputed:
+  noindex: "{{ true if (w.status == 'upcoming' and not w.syn) else '' }}"
   title: "{{ w.title }}({{ (w.date_jp or w.date) | truncate(4, true, '') }})|クレジットシーンは何個?あらすじ・登場キャラ・次に観る作品"
   description: "{{ w.title }}({{ w.date_jp | fmtDate }})の基本情報・あらすじ(ネタバレなし)・ネタバレあり要約・クレジットシーンの有無と内容・登場キャラクター・原作コミックを解説。"
 ---
@@ -45,6 +46,9 @@ eleventyComputed:
       {%- if meter %}
       <div><b>予習必要度</b><span class="prep-meter {{ meter.cls }}">{{ meter.label }}</span>{% if meter.n %}(前提{{ meter.n }}作品は下の「観る前に」参照){% endif %}</div>
       {%- endif %}
+      {%- if w.conn %}
+      <div class="enc-facts-wide"><b>位置づけ</b>{{ w.conn }}</div>
+      {%- endif %}
     </div>
 
     <div class="enc-body article-body">
@@ -79,7 +83,7 @@ eleventyComputed:
           <p class="nav-label">観る前に(前提作品)</p>
           <ul>
             {%- for r in ex.requires %}
-            <li><a href="{{ ('/live/' + r + '/') | url }}">{{ r | workTitle(mcu.works) }}</a></li>
+            <li><a href="{{ ('/live/' + r + '/') | url }}">{{ r | workTitle(mcu.works) }}</a>{% set rd = r | workField(mcu.works, 'desc') %}{% if rd %}<span class="nav-desc">{{ rd }}</span>{% endif %}</li>
             {%- endfor %}
           </ul>
         </div>
@@ -89,7 +93,7 @@ eleventyComputed:
           <p class="nav-label">この次に(繋がる作品)</p>
           <ul>
             {%- for r in ex.leads_to %}
-            <li><a href="{{ ('/live/' + r + '/') | url }}">{{ r | workTitle(mcu.works) }}</a></li>
+            <li><a href="{{ ('/live/' + r + '/') | url }}">{{ r | workTitle(mcu.works) }}</a>{% set rd = r | workField(mcu.works, 'desc') %}{% if rd %}<span class="nav-desc">{{ rd }}</span>{% endif %}</li>
             {%- endfor %}
           </ul>
         </div>
@@ -109,7 +113,15 @@ eleventyComputed:
 
       {%- set guide = wantGuides.guides | guideForWork(w.id) %}
       {%- if guide %}
-      <p class="term-note">🎯 <a href="{{ ('/live/want/' + guide.id + '/') | url }}">この作品の予習コースを見る</a> — {{ guide.catch }}</p>
+      <h3>🎯 この作品を観る前に</h3>
+      <div class="nav-col">
+        <p class="nav-label">{{ guide.catch }}</p>
+        <p class="guide-lead">{{ guide.lead }}</p>
+        <p class="guide-times">
+          {%- if guide.courses.ume.items.length %}最短コース {{ guide.courses.ume.time }}({{ guide.courses.ume.items.length }}本){% else %}<b>予習不要</b>(いきなり観てOK){% endif %} / 推奨コース {{ guide.courses.take.time }}({{ guide.courses.take.items.length }}本) / 完全版 {{ guide.courses.matsu.time }}({{ guide.courses.matsu.items.length }}本)
+        </p>
+        <p><a class="amz-btn" href="{{ ('/live/want/' + guide.id + '/') | url }}">3コースの予習ガイドを見る →</a></p>
+      </div>
       {%- endif %}
 
       {%- set rel = relatedArticles[w.id] %}

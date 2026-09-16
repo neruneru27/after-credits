@@ -7,6 +7,9 @@
 <title>{{ fullTitle }}</title>
 <meta name="description" content="{{ description or site.description }}">
 <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+{%- if noindex %}
+<meta name="robots" content="noindex, follow">
+{%- endif %}
 <meta property="og:type" content="{{ ogType or 'website' }}">
 <meta property="og:title" content="{{ fullTitle }}">
 <meta property="og:description" content="{{ description or site.description }}">
@@ -77,7 +80,7 @@
     <p class="disclosure">当サイト「{{ site.name }}」は、Amazonアソシエイト・プログラムへの参加を予定しています。参加後は適格販売により収入を得ます。</p>
     {%- endif %}
     <p class="legal">{{ site.legal }}</p>
-    <p class="footer-links"><a href="{{ '/privacy/' | url }}">プライバシーポリシー・運営者情報</a> / <a href="{{ site.contactFormUrl }}" target="_blank" rel="noopener">お問い合わせ</a></p>
+    <p class="footer-links"><a href="{{ '/about/' | url }}">このサイトについて</a> / <a href="{{ '/privacy/' | url }}">プライバシーポリシー</a> / <a href="{{ site.contactFormUrl }}" target="_blank" rel="noopener">お問い合わせ</a></p>
     <p class="credit">AFTER<span style="color:var(--cyan)">•</span>CREDITS — PICK YOUR UNIVERSE.</p>
   </div>
 </footer>

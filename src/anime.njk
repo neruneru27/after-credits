@@ -1,17 +1,19 @@
 ---
 layout: layouts/base.njk
-title: アニメ作品ガイド
-description: X-MEN '97、ホワット・イフ...?など、マーベル実写とコミックの橋渡しになるアニメ作品を厳選紹介。原作コミックへの導線つき。
+title: マーベルアニメガイド|MCUアニメ9作品・スパイダーバース・原作への導線
+description: X-MEN '97、ホワット・イフ...?、スパイダーバース3部作など、マーベルのアニメ作品を整理。MCU本編との繋がり、アニメで活躍するキャラクターの原作解説、次に読む原作コミックへの導線つき。
 permalink: /anime/
 ---
+{% from "partials/work-item.njk" import workItem %}
 <section data-page="anime">
   <div class="wrap">
     <p class="crumb"><a href="{{ '/' | url }}">ホーム</a> › アニメサイド</p>
     <div class="sec-head">
       <span class="en">ANIMATION</span>
       <h2>アニメ作品ガイド</h2>
-      <p>実写とコミックの「橋渡し」になるアニメを厳選。原作コミックへの導線も併記します。</p>
+      <p>実写とコミックの「橋渡し」になるアニメを整理しました。MCU公式のアニメ作品は実写と同じ時系列に置かれるものと、「もしも」の世界を描くものに分かれます。ここではまず入口となる3作を紹介し、続けてMCUのアニメ全作品とスパイダーバース3部作、アニメで活躍するキャラクターの原作解説へ案内します。</p>
     </div>
+
     <div class="anime-grid">
       <div class="anime-card">
         <h3>X-MEN '97</h3>
@@ -29,5 +31,65 @@ permalink: /anime/
         <p>MCUとは異なる世界線のピーター・パーカーを描くアニメシリーズ。原作初期スパイダーマンの空気感への入口に。</p>
       </div>
     </div>
+
+    <div class="sec-head" style="margin-top:48px;">
+      <span class="en">MCU ANIMATION</span>
+      <h2>MCUのアニメ全作品(公開順)</h2>
+      <p>Disney+で配信中のMCU公式アニメです。各作品を開くとあらすじ(ネタバレなし)と、その中からネタバレあり要約を読めます。実写ガイドの視聴済みチェックとも連動しています。</p>
+    </div>
+    <div class="watch-list">
+      {%- set animeWorks = [] %}
+      {%- for w in mcu.works | sortJpRelease %}
+      {%- if w.type == 'anime' %}
+      {{ workItem(w, loop.index, amazonLinks[w.id], site.amazonTag, site.affiliateEnabled, w.id | prepMeter(liveExtra)) }}
+      {%- endif %}
+      {%- endfor %}
+    </div>
+
+    {%- for s in otherSeries.series %}
+    {%- if s.id == 'spider-verse' %}
+    <div class="sec-head" style="margin-top:48px;">
+      <span class="en">SPIDER-VERSE</span>
+      <h2>{{ s.title }}</h2>
+      <p>MCUとは別のソニー製作アニメ映画。マルチバースの各世界から集うスパイダーマンたちの物語で、アニメーション表現の革新でも知られます。登場キャラクターの多くは当サイトのキャラクター百科で原作との違いを解説しています。</p>
+    </div>
+    <div class="watch-list">
+      {%- for w in s.items %}
+      {%- if w.syn %}
+      <details class="watch-d"><summary class="watch has-detail"><span class="w-num">{{ loop.index }}</span><div><h3>{{ w.title }}</h3>{% if w.desc %}<p class="w-desc">{{ w.desc }}</p>{% endif %}<p class="w-meta">{{ w.year }}年</p></div></summary><div class="w-detail"><p class="w-syn"><b>あらすじ(ネタバレなし):</b> {{ w.syn }}</p><details class="spoiler-box"><summary>⚠ ネタバレあり要約を表示(結末まで書いています)</summary><p>{{ w.sp }}</p></details></div></details>
+      {%- else %}
+      <div class="watch"><span class="w-num">{{ loop.index }}</span><div><h3>{{ w.title }}<span class="w-badge upcoming">公開予定</span></h3>{% if w.desc %}<p class="w-desc">{{ w.desc }}</p>{% endif %}<p class="w-meta">{{ w.year }}</p></div></div>
+      {%- endif %}
+      {%- endfor %}
+    </div>
+    <div class="char-links" style="margin-top:12px;">
+      {%- for ch in encyclopedia.entries %}
+      {%- if 'spider-verse' in ch.tags.series %}
+      <a class="char-link" href="{{ ('/characters/' + ch.id + '/') | url }}"><b>{{ ch.name }}</b></a>
+      {%- endif %}
+      {%- endfor %}
+    </div>
+    {%- endif %}
+    {%- endfor %}
+
+    <div class="sec-head" style="margin-top:48px;">
+      <span class="en">CHARACTERS IN ANIMATION</span>
+      <h2>アニメで活躍するキャラクター</h2>
+      <p>キャラクター百科のうち、アニメ作品での描かれ方を解説している{{ encyclopedia.entries | selectattr('anime') | list | length }}体です。実写・原作との違いが分かります。</p>
+    </div>
+    <div class="char-links">
+      {%- for ch in encyclopedia.entries %}
+      {%- if ch.anime %}
+      <a class="char-link" href="{{ ('/characters/' + ch.id + '/') | url }}"><b>{{ ch.name }}</b></a>
+      {%- endif %}
+      {%- endfor %}
+    </div>
+
+    <div class="sec-head" style="margin-top:48px;">
+      <span class="en">NEXT</span>
+      <h2>アニメから原作へ</h2>
+      <p>アニメで気になった作品・キャラクターの原作は、<a href="{{ '/comics/' | url }}">邦訳コミックDB</a>(全{{ comics.items.length }}冊)と<a href="{{ '/characters/' | url }}">キャラクター名鑑</a>から辿れます。「どこから読めばいいか分からない」場合は、コミックDBの<a href="{{ '/comics/#comic-navi' | url }}">診断チャート</a>が手助けします。</p>
+    </div>
   </div>
 </section>
+<script id="mcu-data" type="application/json">[]</script>

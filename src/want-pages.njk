@@ -23,6 +23,24 @@ eleventyComputed:
       <p>{{ g.lead }}</p>
     </div>
 
+    {%- if g.target %}
+    {%- set tsyn = g.target | workField(mcu.works, 'syn') %}
+    {%- set tconn = g.target | workField(mcu.works, 'conn') %}
+    {%- set tdesc = g.target | workField(mcu.works, 'desc') %}
+    <div class="want-target">
+      <p class="want-target-head">この作品について(ネタバレなし)</p>
+      {%- if tdesc %}<p class="want-target-desc">{{ tdesc }}</p>{% endif %}
+      {%- if tsyn %}<p>{{ tsyn }}</p>{% endif %}
+      {%- if tconn %}<p class="want-target-conn"><b>シリーズでの位置づけ:</b> {{ tconn }}</p>{% endif %}
+      {%- set tex = liveExtra.works[g.target] %}
+      {%- if tex %}<p class="want-target-meta">監督: {{ tex.director }}{% if tex.runtime %} / {{ tex.runtime }}分{% elif tex.eps %} / 全{{ tex.eps }}話{% endif %} / 日本公開: {{ (g.target | workField(mcu.works, 'date_jp')) | fmtDate }}</p>{% endif %}
+    </div>
+    {%- endif %}
+
+    <div class="course-guide-note">
+      <p><b>3コースの使い分け:</b> <b>梅</b>は「とにかく本編を早く観たい」人向けの最短ルート、<b>竹</b>は物語の因縁や伏線を無理なく把握できる推奨ルート、<b>松</b>は小ネタや客演まで拾う完全版です。各作品には「このコースで観る理由」を添えているので、気になる作品だけ拾い読みしても構いません。すべての作品ページで、あらすじ(ネタバレなし)とネタバレあり要約を分けて読めます。</p>
+    </div>
+
     <div class="course-tabs" role="group" aria-label="コースの切り替え">
       {%- set labels = { ume: '梅(最短)', take: '竹(推奨)', matsu: '松(完全版)' } %}
       {%- for cid in ['ume', 'take', 'matsu'] %}

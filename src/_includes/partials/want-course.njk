@@ -16,7 +16,8 @@
         {%- endif -%}
         {%- if it.verdict %}<span class="verdict {{ it.verdict }}">{{ {'recommend':'特に推奨','optional':'好みで','skip':'外してOK'}[it.verdict] }}</span>{% endif %}
       </p>
-      <p class="want-why">{{ it.why }}</p>
+      {%- if it.work_id %}{% set wd = it.work_id | workField(works, 'desc') %}{% if wd %}<p class="want-desc">{{ wd }}</p>{% endif %}{% endif %}
+      <p class="want-why"><b>このコースで観る理由:</b> {{ it.why }}</p>
     </li>
     {%- endfor %}
   </ol>
