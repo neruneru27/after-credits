@@ -23,6 +23,10 @@ permalink: /games/
         {%- if c.detail %}
         <a class="game-link" href="{{ ('/games/' + c.detail + '/') | url }}">キャラ一覧を見る →</a>
         {%- endif %}
+        {%- set ga = gameArticles[c.en] %}
+        {%- if ga %}
+        <a class="game-link" href="{{ ga.url | url }}">📚 {{ ga.label }} →</a>
+        {%- endif %}
       </div>
       {%- endfor %}
     </div>

@@ -1,0 +1,7 @@
+{
+  "_readme": "ゲーム図鑑カタログ(games.json catalog.items の en)→解説記事URL。games-index.njkで参照",
+  "Marvel's Wolverine": {
+    "url": "/articles/wolverine-game-guide/",
+    "label": "登場キャラの正体を解説した記事を読む"
+  }
+}
