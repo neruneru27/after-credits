@@ -34,7 +34,7 @@ const err = (msg) => errors.push(msg);
       if (!seen.has(r)) err(`glossary: "${t.term}" の rel 参照先が存在しない: "${r}"`);
     }
   }
-  if (g.terms.length !== 298) err(`glossary: terms 件数が 298 でない: ${g.terms.length}`);
+  if (g.terms.length !== 304) err(`glossary: terms 件数が 304 でない: ${g.terms.length}`);
 }
 
 // ---- mcu-works ----
@@ -390,6 +390,17 @@ let encIds = new Set();
     if (ev.start_date && ev.end_date && ev.start_date > ev.end_date) err(`theatricalEvents: ${ev.id} の開始日が終了日より後`);
     if (ev.official_url && !/^https?:\/\//.test(ev.official_url)) err(`theatricalEvents: ${ev.id} の official_url が不正`);
     if (ev.base_work_id && !wids.has(ev.base_work_id)) err(`theatricalEvents: ${ev.id} の base_work_id が mcu に無い: ${ev.base_work_id}`);
+    const af = ev.added_footage;
+    if (af) {
+      for (const pre of af.prerequisites || []) {
+        if (!pre.work_id || !wids.has(pre.work_id)) err(`theatricalEvents: ${ev.id} の prerequisites work_id 不整合: ${pre.work_id}`);
+        if (!pre.why) err(`theatricalEvents: ${ev.id} の prerequisites に why が無い: ${pre.work_id}`);
+      }
+      for (const sc of af.scenes || []) {
+        if (!sc.pos) err(`theatricalEvents: ${ev.id} の scenes に pos が無い`);
+        if (!sc.sp) err(`theatricalEvents: ${ev.id} の scenes に sp が無い(2段防御の中身)`);
+      }
+    }
   }
 }
 
@@ -412,4 +423,4 @@ if (errors.length) {
   for (const e of errors) console.error('  - ' + e);
   process.exit(1);
 }
-console.log("✔ データ検証 OK(glossary 298 / mcu 68 / comics 416 / encyclopedia 146 / cards 146)");
+console.log("✔ データ検証 OK(glossary 304 / mcu 68 / comics 416 / encyclopedia 146 / cards 146)");

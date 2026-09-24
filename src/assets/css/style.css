@@ -978,3 +978,17 @@
   .nav-desc { display: block; font-size: 0.72rem; color: #6b5f52; font-weight: 400; }
   .guide-lead { font-size: 0.85rem; margin: 6px 0; }
   .guide-times { font-size: 0.78rem; font-weight: 700; color: #4a4238; margin-bottom: 10px; }
+
+  /* ---------- 劇場イベント: 追加映像 ---------- */
+  .added-footage { border-top: 3px dashed var(--ink); margin-top: 14px; padding-top: 14px; }
+  .af-head { font-size: 0.95rem; font-weight: 900; margin-bottom: 8px; }
+  .af-summary { font-size: 0.88rem; }
+  .af-note { font-size: 0.78rem; color: #6b5f52; margin-top: 4px; }
+  .af-sub { font-size: 0.78rem; font-weight: 900; color: var(--cyan); margin: 14px 0 6px; }
+  .af-pre { list-style: none; margin: 0 0 10px; }
+  .af-pre li { font-size: 0.85rem; padding: 5px 0; border-bottom: 1px dashed var(--paper-dark); }
+  .af-pre li a { color: var(--magenta); font-weight: 900; text-decoration: underline; }
+  .af-pre li span { display: block; font-size: 0.75rem; color: #4a4238; }
+  .af-facts ul { margin: 6px 0 0 1.4em; font-size: 0.85rem; }
+  .af-facts li { margin: 4px 0; }
+  .af-src { font-size: 0.72rem; color: #6b5f52; margin-top: 10px; line-height: 1.7; }

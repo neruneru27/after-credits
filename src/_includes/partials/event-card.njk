@@ -21,6 +21,41 @@
   </details>
   {%- endif %}
   {%- if ev.bonus %}<p class="event-bonus">🎁 {{ ev.bonus }}</p>{% endif %}
+  {%- if ev.added_footage %}
+  {%- set af = ev.added_footage %}
+  <div class="added-footage">
+    <h4 class="af-head">🎞 追加映像について(ネタバレなし)</h4>
+    <p class="af-summary">{{ af.summary }}</p>
+    {%- if af.note %}<p class="af-note">{{ af.note }}</p>{% endif %}
+    {%- if af.prerequisites and af.prerequisites.length %}
+    <p class="af-sub">追加映像の理解に必要な作品</p>
+    <ul class="af-pre">
+      {%- for pre in af.prerequisites %}
+      <li><a href="{{ ('/live/' + pre.work_id + '/') | url }}">{{ pre.work_id | workTitle(mcu.works) }}</a><span>{{ pre.why }}</span></li>
+      {%- endfor %}
+    </ul>
+    {%- endif %}
+    {%- if af.key_facts and af.key_facts.length %}
+    <details class="spoiler-box af-facts">
+      <summary>⚠ 追加映像で判明した事実を表示(ネタバレ)</summary>
+      <ul>{% for k in af.key_facts %}<li>{{ k }}</li>{% endfor %}</ul>
+    </details>
+    {%- endif %}
+    {%- if af.scenes and af.scenes.length %}
+    <p class="af-sub">各シーンの内容({{ af.scenes.length }}項目・すべてネタバレ)</p>
+    <div class="app-list">
+      {%- for sc in af.scenes %}
+      <div class="app-item">
+        <p class="app-head"><span class="credit-pos {{ 'mid' if '本編' in sc.pos else 'post' }}">{{ sc.no }}. {{ sc.pos }}</span></p>
+        <details class="spoiler-box"><summary>⚠ シーンの内容を表示(ネタバレ)</summary><p>{{ sc.sp }}</p></details>
+      </div>
+      {%- endfor %}
+    </div>
+    {%- endif %}
+    {%- if af.reporter_note %}<p class="af-src"><b>鑑賞記録:</b> {{ af.reporter_note }}</p>{% endif %}
+    {%- if af.source_note %}<p class="af-src">{{ af.source_note }}</p>{% endif %}
+  </div>
+  {%- endif %}
   <p class="event-links">
     <a class="amz-btn" href="{{ ev.official_url }}" target="_blank" rel="noopener">公式サイト(劇場情報)</a>
     {%- if theatricalArticles[ev.id] %}<a class="amz-btn" href="{{ theatricalArticles[ev.id] | url }}">解説記事を読む</a>{% endif %}
